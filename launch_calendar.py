@@ -1,0 +1,1124 @@
+#!/usr/bin/env python3
+"""
+Fetch upcoming launch-event news and export a Google Calendar friendly ICS file.
+
+The script intentionally uses only Python's standard library so it can run in a
+fresh macOS/Python environment without installing packages.
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import dataclasses
+import datetime as dt
+import email.utils
+import hashlib
+import html
+import json
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from typing import Dict, Iterable, List, Optional, Tuple
+
+
+CN_TZ = dt.timezone(dt.timedelta(hours=8), name="Asia/Shanghai")
+UTC = dt.timezone.utc
+
+DEFAULT_CONFIG = {
+    "calendar_name": "新品/科技发布会追踪",
+    "lookback_days": 60,
+    "lookahead_days": 60,
+    "default_start_time": "19:00",
+    "default_duration_minutes": 60,
+    "min_score": 3,
+    "request_sleep_seconds": 1.0,
+    "page_auto_refresh_seconds": 300,
+    "output_dir": "out",
+    "queries": [
+        {
+            "name": "手机新品",
+            "category": "mobile",
+            "query": "手机 新品 发布会 时间 OR 新机 发布会 直播 OR 手机 发布会 定档 OR 折叠屏 发布会",
+        },
+        {
+            "name": "电脑新品",
+            "category": "computer",
+            "query": "笔记本电脑 发布会 时间 OR PC 新品 发布会 OR 电脑 新品 发布会 OR 平板 电脑 发布会",
+        },
+        {
+            "name": "新能源汽车",
+            "category": "ev",
+            "query": "新能源汽车 发布会 时间 OR 新车 发布会 直播 OR 智能汽车 发布会 定档 OR 上市发布会",
+        },
+        {
+            "name": "合资/日系车",
+            "category": "auto",
+            "query": "合资车 发布会 时间 OR 日系车 新车 发布会 OR 丰田 本田 日产 新车 上市 OR 大众 别克 新车 发布会",
+        },
+        {
+            "name": "科技数码",
+            "category": "tech",
+            "query": "科技 数码 发布会 时间 OR 新品 发布会 直播 OR AI 硬件 发布会 OR 智能硬件 发布会",
+        },
+    ],
+}
+
+CATEGORY_LABELS = {
+    "mobile": "手机新品",
+    "computer": "电脑新品",
+    "ev": "新能源汽车",
+    "auto": "合资/日系车",
+    "tech": "科技数码",
+}
+
+CATEGORY_KEYWORDS = {
+    "mobile": [
+        "手机",
+        "新机",
+        "旗舰",
+        "折叠屏",
+        "iphone",
+        "galaxy",
+        "小米",
+        "华为",
+        "荣耀",
+        "oppo",
+        "vivo",
+        "一加",
+        "realme",
+        "红米",
+        "魅族",
+    ],
+    "ev": [
+        "新能源汽车",
+        "汽车",
+        "新车",
+        "电动车",
+        "智能汽车",
+        "特斯拉",
+        "比亚迪",
+        "蔚来",
+        "小鹏",
+        "理想",
+        "极氪",
+        "问界",
+        "智界",
+        "鸿蒙智行",
+        "小米汽车",
+    ],
+    "auto": [
+        "合资车",
+        "日系车",
+        "燃油车",
+        "新车",
+        "上市",
+        "丰田",
+        "toyota",
+        "本田",
+        "honda",
+        "日产",
+        "nissan",
+        "马自达",
+        "mazda",
+        "斯巴鲁",
+        "subaru",
+        "三菱",
+        "大众",
+        "volkswagen",
+        "别克",
+        "buick",
+        "现代",
+        "hyundai",
+        "起亚",
+        "kia",
+    ],
+    "tech": [
+        "科技",
+        "数码",
+        "ai",
+        "芯片",
+        "平板",
+        "笔记本",
+        "耳机",
+        "可穿戴",
+        "智能",
+        "机器人",
+        "大疆",
+        "影像",
+        "家电",
+    ],
+    "computer": [
+        "电脑",
+        "pc",
+        "笔记本",
+        "游戏本",
+        "轻薄本",
+        "台式机",
+        "一体机",
+        "工作站",
+        "平板电脑",
+        "thinkpad",
+        "联想",
+        "lenovo",
+        "惠普",
+        "hp",
+        "戴尔",
+        "dell",
+        "华硕",
+        "asus",
+        "宏碁",
+        "acer",
+        "机械革命",
+    ],
+}
+
+EVENT_KEYWORDS = [
+    "发布会",
+    "新品发布",
+    "新机发布",
+    "新车发布",
+    "直播",
+    "定档",
+    "官宣",
+    "邀请函",
+    "全球发布",
+    "上市发布",
+]
+
+NEGATIVE_KEYWORDS = [
+    "回顾",
+    "汇总",
+    "一图看懂",
+    "发布会后",
+    "发布会结束",
+    "看点汇总",
+]
+
+CHINESE_WEEKDAY = {
+    "一": 0,
+    "二": 1,
+    "三": 2,
+    "四": 3,
+    "五": 4,
+    "六": 5,
+    "日": 6,
+    "天": 6,
+}
+
+
+@dataclasses.dataclass
+class NewsItem:
+    title: str
+    link: str
+    summary: str
+    source: str
+    published_at: Optional[dt.datetime]
+    query_name: str
+    category: str
+
+
+@dataclasses.dataclass
+class LaunchEvent:
+    title: str
+    category: str
+    start: dt.datetime
+    end: dt.datetime
+    all_day: bool
+    location: str
+    url: str
+    source: str
+    summary: str
+    published_at: Optional[dt.datetime]
+    score: int
+    matched_date: str
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Fetch launch events and export ICS/JSON/CSV.")
+    parser.add_argument(
+        "--config",
+        default=None,
+        help="Path to config JSON. Defaults to built-in config or config.json if present.",
+    )
+    parser.add_argument("--output-dir", default=None, help="Override output directory.")
+    parser.add_argument("--max-items", type=int, default=80, help="Max RSS items to read per query.")
+    parser.add_argument("--self-test", action="store_true", help="Run parser self-tests and exit.")
+    return parser.parse_args()
+
+
+def load_config(path: Optional[str]) -> Dict:
+    config = json.loads(json.dumps(DEFAULT_CONFIG))
+    candidate = Path(path) if path else Path("config.json")
+    if candidate.exists():
+        with candidate.open("r", encoding="utf-8") as handle:
+            user_config = json.load(handle)
+        deep_update(config, user_config)
+    return config
+
+
+def deep_update(base: Dict, override: Dict) -> Dict:
+    for key, value in override.items():
+        if isinstance(value, dict) and isinstance(base.get(key), dict):
+            deep_update(base[key], value)
+        else:
+            base[key] = value
+    return base
+
+
+def google_news_rss_url(query: str, lookback_days: int) -> str:
+    q = f"({query}) when:{max(1, lookback_days)}d"
+    params = {
+        "q": q,
+        "hl": "zh-CN",
+        "gl": "CN",
+        "ceid": "CN:zh-Hans",
+    }
+    return "https://news.google.com/rss/search?" + urllib.parse.urlencode(params)
+
+
+def fetch_url(url: str, timeout: int = 20) -> bytes:
+    headers = {
+        "User-Agent": "launch-calendar-bot/1.0 (+https://news.google.com/rss)",
+        "Accept": "application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8",
+    }
+    request = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return response.read()
+
+
+def parse_rss(data: bytes, query_name: str, category: str, max_items: int) -> List[NewsItem]:
+    root = ET.fromstring(data)
+    items: List[NewsItem] = []
+    for node in root.findall(".//item")[:max_items]:
+        title = clean_text(node.findtext("title") or "")
+        link = clean_text(node.findtext("link") or "")
+        summary = clean_html(node.findtext("description") or "")
+        source = clean_text(node.findtext("source") or "")
+        published_at = parse_rfc822(node.findtext("pubDate") or "")
+        if published_at:
+            published_at = published_at.astimezone(CN_TZ)
+        items.append(
+            NewsItem(
+                title=title,
+                link=link,
+                summary=summary,
+                source=source,
+                published_at=published_at,
+                query_name=query_name,
+                category=category,
+            )
+        )
+    return items
+
+
+def parse_rfc822(value: str) -> Optional[dt.datetime]:
+    if not value:
+        return None
+    try:
+        parsed = email.utils.parsedate_to_datetime(value)
+    except (TypeError, ValueError, IndexError):
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=UTC)
+    return parsed
+
+
+def clean_html(value: str) -> str:
+    text = html.unescape(value)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return clean_text(text)
+
+
+def clean_text(value: str) -> str:
+    return re.sub(r"\s+", " ", html.unescape(value)).strip()
+
+
+def score_item(item: NewsItem) -> int:
+    text = f"{item.title} {item.summary}".lower()
+    score = 0
+    if any(word in text for word in EVENT_KEYWORDS):
+        score += 2
+    if "发布会" in text:
+        score += 2
+    if any(word in text for word in ["时间", "定档", "直播", "官宣", "邀请函"]):
+        score += 1
+    if any(word.lower() in text for word in CATEGORY_KEYWORDS.get(item.category, [])):
+        score += 2
+    if any(word in text for word in NEGATIVE_KEYWORDS):
+        score -= 2
+    return score
+
+
+def find_event_datetime(
+    text: str,
+    now: dt.datetime,
+    published_at: Optional[dt.datetime],
+    default_start_time: str,
+) -> Optional[Tuple[dt.datetime, bool, str]]:
+    text = normalize_date_text(text)
+    anchor = published_at or now
+    default_hour, default_minute = parse_hhmm(default_start_time)
+
+    explicit = find_explicit_date(text, now, anchor, default_hour, default_minute)
+    if explicit:
+        return explicit
+
+    relative = find_relative_date(text, anchor, default_hour, default_minute)
+    if relative:
+        return relative
+
+    return None
+
+
+def normalize_date_text(text: str) -> str:
+    text = text.replace("：", ":")
+    text = text.replace("号", "日")
+    text = re.sub(r"\s+", "", text)
+    return text
+
+
+def parse_hhmm(value: str) -> Tuple[int, int]:
+    match = re.match(r"^(\d{1,2}):(\d{2})$", value)
+    if not match:
+        return 19, 0
+    hour, minute = int(match.group(1)), int(match.group(2))
+    if not (0 <= hour <= 23 and 0 <= minute <= 59):
+        return 19, 0
+    return hour, minute
+
+
+def find_explicit_date(
+    text: str,
+    now: dt.datetime,
+    anchor: dt.datetime,
+    default_hour: int,
+    default_minute: int,
+) -> Optional[Tuple[dt.datetime, bool, str]]:
+    patterns = [
+        re.compile(r"(?P<year>20\d{2})年(?P<month>\d{1,2})月(?P<day>\d{1,2})日?"),
+        re.compile(r"(?P<month>\d{1,2})月(?P<day>\d{1,2})日"),
+        re.compile(r"(?<!\d)(?P<month>\d{1,2})/(?P<day>\d{1,2})(?!\d)"),
+    ]
+    for pattern in patterns:
+        for match in pattern.finditer(text):
+            year = int(match.groupdict().get("year") or infer_year(int(match.group("month")), int(match.group("day")), now, anchor))
+            month = int(match.group("month"))
+            day = int(match.group("day"))
+            try:
+                event_date = dt.date(year, month, day)
+            except ValueError:
+                continue
+
+            nearby = text[match.end() : match.end() + 36]
+            before = text[max(0, match.start() - 12) : match.start()]
+            time_result = find_time(nearby) or find_time(before)
+            if time_result:
+                hour, minute, raw_time = time_result
+                all_day = False
+            else:
+                hour, minute, raw_time = default_hour, default_minute, ""
+                all_day = True
+
+            start = dt.datetime(year, month, day, hour, minute, tzinfo=CN_TZ)
+            raw = match.group(0) + raw_time
+            return start, all_day, raw
+    return None
+
+
+def infer_year(month: int, day: int, now: dt.datetime, anchor: dt.datetime) -> int:
+    year = anchor.year
+    try:
+        candidate = dt.datetime(year, month, day, tzinfo=CN_TZ)
+    except ValueError:
+        return year
+
+    # If an article is old but the date is clearly near its publication date, keep
+    # the publication year. Otherwise prefer the next upcoming occurrence.
+    if abs((candidate.date() - anchor.date()).days) <= 45:
+        return year
+    if candidate.date() < now.date() - dt.timedelta(days=3):
+        return year + 1
+    return year
+
+
+def find_relative_date(
+    text: str,
+    anchor: dt.datetime,
+    default_hour: int,
+    default_minute: int,
+) -> Optional[Tuple[dt.datetime, bool, str]]:
+    mapping = [
+        (r"(今日|今天|今晚)", 0),
+        (r"(明日|明天|明晚)", 1),
+        (r"(后日|后天)", 2),
+    ]
+    for pattern, offset in mapping:
+        match = re.search(pattern, text)
+        if not match:
+            continue
+        target = anchor.date() + dt.timedelta(days=offset)
+        window = text[match.start() : match.end() + 24]
+        nearby = text[match.end() : match.end() + 24]
+        time_result = find_time(window) or find_time(nearby)
+        if time_result:
+            hour, minute, raw_time = time_result
+            all_day = False
+        else:
+            hour, minute, raw_time = default_hour, default_minute, ""
+            all_day = True
+        return dt.datetime(target.year, target.month, target.day, hour, minute, tzinfo=CN_TZ), all_day, match.group(0) + raw_time
+
+    week_match = re.search(r"(本周|下周)([一二三四五六日天])", text)
+    if week_match:
+        base = anchor.date()
+        target_weekday = CHINESE_WEEKDAY[week_match.group(2)]
+        week_offset = 7 if week_match.group(1) == "下周" else 0
+        days = target_weekday - base.weekday() + week_offset
+        if days < 0 and week_match.group(1) == "本周":
+            days += 7
+        target = base + dt.timedelta(days=days)
+        nearby = text[week_match.end() : week_match.end() + 24]
+        time_result = find_time(nearby)
+        if time_result:
+            hour, minute, raw_time = time_result
+            all_day = False
+        else:
+            hour, minute, raw_time = default_hour, default_minute, ""
+            all_day = True
+        return dt.datetime(target.year, target.month, target.day, hour, minute, tzinfo=CN_TZ), all_day, week_match.group(0) + raw_time
+
+    return None
+
+
+def find_time(text: str) -> Optional[Tuple[int, int, str]]:
+    time_pattern = re.compile(
+        r"(?P<period>凌晨|早上|上午|中午|下午|晚上|晚间|今晚|明晚|晚)?"
+        r"(?P<hour>\d{1,2})(?:(?:点|时)(?P<minute_cn>\d{1,2})?分?|:(?P<minute>\d{2}))"
+    )
+    for match in time_pattern.finditer(text):
+        hour = int(match.group("hour"))
+        minute = int(match.group("minute") or match.group("minute_cn") or 0)
+        if not (0 <= hour <= 24 and 0 <= minute <= 59):
+            continue
+        period = match.group("period") or ""
+        if period in {"下午", "晚上", "晚间", "今晚", "明晚", "晚"} and hour < 12:
+            hour += 12
+        elif period == "中午" and hour < 11:
+            hour += 12
+        elif hour == 24:
+            hour = 0
+        return hour, minute, match.group(0)
+    return None
+
+
+def item_to_event(item: NewsItem, config: Dict, now: dt.datetime) -> Optional[LaunchEvent]:
+    score = score_item(item)
+    if score < int(config["min_score"]):
+        return None
+    combined = f"{item.title} {item.summary}"
+    parsed = find_event_datetime(
+        combined,
+        now=now,
+        published_at=item.published_at,
+        default_start_time=str(config["default_start_time"]),
+    )
+    if not parsed:
+        return None
+    start, all_day, matched_date = parsed
+    lookback = dt.timedelta(days=int(config["lookback_days"]))
+    lookahead = dt.timedelta(days=int(config["lookahead_days"]))
+    if start < now - lookback or start > now + lookahead:
+        return None
+    duration = dt.timedelta(minutes=int(config["default_duration_minutes"]))
+    end = start + (dt.timedelta(days=1) if all_day else duration)
+    return LaunchEvent(
+        title=strip_news_source_suffix(item.title),
+        category=item.category,
+        start=start,
+        end=end,
+        all_day=all_day,
+        location=extract_location(combined),
+        url=item.link,
+        source=item.source or item.query_name,
+        summary=item.summary,
+        published_at=item.published_at,
+        score=score,
+        matched_date=matched_date,
+    )
+
+
+def strip_news_source_suffix(title: str) -> str:
+    return re.sub(r"\s+-\s+[^-]{1,20}$", "", title).strip()
+
+
+def extract_location(text: str) -> str:
+    normalized = clean_text(text)
+    if any(word in normalized for word in ["线上", "直播", "在线", "云发布", "官网"]):
+        return "线上"
+    city_match = re.search(
+        r"(北京|上海|广州|深圳|成都|杭州|武汉|南京|重庆|西安|苏州|合肥|"
+        r"长沙|厦门|青岛|郑州|珠海|宁波|天津|香港|澳门|台北|东京|首尔|"
+        r"新加坡|纽约|洛杉矶|伦敦|巴黎|柏林)",
+        normalized,
+    )
+    if city_match:
+        return city_match.group(1)
+    return "线上"
+
+
+def dedupe_events(events: Iterable[LaunchEvent]) -> List[LaunchEvent]:
+    best_by_key: Dict[str, LaunchEvent] = {}
+    for event in events:
+        key = stable_event_key(event)
+        existing = best_by_key.get(key)
+        if existing is None or event.score > existing.score:
+            best_by_key[key] = event
+    return sorted(best_by_key.values(), key=lambda event: (event.start, event.category, event.title))
+
+
+def stable_event_key(event: LaunchEvent) -> str:
+    normalized_title = re.sub(r"[\W_]+", "", event.title.lower())
+    normalized_title = normalized_title[:48]
+    return f"{event.category}:{event.start.date().isoformat()}:{normalized_title}"
+
+
+def write_outputs(events: List[LaunchEvent], candidates: List[NewsItem], output_dir: Path, config: Dict) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    write_json(events, output_dir / "events.json")
+    write_csv(events, output_dir / "events.csv")
+    write_google_calendar_csv(events, output_dir / "google_calendar_import.csv")
+    write_ics(events, output_dir / "launch_events.ics", config)
+    write_ics(events, output_dir / "subscription_feed.ics", config)
+    write_html(events, output_dir / "events.html", config)
+    write_candidates(candidates, output_dir / "undated_candidates.json")
+
+
+def write_json(events: List[LaunchEvent], path: Path) -> None:
+    payload = [event_to_dict(event) for event in events]
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def write_csv(events: List[LaunchEvent], path: Path) -> None:
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "start",
+                "end",
+                "all_day",
+                "category",
+                "title",
+                "location",
+                "score",
+                "matched_date",
+            ],
+        )
+        writer.writeheader()
+        for event in events:
+            writer.writerow(
+                {
+                    "start": event.start.isoformat(),
+                    "end": event.end.isoformat(),
+                    "all_day": event.all_day,
+                    "category": CATEGORY_LABELS.get(event.category, event.category),
+                    "title": event.title,
+                    "location": event.location,
+                    "score": event.score,
+                    "matched_date": event.matched_date,
+                }
+            )
+
+
+def write_google_calendar_csv(events: List[LaunchEvent], path: Path) -> None:
+    with path.open("w", newline="", encoding="utf-8-sig") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "Subject",
+                "Start Date",
+                "Start Time",
+                "End Date",
+                "End Time",
+                "All Day Event",
+                "Description",
+                "Location",
+                "Private",
+            ],
+        )
+        writer.writeheader()
+        for event in events:
+            writer.writerow(
+                {
+                    "Subject": f"[{CATEGORY_LABELS.get(event.category, event.category)}] {event.title}",
+                    "Start Date": event.start.strftime("%m/%d/%Y"),
+                    "Start Time": "" if event.all_day else event.start.strftime("%I:%M %p"),
+                    "End Date": event.end.strftime("%m/%d/%Y"),
+                    "End Time": "" if event.all_day else event.end.strftime("%I:%M %p"),
+                    "All Day Event": "True" if event.all_day else "False",
+                    "Description": google_csv_description(event),
+                    "Location": event.location,
+                    "Private": "False",
+                }
+            )
+
+
+def google_csv_description(event: LaunchEvent) -> str:
+    return "\n".join(
+        part
+        for part in [
+            f"识别到的时间：{event.matched_date}",
+            f"可信度分数：{event.score}",
+        ]
+        if part
+    )
+
+
+def write_candidates(candidates: List[NewsItem], path: Path) -> None:
+    payload = [
+        {
+            "title": item.title,
+            "category": CATEGORY_LABELS.get(item.category, item.category),
+            "published_at": item.published_at.isoformat() if item.published_at else None,
+            "score": score_item(item),
+        }
+        for item in candidates
+    ]
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def event_to_dict(event: LaunchEvent) -> Dict:
+    return {
+        "title": event.title,
+        "category": CATEGORY_LABELS.get(event.category, event.category),
+        "start": event.start.isoformat(),
+        "end": event.end.isoformat(),
+        "all_day": event.all_day,
+        "location": event.location,
+        "published_at": event.published_at.isoformat() if event.published_at else None,
+        "score": event.score,
+        "matched_date": event.matched_date,
+    }
+
+
+def write_html(events: List[LaunchEvent], path: Path, config: Dict) -> None:
+    now = dt.datetime.now(tz=CN_TZ)
+    updated_at = now.strftime("%Y-%m-%d %H:%M")
+    rows = "\n".join(render_event_row(event, now) for event in events)
+    if not rows:
+        rows = (
+            '<section class="empty">'
+            "<strong>暂时没有识别到明确时间的发布会。</strong>"
+            "<span>抓取器会继续每天更新；日期不明确的候选项在 undated_candidates.json 里。</span>"
+            "</section>"
+        )
+
+    title = html.escape(str(config["calendar_name"]))
+    count_text = f"{len(events)} 场"
+    refresh_seconds = int(config.get("page_auto_refresh_seconds", 300))
+    refresh_meta = ""
+    if refresh_seconds > 0:
+        refresh_meta = f'  <meta http-equiv="refresh" content="{refresh_seconds}">\n'
+    path.write_text(
+        f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{refresh_meta}  <title>{title}</title>
+  <style>
+    :root {{
+      color-scheme: light;
+      --bg: #f5f5f3;
+      --surface: #ffffff;
+      --surface-muted: #eeeeec;
+      --text: #232323;
+      --muted: #969696;
+      --accent: #f05b57;
+      --fresh: #52c79a;
+      --hairline: #efefef;
+    }}
+
+    * {{
+      box-sizing: border-box;
+    }}
+
+    body {{
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
+        Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }}
+
+    .screen {{
+      width: min(100%, 560px);
+      min-height: 100vh;
+      margin: 0 auto;
+      background: var(--surface);
+    }}
+
+    header {{
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 18px 12px;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--hairline);
+      backdrop-filter: blur(12px);
+    }}
+
+    .headline {{
+      min-width: 0;
+    }}
+
+    h1 {{
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.3;
+      font-weight: 700;
+    }}
+
+    .updated {{
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }}
+
+    .count {{
+      flex: none;
+      color: var(--fresh);
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }}
+
+    .list {{
+      padding: 0 0 20px;
+    }}
+
+    .event-link {{
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }}
+
+    .event {{
+      display: grid;
+      grid-template-columns: 4px minmax(0, 1fr) auto;
+      column-gap: 12px;
+      align-items: start;
+      min-height: 58px;
+      padding: 13px 18px 12px;
+      border-bottom: 1px solid #f4f4f4;
+    }}
+
+    .event.ended {{
+      background: var(--surface-muted);
+      border-bottom-color: #e4e4e2;
+    }}
+
+    .rail {{
+      width: 4px;
+      height: 34px;
+      margin-top: 2px;
+      border-radius: 1px;
+      background: var(--accent);
+    }}
+
+    h2 {{
+      margin: 0;
+      color: #242424;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 700;
+      word-break: break-word;
+    }}
+
+    .meta {{
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+      word-break: break-word;
+    }}
+
+    .status {{
+      margin-top: 2px;
+      color: var(--fresh);
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 600;
+      white-space: nowrap;
+    }}
+
+    .status.ended {{
+      color: #a0a0a0;
+      font-weight: 500;
+    }}
+
+    .empty {{
+      display: grid;
+      gap: 8px;
+      padding: 28px 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }}
+
+    .empty strong {{
+      color: var(--text);
+      font-size: 14px;
+    }}
+
+    @media (max-width: 430px) {{
+      header {{
+        padding-inline: 14px;
+      }}
+
+      .event {{
+        grid-template-columns: 4px minmax(0, 1fr) 54px;
+        padding-inline: 14px;
+        column-gap: 10px;
+      }}
+    }}
+  </style>
+</head>
+<body>
+  <main class="screen">
+    <header>
+      <div class="headline">
+        <h1>{title}</h1>
+        <div class="updated">更新于 {html.escape(updated_at)} · 最近两个月</div>
+      </div>
+      <div class="count">{html.escape(count_text)}</div>
+    </header>
+    <section class="list" aria-label="发布会清单">
+      {rows}
+    </section>
+  </main>
+</body>
+</html>
+""",
+        encoding="utf-8",
+    )
+
+
+def render_event_row(event: LaunchEvent, now: dt.datetime) -> str:
+    status_label, status_class = relative_status(event, now)
+    classes = "event ended" if status_class == "ended" else "event"
+    title = html.escape(event.title)
+    meta = html.escape(f"{format_display_time(event)}　{event.location}")
+    status = html.escape(status_label)
+    return f"""<div class="event-link">
+        <article class="{classes}">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>{title}</h2>
+            <div class="meta">{meta}</div>
+          </div>
+          <div class="status {status_class}">{status}</div>
+        </article>
+      </div>"""
+
+
+def format_display_time(event: LaunchEvent) -> str:
+    date_part = event.start.strftime("%m月%d日")
+    if event.all_day:
+        return f"{date_part} 00:00"
+    return f"{date_part} {event.start.strftime('%H:%M')}"
+
+
+def relative_status(event: LaunchEvent, now: dt.datetime) -> Tuple[str, str]:
+    if now >= event.end:
+        return "已结束", "ended"
+    if event.start <= now < event.end:
+        return "进行中", "live"
+
+    seconds = int((event.start - now).total_seconds())
+    if seconds < 3600:
+        minutes = max(1, (seconds + 59) // 60)
+        return f"{minutes}分钟后", "soon"
+    if seconds < 86400:
+        hours = max(1, (seconds + 3599) // 3600)
+        return f"{hours}小时后", "soon"
+
+    days = max(1, (seconds + 86399) // 86400)
+    if days < 7:
+        return f"{days}天后", "soon"
+
+    weeks = max(1, (days + 6) // 7)
+    return f"{weeks}周后", "soon"
+
+
+def write_ics(events: List[LaunchEvent], path: Path, config: Dict) -> None:
+    now_utc = dt.datetime.now(tz=UTC)
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Codex//Launch Calendar Bot//ZH-CN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        f"X-WR-CALNAME:{ics_escape(str(config['calendar_name']))}",
+        "X-WR-TIMEZONE:Asia/Shanghai",
+    ]
+    for event in events:
+        lines.extend(event_to_ics_lines(event, now_utc))
+    lines.append("END:VCALENDAR")
+    path.write_text("\r\n".join(fold_ics_line(line) for line in lines) + "\r\n", encoding="utf-8")
+
+
+def event_to_ics_lines(event: LaunchEvent, now_utc: dt.datetime) -> List[str]:
+    uid_basis = f"{event.category}|{event.start.isoformat()}|{event.title}"
+    uid = hashlib.sha1(uid_basis.encode("utf-8")).hexdigest() + "@launch-calendar-bot"
+    label = CATEGORY_LABELS.get(event.category, event.category)
+    description = "\n".join(
+        part
+        for part in [
+            f"识别到的时间：{event.matched_date}",
+            f"可信度分数：{event.score}",
+        ]
+        if part
+    )
+    lines = [
+        "BEGIN:VEVENT",
+        f"UID:{uid}",
+        f"DTSTAMP:{format_utc(now_utc)}",
+        f"SUMMARY:{ics_escape('[' + label + '] ' + event.title)}",
+        f"DESCRIPTION:{ics_escape(description)}",
+        f"CATEGORIES:{ics_escape(label)}",
+    ]
+    if event.location:
+        lines.append(f"LOCATION:{ics_escape(event.location)}")
+    if event.all_day:
+        lines.append(f"DTSTART;VALUE=DATE:{event.start.strftime('%Y%m%d')}")
+        lines.append(f"DTEND;VALUE=DATE:{event.end.strftime('%Y%m%d')}")
+    else:
+        lines.append(f"DTSTART:{format_utc(event.start.astimezone(UTC))}")
+        lines.append(f"DTEND:{format_utc(event.end.astimezone(UTC))}")
+    lines.append("END:VEVENT")
+    return lines
+
+
+def ics_escape(value: str) -> str:
+    value = value.replace("\\", "\\\\")
+    value = value.replace(";", "\\;")
+    value = value.replace(",", "\\,")
+    value = value.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
+    return value
+
+
+def fold_ics_line(line: str) -> str:
+    encoded = line.encode("utf-8")
+    if len(encoded) <= 75:
+        return line
+    chunks = []
+    current = ""
+    current_len = 0
+    for char in line:
+        char_len = len(char.encode("utf-8"))
+        if current_len + char_len > 73:
+            chunks.append(current)
+            current = " " + char
+            current_len = 1 + char_len
+        else:
+            current += char
+            current_len += char_len
+    if current:
+        chunks.append(current)
+    return "\r\n".join(chunks)
+
+
+def format_utc(value: dt.datetime) -> str:
+    return value.astimezone(UTC).strftime("%Y%m%dT%H%M%SZ")
+
+
+def collect_events(config: Dict, max_items: int) -> Tuple[List[LaunchEvent], List[NewsItem], List[str]]:
+    now = dt.datetime.now(tz=CN_TZ)
+    events: List[LaunchEvent] = []
+    candidates: List[NewsItem] = []
+    errors: List[str] = []
+    for query_config in config["queries"]:
+        url = google_news_rss_url(query_config["query"], int(config["lookback_days"]))
+        try:
+            data = fetch_url(url)
+            items = parse_rss(data, query_config["name"], query_config["category"], max_items)
+        except (urllib.error.URLError, TimeoutError, ET.ParseError, OSError) as exc:
+            errors.append(f"{query_config['name']}: {exc}")
+            continue
+
+        for item in items:
+            event = item_to_event(item, config, now)
+            if event:
+                events.append(event)
+            elif score_item(item) >= int(config["min_score"]):
+                candidates.append(item)
+        time.sleep(float(config.get("request_sleep_seconds", 1.0)))
+    return dedupe_events(events), candidates, errors
+
+
+def run_self_tests() -> int:
+    now = dt.datetime(2026, 5, 19, 17, 0, tzinfo=CN_TZ)
+    cases = [
+        ("某品牌新品发布会定档 5月20日 19:00", dt.datetime(2026, 5, 20, 19, 0, tzinfo=CN_TZ), False),
+        ("新车发布会将于2026年6月1日晚上8点举行", dt.datetime(2026, 6, 1, 20, 0, tzinfo=CN_TZ), False),
+        ("旗舰新机发布会 5月21日晚8点直播", dt.datetime(2026, 5, 21, 20, 0, tzinfo=CN_TZ), False),
+        ("手机发布会明晚8点直播", dt.datetime(2026, 5, 20, 20, 0, tzinfo=CN_TZ), False),
+        ("科技新品发布会本周五举行", dt.datetime(2026, 5, 22, 19, 0, tzinfo=CN_TZ), True),
+    ]
+    for text, expected_start, expected_all_day in cases:
+        parsed = find_event_datetime(text, now, now, "19:00")
+        if not parsed:
+            print(f"FAIL: no parse for {text}", file=sys.stderr)
+            return 1
+        start, all_day, _ = parsed
+        if start != expected_start or all_day != expected_all_day:
+            print(f"FAIL: {text}: got {start} all_day={all_day}", file=sys.stderr)
+            return 1
+    print("self-test ok")
+    return 0
+
+
+def main() -> int:
+    args = parse_args()
+    if args.self_test:
+        return run_self_tests()
+
+    config = load_config(args.config)
+    if args.output_dir:
+        config["output_dir"] = args.output_dir
+    output_dir = Path(config["output_dir"])
+    events, candidates, errors = collect_events(config, args.max_items)
+    all_sources_failed = bool(errors) and len(errors) >= len(config["queries"]) and not events and not candidates
+    if all_sources_failed:
+        print("refresh failed before finding any items; existing outputs were kept", file=sys.stderr)
+    else:
+        write_outputs(events, candidates, output_dir, config)
+
+    print(f"events: {len(events)}")
+    print(f"undated candidates: {len(candidates)}")
+    print(f"html: {output_dir / 'events.html'}")
+    print(f"ics: {output_dir / 'launch_events.ics'}")
+    print(f"subscription feed: {output_dir / 'subscription_feed.ics'}")
+    print(f"google calendar csv: {output_dir / 'google_calendar_import.csv'}")
+    print(f"json: {output_dir / 'events.json'}")
+    if errors:
+        print("errors:", file=sys.stderr)
+        for error in errors:
+            print(f"- {error}", file=sys.stderr)
+    return 0 if events or candidates or not errors else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,38 @@
+{
+  "calendar_name": "新品/科技发布会追踪",
+  "lookback_days": 60,
+  "lookahead_days": 60,
+  "default_start_time": "19:00",
+  "default_duration_minutes": 60,
+  "min_score": 3,
+  "request_sleep_seconds": 1.0,
+  "page_auto_refresh_seconds": 300,
+  "output_dir": "out",
+  "queries": [
+    {
+      "name": "手机新品",
+      "category": "mobile",
+      "query": "手机 新品 发布会 时间 OR 新机 发布会 直播 OR 手机 发布会 定档 OR 折叠屏 发布会"
+    },
+    {
+      "name": "电脑新品",
+      "category": "computer",
+      "query": "笔记本电脑 发布会 时间 OR PC 新品 发布会 OR 电脑 新品 发布会 OR 平板 电脑 发布会"
+    },
+    {
+      "name": "新能源汽车",
+      "category": "ev",
+      "query": "新能源汽车 发布会 时间 OR 新车 发布会 直播 OR 智能汽车 发布会 定档 OR 上市发布会"
+    },
+    {
+      "name": "合资/日系车",
+      "category": "auto",
+      "query": "合资车 发布会 时间 OR 日系车 新车 发布会 OR 丰田 本田 日产 新车 上市 OR 大众 别克 新车 发布会"
+    },
+    {
+      "name": "科技数码",
+      "category": "tech",
+      "query": "科技 数码 发布会 时间 OR 新品 发布会 直播 OR AI 硬件 发布会 OR 智能硬件 发布会"
+    }
+  ]
+}

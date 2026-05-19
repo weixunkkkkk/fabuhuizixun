@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="300">
+  <title>科技新品发布会日程</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f5f3;
+      --surface: #ffffff;
+      --surface-muted: #eeeeec;
+      --text: #232323;
+      --muted: #969696;
+      --accent: #f05b57;
+      --fresh: #52c79a;
+      --hairline: #efefef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
+        Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .screen {
+      width: min(100%, 560px);
+      min-height: 100vh;
+      margin: 0 auto;
+      background: var(--surface);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 18px 12px;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--hairline);
+      backdrop-filter: blur(12px);
+    }
+
+    .headline {
+      min-width: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .updated {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .count {
+      flex: none;
+      color: var(--fresh);
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .list {
+      padding: 0 0 20px;
+    }
+
+    .event-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 4px minmax(0, 1fr) auto;
+      column-gap: 12px;
+      align-items: start;
+      min-height: 58px;
+      padding: 13px 18px 12px;
+      border-bottom: 1px solid #f4f4f4;
+    }
+
+    .event.ended {
+      background: var(--surface-muted);
+      border-bottom-color: #e4e4e2;
+    }
+
+    .rail {
+      width: 4px;
+      height: 34px;
+      margin-top: 2px;
+      border-radius: 1px;
+      background: var(--accent);
+    }
+
+    h2 {
+      margin: 0;
+      color: #242424;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .meta {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .status {
+      margin-top: 2px;
+      color: var(--fresh);
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .status.ended {
+      color: #a0a0a0;
+      font-weight: 500;
+    }
+
+    .empty {
+      display: grid;
+      gap: 8px;
+      padding: 28px 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .empty strong {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    @media (max-width: 430px) {
+      header {
+        padding-inline: 14px;
+      }
+
+      .event {
+        grid-template-columns: 4px minmax(0, 1fr) 54px;
+        padding-inline: 14px;
+        column-gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="screen">
+    <header>
+      <div class="headline">
+        <h1>科技新品发布会日程</h1>
+        <div class="updated">更新于 2026-05-19 21:00 · 最近两个月</div>
+      </div>
+      <div class="count">27 场</div>
+    </header>
+    <section class="list" aria-label="发布会清单">
+      <div class="event-link">
+        <article class="event ended">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>联想天禧 AI 一体多端全场景新品超能之夜</h2>
+            <div class="meta">05月19日 19:00　线上</div>
+          </div>
+          <div class="status ended">已结束</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>影石 Insta360 新品发布</h2>
+            <div class="meta">05月19日 21:00　线上</div>
+          </div>
+          <div class="status live">进行中</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>Google I/O 2026</h2>
+            <div class="meta">05月20日 01:00　线上</div>
+          </div>
+          <div class="status soon">4小时后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>iQOO 15T 新品发布</h2>
+            <div class="meta">05月20日 19:00　线上</div>
+          </div>
+          <div class="status soon">22小时后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>小鹏 GX 上市发布会</h2>
+            <div class="meta">05月20日 19:30　线上</div>
+          </div>
+          <div class="status soon">23小时后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>网易游戏 520 线上发布会</h2>
+            <div class="meta">05月20日 19:30　线上</div>
+          </div>
+          <div class="status soon">23小时后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>2026 阿里云峰会</h2>
+            <div class="meta">05月20日 00:00　线上/杭州</div>
+          </div>
+          <div class="status soon">3小时后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>小米人车家全生态新品发布会</h2>
+            <div class="meta">05月21日 19:00　线上</div>
+          </div>
+          <div class="status soon">2天后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>BOOX 文石 Poke7/Pro 墨水屏阅读器发布</h2>
+            <div class="meta">05月21日 00:00　线上</div>
+          </div>
+          <div class="status soon">2天后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>北汽极狐 S3 上市</h2>
+            <div class="meta">05月22日 00:00　线上</div>
+          </div>
+          <div class="status soon">3天后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>五菱缤果 Pro 上市发布会</h2>
+            <div class="meta">05月22日 00:00　威海</div>
+          </div>
+          <div class="status soon">3天后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>神舟二十三号计划近日择机发射</h2>
+            <div class="meta">05月24日 00:00　酒泉卫星发射中心</div>
+          </div>
+          <div class="status soon">5天后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>OPPO Reno16 系列发布会</h2>
+            <div class="meta">05月25日 18:00　线上</div>
+          </div>
+          <div class="status soon">6天后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>荣耀 600 系列暨全场景新品发布会</h2>
+            <div class="meta">05月25日 19:00　厦门/线上</div>
+          </div>
+          <div class="status soon">6天后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>蔚来 ES9 上市并开启交付</h2>
+            <div class="meta">05月27日 00:00　线上</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>SPARK 2026 腾讯游戏发布会</h2>
+            <div class="meta">05月27日 20:00　线上</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>vivo S60 系列发布会</h2>
+            <div class="meta">05月29日 19:30　线上</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>京东 618 正式启动</h2>
+            <div class="meta">05月30日 20:00　线上</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>华为 nova 16 系列全场景发布会（待确认）</h2>
+            <div class="meta">06月01日 00:00　线上</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>NVIDIA COMPUTEX 2026 Keynote（黄仁勋）</h2>
+            <div class="meta">06月01日 11:00　台北</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>NVIDIA GTC Taipei 2026</h2>
+            <div class="meta">06月02日 00:00　台北</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>COMPUTEX Taipei 2026</h2>
+            <div class="meta">06月02日 00:00　台北</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>Microsoft Build 2026</h2>
+            <div class="meta">06月02日 00:00　线上/旧金山</div>
+          </div>
+          <div class="status soon">2周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>SNEC PV+ 2026 华为光储新品展示</h2>
+            <div class="meta">06月03日 00:00　上海</div>
+          </div>
+          <div class="status soon">3周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>Apple WWDC 2026</h2>
+            <div class="meta">06月09日 00:00　线上/Apple Park</div>
+          </div>
+          <div class="status soon">3周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>华为开发者大会 HDC 2026</h2>
+            <div class="meta">06月12日 00:00　东莞松山湖</div>
+          </div>
+          <div class="status soon">4周后</div>
+        </article>
+      </div>
+<div class="event-link">
+        <article class="event">
+          <span class="rail" aria-hidden="true"></span>
+          <div>
+            <h2>MWC Shanghai 2026</h2>
+            <div class="meta">06月24日 00:00　上海新国际博览中心</div>
+          </div>
+          <div class="status soon">6周后</div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.pycache/
+__pycache__/
+.DS_Store
+.git-local/
+.git-test-write
+.swift-module-cache/
+config.json
+google_client_secret.json
+google_token.json
+publisher.json

@@ -1,0 +1,4 @@
+{
+  "web_app_url": "https://script.google.com/macros/s/你的部署ID/exec",
+  "sync_token": "在 Apps Script 里运行 setupSyncToken 后复制这里"
+}
