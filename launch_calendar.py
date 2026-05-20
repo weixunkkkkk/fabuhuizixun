@@ -17,6 +17,7 @@ import hashlib
 import html
 import json
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -33,7 +34,8 @@ UTC = dt.timezone.utc
 DEFAULT_CONFIG = {
     "calendar_name": "新品/科技发布会追踪",
     "lookback_days": 60,
-    "event_lookback_hours": 24,
+    "event_lookback_hours": 48,
+    "calendar_past_days": 1,
     "lookahead_days": 60,
     "default_start_time": "19:00",
     "default_duration_minutes": 60,
@@ -41,55 +43,16 @@ DEFAULT_CONFIG = {
     "request_sleep_seconds": 1.0,
     "page_auto_refresh_seconds": 300,
     "output_dir": "out",
-    "rss_sources": [
+    "calendar_sources": [
         {
-            "name": "IT之家",
-            "category": "auto_detect",
-            "url": "https://www.ithome.com/rss/",
+            "name": "IT之家科技日历",
+            "source": "@微醺kkkkk",
+            "url_template": "https://napi.ithome.com/api/newsevent/{year}/{month:02d}",
+            "detail_url_template": "https://img.ithome.com/app/calendar/event_detail.html?id={id}&noapp=1",
         },
     ],
-    "queries": [
-        {
-            "name": "手机新品",
-            "category": "mobile",
-            "query": "手机 新品 发布会 时间 OR 新机 发布会 直播 OR 手机 发布会 定档 OR 折叠屏 发布会",
-        },
-        {
-            "name": "电脑新品",
-            "category": "computer",
-            "query": "笔记本电脑 发布会 时间 OR PC 新品 发布会 OR 电脑 新品 发布会 OR 平板 电脑 发布会",
-        },
-        {
-            "name": "新能源汽车",
-            "category": "ev",
-            "query": "新能源汽车 发布会 时间 OR 新车 发布会 直播 OR 智能汽车 发布会 定档 OR 上市发布会",
-        },
-        {
-            "name": "鸿蒙智行/华为车BU",
-            "category": "ev",
-            "query": "鸿蒙智行 发布会 时间 OR 华为车BU 发布会 OR 华为智能汽车解决方案BU 发布会 OR 华为乾崑 发布会 OR 乾崑ADS 发布会 OR 问界 智界 享界 尊界 尚界 发布会 OR 启境 奕境 华境 发布会 OR AITO LUXEED STELATO MAEXTRO 发布会",
-        },
-        {
-            "name": "华为终端/开发者大会",
-            "category": "tech",
-            "query": "华为 发布会 时间 OR 华为 新品 发布会 OR 华为 nova Mate Pura 发布会 OR 华为开发者大会 HDC OR 鸿蒙 HarmonyOS 发布会",
-        },
-        {
-            "name": "合资/日系车",
-            "category": "auto",
-            "query": "合资车 发布会 时间 OR 日系车 新车 发布会 OR 丰田 本田 日产 新车 上市 OR 大众 别克 新车 发布会",
-        },
-        {
-            "name": "科技数码",
-            "category": "tech",
-            "query": "科技 数码 发布会 时间 OR 新品 发布会 直播 OR AI 硬件 发布会 OR 智能硬件 发布会",
-        },
-        {
-            "name": "消费电子/外设",
-            "category": "tech",
-            "query": "耳机 NAS 私有云 显卡 机器人 音频芯片 发布会 开售 OR 索尼 荣耀 绿联 安克 砺算 AMD SAFE SpaceX 发布",
-        },
-    ],
+    "rss_sources": [],
+    "queries": [],
 }
 
 CATEGORY_LABELS = {
@@ -164,11 +127,38 @@ CATEGORY_KEYWORDS = {
         "上汽",
         "小米汽车",
         "红旗",
+        "北汽",
+        "极狐",
+        "arcfox",
         "北京越野",
         "bj40",
         "吉利银河",
         "岚图",
         "一汽悦意",
+        "吉利",
+        "广汽",
+        "传祺",
+        "奥迪",
+        "丰田",
+        "博越",
+        "领汇",
+        "铂智",
+        "方程豹",
+        "华境",
+        "五菱",
+        "理想",
+        "乐道",
+        "哈弗",
+        "长城汽车",
+        "昊铂",
+        "魏牌",
+        "腾势",
+        "极狐",
+        "东风",
+        "奕派",
+        "悦意",
+        "瑞虎",
+        "奇瑞",
     ],
     "auto": [
         "合资车",
@@ -291,16 +281,32 @@ NEGATIVE_KEYWORDS = [
     "京东首发",
     "京东首发开售",
     "京东全球首场",
+    "京东举办",
+    "京东直播",
     "京东 618",
+    "京东618",
     "618 正式启动",
+    "618 大促",
+    "618大促",
+    "大促正式启动",
+    "机器人拍卖",
     "两轮电动车",
     "电动自行车",
+    "电动摩托",
+    "电摩",
+    "摩托车",
+    "摩托",
     "新国标电动车",
+    "九号",
     "九号电动",
+    "小牛",
     "小牛电动",
     "爱玛",
     "雅迪",
     "春风动力",
+    "张雪机车",
+    "WSBK",
+    "SSP",
 ]
 
 CHINESE_WEEKDAY = {
@@ -391,8 +397,32 @@ def fetch_url(url: str, timeout: int = 20) -> bytes:
         "Accept": "application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8",
     }
     request = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return response.read()
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return response.read()
+    except (urllib.error.URLError, TimeoutError, OSError):
+        # The Codex sandbox can block Python DNS while allowing curl. The daily
+        # macOS LaunchAgent usually uses urllib directly, but this fallback keeps
+        # manual refreshes reliable from the same script.
+        completed = subprocess.run(
+            [
+                "curl",
+                "-L",
+                "--max-time",
+                str(timeout),
+                "-A",
+                headers["User-Agent"],
+                url,
+            ],
+            text=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        if completed.returncode != 0:
+            message = completed.stderr.decode("utf-8", errors="replace").strip()
+            raise urllib.error.URLError(message or f"curl exited {completed.returncode}")
+        return completed.stdout
 
 
 def parse_rss(data: bytes, query_name: str, category: str, max_items: int) -> List[NewsItem]:
@@ -520,6 +550,13 @@ def find_explicit_date(
             try:
                 event_date = dt.date(year, month, day)
             except ValueError:
+                continue
+
+            after_date = text[match.end() : match.end() + 6]
+            before_date = text[max(0, match.start() - 6) : match.start()]
+            if after_date.startswith(("消息", "讯", "前", "之前", "内")):
+                continue
+            if before_date.endswith(("截至", "截止", "有效期至")):
                 continue
 
             nearby = text[match.end() : match.end() + 36]
@@ -697,16 +734,66 @@ def dedupe_events(events: Iterable[LaunchEvent]) -> List[LaunchEvent]:
     best_by_key: Dict[str, LaunchEvent] = {}
     for event in events:
         key = stable_event_key(event)
+        key = find_existing_fuzzy_key(best_by_key, key, event)
         existing = best_by_key.get(key)
-        if existing is None or event.score > existing.score:
+        if existing is None or event_quality(event) > event_quality(existing):
             best_by_key[key] = event
     return sorted(best_by_key.values(), key=lambda event: (event.start, event.category, event.title))
 
 
 def stable_event_key(event: LaunchEvent) -> str:
-    normalized_title = re.sub(r"[\W_]+", "", event.title.lower())
-    normalized_title = normalized_title[:48]
+    normalized_title = compact_title_for_dedupe(event.title)[:48]
     return f"{event.category}:{event.start.date().isoformat()}:{normalized_title}"
+
+
+def find_existing_fuzzy_key(existing: Dict[str, LaunchEvent], default_key: str, event: LaunchEvent) -> str:
+    event_title = compact_title_for_dedupe(event.title)
+    if len(event_title) < 4:
+        return default_key
+    for key, other in existing.items():
+        if other.category != event.category:
+            continue
+        if abs((other.start - event.start).total_seconds()) > 90:
+            continue
+        other_title = compact_title_for_dedupe(other.title)
+        if len(other_title) < 4:
+            continue
+        if event_title in other_title or other_title in event_title:
+            return key
+    return default_key
+
+
+def compact_title_for_dedupe(title: str) -> str:
+    normalized = title.lower()
+    normalized = re.sub(r"[（(].*?具体时间待定.*?[）)]", "", normalized)
+    for word in [
+        "发布会",
+        "新品发布",
+        "上市发布",
+        "正式上市",
+        "开启预售",
+        "开启预约",
+        "发布上市",
+        "全球首秀",
+        "国行版",
+        "系列",
+        "手机",
+        "车型",
+        "汽车",
+        "全新",
+        "正式",
+        "2026款",
+        "2026年",
+        "东风",
+    ]:
+        normalized = normalized.replace(word, "")
+    normalized = re.sub(r"[\W_]+", "", normalized)
+    return normalized or re.sub(r"[\W_]+", "", title.lower())
+
+
+def event_quality(event: LaunchEvent) -> Tuple[int, int, int]:
+    has_news_url = 1 if re.search(r"https://www\.ithome\.com/0/\d+/\d+\.htm", event.url) else 0
+    return event.score, has_news_url, len(event.title)
 
 
 def write_outputs(events: List[LaunchEvent], candidates: List[NewsItem], output_dir: Path, config: Dict) -> None:
@@ -1178,11 +1265,260 @@ def format_utc(value: dt.datetime) -> str:
     return value.astimezone(UTC).strftime("%Y%m%dT%H%M%SZ")
 
 
+def iter_calendar_months(now: dt.datetime, config: Dict) -> Iterable[Tuple[int, int]]:
+    start = (now - dt.timedelta(hours=int(config.get("event_lookback_hours", 48)))).date().replace(day=1)
+    end = (now + dt.timedelta(days=int(config["lookahead_days"]))).date().replace(day=1)
+    year, month = start.year, start.month
+    while (year, month) <= (end.year, end.month):
+        yield year, month
+        month += 1
+        if month > 12:
+            year += 1
+            month = 1
+
+
+def parse_ithome_calendar(data: bytes) -> List[Dict]:
+    payload = json.loads(data.decode("utf-8-sig"))
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+    if isinstance(payload, dict):
+        nested = payload.get("data") or payload.get("Data") or payload.get("result")
+        if isinstance(nested, list):
+            return [item for item in nested if isinstance(item, dict)]
+    return []
+
+
+def ithome_calendar_item_to_event(
+    raw: Dict,
+    config: Dict,
+    source_config: Dict,
+    now: dt.datetime,
+) -> Optional[LaunchEvent]:
+    if bool(raw.get("Internal")):
+        return None
+    if is_blocked_ithome_calendar_item(raw):
+        return None
+
+    start = parse_ithome_datetime(raw)
+    if not start:
+        return None
+
+    lookahead = dt.timedelta(days=int(config["lookahead_days"]))
+    min_calendar_date = now.date() - dt.timedelta(days=int(config.get("calendar_past_days", 1)))
+    if start.date() < min_calendar_date or start > now + lookahead:
+        return None
+
+    title = clean_text(str(raw.get("Title") or ""))
+    if not title:
+        return None
+
+    all_day = bool(raw.get("TimeNotdecided")) or (
+        str(raw.get("EventTime") or "").strip() in {"0:00", "00:00"} and "具体时间待定" in title
+    )
+    end = parse_dotnet_datetime(str(raw.get("EndTime") or ""))
+    if all_day:
+        if end and end.date() > start.date():
+            end = dt.datetime.combine(end.date() + dt.timedelta(days=1), dt.time.min, tzinfo=CN_TZ)
+        else:
+            end = dt.datetime.combine(start.date() + dt.timedelta(days=1), dt.time.min, tzinfo=CN_TZ)
+        start = dt.datetime.combine(start.date(), dt.time.min, tzinfo=CN_TZ)
+    else:
+        default_end = start + dt.timedelta(minutes=int(config["default_duration_minutes"]))
+        end = end if end and end > start else default_end
+
+    tags = clean_text(str(raw.get("Tags") or ""))
+    memo = clean_html(str(raw.get("MemoHtml") or raw.get("Memo") or ""))
+    combined = " ".join(part for part in [title, tags, memo] if part)
+    event_id = raw.get("ID")
+    detail_url = ithome_calendar_detail_url(source_config, event_id)
+    url = ithome_news_url(raw.get("NewsId")) or detail_url
+    summary = "\n".join(part for part in [memo, f"IT之家日历：{detail_url}", f"标签：{tags}" if tags else ""] if part)
+
+    return LaunchEvent(
+        title=title,
+        category=detect_ithome_calendar_category(combined),
+        start=start,
+        end=end,
+        all_day=all_day,
+        location=clean_text(str(raw.get("EventPlace") or "")) or "线上",
+        url=url,
+        source=str(source_config.get("source") or "@微醺kkkkk"),
+        summary=summary,
+        published_at=parse_iso_datetime(str(raw.get("UpdateTime") or "")),
+        score=10 if not all_day else 9,
+        matched_date=start.strftime("%m月%d日 %H:%M"),
+    )
+
+
+def is_blocked_ithome_calendar_item(raw: Dict) -> bool:
+    title = clean_text(str(raw.get("Title") or ""))
+    tags = clean_text(str(raw.get("Tags") or ""))
+    memo = clean_html(str(raw.get("MemoHtml") or raw.get("Memo") or ""))
+    place = clean_text(str(raw.get("EventPlace") or ""))
+    searchable = f"{title} {tags} {memo}"
+    lowered = searchable.lower()
+    if any(keyword.lower() in lowered for keyword in NEGATIVE_KEYWORDS):
+        return True
+    if "京东" in place and any(word in title for word in ["开售", "首发", "直播", "大促"]):
+        return True
+    return False
+
+
+def detect_ithome_calendar_category(text: str) -> str:
+    lowered = text.lower()
+    ev_words = [
+        "汽车",
+        "新车",
+        "车型",
+        "华为乾崑",
+        "乾崑智驾",
+        "鸿蒙智行",
+        "问界",
+        "智界",
+        "享界",
+        "尊界",
+        "尚界",
+        "华境",
+        "启境",
+        "奕境",
+        "小米汽车",
+        "比亚迪",
+        "蔚来",
+        "小鹏",
+        "理想",
+        "极氪",
+        "红旗",
+        "北汽",
+        "极狐",
+        "arcfox",
+        "北京越野",
+        "吉利",
+        "岚图",
+        "五菱",
+        "乐道",
+        "哈弗",
+        "长城汽车",
+        "腾势",
+        "东风",
+        "奕派",
+        "悦意",
+        "瑞虎",
+        "奇瑞",
+    ]
+    if any(word.lower() in lowered for word in ev_words):
+        return "ev"
+
+    computer_words = [
+        "电脑",
+        "笔记本",
+        "游戏本",
+        "台式机",
+        "pc",
+        "computex",
+        "华硕",
+        "rog",
+        "七彩虹",
+        "英特尔酷睿",
+    ]
+    if any(word.lower() in lowered for word in computer_words):
+        return "computer"
+
+    mobile_words = [
+        "手机",
+        "新机",
+        "iqoo",
+        "oppo",
+        "reno",
+        "vivo",
+        "xperia",
+        "红魔",
+        "小米 17t",
+        "荣耀 600",
+        "win turbo",
+        "nova",
+        "pura",
+    ]
+    if any(word.lower() in lowered for word in mobile_words):
+        return "mobile"
+
+    return "tech"
+
+
+def parse_ithome_datetime(raw: Dict) -> Optional[dt.datetime]:
+    parsed = parse_dotnet_datetime(str(raw.get("RealTime") or ""))
+    if parsed:
+        return parsed
+    return parse_iso_datetime(str(raw.get("RealTimeNew") or ""))
+
+
+def parse_dotnet_datetime(value: str) -> Optional[dt.datetime]:
+    match = re.search(r"/Date\((-?\d+)", value)
+    if not match:
+        return None
+    try:
+        timestamp = int(match.group(1)) / 1000
+    except ValueError:
+        return None
+    return dt.datetime.fromtimestamp(timestamp, tz=UTC).astimezone(CN_TZ)
+
+
+def parse_iso_datetime(value: str) -> Optional[dt.datetime]:
+    if not value:
+        return None
+    normalized = re.sub(r"\.(\d{6})\d+", r".\1", value)
+    try:
+        parsed = dt.datetime.fromisoformat(normalized)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=CN_TZ)
+    return parsed.astimezone(CN_TZ)
+
+
+def ithome_news_url(news_id: object) -> str:
+    try:
+        value = int(news_id or 0)
+    except (TypeError, ValueError):
+        return ""
+    if value <= 0:
+        return ""
+    return f"https://www.ithome.com/0/{value // 1000:03d}/{value % 1000:03d}.htm"
+
+
+def ithome_calendar_detail_url(source_config: Dict, event_id: object) -> str:
+    template = str(
+        source_config.get("detail_url_template")
+        or "https://img.ithome.com/app/calendar/event_detail.html?id={id}&noapp=1"
+    )
+    try:
+        return template.format(id=int(event_id or 0))
+    except (TypeError, ValueError):
+        return template.format(id=0)
+
+
 def collect_events(config: Dict, max_items: int) -> Tuple[List[LaunchEvent], List[NewsItem], List[str]]:
     now = dt.datetime.now(tz=CN_TZ)
     events: List[LaunchEvent] = []
     candidates: List[NewsItem] = []
     errors: List[str] = []
+    for source_config in config.get("calendar_sources", []):
+        template = source_config.get("url_template")
+        if not template:
+            continue
+        for year, month in iter_calendar_months(now, config):
+            try:
+                url = str(template).format(year=year, month=month)
+                data = fetch_url(url)
+                items = parse_ithome_calendar(data)
+            except (KeyError, urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError) as exc:
+                errors.append(f"{source_config.get('name', 'Calendar')} {year}-{month:02d}: {exc}")
+                continue
+            for item in items:
+                event = ithome_calendar_item_to_event(item, config, source_config, now)
+                if event:
+                    events.append(event)
+            time.sleep(float(config.get("request_sleep_seconds", 1.0)))
+
     for source_config in config.get("rss_sources", []):
         try:
             data = fetch_url(source_config["url"])
@@ -1199,7 +1535,7 @@ def collect_events(config: Dict, max_items: int) -> Tuple[List[LaunchEvent], Lis
                 candidates.append(item)
         time.sleep(float(config.get("request_sleep_seconds", 1.0)))
 
-    for query_config in config["queries"]:
+    for query_config in config.get("queries", []):
         url = google_news_rss_url(query_config["query"], int(config["lookback_days"]))
         try:
             data = fetch_url(url)
@@ -1226,6 +1562,7 @@ def run_self_tests() -> int:
         ("旗舰新机发布会 5月21日晚8点直播", dt.datetime(2026, 5, 21, 20, 0, tzinfo=CN_TZ), False),
         ("手机发布会明晚8点直播", dt.datetime(2026, 5, 20, 20, 0, tzinfo=CN_TZ), False),
         ("科技新品发布会本周五举行", dt.datetime(2026, 5, 22, 19, 0, tzinfo=CN_TZ), True),
+        ("5月20日消息，vivo S60 系列手机新品发布会定档 5月29日 19:30", dt.datetime(2026, 5, 29, 19, 30, tzinfo=CN_TZ), False),
     ]
     for text, expected_start, expected_all_day in cases:
         parsed = find_event_datetime(text, now, now, "19:00")
@@ -1250,7 +1587,7 @@ def main() -> int:
         config["output_dir"] = args.output_dir
     output_dir = Path(config["output_dir"])
     events, candidates, errors = collect_events(config, args.max_items)
-    source_count = len(config.get("rss_sources", [])) + len(config["queries"])
+    source_count = len(config.get("calendar_sources", [])) + len(config.get("rss_sources", [])) + len(config.get("queries", []))
     all_sources_failed = bool(errors) and len(errors) >= source_count and not events and not candidates
     if all_sources_failed:
         print("refresh failed before finding any items; existing outputs were kept", file=sys.stderr)

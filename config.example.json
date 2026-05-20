@@ -1,7 +1,8 @@
 {
   "calendar_name": "新品/科技发布会追踪",
   "lookback_days": 60,
-  "event_lookback_hours": 24,
+  "event_lookback_hours": 48,
+  "calendar_past_days": 1,
   "lookahead_days": 60,
   "default_start_time": "19:00",
   "default_duration_minutes": 60,
@@ -9,53 +10,14 @@
   "request_sleep_seconds": 1.0,
   "page_auto_refresh_seconds": 300,
   "output_dir": "out",
-  "rss_sources": [
+  "calendar_sources": [
     {
-      "name": "IT之家",
-      "category": "auto_detect",
-      "url": "https://www.ithome.com/rss/"
+      "name": "IT之家科技日历",
+      "source": "@微醺kkkkk",
+      "url_template": "https://napi.ithome.com/api/newsevent/{year}/{month:02d}",
+      "detail_url_template": "https://img.ithome.com/app/calendar/event_detail.html?id={id}&noapp=1"
     }
   ],
-  "queries": [
-    {
-      "name": "手机新品",
-      "category": "mobile",
-      "query": "手机 新品 发布会 时间 OR 新机 发布会 直播 OR 手机 发布会 定档 OR 折叠屏 发布会"
-    },
-    {
-      "name": "电脑新品",
-      "category": "computer",
-      "query": "笔记本电脑 发布会 时间 OR PC 新品 发布会 OR 电脑 新品 发布会 OR 平板 电脑 发布会"
-    },
-    {
-      "name": "新能源汽车",
-      "category": "ev",
-      "query": "新能源汽车 发布会 时间 OR 新车 发布会 直播 OR 智能汽车 发布会 定档 OR 上市发布会"
-    },
-    {
-      "name": "鸿蒙智行/华为车BU",
-      "category": "ev",
-      "query": "鸿蒙智行 发布会 时间 OR 华为车BU 发布会 OR 华为智能汽车解决方案BU 发布会 OR 华为乾崑 发布会 OR 乾崑ADS 发布会 OR 问界 智界 享界 尊界 尚界 发布会 OR 启境 奕境 华境 发布会 OR AITO LUXEED STELATO MAEXTRO 发布会"
-    },
-    {
-      "name": "华为终端/开发者大会",
-      "category": "tech",
-      "query": "华为 发布会 时间 OR 华为 新品 发布会 OR 华为 nova Mate Pura 发布会 OR 华为开发者大会 HDC OR 鸿蒙 HarmonyOS 发布会"
-    },
-    {
-      "name": "合资/日系车",
-      "category": "auto",
-      "query": "合资车 发布会 时间 OR 日系车 新车 发布会 OR 丰田 本田 日产 新车 上市 OR 大众 别克 新车 发布会"
-    },
-    {
-      "name": "科技数码",
-      "category": "tech",
-      "query": "科技 数码 发布会 时间 OR 新品 发布会 直播 OR AI 硬件 发布会 OR 智能硬件 发布会"
-    },
-    {
-      "name": "消费电子/外设",
-      "category": "tech",
-      "query": "耳机 NAS 私有云 显卡 机器人 音频芯片 发布会 开售 OR 索尼 荣耀 绿联 安克 砺算 AMD SAFE SpaceX 发布"
-    }
-  ]
+  "rss_sources": [],
+  "queries": []
 }

@@ -5,6 +5,7 @@ __pycache__/
 .github-feed-worktree/
 .git-test-write
 .swift-module-cache/
+logs/
 config.json
 google_client_secret.json
 google_token.json
