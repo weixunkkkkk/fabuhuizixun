@@ -69,8 +69,8 @@ if ! echo "$SSH_OUTPUT" | grep -q "successfully authenticated"; then
 fi
 
 echo ""
-echo "SSH 已连通，开始首次上传当前仓库..."
-GIT_DIR=".git-local" GIT_WORK_TREE="." git push -u origin main
+echo "SSH 已连通，开始首次上传订阅源文件..."
+python3 upload_subscription_feed_to_github.py
 code=$?
 
 echo ""

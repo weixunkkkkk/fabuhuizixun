@@ -1,10 +1,10 @@
 #!/bin/zsh
 cd "$(dirname "$0")"
 
-echo "正在上传到 GitHub: https://github.com/weixunkkkkk/fabuhuizixun"
+echo "正在上传订阅源到 GitHub: https://github.com/weixunkkkkk/fabuhuizixun"
 echo ""
 
-GIT_DIR=".git-local" GIT_WORK_TREE="." git push -u origin main
+python3 upload_subscription_feed_to_github.py
 code=$?
 
 echo ""

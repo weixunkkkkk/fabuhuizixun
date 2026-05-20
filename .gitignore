@@ -2,6 +2,7 @@
 __pycache__/
 .DS_Store
 .git-local/
+.github-feed-worktree/
 .git-test-write
 .swift-module-cache/
 config.json
