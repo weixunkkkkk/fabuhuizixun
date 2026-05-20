@@ -33,6 +33,7 @@ UTC = dt.timezone.utc
 DEFAULT_CONFIG = {
     "calendar_name": "新品/科技发布会追踪",
     "lookback_days": 60,
+    "event_lookback_hours": 24,
     "lookahead_days": 60,
     "default_start_time": "19:00",
     "default_duration_minutes": 60,
@@ -282,6 +283,10 @@ NEGATIVE_KEYWORDS = [
     "发布会后",
     "发布会结束",
     "看点汇总",
+    "早报",
+    "do早报",
+    "一文汇总",
+    "主讲人",
     "京东直播",
     "京东首发",
     "京东首发开售",
@@ -439,6 +444,8 @@ def clean_text(value: str) -> str:
 
 def score_item(item: NewsItem) -> int:
     text = f"{item.title} {item.summary}".lower()
+    if any(word.lower() in text for word in NEGATIVE_KEYWORDS):
+        return 0
     score = 0
     if any(word in text for word in EVENT_KEYWORDS):
         score += 2
@@ -446,10 +453,12 @@ def score_item(item: NewsItem) -> int:
         score += 2
     if any(word in text for word in ["时间", "定档", "直播", "官宣", "邀请函"]):
         score += 1
-    if any(word.lower() in text for word in CATEGORY_KEYWORDS.get(item.category, [])):
+    if item.category == "auto_detect":
+        category_keywords = [word for words in CATEGORY_KEYWORDS.values() for word in words]
+    else:
+        category_keywords = CATEGORY_KEYWORDS.get(item.category, [])
+    if any(word.lower() in text for word in category_keywords):
         score += 2
-    if any(word in text for word in NEGATIVE_KEYWORDS):
-        score -= 2
     return score
 
 
@@ -629,9 +638,9 @@ def item_to_event(item: NewsItem, config: Dict, now: dt.datetime) -> Optional[La
     if not parsed:
         return None
     start, all_day, matched_date = parsed
-    lookback = dt.timedelta(days=int(config["lookback_days"]))
+    event_lookback = dt.timedelta(hours=int(config.get("event_lookback_hours", 24)))
     lookahead = dt.timedelta(days=int(config["lookahead_days"]))
-    if start < now - lookback or start > now + lookahead:
+    if start < now - event_lookback or start > now + lookahead:
         return None
     duration = dt.timedelta(minutes=int(config["default_duration_minutes"]))
     end = start + (dt.timedelta(days=1) if all_day else duration)

@@ -1,6 +1,7 @@
 {
   "calendar_name": "新品/科技发布会追踪",
   "lookback_days": 60,
+  "event_lookback_hours": 24,
   "lookahead_days": 60,
   "default_start_time": "19:00",
   "default_duration_minutes": 60,
