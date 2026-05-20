@@ -40,6 +40,13 @@ DEFAULT_CONFIG = {
     "request_sleep_seconds": 1.0,
     "page_auto_refresh_seconds": 300,
     "output_dir": "out",
+    "rss_sources": [
+        {
+            "name": "IT之家",
+            "category": "auto_detect",
+            "url": "https://www.ithome.com/rss/",
+        },
+    ],
     "queries": [
         {
             "name": "手机新品",
@@ -628,9 +635,10 @@ def item_to_event(item: NewsItem, config: Dict, now: dt.datetime) -> Optional[La
         return None
     duration = dt.timedelta(minutes=int(config["default_duration_minutes"]))
     end = start + (dt.timedelta(days=1) if all_day else duration)
+    category = detect_category(combined, item.category)
     return LaunchEvent(
         title=strip_news_source_suffix(item.title),
-        category=item.category,
+        category=category,
         start=start,
         end=end,
         all_day=all_day,
@@ -642,6 +650,19 @@ def item_to_event(item: NewsItem, config: Dict, now: dt.datetime) -> Optional[La
         score=score,
         matched_date=matched_date,
     )
+
+
+def detect_category(text: str, fallback: str) -> str:
+    if fallback != "auto_detect":
+        return fallback
+    lowered = text.lower()
+    scores: Dict[str, int] = {}
+    for category, keywords in CATEGORY_KEYWORDS.items():
+        scores[category] = sum(1 for keyword in keywords if keyword.lower() in lowered)
+    if not scores:
+        return "tech"
+    best_category, best_score = max(scores.items(), key=lambda item: item[1])
+    return best_category if best_score > 0 else "tech"
 
 
 def strip_news_source_suffix(title: str) -> str:
@@ -1153,6 +1174,22 @@ def collect_events(config: Dict, max_items: int) -> Tuple[List[LaunchEvent], Lis
     events: List[LaunchEvent] = []
     candidates: List[NewsItem] = []
     errors: List[str] = []
+    for source_config in config.get("rss_sources", []):
+        try:
+            data = fetch_url(source_config["url"])
+            items = parse_rss(data, source_config["name"], source_config.get("category", "auto_detect"), max_items)
+        except (KeyError, urllib.error.URLError, TimeoutError, ET.ParseError, OSError) as exc:
+            errors.append(f"{source_config.get('name', 'RSS')}: {exc}")
+            continue
+
+        for item in items:
+            event = item_to_event(item, config, now)
+            if event:
+                events.append(event)
+            elif score_item(item) >= int(config["min_score"]):
+                candidates.append(item)
+        time.sleep(float(config.get("request_sleep_seconds", 1.0)))
+
     for query_config in config["queries"]:
         url = google_news_rss_url(query_config["query"], int(config["lookback_days"]))
         try:
@@ -1204,7 +1241,8 @@ def main() -> int:
         config["output_dir"] = args.output_dir
     output_dir = Path(config["output_dir"])
     events, candidates, errors = collect_events(config, args.max_items)
-    all_sources_failed = bool(errors) and len(errors) >= len(config["queries"]) and not events and not candidates
+    source_count = len(config.get("rss_sources", [])) + len(config["queries"])
+    all_sources_failed = bool(errors) and len(errors) >= source_count and not events and not candidates
     if all_sources_failed:
         print("refresh failed before finding any items; existing outputs were kept", file=sys.stderr)
     else:

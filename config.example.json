@@ -8,6 +8,13 @@
   "request_sleep_seconds": 1.0,
   "page_auto_refresh_seconds": 300,
   "output_dir": "out",
+  "rss_sources": [
+    {
+      "name": "IT之家",
+      "category": "auto_detect",
+      "url": "https://www.ithome.com/rss/"
+    }
+  ],
   "queries": [
     {
       "name": "手机新品",
