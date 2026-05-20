@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Daily entrypoint: refresh launch events, summarize, then sync if authorized."""
+"""Daily entrypoint: refresh launch events and keep the local ICS feed current."""
 
 from __future__ import annotations
 
@@ -35,9 +35,7 @@ def main() -> int:
     if summary_code != 0:
         return summary_code
 
-    if os.environ.get("SKIP_MAC_CALENDAR_SYNC") == "1":
-        print("Mac Calendar sync skipped by SKIP_MAC_CALENDAR_SYNC=1.")
-    else:
+    if os.environ.get("SYNC_MAC_CALENDAR") == "1":
         mac_sync_code = run(
             [
                 "swift",
@@ -53,10 +51,17 @@ def main() -> int:
         )
         if mac_sync_code != 0:
             print("Mac Calendar sync failed or needs first-time permission; summary still generated.", file=sys.stderr)
+    else:
+        print("Mac Calendar sync skipped. Set SYNC_MAC_CALENDAR=1 to enable it.")
 
-    publish_code = run([sys.executable, str(PUBLISH_FEED)])
-    if publish_code != 0:
-        print("Subscription feed publish failed; local files are still generated.", file=sys.stderr)
+    if os.environ.get("PUBLISH_SUBSCRIPTION_FEED") == "1":
+        publish_code = run([sys.executable, str(PUBLISH_FEED)])
+        if publish_code != 0:
+            print("Subscription feed publish failed; local files are still generated.", file=sys.stderr)
+    else:
+        print("Subscription feed publish skipped. Upload out/subscription_feed.ics to GitHub yourself.")
+
+    print(f"subscription feed: {ROOT / 'out' / 'subscription_feed.ics'}")
 
     return 0
 
