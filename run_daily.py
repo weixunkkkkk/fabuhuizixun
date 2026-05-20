@@ -59,7 +59,7 @@ def main() -> int:
         if publish_code != 0:
             print("Subscription feed publish failed; local files are still generated.", file=sys.stderr)
     else:
-        print("Subscription feed publish skipped. Upload out/subscription_feed.ics to GitHub yourself.")
+        print("Remote feed publish skipped by default; local subscription feed is generated.")
 
     print(f"subscription feed: {ROOT / 'out' / 'subscription_feed.ics'}")
 
