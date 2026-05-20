@@ -59,7 +59,12 @@ DEFAULT_CONFIG = {
         {
             "name": "鸿蒙智行/华为车BU",
             "category": "ev",
-            "query": "鸿蒙智行 发布会 时间 OR 华为车BU 发布会 OR 华为智能汽车解决方案BU 发布会 OR 问界 智界 享界 尊界 尚界 发布会 OR AITO LUXEED STELATO MAEXTRO 发布会",
+            "query": "鸿蒙智行 发布会 时间 OR 华为车BU 发布会 OR 华为智能汽车解决方案BU 发布会 OR 华为乾崑 发布会 OR 乾崑ADS 发布会 OR 问界 智界 享界 尊界 尚界 发布会 OR 启境 奕境 华境 发布会 OR AITO LUXEED STELATO MAEXTRO 发布会",
+        },
+        {
+            "name": "华为终端/开发者大会",
+            "category": "tech",
+            "query": "华为 发布会 时间 OR 华为 新品 发布会 OR 华为 nova Mate Pura 发布会 OR 华为开发者大会 HDC OR 鸿蒙 HarmonyOS 发布会",
         },
         {
             "name": "合资/日系车",
@@ -92,6 +97,9 @@ CATEGORY_KEYWORDS = {
         "galaxy",
         "小米",
         "华为",
+        "nova",
+        "mate",
+        "pura",
         "荣耀",
         "oppo",
         "vivo",
@@ -118,6 +126,14 @@ CATEGORY_KEYWORDS = {
         "尊界",
         "尚界",
         "鸿蒙智行",
+        "华为乾崑",
+        "乾崑",
+        "乾崑ads",
+        "乾崑智驾",
+        "引望",
+        "启境",
+        "奕境",
+        "华境",
         "hima",
         "aito",
         "luxeed",
@@ -125,9 +141,9 @@ CATEGORY_KEYWORDS = {
         "maextro",
         "华为车bu",
         "华为智能汽车解决方案bu",
-        "华为乾崑",
-        "乾崑智驾",
-        "引望",
+        "华为智驾",
+        "华为智选车",
+        "鸿蒙座舱",
         "赛力斯",
         "奇瑞",
         "北汽蓝谷",
@@ -644,6 +660,8 @@ def write_csv(events: List[LaunchEvent], path: Path) -> None:
                 "category",
                 "title",
                 "location",
+                "source",
+                "url",
                 "score",
                 "matched_date",
             ],
@@ -658,6 +676,8 @@ def write_csv(events: List[LaunchEvent], path: Path) -> None:
                     "category": CATEGORY_LABELS.get(event.category, event.category),
                     "title": event.title,
                     "location": event.location,
+                    "source": event.source,
+                    "url": event.url,
                     "score": event.score,
                     "matched_date": event.matched_date,
                 }
@@ -701,8 +721,11 @@ def google_csv_description(event: LaunchEvent) -> str:
     return "\n".join(
         part
         for part in [
+            f"来源：{event.source}" if event.source else None,
+            f"链接：{event.url}" if event.url else None,
             f"识别到的时间：{event.matched_date}",
             f"可信度分数：{event.score}",
+            event.url if event.url else None,
         ]
         if part
     )
@@ -729,6 +752,9 @@ def event_to_dict(event: LaunchEvent) -> Dict:
         "end": event.end.isoformat(),
         "all_day": event.all_day,
         "location": event.location,
+        "source": event.source,
+        "url": event.url,
+        "summary": event.summary,
         "published_at": event.published_at.isoformat() if event.published_at else None,
         "score": event.score,
         "matched_date": event.matched_date,
@@ -1015,8 +1041,11 @@ def event_to_ics_lines(event: LaunchEvent, now_utc: dt.datetime) -> List[str]:
     description = "\n".join(
         part
         for part in [
+            f"来源：{event.source}" if event.source else None,
+            f"链接：{event.url}" if event.url else None,
             f"识别到的时间：{event.matched_date}",
             f"可信度分数：{event.score}",
+            event.url if event.url else None,
         ]
         if part
     )

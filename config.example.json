@@ -27,7 +27,12 @@
     {
       "name": "鸿蒙智行/华为车BU",
       "category": "ev",
-      "query": "鸿蒙智行 发布会 时间 OR 华为车BU 发布会 OR 华为智能汽车解决方案BU 发布会 OR 问界 智界 享界 尊界 尚界 发布会 OR AITO LUXEED STELATO MAEXTRO 发布会"
+      "query": "鸿蒙智行 发布会 时间 OR 华为车BU 发布会 OR 华为智能汽车解决方案BU 发布会 OR 华为乾崑 发布会 OR 乾崑ADS 发布会 OR 问界 智界 享界 尊界 尚界 发布会 OR 启境 奕境 华境 发布会 OR AITO LUXEED STELATO MAEXTRO 发布会"
+    },
+    {
+      "name": "华为终端/开发者大会",
+      "category": "tech",
+      "query": "华为 发布会 时间 OR 华为 新品 发布会 OR 华为 nova Mate Pura 发布会 OR 华为开发者大会 HDC OR 鸿蒙 HarmonyOS 发布会"
     },
     {
       "name": "合资/日系车",

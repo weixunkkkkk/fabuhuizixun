@@ -209,13 +209,21 @@ func fnv1a64(_ value: String) -> String {
 
 func eventNotes(for event: LaunchEvent, key: String) -> String {
     var lines = [
-        "launch-calendar-bot-id:\(key)"
+        "launch-calendar-bot-id:\(key)",
+        "来源：\(event.source ?? "@微醺kkkkk")"
     ]
+    if let url = event.url, !url.isEmpty {
+        lines.append("链接：\(url)")
+    }
     if let matchedDate = event.matchedDate, !matchedDate.isEmpty {
         lines.append("识别时间：\(matchedDate)")
     }
     if let score = event.score {
         lines.append("可信度分数：\(score)")
+    }
+    if let url = event.url, !url.isEmpty {
+        lines.append("")
+        lines.append(url)
     }
     return lines.joined(separator: "\n")
 }
@@ -236,7 +244,11 @@ func applyLaunchEvent(_ launch: LaunchEvent, to event: EKEvent, key: String) thr
     event.isAllDay = launch.allDay
     event.location = launch.location ?? "线上"
     event.notes = eventNotes(for: launch, key: key)
-    event.url = nil
+    if let url = launch.url, !url.isEmpty {
+        event.url = URL(string: url)
+    } else {
+        event.url = nil
+    }
 }
 
 func sync(args: Arguments) throws {

@@ -7,10 +7,12 @@ X-WR-CALNAME:科技新品发布会日程
 X-WR-TIMEZONE:Asia/Shanghai
 BEGIN:VEVENT
 UID:71377110b9cd8fb97347c3d2c813a65d883da451@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] 联想天禧 AI 一体多端全场景新品超能
  之夜
-DESCRIPTION:识别到的时间：05月19日 19:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.sohu.com/a/102426
+ 1683_121839622\n识别到的时间：05月19日 19:00\n可信度分数
+ ：10\nhttps://www.sohu.com/a/1024261683_121839622
 CATEGORIES:科技数码
 LOCATION:线上
 DTSTART:20260519T110000Z
@@ -18,9 +20,11 @@ DTEND:20260519T123000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:c9a26d106a5d1df86b1cf056f6c788b87edba9a4@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] 影石 Insta360 新品发布
-DESCRIPTION:识别到的时间：05月19日 21:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.sina.cn/news/deta
+ il/5298218549382274.html\n识别到的时间：05月19日 21:00\n可信
+ 度分数：10\nhttps://www.sina.cn/news/detail/5298218549382274.html
 CATEGORIES:科技数码
 LOCATION:线上
 DTSTART:20260519T130000Z
@@ -28,9 +32,11 @@ DTEND:20260519T143000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:ae5a0aafbb0451f3608083f7dd2165c99f77b84c@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] Google I/O 2026
-DESCRIPTION:识别到的时间：05月20日 01:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://io.google/2026/\n识
+ 别到的时间：05月20日 01:00\n可信度分数：10\nhttps://io.goo
+ gle/2026/
 CATEGORIES:科技数码
 LOCATION:线上
 DTSTART:20260519T170000Z
@@ -38,9 +44,11 @@ DTEND:20260519T183000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:ab7478e2bfe5b51cdc34ab85c7ae597f6091dd33@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[手机新品] iQOO 15T 新品发布
-DESCRIPTION:识别到的时间：05月20日 19:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/949/
+ 624.htm\n识别到的时间：05月20日 19:00\n可信度分数：10\nht
+ tps://www.ithome.com/0/949/624.htm
 CATEGORIES:手机新品
 LOCATION:线上
 DTSTART:20260520T110000Z
@@ -48,9 +56,11 @@ DTEND:20260520T123000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:8ef341c04742bbedb2c884207f5e85b8346ac705@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[新能源汽车] 小鹏 GX 上市发布会
-DESCRIPTION:识别到的时间：05月20日 19:30\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/950/
+ 843.htm\n识别到的时间：05月20日 19:30\n可信度分数：10\nht
+ tps://www.ithome.com/0/950/843.htm
 CATEGORIES:新能源汽车
 LOCATION:线上
 DTSTART:20260520T113000Z
@@ -58,9 +68,11 @@ DTEND:20260520T130000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:0474b957412c18405b0424c5bc0d058fc55aa896@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] 网易游戏 520 线上发布会
-DESCRIPTION:识别到的时间：05月20日 19:30\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/948/
+ 671.htm\n识别到的时间：05月20日 19:30\n可信度分数：10\nht
+ tps://www.ithome.com/0/948/671.htm
 CATEGORIES:科技数码
 LOCATION:线上
 DTSTART:20260520T113000Z
@@ -68,9 +80,11 @@ DTEND:20260520T130000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:7fe411a155d67b6f100930edcd2d2f3cd41580b0@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] 2026 阿里云峰会
-DESCRIPTION:识别到的时间：05月20日\n可信度分数：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://summit.aliyun.com/202
+ 6\n识别到的时间：05月20日\n可信度分数：8\nhttps://summit.
+ aliyun.com/2026
 CATEGORIES:科技数码
 LOCATION:线上/杭州
 DTSTART;VALUE=DATE:20260520
@@ -78,9 +92,12 @@ DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
 UID:786bb20227f9e7ac3319796ec8915ee9b315fcfe@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[手机新品] 小米人车家全生态新品发布会
-DESCRIPTION:识别到的时间：05月21日 19:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://finance.sina.com.cn/t
+ ech/roll/2026-05-18/doc-inhyhyqn0717717.shtml\n识别到的时间：05
+ 月21日 19:00\n可信度分数：10\nhttps://finance.sina.com.cn/tech/r
+ oll/2026-05-18/doc-inhyhyqn0717717.shtml
 CATEGORIES:手机新品
 LOCATION:线上
 DTSTART:20260521T110000Z
@@ -88,9 +105,11 @@ DTEND:20260521T123000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:60283e7c0ccf6420c268e62c44083676d7de6a20@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] BOOX 文石 Poke7/Pro 墨水屏阅读器发布
-DESCRIPTION:识别到的时间：05月21日\n可信度分数：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/948/
+ 192.htm\n识别到的时间：05月21日\n可信度分数：8\nhttps://w
+ ww.ithome.com/0/948/192.htm
 CATEGORIES:科技数码
 LOCATION:线上
 DTSTART;VALUE=DATE:20260521
@@ -98,9 +117,11 @@ DTEND;VALUE=DATE:20260522
 END:VEVENT
 BEGIN:VEVENT
 UID:b09cf5c008aa125043ea96fb4e9860639b1d697d@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[新能源汽车] 北汽极狐 S3 上市
-DESCRIPTION:识别到的时间：05月22日\n可信度分数：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/949/
+ 896.htm\n识别到的时间：05月22日\n可信度分数：8\nhttps://w
+ ww.ithome.com/0/949/896.htm
 CATEGORIES:新能源汽车
 LOCATION:线上
 DTSTART;VALUE=DATE:20260522
@@ -108,9 +129,11 @@ DTEND;VALUE=DATE:20260523
 END:VEVENT
 BEGIN:VEVENT
 UID:693bef7ce460076f3d842d796799990291b4de2c@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[新能源汽车] 五菱缤果 Pro 上市发布会
-DESCRIPTION:识别到的时间：05月22日\n可信度分数：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.bitauto.com/artic
+ le/1003109938743/\n识别到的时间：05月22日\n可信度分数：8\
+ nhttps://www.bitauto.com/article/1003109938743/
 CATEGORIES:新能源汽车
 LOCATION:威海
 DTSTART;VALUE=DATE:20260522
@@ -118,9 +141,11 @@ DTEND;VALUE=DATE:20260523
 END:VEVENT
 BEGIN:VEVENT
 UID:739b9449984a49f2a45fa09953353dcd8ebae400@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] 神舟二十三号计划近日择机发射
-DESCRIPTION:识别到的时间：05月24日\n可信度分数：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/951/
+ 187.htm\n识别到的时间：05月24日\n可信度分数：8\nhttps://w
+ ww.ithome.com/0/951/187.htm
 CATEGORIES:科技数码
 LOCATION:酒泉卫星发射中心
 DTSTART;VALUE=DATE:20260524
@@ -128,9 +153,11 @@ DTEND;VALUE=DATE:20260525
 END:VEVENT
 BEGIN:VEVENT
 UID:6ae0171717036ede0bbc54a3ee43a1a31c50d713@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[手机新品] OPPO Reno16 系列发布会
-DESCRIPTION:识别到的时间：05月25日 18:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/951/
+ 680.htm\n识别到的时间：05月25日 18:00\n可信度分数：10\nht
+ tps://www.ithome.com/0/951/680.htm
 CATEGORIES:手机新品
 LOCATION:线上
 DTSTART:20260525T100000Z
@@ -138,9 +165,11 @@ DTEND:20260525T113000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:1cd1ab50b3507742417ab005185c5613902c6feb@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[手机新品] 荣耀 600 系列暨全场景新品发布会
-DESCRIPTION:识别到的时间：05月25日 19:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://club.honor.com/cn/thr
+ ead-30202295-1-1.html\n识别到的时间：05月25日 19:00\n可信度
+ 分数：10\nhttps://club.honor.com/cn/thread-30202295-1-1.html
 CATEGORIES:手机新品
 LOCATION:厦门/线上
 DTSTART:20260525T110000Z
@@ -148,9 +177,11 @@ DTEND:20260525T123000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:523303a1c2255bdc7d32bdc6a98c67897f54b545@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[新能源汽车] 蔚来 ES9 上市并开启交付
-DESCRIPTION:识别到的时间：05月27日\n可信度分数：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://cbgc.scol.com.cn/news
+ /7568996\n识别到的时间：05月27日\n可信度分数：8\nhttps://
+ cbgc.scol.com.cn/news/7568996
 CATEGORIES:新能源汽车
 LOCATION:线上
 DTSTART;VALUE=DATE:20260527
@@ -158,9 +189,12 @@ DTEND;VALUE=DATE:20260528
 END:VEVENT
 BEGIN:VEVENT
 UID:1aa5c9b32fdb969e51da2b9e1656f053d908f7f0@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] SPARK 2026 腾讯游戏发布会
-DESCRIPTION:识别到的时间：05月27日 20:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://finance.sina.com.cn/t
+ ech/digi/2026-05-18/doc-inhyimei2851668.shtml\n识别到的时间：05
+ 月27日 20:00\n可信度分数：10\nhttps://finance.sina.com.cn/tech/d
+ igi/2026-05-18/doc-inhyimei2851668.shtml
 CATEGORIES:科技数码
 LOCATION:线上
 DTSTART:20260527T120000Z
@@ -168,9 +202,11 @@ DTEND:20260527T133000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:132436fca8d09c58fd69955eae29e1749fcced2f@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[手机新品] vivo S60 系列发布会
-DESCRIPTION:识别到的时间：05月29日 19:30\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/952/
+ 238.htm\n识别到的时间：05月29日 19:30\n可信度分数：10\nht
+ tps://www.ithome.com/0/952/238.htm
 CATEGORIES:手机新品
 LOCATION:线上
 DTSTART:20260529T113000Z
@@ -178,9 +214,12 @@ DTEND:20260529T130000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:7216028957e6464d004f1596c8976e2450482a5f@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] 京东 618 正式启动
-DESCRIPTION:识别到的时间：05月30日 20:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://finance.sina.com.cn/t
+ ob/2026-05-18/doc-inhyhyqp2925192.shtml\n识别到的时间：05月30日
+  20:00\n可信度分数：10\nhttps://finance.sina.com.cn/tob/2026-05-18
+ /doc-inhyhyqp2925192.shtml
 CATEGORIES:科技数码
 LOCATION:线上
 DTSTART:20260530T120000Z
@@ -188,10 +227,12 @@ DTEND:20260530T133000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:0abb0db91e11af91cde69e21875af8c27c83a26f@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[手机新品] 华为 nova 16 系列全场景发布会（待确
  认）
-DESCRIPTION:识别到的时间：06月01日\n可信度分数：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://mobile.zol.com.cn/118
+ 1/11818097.html\n识别到的时间：06月01日\n可信度分数：8\nh
+ ttps://mobile.zol.com.cn/1181/11818097.html
 CATEGORIES:手机新品
 LOCATION:线上
 DTSTART;VALUE=DATE:20260601
@@ -199,9 +240,11 @@ DTEND;VALUE=DATE:20260602
 END:VEVENT
 BEGIN:VEVENT
 UID:9e18badde96426585a85811e3040a2dbbdfc9710@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] NVIDIA COMPUTEX 2026 Keynote（黄仁勋）
-DESCRIPTION:识别到的时间：06月01日 11:00\n可信度分数：10
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.taiwannews.com.tw
+ /news/6341753\n识别到的时间：06月01日 11:00\n可信度分数：
+ 10\nhttps://www.taiwannews.com.tw/news/6341753
 CATEGORIES:科技数码
 LOCATION:台北
 DTSTART:20260601T030000Z
@@ -209,10 +252,11 @@ DTEND:20260601T043000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:479e39635144d5557a2c355d5d11f427e30e56de@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] NVIDIA GTC Taipei 2026
-DESCRIPTION:识别到的时间：06月02日 - 06月04日\n可信度分数
- ：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.nvidia.com/en-us/
+ events/computex/\n识别到的时间：06月02日 - 06月04日\n可信
+ 度分数：8\nhttps://www.nvidia.com/en-us/events/computex/
 CATEGORIES:科技数码
 LOCATION:台北
 DTSTART;VALUE=DATE:20260602
@@ -220,10 +264,13 @@ DTEND;VALUE=DATE:20260605
 END:VEVENT
 BEGIN:VEVENT
 UID:6aa47b89f2c75f109700326f9e3647ac53967cd4@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] COMPUTEX Taipei 2026
-DESCRIPTION:识别到的时间：06月02日 - 06月05日\n可信度分数
- ：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.computextaipei.co
+ m.tw/en/news/8F914C77B6AF77A5/info.html?cid=news&cr=5&lt=data\n识别到
+ 的时间：06月02日 - 06月05日\n可信度分数：8\nhttps://www.co
+ mputextaipei.com.tw/en/news/8F914C77B6AF77A5/info.html?cid=news&cr=5&lt=
+ data
 CATEGORIES:科技数码
 LOCATION:台北
 DTSTART;VALUE=DATE:20260602
@@ -231,10 +278,11 @@ DTEND;VALUE=DATE:20260606
 END:VEVENT
 BEGIN:VEVENT
 UID:950965ea3308447422c13fee774dd88f6227ed87@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] Microsoft Build 2026
-DESCRIPTION:识别到的时间：06月02日 - 06月03日\n可信度分数
- ：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://build.microsoft.com/\
+ n识别到的时间：06月02日 - 06月03日\n可信度分数：8\nhttp
+ s://build.microsoft.com/
 CATEGORIES:科技数码
 LOCATION:线上/旧金山
 DTSTART;VALUE=DATE:20260602
@@ -242,10 +290,11 @@ DTEND;VALUE=DATE:20260604
 END:VEVENT
 BEGIN:VEVENT
 UID:3361974baedb6563db74c67f910f8de5dfd73ca7@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] SNEC PV+ 2026 华为光储新品展示
-DESCRIPTION:识别到的时间：06月03日 - 06月05日\n可信度分数
- ：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://solar.huawei.com/cn/e
+ vents/snec2026/\n识别到的时间：06月03日 - 06月05日\n可信度
+ 分数：8\nhttps://solar.huawei.com/cn/events/snec2026/
 CATEGORIES:科技数码
 LOCATION:上海
 DTSTART;VALUE=DATE:20260603
@@ -253,10 +302,13 @@ DTEND;VALUE=DATE:20260606
 END:VEVENT
 BEGIN:VEVENT
 UID:a98d477ae1f2c24ce3c09af1c124ceb9b6db2147@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] Apple WWDC 2026
-DESCRIPTION:识别到的时间：06月09日 - 06月13日\n可信度分数
- ：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.apple.com.cn/news
+ room/2026/05/apple-kicks-off-worldwide-developers-conference-on-june-8/\
+ n识别到的时间：06月09日 - 06月13日\n可信度分数：8\nhttp
+ s://www.apple.com.cn/newsroom/2026/05/apple-kicks-off-worldwide-develope
+ rs-conference-on-june-8/
 CATEGORIES:科技数码
 LOCATION:线上/Apple Park
 DTSTART;VALUE=DATE:20260609
@@ -264,10 +316,11 @@ DTEND;VALUE=DATE:20260614
 END:VEVENT
 BEGIN:VEVENT
 UID:9c164a2d41484ce3a6a8ce28adca1bddd93e6add@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] 华为开发者大会 HDC 2026
-DESCRIPTION:识别到的时间：06月12日 - 06月14日\n可信度分数
- ：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/944/
+ 689.htm\n识别到的时间：06月12日 - 06月14日\n可信度分数
+ ：8\nhttps://www.ithome.com/0/944/689.htm
 CATEGORIES:科技数码
 LOCATION:东莞松山湖
 DTSTART;VALUE=DATE:20260612
@@ -275,10 +328,11 @@ DTEND;VALUE=DATE:20260615
 END:VEVENT
 BEGIN:VEVENT
 UID:cbfb2de0161d734551e068cd2b2a19139ee1f21d@launch-calendar-bot
-DTSTAMP:20260519T130039Z
+DTSTAMP:20260520T001633Z
 SUMMARY:[科技数码] MWC Shanghai 2026
-DESCRIPTION:识别到的时间：06月24日 - 06月26日\n可信度分数
- ：8
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.mwcshanghai.com/l
+ ocation-venues\n识别到的时间：06月24日 - 06月26日\n可信度
+ 分数：8\nhttps://www.mwcshanghai.com/location-venues
 CATEGORIES:科技数码
 LOCATION:上海新国际博览中心
 DTSTART;VALUE=DATE:20260624

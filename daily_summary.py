@@ -71,6 +71,8 @@ def build_rows(events: List[Dict], now: dt.datetime) -> List[Dict]:
                 "标题": event.get("title", ""),
                 "分类": event.get("category", ""),
                 "地点": event.get("location", "线上"),
+                "来源": event.get("source", ""),
+                "链接": event.get("url", ""),
                 "_sort": (rank, parse_dt(event["start"])),
             }
         )
@@ -78,7 +80,7 @@ def build_rows(events: List[Dict], now: dt.datetime) -> List[Dict]:
 
 
 def write_csv(rows: List[Dict], path: Path) -> None:
-    fields = ["状态", "时间", "标题", "分类", "地点"]
+    fields = ["状态", "时间", "标题", "分类", "地点", "来源", "链接"]
     with path.open("w", newline="", encoding="utf-8-sig") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
