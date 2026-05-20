@@ -52,19 +52,18 @@
 ---
 ## 实测情况
 
-目前已在以下设备中测试，可以正常订阅并显示发布会日程：
+目前已在 OPPO 手机、小米手机和 iPhone 上进行测试，均可以正常添加订阅日历，并显示发布会日程。
 
-- OPPO 手机：可以正常添加订阅日历
-- 小米手机：可以正常添加订阅日历
-- iPhone：可以通过订阅日历方式添加 `.ics` 链接
+> 不同系统版本的入口名称可能略有差异，但只要系统日历支持网络日历 / 订阅日历 / URL 导入，一般都可以正常使用。
 
-### OPPO 手机测试截图
+<h3>OPPO 手机测试截图</h3>
+<img src="./screenshots/oppo-calendar-test.jpg" width="320">
 
-![OPPO 手机订阅测试](./screenshots/oppo-calendar-test.jpg)
+<h3>小米手机测试截图</h3>
+<img src="./screenshots/xiaomi-calendar-test.jpg" width="320">
 
-### 小米手机测试截图
-
-![小米手机订阅测试](./screenshots/xiaomi-calendar-test.jpg)
+<h3>iPhone 订阅测试截图</h3>
+<img src="./screenshots/iphone-calendar-test.jpg" width="320">
 
 
 ### Google Calendar 添加订阅
