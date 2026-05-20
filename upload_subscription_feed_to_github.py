@@ -76,6 +76,14 @@ def feed_changed() -> bool:
     return bool(completed.stdout.strip())
 
 
+def has_unpushed_commits() -> bool:
+    completed = run_git(["rev-list", "--count", f"origin/{BRANCH}..HEAD"], check=False)
+    try:
+        return int(completed.stdout.strip() or "0") > 0
+    except ValueError:
+        return False
+
+
 def copy_feed() -> None:
     target = PUBLISH_ROOT / FEED
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -95,7 +103,9 @@ def main() -> int:
             return 0
 
         copy_feed()
-        if not feed_changed():
+        changed = feed_changed()
+        ahead = has_unpushed_commits()
+        if not changed and not ahead:
             print("subscription feed unchanged; GitHub upload skipped.")
             return 0
 
@@ -103,9 +113,10 @@ def main() -> int:
             print(f"dry-run: would commit and push {FEED}")
             return 0
 
-        run_git(["add", str(FEED)])
-        message = "Update subscription feed " + dt.datetime.now().strftime("%Y-%m-%d %H:%M")
-        run_git(["commit", "-m", message, "--", str(FEED)])
+        if changed:
+            run_git(["add", str(FEED)])
+            message = "Update subscription feed " + dt.datetime.now().strftime("%Y-%m-%d %H:%M")
+            run_git(["commit", "-m", message, "--", str(FEED)])
         run_git(["push", "-u", "origin", f"HEAD:{BRANCH}"])
         print("GitHub upload complete.")
         return 0
