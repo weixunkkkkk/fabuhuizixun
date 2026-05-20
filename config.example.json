@@ -25,6 +25,11 @@
       "query": "新能源汽车 发布会 时间 OR 新车 发布会 直播 OR 智能汽车 发布会 定档 OR 上市发布会"
     },
     {
+      "name": "两轮电动车/摩托",
+      "category": "ev",
+      "query": "两轮电动车 发布会 OR 电动自行车 新国标 发布 OR 九号 爱玛 雅迪 小牛 春风动力 发布会 上市 预购"
+    },
+    {
       "name": "鸿蒙智行/华为车BU",
       "category": "ev",
       "query": "鸿蒙智行 发布会 时间 OR 华为车BU 发布会 OR 华为智能汽车解决方案BU 发布会 OR 华为乾崑 发布会 OR 乾崑ADS 发布会 OR 问界 智界 享界 尊界 尚界 发布会 OR 启境 奕境 华境 发布会 OR AITO LUXEED STELATO MAEXTRO 发布会"
@@ -43,6 +48,11 @@
       "name": "科技数码",
       "category": "tech",
       "query": "科技 数码 发布会 时间 OR 新品 发布会 直播 OR AI 硬件 发布会 OR 智能硬件 发布会"
+    },
+    {
+      "name": "消费电子/外设",
+      "category": "tech",
+      "query": "耳机 NAS 私有云 显卡 机器人 拍卖 音频芯片 发布会 开售 OR 索尼 荣耀 绿联 安克 砺算 西昇 AMD SAFE SpaceX 发布"
     }
   ]
 }
