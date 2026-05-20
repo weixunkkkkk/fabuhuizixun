@@ -25,6 +25,11 @@
       "query": "新能源汽车 发布会 时间 OR 新车 发布会 直播 OR 智能汽车 发布会 定档 OR 上市发布会"
     },
     {
+      "name": "鸿蒙智行/华为车BU",
+      "category": "ev",
+      "query": "鸿蒙智行 发布会 时间 OR 华为车BU 发布会 OR 华为智能汽车解决方案BU 发布会 OR 问界 智界 享界 尊界 尚界 发布会 OR AITO LUXEED STELATO MAEXTRO 发布会"
+    },
+    {
       "name": "合资/日系车",
       "category": "auto",
       "query": "合资车 发布会 时间 OR 日系车 新车 发布会 OR 丰田 本田 日产 新车 上市 OR 大众 别克 新车 发布会"
