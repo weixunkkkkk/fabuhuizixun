@@ -6,364 +6,25 @@ METHOD:PUBLISH
 X-WR-CALNAME:新品/科技发布会追踪
 X-WR-TIMEZONE:Asia/Shanghai
 BEGIN:VEVENT
-UID:5e068c2f91f238e98b5847ff44671ee31ffe0293@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[手机新品] 华为春季发布会定档3月23日
-DESCRIPTION:来源：汽车之家\n链接：https://news.google.com/rss/a
- rticles/CBMiW0FVX3lxTE5jZ2Y5Q20tX3VEb0pLZEczQkJJaFZTUmk1dHA5S0wxRnM3OGlE
- YXdBZXJHbklOZ2NraHRLUElnS1R3UlV6OWN6Qi1pb3R6M1FiRnRaS3FHSTVDWTA?oc=5\n
- 识别到的时间：3月23日\n可信度分数：7\nhttps://news.google
- .com/rss/articles/CBMiW0FVX3lxTE5jZ2Y5Q20tX3VEb0pLZEczQkJJaFZTUmk1dHA5S0
- wxRnM3OGlEYXdBZXJHbklOZ2NraHRLUElnS1R3UlV6OWN6Qi1pb3R6M1FiRnRaS3FHSTVDWT
- A?oc=5
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260323
-DTEND;VALUE=DATE:20260324
-END:VEVENT
-BEGIN:VEVENT
-UID:1b67a3af1ef0c7b143d126a4d5478ffe9e90e331@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[手机新品] 全能巨无霸vivo X300 Ultra发布会定档 3月
- 30日碾压手机旗舰圈
-DESCRIPTION:来源：中关村在线\n链接：https://news.google.com/rs
- s/articles/CBMiV0FVX3lxTE45eGRXMGN0dGVnU0RyQTViSW9QcHV2a20tdjlWV3FmRGE1U
- G1kbFJzUEo1Sy1rOG1Lc3FibUVEQkxCVnY1M3B2R1MzN2tKNUtkSWtCdkNDZw?oc=5\n识
- 别到的时间：3月30日\n可信度分数：7\nhttps://news.google.co
- m/rss/articles/CBMiV0FVX3lxTE45eGRXMGN0dGVnU0RyQTViSW9QcHV2a20tdjlWV3FmR
- GE1UG1kbFJzUEo1Sy1rOG1Lc3FibUVEQkxCVnY1M3B2R1MzN2tKNUtkSWtCdkNDZw?oc=5
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260330
-DTEND;VALUE=DATE:20260331
-END:VEVENT
-BEGIN:VEVENT
-UID:ec926607074edc0340cd500a9c39e1e495c5c31d@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[新能源汽车] 小鹏GX旗舰SUV内饰首发亮相，技术发
- 布会定档4月15日举行
-DESCRIPTION:来源：新浪财经\n链接：https://news.google.com/rss/a
- rticles/CBMikgFBVV95cUxQMnc5bEhOMTlOV0g4S2JGRTNMLWN6Y2ZqdHRYbWVtdUJwNDFT
- NklzbF82amd4QVJfamcxTUtzQkVBSUV1TmFmYnU5a2ZObzFDbFFDT3hnUlNjNDNURUF4S1ox
- UDd4TFJ5ZldkOUJPeDZoZV9CZFRWQXdNVXRaNFZtd0hlUVVMUnA3bnRKbVl0dWhBQQ?oc=5\
- n识别到的时间：4月15日\n可信度分数：7\nhttps://news.googl
- e.com/rss/articles/CBMikgFBVV95cUxQMnc5bEhOMTlOV0g4S2JGRTNMLWN6Y2ZqdHRYb
- WVtdUJwNDFTNklzbF82amd4QVJfamcxTUtzQkVBSUV1TmFmYnU5a2ZObzFDbFFDT3hnUlNjN
- DNURUF4S1oxUDd4TFJ5ZldkOUJPeDZoZV9CZFRWQXdNVXRaNFZtd0hlUVVMUnA3bnRKbVl0d
- WhBQQ?oc=5
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260415
-DTEND;VALUE=DATE:20260416
-END:VEVENT
-BEGIN:VEVENT
-UID:5a8dc11387ab9cdff1d00501e31e7c1d332da98a@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[手机新品] IT早报 0411：DeepSeek V4 将于4 月下旬正
- 式发布；阿里认领神秘AI 视频模型“欢乐马”；华为 Pu
- ra 系列发布会定档4 月 20 日；第二批625 亿国补资金下
- 达...
+UID:419da657cc4119e447aba6396df675ec892bc5e3@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[电脑新品] 联想新品发布会定档5月19日！首款大
+ 折叠moto razr fold、拯救者Y70新一代等齐发
 DESCRIPTION:来源：17173\n链接：https://news.google.com/rss/articles
- /CBMiZEFVX3lxTE1ySE1mTzFkSDdobjJLTWFfNXRwNEVrMlpteHA1dnVtd09OWFl2U19SWkJ
- 4N2w1a2JzRGdCSWdiQW1pZGhDYktvd2NSRnRfc1hEbTBxSi1JU1Y4dmhOeFBjanlaQXo?oc=
- 5\n识别到的时间：4月20日\n可信度分数：7\nhttps://news.goo
- gle.com/rss/articles/CBMiZEFVX3lxTE1ySE1mTzFkSDdobjJLTWFfNXRwNEVrMlpteHA
- 1dnVtd09OWFl2U19SWkJ4N2w1a2JzRGdCSWdiQW1pZGhDYktvd2NSRnRfc1hEbTBxSi1JU1Y
- 4dmhOeFBjanlaQXo?oc=5
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260420
-DTEND;VALUE=DATE:20260421
-END:VEVENT
-BEGIN:VEVENT
-UID:1703187dab2d768507273f2515f5b1ded1f3847a@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[手机新品] 华为4月20日新品发布会来袭！Pura 90系
- 列与Pura X2折叠屏手机齐登场
-DESCRIPTION:来源：天脉网\n链接：https://news.google.com/rss/arti
- cles/CBMiV0FVX3lxTFB3RGxGNlR2SmJpOHFQbGotVy11TWZnOHF4MTNpRGZVMXY1OXg3YjV
- 6Rm8zZ2tidDdKc0l3cjhkdmhJaXI5ZVpSUDcxVGtRVG5xOFhxY2Jmdw?oc=5\n识别到
- 的时间：4月20日\n可信度分数：6\nhttps://news.google.com/rss/
- articles/CBMiV0FVX3lxTFB3RGxGNlR2SmJpOHFQbGotVy11TWZnOHF4MTNpRGZVMXY1OXg
- 3YjV6Rm8zZ2tidDdKc0l3cjhkdmhJaXI5ZVpSUDcxVGtRVG5xOFhxY2Jmdw?oc=5
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260420
-DTEND;VALUE=DATE:20260421
-END:VEVENT
-BEGIN:VEVENT
-UID:b2fdea429bc811f03e8b4bf77851ec3f536003cf@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[手机新品] OPPO Find X9 Ultra发布会定档4月21日
-DESCRIPTION:来源：电玩巴士\n链接：https://news.google.com/rss/a
- rticles/CBMiTkFVX3lxTE1NdzU1Yk8yX2pMeWZKQjhiMkFWNGFOUHJ1M1NiZWpuLUUycU44
- T0p3MjNGaWdleWFDd1FGcnVGWGhyUmJRTHVka3JPYXZNdw?oc=5\n识别到的时间
- ：4月21日\n可信度分数：7\nhttps://news.google.com/rss/articles/
- CBMiTkFVX3lxTE1NdzU1Yk8yX2pMeWZKQjhiMkFWNGFOUHJ1M1NiZWpuLUUycU44T0p3MjNG
- aWdleWFDd1FGcnVGWGhyUmJRTHVka3JPYXZNdw?oc=5
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260421
-DTEND;VALUE=DATE:20260422
-END:VEVENT
-BEGIN:VEVENT
-UID:00505fdb2eb290e89ae71859298184c189998076@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[科技数码] 今天#红米K90Max发布会# 的主讲人是@Cici
- _老魏 [卡皮巴拉] ​
-DESCRIPTION:来源：新浪网\n链接：https://news.google.com/rss/arti
- cles/CBMiY0FVX3lxTE9HWXVzVFBEcFphemlkMEhUeFk1TktmaC1GbHV1WFJHdWo4NTNWRkd
- TOFBMNUFLTlFzX0k2MWswM3VhaXNZNFctWTdZbWh6OW5xaU5pdjdvZHV5MjV0bTB4NVhXNA?
- oc=5\n识别到的时间：今天\n可信度分数：4\nhttps://news.goo
- gle.com/rss/articles/CBMiY0FVX3lxTE9HWXVzVFBEcFphemlkMEhUeFk1TktmaC1GbHV
- 1WFJHdWo4NTNWRkdTOFBMNUFLTlFzX0k2MWswM3VhaXNZNFctWTdZbWh6OW5xaU5pdjdvZHV
- 5MjV0bTB4NVhXNA?oc=5
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART;VALUE=DATE:20260421
-DTEND;VALUE=DATE:20260422
-END:VEVENT
-BEGIN:VEVENT
-UID:25e153f1b7b9c4b22520ef74257657c5c56050fd@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[电脑新品] 联想4月22日举办ThinkPad 2026新品暨天禧A
- I生态发布会-PChome
-DESCRIPTION:来源：Pchome电脑之家\n链接：https://news.google.com
- /rss/articles/CBMiXkFVX3lxTE9VbDlELWRGa2xvalhDejJod1lHQVI4eXBVTFlWUFM2Tj
- FyZUZSNmc2SmVoazdkT2k2U3hxd1VMaGhaSmlaSXNnYlpoSWFlLTRNbWwtOGdReVRYclpNcE
- E?oc=5\n识别到的时间：4月22日\n可信度分数：6\nhttps://new
- s.google.com/rss/articles/CBMiXkFVX3lxTE9VbDlELWRGa2xvalhDejJod1lHQVI4eX
- BVTFlWUFM2TjFyZUZSNmc2SmVoazdkT2k2U3hxd1VMaGhaSmlaSXNnYlpoSWFlLTRNbWwtOG
- dReVRYclpNcEE?oc=5
+ /CBMiZEFVX3lxTFByRmJNUkhPMTRDeUdOdHZBMTlILVJyVXIyV0F1a1lFTE9GN3B3S3pmdnR
+ TNWhvUjU5WXZlMWx2Z044TFhCb0tDMXpUcVlScFJpTFlxcXFNTDdsUzc1ZllzdXZNaDQ?oc=
+ 5\n识别到的时间：5月19日\n可信度分数：7\nhttps://news.goo
+ gle.com/rss/articles/CBMiZEFVX3lxTFByRmJNUkhPMTRDeUdOdHZBMTlILVJyVXIyV0F
+ 1a1lFTE9GN3B3S3pmdnRTNWhvUjU5WXZlMWx2Z044TFhCb0tDMXpUcVlScFJpTFlxcXFNTDd
+ sUzc1ZllzdXZNaDQ?oc=5
 CATEGORIES:电脑新品
 LOCATION:线上
-DTSTART;VALUE=DATE:20260422
-DTEND;VALUE=DATE:20260423
-END:VEVENT
-BEGIN:VEVENT
-UID:287f79401d930820c62195010ad587700c3ac496@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[新能源汽车] 今晚，鸿蒙智行春季新品发布会火
- 力全开！
-DESCRIPTION:来源：汽车之家\n链接：https://news.google.com/rss/a
- rticles/CBMiW0FVX3lxTE8xTXNjREM5S2ppbGRZZzctUUFBYkQ5X2tJeGdxVjYtVmdpQUdP
- U1JaMF95MmFIb1JYTWJhMnE4TG5aWXctYVA3b0JMTlRjOVhNMXdhRGRXd3VsWDQ?oc=5\n
- 识别到的时间：今晚\n可信度分数：6\nhttps://news.google.co
- m/rss/articles/CBMiW0FVX3lxTE8xTXNjREM5S2ppbGRZZzctUUFBYkQ5X2tJeGdxVjYtV
- mdpQUdPU1JaMF95MmFIb1JYTWJhMnE4TG5aWXctYVA3b0JMTlRjOVhNMXdhRGRXd3VsWDQ?o
- c=5
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260422
-DTEND;VALUE=DATE:20260423
-END:VEVENT
-BEGIN:VEVENT
-UID:bbd54c7948dd33170a87c4bed6115f25a7796c20@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[新能源汽车] 尚界Z7官宣4月22日正式上市，鸿蒙智
- 行春季发布会四车连发
-DESCRIPTION:来源：汽车之家\n链接：https://news.google.com/rss/a
- rticles/CBMiXkFVX3lxTE0yU1hIWXVGMVpTbTZzU1M4dk1BQ1luQkVuaEQ0YjlHbFpJOG5t
- T1o3MlZNVFl3cEEzVXhrVTZXaC1CaXpXNkxTWS1qUDdZRkFqTUNLMkVsb1B6QjZjUkE?oc=5
- \n识别到的时间：4月22日\n可信度分数：7\nhttps://news.goog
- le.com/rss/articles/CBMiXkFVX3lxTE0yU1hIWXVGMVpTbTZzU1M4dk1BQ1luQkVuaEQ0
- YjlHbFpJOG5tT1o3MlZNVFl3cEEzVXhrVTZXaC1CaXpXNkxTWS1qUDdZRkFqTUNLMkVsb1B6
- QjZjUkE?oc=5
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260422
-DTEND;VALUE=DATE:20260423
-END:VEVENT
-BEGIN:VEVENT
-UID:3da63fb78aca0cfdc219d557432859bf6c674088@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[新能源汽车] 鸿蒙智行春季发布会官宣，尚界Z7于
- 4月22日上市-腾讯新闻
-DESCRIPTION:来源：QQ News\n链接：https://news.google.com/rss/articl
- es/CBMiVkFVX3lxTE9yUVh4ZlF5NE1WOU9DaDdjQ3djX0E4MEFrSldtMVBoa3JlcWVfZC14Z
- U5RTW5FWVBhVGJkTldlQ2hRaG9WNmxUOWFzOFZiUkhzSUt3NGhR?oc=5\n识别到的
- 时间：4月22日\n可信度分数：7\nhttps://news.google.com/rss/art
- icles/CBMiVkFVX3lxTE9yUVh4ZlF5NE1WOU9DaDdjQ3djX0E4MEFrSldtMVBoa3JlcWVfZC
- 14ZU5RTW5FWVBhVGJkTldlQ2hRaG9WNmxUOWFzOFZiUkhzSUt3NGhR?oc=5
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260422
-DTEND;VALUE=DATE:20260423
-END:VEVENT
-BEGIN:VEVENT
-UID:b9a233f82298eec31a2422a3284de8c00c6c72fe@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[电脑新品] 荣耀WIN游戏本官宣定档4月23日，荣耀PC
- 开启2026全品类迭代
-DESCRIPTION:来源：新浪财经\n链接：https://news.google.com/rss/a
- rticles/CBMimwFBVV95cUxOa01hMlVpeF9wdE8yblQxUzVKcVZjbEh0TEZzZUtmVzRNSWxU
- d1pKQkhuYk9VeDNnUDhtQ3NXRmFkOHZGQXZRN3lTLTVhbjhfYWM3cjMzYVVwRHFxX29RVzMz
- OVV2VUpoR1pzYjA5ZGk1SmRLMTNQMHEwckR0eGNJSThORXNlajdCSUp5ZHBycERyNXVSU3ZH
- TFRmRQ?oc=5\n识别到的时间：4月23日\n可信度分数：5\nhttps:
- //news.google.com/rss/articles/CBMimwFBVV95cUxOa01hMlVpeF9wdE8yblQxUzVKc
- VZjbEh0TEZzZUtmVzRNSWxUd1pKQkhuYk9VeDNnUDhtQ3NXRmFkOHZGQXZRN3lTLTVhbjhfY
- WM3cjMzYVVwRHFxX29RVzMzOVV2VUpoR1pzYjA5ZGk1SmRLMTNQMHEwckR0eGNJSThORXNla
- jdCSUp5ZHBycERyNXVSU3ZHTFRmRQ?oc=5
-CATEGORIES:电脑新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260423
-DTEND;VALUE=DATE:20260424
-END:VEVENT
-BEGIN:VEVENT
-UID:4739c603e7af2e2b1cd40b0d978768d641b23650@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[电脑新品] 荣耀高管预热今晚发布会新品：WIN H9
- 电竞游戏本等十余款产品
-DESCRIPTION:来源：电脑之家\n链接：https://news.google.com/rss/a
- rticles/CBMiVEFVX3lxTE1fQlJlSmlXUzVSaEVKY1VKV2taRTFadkdIekxtQjFMdUhILW9v
- YUJUcTBhaWtjOGxwWE1wSmh2WU9YX1p0ZkFDTU9LWWhPMU5tbW92cw?oc=5\n识别到
- 的时间：今晚\n可信度分数：6\nhttps://news.google.com/rss/art
- icles/CBMiVEFVX3lxTE1fQlJlSmlXUzVSaEVKY1VKV2taRTFadkdIekxtQjFMdUhILW9vYU
- JUcTBhaWtjOGxwWE1wSmh2WU9YX1p0ZkFDTU9LWWhPMU5tbW92cw?oc=5
-CATEGORIES:电脑新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260423
-DTEND;VALUE=DATE:20260424
-END:VEVENT
-BEGIN:VEVENT
-UID:4b3c3c78f56ee76d83d02578be2514dd13bd9df1@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[新能源汽车] 华为乾崑智驾技术发布会定档4月23
- 日 四款新车亮相前瞻
-DESCRIPTION:来源：BitAuto\n链接：https://news.google.com/rss/articl
- es/CBMiY0FVX3lxTE9rdF9YajlyVHQ1V1d6UlZYWU85SFl0QWpFYVRPME1vVVd1WnBKTFJTV
- 0FIbDRQaUVGeWsyQWtfR3h6QV9vU2VvWmtsTFpRYWpFSngzVk5nTjk5cC1WNl9FclZDTQ?oc
- =5\n识别到的时间：4月23日\n可信度分数：7\nhttps://news.go
- ogle.com/rss/articles/CBMiY0FVX3lxTE9rdF9YajlyVHQ1V1d6UlZYWU85SFl0QWpFYV
- RPME1vVVd1WnBKTFJTV0FIbDRQaUVGeWsyQWtfR3h6QV9vU2VvWmtsTFpRYWpFSngzVk5nTj
- k5cC1WNl9FclZDTQ?oc=5
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260423
-DTEND;VALUE=DATE:20260424
-END:VEVENT
-BEGIN:VEVENT
-UID:cfc68ac91eab5c71158507726ef3b7ad4cf4c602@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[电脑新品] 32GB+1TB+鸿蒙6.1！华为新品正式官宣：4
- 月28日，全面开售
-DESCRIPTION:来源：搜狐网\n链接：https://news.google.com/rss/arti
- cles/CBMijAFBVV95cUxNdVN4MlBnaHlQTFgtcm51dmltTVpCWXZSSnRwWDdkRmFsX0ROOGx
- IRDVzX1g5NUtPblZrYmVmdU5uUjFGUUpKRkZKMWlzdkx1Wmd0bXJuY043allzNzdYTkZodnB
- SWnYzVVo5Z0hWdGtJTUtnbDNXcjRRbTRTLVozdGppOXJDam1LWm1NQQ?oc=5\n识别到
- 的时间：4月28日\n可信度分数：3\nhttps://news.google.com/rss/
- articles/CBMijAFBVV95cUxNdVN4MlBnaHlQTFgtcm51dmltTVpCWXZSSnRwWDdkRmFsX0R
- OOGxIRDVzX1g5NUtPblZrYmVmdU5uUjFGUUpKRkZKMWlzdkx1Wmd0bXJuY043allzNzdYTkZ
- odnBSWnYzVVo5Z0hWdGtJTUtnbDNXcjRRbTRTLVozdGppOXJDam1LWm1NQQ?oc=5
-CATEGORIES:电脑新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260428
-DTEND;VALUE=DATE:20260429
-END:VEVENT
-BEGIN:VEVENT
-UID:942711334fd11b175f2d218719f391f7d78673eb@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[电脑新品] 惠普星 Book 2026 新品发布今晚举行，将
- 推“ 1kg 游戏级轻薄本”
-DESCRIPTION:来源：Sina finance\n链接：https://news.google.com/rss/a
- rticles/CBMifkFVX3lxTFBiLTBqTWExRkpzdWlVSXQ5Q3JnZ1I2NjFiaktUaGMtUHV4T29f
- X2xaUDluNGZnZzZ2QnlHbWJkY0FZMzE1Wm45ZGRheHRiRi01R0I5dkRLMWRCY1FjTHdBNDZQ
- eEc2YWdpNVhfcmFmTVZsUVIwUUdSMjFRaE1EQQ?oc=5\n识别到的时间：今晚
- \n可信度分数：4\nhttps://news.google.com/rss/articles/CBMifkFVX3lx
- TFBiLTBqTWExRkpzdWlVSXQ5Q3JnZ1I2NjFiaktUaGMtUHV4T29fX2xaUDluNGZnZzZ2QnlH
- bWJkY0FZMzE1Wm45ZGRheHRiRi01R0I5dkRLMWRCY1FjTHdBNDZQeEc2YWdpNVhfcmFmTVZs
- UVIwUUdSMjFRaE1EQQ?oc=5
-CATEGORIES:电脑新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260428
-DTEND;VALUE=DATE:20260429
-END:VEVENT
-BEGIN:VEVENT
-UID:60d16b73c6c3d675e96d19def5f8e0b0d5c4075d@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[新能源汽车] 官宣！九号新品发布会定档4月29日
- ，诠释从路程到旅程的转变
-DESCRIPTION:来源：飞象网\n链接：https://news.google.com/rss/arti
- cles/CBMiS0FVX3lxTE95b0Fwa2RfUDFJQ0FSX01DMnFRNXB4RWdVNUdXaTd6cEpHb1lDT3F
- PVnc3NHI0NE5aNldBalRDSXR5cFNZM0c3N2VRZw?oc=5\n识别到的时间：4月2
- 9日\n可信度分数：5\nhttps://news.google.com/rss/articles/CBMiS0FV
- X3lxTE95b0Fwa2RfUDFJQ0FSX01DMnFRNXB4RWdVNUdXaTd6cEpHb1lDT3FPVnc3NHI0NE5a
- NldBalRDSXR5cFNZM0c3N2VRZw?oc=5
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260429
-DTEND;VALUE=DATE:20260430
-END:VEVENT
-BEGIN:VEVENT
-UID:6cf0553fb81ab31b56e64aa36ce9952ac57e5ce8@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[手机新品] 官宣！九号新品发布会定档4月29日，
- 诠释从路程到旅程的转变
-DESCRIPTION:来源：飞象网\n链接：https://news.google.com/rss/arti
- cles/CBMiS0FVX3lxTE95b0Fwa2RfUDFJQ0FSX01DMnFRNXB4RWdVNUdXaTd6cEpHb1lDT3F
- PVnc3NHI0NE5aNldBalRDSXR5cFNZM0c3N2VRZw?oc=5\n识别到的时间：4月2
- 9日\n可信度分数：5\nhttps://news.google.com/rss/articles/CBMiS0FV
- X3lxTE95b0Fwa2RfUDFJQ0FSX01DMnFRNXB4RWdVNUdXaTd6cEpHb1lDT3FPVnc3NHI0NE5a
- NldBalRDSXR5cFNZM0c3N2VRZw?oc=5
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260429
-DTEND;VALUE=DATE:20260430
-END:VEVENT
-BEGIN:VEVENT
-UID:be64147258cfa13d59342fe9aed941ba0858e654@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[科技数码] 极米2026新品发布会定档4月29日：将推
- 出四款旗舰投影设备
-DESCRIPTION:来源：电脑之家\n链接：https://news.google.com/rss/a
- rticles/CBMiVEFVX3lxTE5rZnhXa0h2bnFuZFVLc1h3WDd0aEFDLVBEZjJIYWR3T3NFVDRh
- X2pidEd5aE5TcWFjZy0wUGlfU2JpTzJvMkpPd21tWTYxS2loSWFTMw?oc=5\n识别到
- 的时间：4月29日\n可信度分数：5\nhttps://news.google.com/rss/
- articles/CBMiVEFVX3lxTE5rZnhXa0h2bnFuZFVLc1h3WDd0aEFDLVBEZjJIYWR3T3NFVDR
- hX2pidEd5aE5TcWFjZy0wUGlfU2JpTzJvMkpPd21tWTYxS2loSWFTMw?oc=5
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART;VALUE=DATE:20260429
-DTEND;VALUE=DATE:20260430
-END:VEVENT
-BEGIN:VEVENT
-UID:53d97812f792c8d2265b8526544bc8d0d51092d1@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[手机新品] 华为海外新品发布会定档5月7日，nova 1
- 5 Max确认即将登场
-DESCRIPTION:来源：新浪财经\n链接：https://news.google.com/rss/a
- rticles/CBMifEFVX3lxTE91Nml6TmJJUHFVRDJrWlBTNFZXdTlndXdPSGpOU1ZTU1MwbW5s
- TDl2R3Y4aEJlQWNjcURSY2Fja0tfeGZyTnRNcTh3c3FwdkRKNkF6WUg5ME04dGwxOTVYVEw2
- UFdmd3duckNRazdmNy1xSXFHSk14TWVuUE8?oc=5\n识别到的时间：5月7日\
- n可信度分数：7\nhttps://news.google.com/rss/articles/CBMifEFVX3lxT
- E91Nml6TmJJUHFVRDJrWlBTNFZXdTlndXdPSGpOU1ZTU1MwbW5sTDl2R3Y4aEJlQWNjcURSY
- 2Fja0tfeGZyTnRNcTh3c3FwdkRKNkF6WUg5ME04dGwxOTVYVEw2UFdmd3duckNRazdmNy1xS
- XFHSk14TWVuUE8?oc=5
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260507
-DTEND;VALUE=DATE:20260508
-END:VEVENT
-BEGIN:VEVENT
-UID:0e38821fe0c8d077718eac9f7b1de5241e24a53b@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[新能源汽车] 官宣！王力宏成腾势汽车品牌全球
- 代言人，将出席5月18日N9闪充版上市发布会
-DESCRIPTION:来源：DoNews\n链接：https://news.google.com/rss/article
- s/CBMiXkFVX3lxTE5zUkpGXzA0VklialJpZDExdVREZXNnSDQxMWNsWVVxWGdTcFdYdTROU2
- 5TQWtTRGRPRWg1YkdpSVdIZkwtYU56cVIzUU5aNzJ4MHZISEVEN0hsNUVfOVE?oc=5\n识
- 别到的时间：5月18日\n可信度分数：7\nhttps://news.google.co
- m/rss/articles/CBMiXkFVX3lxTE5zUkpGXzA0VklialJpZDExdVREZXNnSDQxMWNsWVVxW
- GdTcFdYdTROU25TQWtTRGRPRWg1YkdpSVdIZkwtYU56cVIzUU5aNzJ4MHZISEVEN0hsNUVfO
- VE?oc=5
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260518
-DTEND;VALUE=DATE:20260519
+DTSTART;VALUE=DATE:20260519
+DTEND;VALUE=DATE:20260520
 END:VEVENT
 BEGIN:VEVENT
 UID:149710ae6cda84636c28e2b94f2ad0f9a3e51d61@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[电脑新品] 联想新品发布会定档5月19日，大折叠
  ，平板、PC集体亮相
 DESCRIPTION:来源：电玩巴士\n链接：https://news.google.com/rss/a
@@ -379,7 +40,7 @@ DTEND;VALUE=DATE:20260520
 END:VEVENT
 BEGIN:VEVENT
 UID:05c91b4ded870544ce4274d87a39ef0961942580@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 5月19日！联想新品发布会定档
 DESCRIPTION:来源：TOM科技\n链接：https://news.google.com/rss/arti
  cles/CBMiVkFVX3lxTE5LckFnS3YxRmp0SVpGbzF0WUxKZWxmNnlQT3UtMGZRbmpkSURTRDl
@@ -394,7 +55,7 @@ DTEND;VALUE=DATE:20260520
 END:VEVENT
 BEGIN:VEVENT
 UID:496017b9f3c4a2392b637fbcf9a4de959b017a93@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 联想官宣多款新品5月19日发布 含razr fo
  ld大折叠
 DESCRIPTION:来源：搜狐网\n链接：https://news.google.com/rss/arti
@@ -410,7 +71,7 @@ DTEND;VALUE=DATE:20260520
 END:VEVENT
 BEGIN:VEVENT
 UID:986d5f674dc28d73023292c23729df204ba7e22f@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 联想新品发布会定档5月19日！首款大
  折叠moto razr fold、拯救者Y70新一代等齐发
 DESCRIPTION:来源：Sina finance\n链接：https://news.google.com/rss/a
@@ -428,7 +89,7 @@ DTEND;VALUE=DATE:20260520
 END:VEVENT
 BEGIN:VEVENT
 UID:e367e238594d3e915e76eedab6b9e1d29eca6230@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 联想新品发布会定档5月19日，大折叠
  ，平板、PC集体亮相
 DESCRIPTION:来源：电玩巴士\n链接：https://news.google.com/rss/a
@@ -443,26 +104,25 @@ DTSTART;VALUE=DATE:20260519
 DTEND;VALUE=DATE:20260520
 END:VEVENT
 BEGIN:VEVENT
-UID:1fb4e6f114805448c6309e4e50a6c44eb38bd4b4@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[新能源汽车] 华为轮值董事长徐直军到访东风汽
- 车，双品牌猛士、奕境与华为乾崑全面深化战略合作 2.
- 0 升级
-DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/557.
+UID:1c077570e309e291522b6971a487dc74ac9ece86@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[新能源汽车] 小米汽车 CTO 胡峥楠祝贺任周灿圆梦
+ ：十几年的坚守终于有被世界认可的时刻
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/588.
  htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
- home.com/0/952/557.htm
+ home.com/0/952/588.htm
 CATEGORIES:新能源汽车
-LOCATION:武汉
+LOCATION:线上
 DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
 UID:ab740b3a2715b7dc13d53c85e57b6a5cbd239bf2@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[新能源汽车] 智己 LS6 上汽一亿台限定版发布，换
  代车型第三季度上市
 DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/647.
- htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ htm\n识别到的时间：5月20日\n可信度分数：5\nhttps://www.it
  home.com/0/952/647.htm
 CATEGORIES:新能源汽车
 LOCATION:线上
@@ -470,12 +130,64 @@ DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
+UID:d8e9280845843b5ca32e0d901f90cd728a973572@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[新能源汽车] 首款鸿蒙生态共享单车亮相，哈啰 A
+ 70 云朵搭载海思芯片 + 轻量级鸿蒙系统
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/630.
+ htm\n识别到的时间：5月20日\n可信度分数：4\nhttps://www.it
+ home.com/0/952/630.htm
+CATEGORIES:新能源汽车
+LOCATION:深圳
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
+UID:bf3f24c41928cdac146ea73530098e420e16d341@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[手机新品] AMD 公布 EPYC 8005 "Sorano" 处理器详细信
+ 息：支持 6400MT/s 内存
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/589.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/589.htm
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
+UID:3a275d019f8013a126108545f99f58ed59c51dd2@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[手机新品] QQ 鸿蒙版 App 获 9.2.23 新版本邀测升级
+ ，新增设置回车键发送消息等功能
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/561.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/561.htm
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
+UID:3114de01aef2ee0de643c190a381448265f7986a@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[手机新品] 佳能打印机官宣接入米家 App，成为首
+ 家与小米合作的打印机厂商
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/687.
+ htm\n识别到的时间：5月20日\n可信度分数：5\nhttps://www.it
+ home.com/0/952/687.htm
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
 UID:17be5883d38d901d7c8d2bdce068a3f2c132901b@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 华为 MatePad Pro Max 旗舰平板官宣今日 16
  :08 开启预售，搭载鸿蒙 HarmonyOS 6 系统
 DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/582.
- htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ htm\n识别到的时间：5月20日\n可信度分数：5\nhttps://www.it
  home.com/0/952/582.htm
 CATEGORIES:手机新品
 LOCATION:线上
@@ -483,14 +195,52 @@ DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
-UID:472911f3ab7a93fdc5ed617114edee40617c877a@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[科技数码] IT早报 0520：小米 YU7 GT 破纽北 SUV 圈速
- 纪录；特斯拉放弃印度建厂计划；谷歌发布 Gemini 3.5 Fla
- sh；DeepSeek 回应字符触发模型异常...
-DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/556.
- htm\n识别到的时间：2026年5月20日\n可信度分数：5\nhttps:/
- /www.ithome.com/0/952/556.htm
+UID:933abd66bf5228610e820012e5125d49638561db@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[手机新品] 告别验证码：微信 iOS 版灰度测试“用
+ 本机号码登录”功能
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/560.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/560.htm
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
+UID:584ef5e8d6d48adea9fbbd20b90e735cf99eb27b@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[手机新品] 运营商网上营业厅服务新国标发布，
+ 要求明示业务退订方式、限制性条件等
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/614.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/614.htm
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
+UID:a478a288c9fe7b7b7514eaffca1b55469bb7f13c@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[手机新品] 鸿蒙 PC 桌面首登平板？华为 MatePad Pro 
+ Max 旗舰新机更多细节曝光
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/643.
+ htm\n识别到的时间：5月20日\n可信度分数：4\nhttps://www.it
+ home.com/0/952/643.htm
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
+UID:279f4927372491d87aaac593469b7f82da77f201@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[科技数码] AMD 被曝将推锐龙 7 7700X3D 处理器：加
+ 速频率最高可达 4.5GHz
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/565.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/565.htm
 CATEGORIES:科技数码
 LOCATION:北京
 DTSTART;VALUE=DATE:20260520
@@ -498,11 +248,11 @@ DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
 UID:f05f610bb3cd4f592d31d1515d27e975e097de34@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[科技数码] iQOO Pad6 Pro 平板官宣行业首发 4K 游戏 L
  ive 截图，支持一键获取超清动态照片
 DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/662.
- htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ htm\n识别到的时间：5月20日\n可信度分数：5\nhttps://www.it
  home.com/0/952/662.htm
 CATEGORIES:科技数码
 LOCATION:线上
@@ -511,11 +261,11 @@ DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
 UID:c33a38d1f47415ae9bd260b3f9fc58096183347c@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[科技数码] 三星电子扩展显示器产品线，宣布多
  款新品
 DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/581.
- htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ htm\n识别到的时间：5月20日\n可信度分数：5\nhttps://www.it
  home.com/0/952/581.htm
 CATEGORIES:科技数码
 LOCATION:线上
@@ -523,12 +273,38 @@ DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
+UID:1bf9ef8651043800926e84ad6065bbef29e52879@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[科技数码] 大裁员前夕：Meta 员工疯狂“薅羊毛”
+ ，用福利买苹果耳机、塞零食
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/611.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/611.htm
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
+UID:fb2ce5b3b4ef9720a1b70725c336fb0fe85b65d6@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[科技数码] 微信 AI 团队模式识别中心论文拿下信
+ 号处理国际大奖，系该奖设立后首次颁给中国企业团队
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/585.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/585.htm
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
 UID:2197c8978fc5a69a7e119a6e2ff070fb0caa4580@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[科技数码] 微软官宣 2026 款 Surface Laptop 将推 8GB 
  内存版，未达 Windows 11 AI+ PC 要求
 DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/587.
- htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ htm\n识别到的时间：5月20日\n可信度分数：5\nhttps://www.it
  home.com/0/952/587.htm
 CATEGORIES:科技数码
 LOCATION:线上
@@ -536,12 +312,25 @@ DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
+UID:22cd03f5bbca17b9ec213a280208f8eb294e763e@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[科技数码] 曝字节 Seedance 2.1 模型即将发布，系列
+ 已狂揽 AI 视频生成 80% 算力消耗
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/584.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/584.htm
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
 UID:15136bb4401f532d7554cc2821daffaa6135f13b@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[科技数码] 英特尔数据中心 AI 推理 GPU "Crescent Isla
  nd" PCB 曝光
 DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/571.
- htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ htm\n识别到的时间：5月20日\n可信度分数：5\nhttps://www.it
  home.com/0/952/571.htm
 CATEGORIES:科技数码
 LOCATION:北京
@@ -549,8 +338,21 @@ DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260521
 END:VEVENT
 BEGIN:VEVENT
+UID:78103efa738283ee82152fe5f945735218d52c87@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[科技数码] 谷歌 DeepMind CEO 哈萨比斯痛批“AI 裁员
+ 论”：别有用心，取代开发者是重大错误
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/577.
+ htm\n识别到的时间：5月20日\n可信度分数：3\nhttps://www.it
+ home.com/0/952/577.htm
+CATEGORIES:科技数码
+LOCATION:北京
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+END:VEVENT
+BEGIN:VEVENT
 UID:39a0c942a0dec7918c00384b77039de3a0abfc5c@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[新能源汽车] 小米YU7 GT发布会定档5月21日；小鹏
  汽车首台量产Robotaxi下线丨汽车早参
 DESCRIPTION:来源：mrjjxw.com\n链接：https://news.google.com/rss/art
@@ -567,7 +369,7 @@ DTEND;VALUE=DATE:20260522
 END:VEVENT
 BEGIN:VEVENT
 UID:52a6da1aa4d7a5516dd43ef9f8c6f4bf333f836e@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[新能源汽车] 小米重磅发布会定档5月21日！新车
  、新手机来了 阵容庞大
 DESCRIPTION:来源：电子工程专辑\n链接：https://news.google.com
@@ -583,7 +385,7 @@ DTEND;VALUE=DATE:20260522
 END:VEVENT
 BEGIN:VEVENT
 UID:89eac2f6fe4c5082c20e8a4843118568b67b3110@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 小米5月21日发布会定档：17 Max与YU7 GT
  双旗舰登场，全面冲击高端
 DESCRIPTION:来源：搜狐网\n链接：https://news.google.com/rss/arti
@@ -601,7 +403,7 @@ DTEND;VALUE=DATE:20260522
 END:VEVENT
 BEGIN:VEVENT
 UID:a1ddc6b047e1e2853dd2098131798699cdc34f58@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 小米人车家全生态新品发布会定档5月2
  1日！YU7 GT、17 Max来了
 DESCRIPTION:来源：Sina finance\n链接：https://news.google.com/rss/a
@@ -619,7 +421,7 @@ DTEND;VALUE=DATE:20260522
 END:VEVENT
 BEGIN:VEVENT
 UID:966a3196396d1d3ea19dca66f19aea514cc1bc64@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 小米重磅发布会定档5月21日！新车、
  新手机来了 阵容庞大
 DESCRIPTION:来源：电子工程专辑\n链接：https://news.google.com
@@ -635,7 +437,7 @@ DTEND;VALUE=DATE:20260522
 END:VEVENT
 BEGIN:VEVENT
 UID:acbf7a82763caf89e78aad119820ba0cff74be62@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] OPPO Reno16手机搭载潜望长焦系统，发布
  会定档5月25日
 DESCRIPTION:来源：搜狐网\n链接：https://news.google.com/rss/arti
@@ -653,7 +455,7 @@ DTEND;VALUE=DATE:20260526
 END:VEVENT
 BEGIN:VEVENT
 UID:afd16d95f24195c52c46bbd1db7a5c7043cbd3b9@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[手机新品] 荣耀600系列官宣肖战代言大片，发布
  会定档5月25日
 DESCRIPTION:来源：潮新闻\n链接：https://news.google.com/rss/arti
@@ -671,11 +473,11 @@ DTEND;VALUE=DATE:20260526
 END:VEVENT
 BEGIN:VEVENT
 UID:cda3fb9cce1d185ad2cf32084b08adb23a65b50e@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[科技数码] 能跳舞的人形机器人？逐际动力 LimX Lu
  na 亮相，5 月 25 日发布
 DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/660.
- htm\n识别到的时间：5月25日\n可信度分数：4\nhttps://www.it
+ htm\n识别到的时间：5月25日\n可信度分数：6\nhttps://www.it
  home.com/0/952/660.htm
 CATEGORIES:科技数码
 LOCATION:深圳
@@ -684,11 +486,11 @@ DTEND;VALUE=DATE:20260526
 END:VEVENT
 BEGIN:VEVENT
 UID:2228d3724a145a4556f0a96c7232200d21e69dde@launch-calendar-bot
-DTSTAMP:20260520T033507Z
+DTSTAMP:20260520T035306Z
 SUMMARY:[新能源汽车] 鸿蒙智行问界 M9 系列新品发布会定
  档 5 月 27 日，预售价 49.98 万元起
 DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/586.
- htm\n识别到的时间：5月27日\n可信度分数：5\nhttps://www.it
+ htm\n识别到的时间：5月27日\n可信度分数：7\nhttps://www.it
  home.com/0/952/586.htm
 CATEGORIES:新能源汽车
 LOCATION:线上
@@ -696,20 +498,16 @@ DTSTART;VALUE=DATE:20260527
 DTEND;VALUE=DATE:20260528
 END:VEVENT
 BEGIN:VEVENT
-UID:1dba5496c31719baa796dec895911355d264d7c1@launch-calendar-bot
-DTSTAMP:20260520T033507Z
-SUMMARY:[手机新品] 华为春季全场景新品发布会汇总；WWDC2
- 6定档6 月 9 日；北京三部门约谈12 家平台企业｜Do早报
-DESCRIPTION:来源：DoNews\n链接：https://news.google.com/rss/article
- s/CBMiXkFVX3lxTFBCQ0djdE4zaWdmOHJMby1tMmZ6ajJmZk9Yck4wOG1PQkVteFJYemVYWW
- lIMFVjdVdYaUpoSHcxNkdMT3czVzVOdFo2OHpVamZYTTk0cFdKZWVTWDM3dVE?oc=5\n识
- 别到的时间：6月9日\n可信度分数：5\nhttps://news.google.com
- /rss/articles/CBMiXkFVX3lxTFBCQ0djdE4zaWdmOHJMby1tMmZ6ajJmZk9Yck4wOG1PQk
- VteFJYemVYWWlIMFVjdVdYaUpoSHcxNkdMT3czVzVOdFo2OHpVamZYTTk0cFdKZWVTWDM3dV
- E?oc=5
+UID:36fa7b2db7a3359f558e5f4338c301aa021e8308@launch-calendar-bot
+DTSTAMP:20260520T035306Z
+SUMMARY:[手机新品] 华为鸿蒙 HarmonyOS 6.1 系统上线毕业季
+ 限时水印，7 月 15 日前可用
+DESCRIPTION:来源：IT之家\n链接：https://www.ithome.com/0/952/572.
+ htm\n识别到的时间：2026年7月15日\n可信度分数：3\nhttps:/
+ /www.ithome.com/0/952/572.htm
 CATEGORIES:手机新品
-LOCATION:北京
-DTSTART;VALUE=DATE:20260609
-DTEND;VALUE=DATE:20260610
+LOCATION:线上
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
 END:VEVENT
 END:VCALENDAR
