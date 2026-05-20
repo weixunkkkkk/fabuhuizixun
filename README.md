@@ -50,6 +50,22 @@
 添加完成后，后续发布会信息更新时，日历会自动刷新。
 
 ---
+## 实测情况
+
+目前已在以下设备中测试，可以正常订阅并显示发布会日程：
+
+- OPPO 手机：可以正常添加订阅日历
+- 小米手机：可以正常添加订阅日历
+- iPhone：可以通过订阅日历方式添加 `.ics` 链接
+
+### OPPO 手机测试截图
+
+![OPPO 手机订阅测试](./screenshots/oppo-calendar-test.jpg)
+
+### 小米手机测试截图
+
+![小米手机订阅测试](./screenshots/xiaomi-calendar-test.jpg)
+
 
 ### Google Calendar 添加订阅
 
