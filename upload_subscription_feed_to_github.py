@@ -77,7 +77,14 @@ def feed_changed() -> bool:
 
 
 def has_unpushed_commits() -> bool:
-    completed = run_git(["rev-list", "--count", f"origin/{BRANCH}..HEAD"], check=False)
+    completed = subprocess.run(
+        ["git", "rev-list", "--count", f"origin/{BRANCH}..HEAD"],
+        cwd=str(PUBLISH_ROOT),
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        check=False,
+    )
     try:
         return int(completed.stdout.strip() or "0") > 0
     except ValueError:
