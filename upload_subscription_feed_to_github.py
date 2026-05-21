@@ -66,9 +66,12 @@ def ensure_publish_repo(dry_run: bool) -> None:
 
     run_git(["config", "user.name", "Codex"], check=False)
     run_git(["config", "user.email", "codex@local"], check=False)
+
+    if (PUBLISH_ROOT / ".git" / "rebase-merge").exists() or (PUBLISH_ROOT / ".git" / "rebase-apply").exists():
+        run_git(["rebase", "--abort"], check=False)
+    run_git(["stash", "push", "--include-untracked", "--message", "launch-feed-upload-autostash", "--", str(FEED)], check=False)
     run_git(["fetch", "origin", BRANCH], check=False)
-    run_git(["checkout", BRANCH], check=False)
-    run_git(["pull", "--rebase", "origin", BRANCH], check=False)
+    run_git(["checkout", "--detach", f"origin/{BRANCH}"])
 
 
 def feed_changed() -> bool:
