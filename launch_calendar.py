@@ -140,6 +140,13 @@ CATEGORY_KEYWORDS = {
         "传祺",
         "奥迪",
         "audi",
+        "福特",
+        "ford",
+        "烈马",
+        "沃尔沃",
+        "volvo",
+        "smart",
+        "上汽集团",
         "丰田",
         "博越",
         "领汇",
@@ -1422,6 +1429,13 @@ def detect_ithome_calendar_category(text: str) -> str:
         "星愿",
         "牛仔",
         "mg 4x",
+        "福特",
+        "ford",
+        "烈马",
+        "沃尔沃",
+        "volvo",
+        "smart",
+        "上汽集团",
     ]
     if any(word.lower() in lowered for word in ev_words):
         return "ev"
