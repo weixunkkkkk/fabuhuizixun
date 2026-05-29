@@ -1,28 +1,23 @@
 start,end,all_day,category,title,location,source,url,score,matched_date
-2026-05-27T00:00:00+08:00,2026-05-28T00:00:00+08:00,True,科技数码,酷态科神秘新品发布（具体时间待定）,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4232&noapp=1,9,05月27日 00:00
-2026-05-27T02:00:00.200000+08:00,2026-05-27T03:00:00.200000+08:00,False,科技数码,NASA 公布月球基地计划,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4231&noapp=1,10,05月27日 02:00
-2026-05-27T14:30:00+08:00,2026-05-27T15:30:00+08:00,False,新能源汽车,鸿蒙智行问界 M9 系列新品发布会,线上,@微醺kkkkk,https://www.ithome.com/0/954/804.htm,10,05月27日 14:30
-2026-05-27T15:00:00+08:00,2026-05-27T16:00:00+08:00,False,新能源汽车,上汽 MG 4X 车型上市发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4228&noapp=1,10,05月27日 15:00
-2026-05-27T15:00:00.400000+08:00,2026-05-27T16:00:00.400000+08:00,False,新能源汽车,五菱星光 L 预售发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4252&noapp=1,10,05月27日 15:00
-2026-05-27T16:00:00+08:00,2026-05-27T17:00:00+08:00,False,新能源汽车,极狐问道 V9 上市发布会暨用户盛典,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4251&noapp=1,10,05月27日 16:00
-2026-05-27T17:45:00+08:00,2026-05-27T18:45:00+08:00,False,科技数码,联想百应 AI 主机暨百应生态发布，将亮相“全球首款商用 AI 主机”,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4253&noapp=1,10,05月27日 17:45
-2026-05-27T19:30:00+08:00,2026-05-27T20:30:00+08:00,False,新能源汽车,蔚来 ES9 上市并开启交付,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4138&noapp=1,10,05月27日 19:30
-2026-05-27T19:30:00.300000+08:00,2026-05-27T20:30:00.300000+08:00,False,科技数码,2026 雷鸟夏季新品发布会,好莱坞 TCL 中国大剧院,@微醺kkkkk,https://www.ithome.com/0/953/477.htm,10,05月27日 19:30
-2026-05-27T20:00:00.500000+08:00,2026-05-27T21:00:00.500000+08:00,False,科技数码,SPARK 2026 腾讯游戏发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4204&noapp=1,10,05月27日 20:00
-2026-05-28T00:00:00+08:00,2026-05-29T00:00:00+08:00,True,新能源汽车,吉利星愿新款纯电小车上市发布会（具体时间待定）,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4238&noapp=1,9,05月28日 00:00
 2026-05-28T00:00:00+08:00,2026-05-29T00:00:00+08:00,True,新能源汽车,比亚迪宋 Ultra DM-i 上市（具体时间待定）,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4247&noapp=1,9,05月28日 00:00
 2026-05-28T00:00:00+08:00,2026-05-29T00:00:00+08:00,True,手机新品,小米 17T 系列手机海外发布会（具体时间待定）,海外,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4205&noapp=1,9,05月28日 00:00
 2026-05-28T09:30:00.400000+08:00,2026-05-28T10:30:00.400000+08:00,False,科技数码,2026 索尼家庭影音娱乐新品发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4223&noapp=1,10,05月28日 09:30
+2026-05-28T14:00:00+08:00,2026-05-28T15:00:00+08:00,False,新能源汽车,吉利星愿新款纯电小车上市发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4238&noapp=1,10,05月28日 14:00
 2026-05-28T15:30:00+08:00,2026-05-28T17:00:00+08:00,False,新能源汽车,上汽集团全球第一亿位用户交车仪式,上海北外滩世界会客厅主会场及全球多地,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4242&noapp=1,10,05月28日 15:30
 2026-05-28T19:30:00.300000+08:00,2026-05-28T20:30:00.300000+08:00,False,新能源汽车,比亚迪智能化战略发布会,线上,@微醺kkkkk,https://www.ithome.com/0/955/310.htm,10,05月28日 19:30
 2026-05-29T00:00:00+08:00,2026-05-30T00:00:00+08:00,True,新能源汽车,一汽悦意 08 轿车开启预售（具体时间待定）,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4208&noapp=1,9,05月29日 00:00
-2026-05-29T00:00:00+08:00,2026-05-30T00:00:00+08:00,True,新能源汽车,全新猛士 M817 开启预售，猛士 M817 Ultimate 亮相（具体时间待定）,粤港澳大湾区车展,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4237&noapp=1,9,05月29日 00:00
-2026-05-29T00:00:00+08:00,2026-05-30T00:00:00+08:00,True,新能源汽车,启境 GT7 预售发布会（具体时间待定）,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4239&noapp=1,9,05月29日 00:00
 2026-05-29T00:00:00+08:00,2026-05-30T00:00:00+08:00,True,新能源汽车,第三十届粤港澳大湾区车展开幕（具体时间待定）,深圳国际会展中心（宝安）,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4236&noapp=1,9,05月29日 00:00
 2026-05-29T00:00:00+08:00,2026-05-30T00:00:00+08:00,True,科技数码,酷态科新品发布（具体时间待定）,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4243&noapp=1,9,05月29日 00:00
 2026-05-29T01:00:00+08:00,2026-05-29T02:00:00+08:00,False,科技数码,三星 SAFE 论坛 2026 美国场,美国 加州 圣何塞,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4036&noapp=1,10,05月29日 01:00
+2026-05-29T08:30:00+08:00,2026-05-29T09:30:00+08:00,False,新能源汽车,华为余承东「老余的特别发布」栏目,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4257&noapp=1,10,05月29日 08:30
+2026-05-29T09:20:00.100000+08:00,2026-05-29T10:20:00.100000+08:00,False,新能源汽车,东风奕派 M8 技术发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4258&noapp=1,10,05月29日 09:20
+2026-05-29T10:00:00+08:00,2026-05-29T11:00:00+08:00,False,新能源汽车,全新猛士 M817 开启预售，猛士 M817 Ultimate 亮相,粤港澳大湾区车展,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4237&noapp=1,10,05月29日 10:00
+2026-05-29T10:00:00+08:00,2026-05-29T11:00:00+08:00,False,新能源汽车,新乐道 L60 预售发布会,粤港澳大湾区车展,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4255&noapp=1,10,05月29日 10:00
 2026-05-29T10:00:00+08:00,2026-05-29T11:00:00+08:00,False,新能源汽车,沃尔沃全新 ES90/EX90 车型上市,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4246&noapp=1,10,05月29日 10:00
+2026-05-29T10:30:00+08:00,2026-05-29T11:30:00+08:00,False,新能源汽车,雷军联合舒淇给小米 YU7 GT 首批车主直播交车,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4256&noapp=1,10,05月29日 10:30
+2026-05-29T10:30:00.400000+08:00,2026-05-29T11:30:00.400000+08:00,False,新能源汽车,全新坦克 700 粤港澳大湾区车展发布会,2026 粤港澳大湾区车展,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4259&noapp=1,10,05月29日 10:30
 2026-05-29T11:00:00+08:00,2026-05-29T12:00:00+08:00,False,新能源汽车,上汽奥迪 AUDI E7X 正式上市,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4225&noapp=1,10,05月29日 11:00
+2026-05-29T14:00:00+08:00,2026-05-29T15:00:00+08:00,False,新能源汽车,启境 GT7 预售发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4239&noapp=1,10,05月29日 14:00
 2026-05-29T14:00:00+08:00,2026-05-29T15:00:00+08:00,False,新能源汽车,途观L超混 帕萨特超混 上市,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4250&noapp=1,10,05月29日 14:00
 2026-05-29T15:00:00+08:00,2026-05-29T16:00:00+08:00,False,手机新品,荣耀 WIN Turbo 新品发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4220&noapp=1,10,05月29日 15:00
 2026-05-29T19:00:00+08:00,2026-05-29T20:00:00+08:00,False,新能源汽车,领克 10 / 领克 10+ 上市发布会,线上,@微醺kkkkk,https://img.ithome.com/app/calendar/event_detail.html?id=4230&noapp=1,10,05月29日 19:00
