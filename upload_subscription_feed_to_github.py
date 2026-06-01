@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Commit and push only the generated subscription feed to GitHub.
+"""Commit and push generated subscription feeds to GitHub.
 
-This uses a small separate clone so the GitHub repo can keep its own README or
-other files without being overwritten by this local project.
+From the local project it uses a small separate clone, so the GitHub repo can
+keep its own README or other files without being overwritten. When run inside
+the GitHub repo itself, it updates that repo directly.
 """
 
 from __future__ import annotations
@@ -18,12 +19,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 FEED = Path("out/subscription_feed.ics")
+COMPAT_FEED = Path("subscription_feed.ics")
+PUBLISHED_FEEDS = [FEED, COMPAT_FEED]
 REMOTE = os.environ.get(
     "LAUNCH_FEED_GIT_REMOTE",
     "git@github-fabuhuizixun:weixunkkkkk/fabuhuizixun.git",
 )
 BRANCH = os.environ.get("LAUNCH_FEED_GIT_BRANCH", "main")
-PUBLISH_ROOT = ROOT / ".github-feed-worktree"
+PUBLISH_ROOT = ROOT if (ROOT / ".git").exists() else ROOT / ".github-feed-worktree"
 
 
 def run(command: list[str], cwd: Path = ROOT, check: bool = True) -> subprocess.CompletedProcess[str]:
@@ -52,6 +55,7 @@ def ensure_feed() -> None:
 
 
 def ensure_publish_repo(dry_run: bool) -> None:
+    direct_publish = PUBLISH_ROOT == ROOT
     if dry_run and not (PUBLISH_ROOT / ".git").exists():
         print(f"dry-run: would clone {REMOTE} into {PUBLISH_ROOT}")
         return
@@ -69,13 +73,18 @@ def ensure_publish_repo(dry_run: bool) -> None:
 
     if (PUBLISH_ROOT / ".git" / "rebase-merge").exists() or (PUBLISH_ROOT / ".git" / "rebase-apply").exists():
         run_git(["rebase", "--abort"], check=False)
-    run_git(["stash", "push", "--include-untracked", "--message", "launch-feed-upload-autostash", "--", str(FEED)], check=False)
     run_git(["fetch", "origin", BRANCH], check=False)
-    run_git(["checkout", "--detach", f"origin/{BRANCH}"])
+    if not direct_publish:
+        run_git(
+            ["stash", "push", "--include-untracked", "--message", "launch-feed-upload-autostash", "--"]
+            + [str(path) for path in PUBLISHED_FEEDS],
+            check=False,
+        )
+        run_git(["checkout", "--detach", f"origin/{BRANCH}"])
 
 
 def feed_changed() -> bool:
-    completed = run_git(["status", "--porcelain", "--", str(FEED)], check=False)
+    completed = run_git(["status", "--porcelain", "--", *[str(path) for path in PUBLISHED_FEEDS]], check=False)
     return bool(completed.stdout.strip())
 
 
@@ -95,13 +104,16 @@ def has_unpushed_commits() -> bool:
 
 
 def copy_feed() -> None:
-    target = PUBLISH_ROOT / FEED
-    target.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(ROOT / FEED, target)
+    source = ROOT / FEED
+    for target_path in PUBLISHED_FEEDS:
+        target = PUBLISH_ROOT / target_path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if source.resolve() != target.resolve():
+            shutil.copy2(source, target)
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Upload out/subscription_feed.ics to GitHub.")
+    parser = argparse.ArgumentParser(description="Upload generated subscription feeds to GitHub.")
     parser.add_argument("--dry-run", action="store_true", help="Show what would happen without committing or pushing.")
     args = parser.parse_args()
 
@@ -109,7 +121,7 @@ def main() -> int:
         ensure_feed()
         ensure_publish_repo(args.dry_run)
         if args.dry_run and not (PUBLISH_ROOT / ".git").exists():
-            print(f"dry-run: would copy {ROOT / FEED} to {PUBLISH_ROOT / FEED}")
+            print(f"dry-run: would copy {ROOT / FEED} to GitHub feed paths")
             return 0
 
         copy_feed()
@@ -120,13 +132,13 @@ def main() -> int:
             return 0
 
         if args.dry_run:
-            print(f"dry-run: would commit and push {FEED}")
+            print("dry-run: would commit and push generated feed files")
             return 0
 
         if changed:
-            run_git(["add", str(FEED)])
+            run_git(["add", *[str(path) for path in PUBLISHED_FEEDS]])
             message = "Update subscription feed " + dt.datetime.now().strftime("%Y-%m-%d %H:%M")
-            run_git(["commit", "-m", message, "--", str(FEED)])
+            run_git(["commit", "-m", message, "--", *[str(path) for path in PUBLISHED_FEEDS]])
         run_git(["push", "-u", "origin", f"HEAD:{BRANCH}"])
         print("GitHub upload complete.")
         return 0

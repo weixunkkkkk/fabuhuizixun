@@ -33,7 +33,11 @@
   "queries": [],
   "manual_sources": [
     {
-      "name": "Gemini补充",
+      "name": "Gemini表格",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_CHBKTjTb7_3Ht-xU6ZK9ico3l12DVdceQrFrzertjiczryjvkHt0zjMdeplFzGwc0dZ__jCu2Nz8/pub?output=csv"
+    },
+    {
+      "name": "Gemini本地补充",
       "path": "inbox/gemini_events.csv"
     }
   ]

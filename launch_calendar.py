@@ -16,6 +16,7 @@ import difflib
 import email.utils
 import hashlib
 import html
+import io
 import json
 import re
 import subprocess
@@ -67,7 +68,11 @@ DEFAULT_CONFIG = {
     "queries": [],
     "manual_sources": [
         {
-            "name": "Gemini补充",
+            "name": "Gemini表格",
+            "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_CHBKTjTb7_3Ht-xU6ZK9ico3l12DVdceQrFrzertjiczryjvkHt0zjMdeplFzGwc0dZ__jCu2Nz8/pub?output=csv",
+        },
+        {
+            "name": "Gemini本地补充",
             "path": "inbox/gemini_events.csv",
         },
     ],
@@ -946,10 +951,16 @@ def find_existing_duplicate_key(existing: Dict[str, LaunchEvent], default_key: s
 
 
 def may_be_same_event_window(event: LaunchEvent, other: LaunchEvent) -> bool:
+    if event.category == other.category:
+        if event.start.date() == other.start.date():
+            return True
+        event_title = compact_title_for_dedupe(event.title)
+        other_title = compact_title_for_dedupe(other.title)
+        if abs((event.start - other.start).total_seconds()) <= 36 * 3600:
+            return title_similarity(event_title, other_title) >= 0.74
+        return False
     if event.start.date() != other.start.date():
         return False
-    if event.category == other.category:
-        return True
     event_title = compact_title_for_dedupe(event.title)
     other_title = compact_title_for_dedupe(other.title)
     return title_similarity(event_title, other_title) >= 0.78
@@ -1783,32 +1794,47 @@ def load_manual_events(config: Dict, now: dt.datetime) -> Tuple[List[LaunchEvent
     events: List[LaunchEvent] = []
     errors: List[str] = []
     for source_config in config.get("manual_sources", []):
-        path = Path(str(source_config.get("path") or ""))
-        if not path:
-            continue
-        if not path.is_absolute():
-            path = Path.cwd() / path
-        if not path.exists():
-            continue
         try:
-            with path.open("r", encoding="utf-8-sig", newline="") as handle:
-                rows = list(csv.DictReader(handle))
-        except (OSError, csv.Error) as exc:
-            errors.append(f"{source_config.get('name', 'Manual')} {path}: {exc}")
+            rows = read_manual_source_rows(source_config)
+        except (OSError, csv.Error, urllib.error.URLError, TimeoutError) as exc:
+            location = source_config.get("url") or source_config.get("path") or ""
+            errors.append(f"{source_config.get('name', 'Manual')} {location}: {exc}")
             continue
         for index, row in enumerate(rows, start=2):
             try:
                 event = manual_row_to_event(row, source_config, config, now)
             except ValueError as exc:
-                errors.append(f"{source_config.get('name', 'Manual')} {path}:{index}: {exc}")
+                location = source_config.get("url") or source_config.get("path") or ""
+                errors.append(f"{source_config.get('name', 'Manual')} {location}:{index}: {exc}")
                 continue
             if event:
                 events.append(event)
     return events, errors
 
 
+def read_manual_source_rows(source_config: Dict) -> List[Dict[str, str]]:
+    url = str(source_config.get("url") or "").strip()
+    if url:
+        text = fetch_url(url).decode("utf-8-sig", errors="replace")
+        return list(csv.DictReader(io.StringIO(text)))
+
+    path = Path(str(source_config.get("path") or ""))
+    if not path:
+        return []
+    if not path.is_absolute():
+        path = Path.cwd() / path
+    if not path.exists():
+        return []
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
 def manual_row_to_event(row: Dict[str, str], source_config: Dict, config: Dict, now: dt.datetime) -> Optional[LaunchEvent]:
-    title = clean_text(row_value(row, "title", "标题", "name", "名称"))
+    status = row_value(row, "status", "状态")
+    if "已结束" in status:
+        return None
+
+    title = clean_text(row_value(row, "title", "标题", "name", "名称", "发布会名称"))
     if not title:
         return None
     combined = " ".join(
@@ -1825,7 +1851,11 @@ def manual_row_to_event(row: Dict[str, str], source_config: Dict, config: Dict, 
     if not is_strong_supplemental_launch_text(combined):
         return None
 
-    start_value = row_value(row, "start", "开始时间", "时间", "date", "日期")
+    start_value = row_value(row, "start", "开始时间")
+    if not start_value:
+        date_value = row_value(row, "date", "日期")
+        time_value = row_value(row, "time", "时间")
+        start_value = " ".join(part for part in [date_value, time_value] if part)
     if not start_value:
         raise ValueError("missing start/date")
     start, all_day, matched_date = parse_manual_datetime(
