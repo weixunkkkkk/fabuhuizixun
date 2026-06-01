@@ -7,7 +7,7 @@ PLIST="$HOME/Library/LaunchAgents/com.weixunkkkkk.fabuhuizixun.feed.plist"
 LABEL="com.weixunkkkkk.fabuhuizixun.feed"
 LOG_DIR="$PROJECT/logs"
 
-echo "准备安装 macOS 每日 9:30 自动上传任务。"
+echo "准备安装 macOS 每日 9:00 自动上传任务。"
 echo "它会每天刷新并上传：out/subscription_feed.ics"
 echo ""
 
@@ -25,6 +25,7 @@ cat > "$PLIST" <<EOF
 
   <key>ProgramArguments</key>
   <array>
+    <string>/bin/zsh</string>
     <string>$SCRIPT</string>
   </array>
 
@@ -36,7 +37,7 @@ cat > "$PLIST" <<EOF
     <key>Hour</key>
     <integer>9</integer>
     <key>Minute</key>
-    <integer>30</integer>
+    <integer>0</integer>
   </dict>
 
   <key>StandardOutPath</key>
@@ -59,7 +60,7 @@ echo ""
 if [ "$code" -eq 0 ]; then
   launchctl enable "gui/$(id -u)/$LABEL" >/dev/null 2>&1
   echo "安装完成。"
-  echo "每天 9:30 会自动运行：$SCRIPT"
+  echo "每天 9:00 会自动运行：$SCRIPT"
   echo ""
   echo "日志文件："
   echo "$LOG_DIR/daily_github_upload.log"
