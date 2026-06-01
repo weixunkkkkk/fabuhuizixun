@@ -119,6 +119,24 @@ cp config.example.json config.json
 
 `min_score` 越高，误报越少，但可能漏掉一些小品牌发布会。默认值 `3` 比较适合先用起来。
 
+## Gemini 补充数据
+
+如果你用 Gemini 每天额外跑一遍，把结果整理成 CSV 后放到：
+
+```text
+inbox/gemini_events.csv
+```
+
+表头固定为：
+
+```csv
+title,start,end,all_day,category,location,url,source,summary
+```
+
+`start` 推荐格式：`2026-06-08 19:00`。`category` 可填：`手机新品`、`新能源汽车`、`科技数码`、`电脑新品`。
+
+这些补充数据会自动进入同一套过滤和去重逻辑；如果和 IT之家科技日历重复，会优先保留 IT之家那条。
+
 ## 定时任务建议
 
 现在按每天抓一次配置。新品发布会信息一般提前几天到几周公布，这个频率比较稳。

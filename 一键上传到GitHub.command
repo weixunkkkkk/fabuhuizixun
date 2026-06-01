@@ -2,14 +2,15 @@
 cd "$(dirname "$0")"
 
 echo "正在上传订阅源到 GitHub: https://github.com/weixunkkkkk/fabuhuizixun"
+echo "流程：先刷新 IT之家科技日历，再生成 out/subscription_feed.ics，最后上传。"
 echo ""
 
-python3 upload_subscription_feed_to_github.py
+python3 run_daily_upload_github.py
 code=$?
 
 echo ""
 if [ "$code" -eq 0 ]; then
-  echo "上传完成。"
+  echo "刷新并上传完成。"
   echo ""
   echo "GitHub Pages 订阅链接："
   echo "https://weixunkkkkk.github.io/fabuhuizixun/out/subscription_feed.ics"

@@ -12,6 +12,7 @@ import argparse
 import csv
 import dataclasses
 import datetime as dt
+import difflib
 import email.utils
 import hashlib
 import html
@@ -51,8 +52,25 @@ DEFAULT_CONFIG = {
             "detail_url_template": "https://img.ithome.com/app/calendar/event_detail.html?id={id}&noapp=1",
         },
     ],
-    "rss_sources": [],
+    "rss_sources": [
+        {
+            "name": "IT之家RSS",
+            "url": "https://www.ithome.com/rss/",
+            "category": "auto_detect",
+        },
+        {
+            "name": "36氪RSS",
+            "url": "https://www.36kr.com/feed",
+            "category": "auto_detect",
+        },
+    ],
     "queries": [],
+    "manual_sources": [
+        {
+            "name": "Gemini补充",
+            "path": "inbox/gemini_events.csv",
+        },
+    ],
 }
 
 CATEGORY_LABELS = {
@@ -61,6 +79,28 @@ CATEGORY_LABELS = {
     "ev": "新能源汽车",
     "auto": "合资/日系车",
     "tech": "科技数码",
+}
+
+CATEGORY_ALIASES = {
+    "手机新品": "mobile",
+    "手机": "mobile",
+    "新机": "mobile",
+    "mobile": "mobile",
+    "电脑新品": "computer",
+    "电脑": "computer",
+    "pc": "computer",
+    "computer": "computer",
+    "新能源汽车": "ev",
+    "汽车": "ev",
+    "新车": "ev",
+    "ev": "ev",
+    "合资/日系车": "auto",
+    "auto": "auto",
+    "科技数码": "tech",
+    "数码科技": "tech",
+    "科技": "tech",
+    "数码": "tech",
+    "tech": "tech",
 }
 
 CATEGORY_KEYWORDS = {
@@ -300,6 +340,30 @@ NEGATIVE_KEYWORDS = [
     "do早报",
     "一文汇总",
     "主讲人",
+    "交付量",
+    "销量",
+    "财报",
+    "降价",
+    "补贴",
+    "曝光",
+    "跑分",
+    "预发布跑分",
+    "ipo",
+    "募资",
+    "融资",
+    "战投",
+    "领投",
+    "36氪首发",
+    "日赚",
+    "大涨",
+    "注册登记",
+    "排名",
+    "请愿",
+    "停更",
+    "评估",
+    "承诺支持",
+    "超频",
+    "直播回放",
     "京东直播",
     "京东首发",
     "京东首发开售",
@@ -329,6 +393,67 @@ NEGATIVE_KEYWORDS = [
     "张雪机车",
     "WSBK",
     "SSP",
+]
+
+DEDUP_BRAND_WORDS = [
+    "苹果",
+    "apple",
+    "iphone",
+    "华为",
+    "huawei",
+    "鸿蒙智行",
+    "问界",
+    "智界",
+    "享界",
+    "尊界",
+    "尚界",
+    "小米",
+    "xiaomi",
+    "redmi",
+    "荣耀",
+    "honor",
+    "vivo",
+    "iqoo",
+    "oppo",
+    "一加",
+    "oneplus",
+    "realme",
+    "三星",
+    "samsung",
+    "索尼",
+    "sony",
+    "联想",
+    "lenovo",
+    "英伟达",
+    "nvidia",
+    "高通",
+    "qualcomm",
+    "英特尔",
+    "intel",
+    "amd",
+    "微软",
+    "microsoft",
+    "比亚迪",
+    "byd",
+    "蔚来",
+    "nio",
+    "小鹏",
+    "理想",
+    "极氪",
+    "领克",
+    "乐道",
+    "smart",
+    "吉利",
+    "东风",
+    "猛士",
+    "奇瑞",
+    "上汽",
+    "奥迪",
+    "audi",
+    "大众",
+    "volkswagen",
+    "沃尔沃",
+    "volvo",
 ]
 
 CHINESE_WEEKDAY = {
@@ -688,6 +813,8 @@ def item_to_event(item: NewsItem, config: Dict, now: dt.datetime) -> Optional[La
     if score < int(config["min_score"]):
         return None
     combined = f"{item.title} {item.summary}"
+    if not is_strong_supplemental_launch_text(combined):
+        return None
     parsed = find_event_datetime(
         combined,
         now=now,
@@ -718,6 +845,44 @@ def item_to_event(item: NewsItem, config: Dict, now: dt.datetime) -> Optional[La
         score=score,
         matched_date=matched_date,
     )
+
+
+def is_strong_supplemental_launch_text(text: str) -> bool:
+    normalized = clean_text(text)
+    if any(word.lower() in normalized.lower() for word in NEGATIVE_KEYWORDS):
+        return False
+    patterns = [
+        r"发布会",
+        r"新品发布",
+        r"新机发布",
+        r"新车发布",
+        r"上市发布",
+        r"正式上市",
+        r"开发者大会",
+        r"技术沟通会",
+        r"影像沟通会",
+        r"全球发布",
+        r"主题演讲",
+        r"定档.{0,24}发布",
+        r"将于.{0,24}发布",
+    ]
+    return any(re.search(pattern, normalized, flags=re.IGNORECASE) for pattern in patterns)
+
+
+def is_candidate_launch_text(text: str) -> bool:
+    normalized = clean_text(text)
+    if any(word.lower() in normalized.lower() for word in NEGATIVE_KEYWORDS):
+        return False
+    patterns = [
+        r"发布会",
+        r"新品发布会",
+        r"上市发布",
+        r"开发者大会",
+        r"技术沟通会",
+        r"影像沟通会",
+        r"全球发布",
+    ]
+    return any(re.search(pattern, normalized, flags=re.IGNORECASE) for pattern in patterns)
 
 
 def detect_category(text: str, fallback: str) -> str:
@@ -756,7 +921,7 @@ def dedupe_events(events: Iterable[LaunchEvent]) -> List[LaunchEvent]:
     best_by_key: Dict[str, LaunchEvent] = {}
     for event in events:
         key = stable_event_key(event)
-        key = find_existing_fuzzy_key(best_by_key, key, event)
+        key = find_existing_duplicate_key(best_by_key, key, event)
         existing = best_by_key.get(key)
         if existing is None or event_quality(event) > event_quality(existing):
             best_by_key[key] = event
@@ -764,39 +929,73 @@ def dedupe_events(events: Iterable[LaunchEvent]) -> List[LaunchEvent]:
 
 
 def stable_event_key(event: LaunchEvent) -> str:
-    normalized_title = compact_title_for_dedupe(event.title)[:48]
+    normalized_title = compact_title_for_dedupe(event.title)[:64]
     return f"{event.category}:{event.start.date().isoformat()}:{normalized_title}"
 
 
-def find_existing_fuzzy_key(existing: Dict[str, LaunchEvent], default_key: str, event: LaunchEvent) -> str:
+def find_existing_duplicate_key(existing: Dict[str, LaunchEvent], default_key: str, event: LaunchEvent) -> str:
     event_title = compact_title_for_dedupe(event.title)
     if len(event_title) < 4:
         return default_key
     for key, other in existing.items():
-        if other.category != event.category:
+        if not may_be_same_event_window(event, other):
             continue
-        if abs((other.start - event.start).total_seconds()) > 90:
-            continue
-        other_title = compact_title_for_dedupe(other.title)
-        if len(other_title) < 4:
-            continue
-        if event_title in other_title or other_title in event_title:
+        if titles_are_duplicate(event, other, event_title):
             return key
     return default_key
+
+
+def may_be_same_event_window(event: LaunchEvent, other: LaunchEvent) -> bool:
+    if event.start.date() != other.start.date():
+        return False
+    if event.category == other.category:
+        return True
+    event_title = compact_title_for_dedupe(event.title)
+    other_title = compact_title_for_dedupe(other.title)
+    return title_similarity(event_title, other_title) >= 0.78
+
+
+def titles_are_duplicate(event: LaunchEvent, other: LaunchEvent, event_title: str) -> bool:
+    other_title = compact_title_for_dedupe(other.title)
+    if len(other_title) < 4:
+        return False
+    shorter, longer = sorted([event_title, other_title], key=len)
+    if len(shorter) >= 4 and shorter in longer:
+        return True
+
+    similarity = title_similarity(event_title, other_title)
+    if similarity >= 0.72:
+        return True
+
+    if longest_common_substring_len(event_title, other_title) >= 6 and similarity >= 0.45:
+        return True
+
+    event_codes = product_codes(event_title)
+    other_codes = product_codes(other_title)
+    shared_codes = event_codes & other_codes
+    if shared_codes and shared_brand_words(event.title, other.title) and similarity >= 0.42:
+        return True
+
+    return False
 
 
 def compact_title_for_dedupe(title: str) -> str:
     normalized = title.lower()
     normalized = re.sub(r"[（(].*?具体时间待定.*?[）)]", "", normalized)
+    normalized = re.sub(r"20\d{2}年?", "", normalized)
     for word in [
         "发布会",
         "新品发布",
         "上市发布",
         "正式上市",
+        "正式发布",
+        "发布上市",
         "开启预售",
         "开启预约",
-        "发布上市",
+        "开启交付",
         "全球首秀",
+        "全球发布",
+        "主题演讲",
         "国行版",
         "系列",
         "手机",
@@ -804,8 +1003,7 @@ def compact_title_for_dedupe(title: str) -> str:
         "汽车",
         "全新",
         "正式",
-        "2026款",
-        "2026年",
+        "款",
         "东风",
     ]:
         normalized = normalized.replace(word, "")
@@ -813,9 +1011,48 @@ def compact_title_for_dedupe(title: str) -> str:
     return normalized or re.sub(r"[\W_]+", "", title.lower())
 
 
-def event_quality(event: LaunchEvent) -> Tuple[int, int, int]:
+def title_similarity(left: str, right: str) -> float:
+    return difflib.SequenceMatcher(None, left, right).ratio()
+
+
+def longest_common_substring_len(left: str, right: str) -> int:
+    matcher = difflib.SequenceMatcher(None, left, right)
+    return max((match.size for match in matcher.get_matching_blocks()), default=0)
+
+
+def product_codes(title: str) -> set[str]:
+    raw_codes = set(re.findall(r"[a-z]{1,5}\d{1,4}[a-z0-9+]*|\d{1,4}[a-z]{1,5}[a-z0-9+]*", title))
+    codes = set(raw_codes)
+    for code in raw_codes:
+        for suffix in ["pro", "max", "ultra", "plus"]:
+            if code.endswith(suffix) and len(code) > len(suffix) + 2:
+                codes.add(code[: -len(suffix)])
+    codes.update(code for code in re.findall(r"\d{3,4}", title) if code not in {"2025", "2026", "2027"})
+    return codes
+
+
+def shared_brand_words(left: str, right: str) -> set[str]:
+    left_lower = left.lower()
+    right_lower = right.lower()
+    return {word for word in DEDUP_BRAND_WORDS if word.lower() in left_lower and word.lower() in right_lower}
+
+
+def event_quality(event: LaunchEvent) -> Tuple[int, int, int, int, int]:
+    source_priority = event_source_priority(event)
+    has_exact_time = 0 if event.all_day else 1
     has_news_url = 1 if re.search(r"https://www\.ithome\.com/0/\d+/\d+\.htm", event.url) else 0
-    return event.score, has_news_url, len(event.title)
+    return source_priority, has_exact_time, event.score, has_news_url, len(event.title)
+
+
+def event_source_priority(event: LaunchEvent) -> int:
+    source = (event.source or "").lower()
+    url = (event.url or "").lower()
+    summary = (event.summary or "").lower()
+    if event.source == "@微醺kkkkk" or "ithome.com/app/calendar" in url or "it之家日历" in summary.lower():
+        return 30
+    if "it之家" in source or "ithome" in source or "ithome.com" in url:
+        return 20
+    return 10
 
 
 def write_outputs(events: List[LaunchEvent], candidates: List[NewsItem], output_dir: Path, config: Dict) -> None:
@@ -1542,6 +1779,161 @@ def ithome_calendar_detail_url(source_config: Dict, event_id: object) -> str:
         return template.format(id=0)
 
 
+def load_manual_events(config: Dict, now: dt.datetime) -> Tuple[List[LaunchEvent], List[str]]:
+    events: List[LaunchEvent] = []
+    errors: List[str] = []
+    for source_config in config.get("manual_sources", []):
+        path = Path(str(source_config.get("path") or ""))
+        if not path:
+            continue
+        if not path.is_absolute():
+            path = Path.cwd() / path
+        if not path.exists():
+            continue
+        try:
+            with path.open("r", encoding="utf-8-sig", newline="") as handle:
+                rows = list(csv.DictReader(handle))
+        except (OSError, csv.Error) as exc:
+            errors.append(f"{source_config.get('name', 'Manual')} {path}: {exc}")
+            continue
+        for index, row in enumerate(rows, start=2):
+            try:
+                event = manual_row_to_event(row, source_config, config, now)
+            except ValueError as exc:
+                errors.append(f"{source_config.get('name', 'Manual')} {path}:{index}: {exc}")
+                continue
+            if event:
+                events.append(event)
+    return events, errors
+
+
+def manual_row_to_event(row: Dict[str, str], source_config: Dict, config: Dict, now: dt.datetime) -> Optional[LaunchEvent]:
+    title = clean_text(row_value(row, "title", "标题", "name", "名称"))
+    if not title:
+        return None
+    combined = " ".join(
+        part
+        for part in [
+            title,
+            row_value(row, "summary", "备注", "说明", "description", "简介"),
+            row_value(row, "category", "分类"),
+        ]
+        if part
+    )
+    if any(word.lower() in combined.lower() for word in NEGATIVE_KEYWORDS):
+        return None
+    if not is_strong_supplemental_launch_text(combined):
+        return None
+
+    start_value = row_value(row, "start", "开始时间", "时间", "date", "日期")
+    if not start_value:
+        raise ValueError("missing start/date")
+    start, all_day, matched_date = parse_manual_datetime(
+        start_value,
+        now=now,
+        default_start_time=str(config["default_start_time"]),
+    )
+
+    explicit_all_day = parse_bool(row_value(row, "all_day", "全天", "是否全天"))
+    if explicit_all_day is not None:
+        all_day = explicit_all_day
+        if all_day:
+            start = dt.datetime.combine(start.date(), dt.time.min, tzinfo=CN_TZ)
+
+    end_value = row_value(row, "end", "结束时间")
+    end = parse_manual_end_datetime(end_value, now, config) if end_value else None
+    if all_day:
+        end = dt.datetime.combine(start.date() + dt.timedelta(days=1), dt.time.min, tzinfo=CN_TZ)
+    elif not end or end <= start:
+        end = start + dt.timedelta(minutes=int(config["default_duration_minutes"]))
+
+    lookahead = dt.timedelta(days=int(config["lookahead_days"]))
+    event_lookback = dt.timedelta(hours=int(config.get("event_lookback_hours", 24)))
+    if start < now - event_lookback or start > now + lookahead:
+        return None
+
+    category_value = row_value(row, "category", "分类")
+    category = normalize_category(category_value) if category_value else detect_category(combined, "auto_detect")
+    source = clean_text(row_value(row, "source", "来源")) or str(source_config.get("name") or "Gemini补充")
+    url = clean_text(row_value(row, "url", "link", "链接", "原文链接"))
+    summary = clean_text(row_value(row, "summary", "备注", "说明", "description", "简介"))
+    location = clean_text(row_value(row, "location", "地点", "地址")) or extract_location(combined)
+
+    return LaunchEvent(
+        title=title,
+        category=category,
+        start=start,
+        end=end,
+        all_day=all_day,
+        location=location,
+        url=url,
+        source=source,
+        summary=summary,
+        published_at=None,
+        score=8 if not all_day else 7,
+        matched_date=matched_date,
+    )
+
+
+def row_value(row: Dict[str, str], *names: str) -> str:
+    normalized = {str(key).strip().lower(): value for key, value in row.items() if key is not None}
+    for name in names:
+        value = normalized.get(name.lower())
+        if value is not None:
+            return clean_text(str(value))
+    return ""
+
+
+def parse_manual_datetime(value: str, now: dt.datetime, default_start_time: str) -> Tuple[dt.datetime, bool, str]:
+    normalized = clean_text(value)
+    parsed = parse_loose_datetime(normalized)
+    if parsed:
+        all_day = not bool(find_time(normalized.replace("：", ":")))
+        if re.match(r"^\d{4}[-/]\d{1,2}[-/]\d{1,2}$", normalized):
+            all_day = True
+        return parsed, all_day, parsed.strftime("%m月%d日 %H:%M")
+    found = find_event_datetime(normalized, now=now, published_at=now, default_start_time=default_start_time)
+    if not found:
+        raise ValueError(f"cannot parse datetime: {value}")
+    return found
+
+
+def parse_manual_end_datetime(value: str, now: dt.datetime, config: Dict) -> Optional[dt.datetime]:
+    try:
+        return parse_manual_datetime(value, now, str(config["default_start_time"]))[0]
+    except ValueError:
+        return None
+
+
+def parse_loose_datetime(value: str) -> Optional[dt.datetime]:
+    normalized = value.strip().replace("/", "-")
+    if re.match(r"^\d{4}-\d{1,2}-\d{1,2}\s+\d{1,2}:\d{2}$", normalized):
+        normalized = normalized.replace(" ", "T")
+    try:
+        parsed = dt.datetime.fromisoformat(normalized)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=CN_TZ)
+    return parsed.astimezone(CN_TZ)
+
+
+def parse_bool(value: str) -> Optional[bool]:
+    if not value:
+        return None
+    lowered = value.strip().lower()
+    if lowered in {"true", "1", "yes", "y", "是", "全天"}:
+        return True
+    if lowered in {"false", "0", "no", "n", "否", "不是"}:
+        return False
+    return None
+
+
+def normalize_category(value: str) -> str:
+    cleaned = clean_text(value).lower()
+    return CATEGORY_ALIASES.get(cleaned, "tech")
+
+
 def collect_events(config: Dict, max_items: int) -> Tuple[List[LaunchEvent], List[NewsItem], List[str]]:
     now = dt.datetime.now(tz=CN_TZ)
     events: List[LaunchEvent] = []
@@ -1577,7 +1969,9 @@ def collect_events(config: Dict, max_items: int) -> Tuple[List[LaunchEvent], Lis
             event = item_to_event(item, config, now)
             if event:
                 events.append(event)
-            elif score_item(item) >= int(config["min_score"]):
+            elif score_item(item) >= int(config["min_score"]) and is_candidate_launch_text(
+                f"{item.title} {item.summary}"
+            ):
                 candidates.append(item)
         time.sleep(float(config.get("request_sleep_seconds", 1.0)))
 
@@ -1594,9 +1988,16 @@ def collect_events(config: Dict, max_items: int) -> Tuple[List[LaunchEvent], Lis
             event = item_to_event(item, config, now)
             if event:
                 events.append(event)
-            elif score_item(item) >= int(config["min_score"]):
+            elif score_item(item) >= int(config["min_score"]) and is_candidate_launch_text(
+                f"{item.title} {item.summary}"
+            ):
                 candidates.append(item)
         time.sleep(float(config.get("request_sleep_seconds", 1.0)))
+
+    manual_events, manual_errors = load_manual_events(config, now)
+    events.extend(manual_events)
+    errors.extend(manual_errors)
+
     return dedupe_events(events), candidates, errors
 
 
@@ -1619,6 +2020,51 @@ def run_self_tests() -> int:
         if start != expected_start or all_day != expected_all_day:
             print(f"FAIL: {text}: got {start} all_day={all_day}", file=sys.stderr)
             return 1
+
+    ithome_event = LaunchEvent(
+        title="vivo S60 系列手机新品发布会",
+        category="mobile",
+        start=dt.datetime(2026, 5, 29, 19, 30, tzinfo=CN_TZ),
+        end=dt.datetime(2026, 5, 29, 20, 30, tzinfo=CN_TZ),
+        all_day=False,
+        location="线上",
+        url="https://img.ithome.com/app/calendar/event_detail.html?id=4212&noapp=1",
+        source="@微醺kkkkk",
+        summary="IT之家日历",
+        published_at=None,
+        score=10,
+        matched_date="05月29日 19:30",
+    )
+    rss_event = dataclasses.replace(
+        ithome_event,
+        title="vivo S60 系列发布会定档 5 月 29 日晚间举行",
+        url="https://example.com/vivo-s60",
+        source="外部RSS",
+        summary="外部来源",
+        score=8,
+    )
+    deduped = dedupe_events([rss_event, ithome_event])
+    if len(deduped) != 1 or deduped[0].source != "@微醺kkkkk":
+        print("FAIL: dedupe should keep the IT之家 calendar event", file=sys.stderr)
+        return 1
+
+    manual_event = manual_row_to_event(
+        {
+            "title": "小米 17T 系列国行手机发布会",
+            "start": "2026-06-08 19:00",
+            "category": "手机新品",
+            "url": "https://example.com/xiaomi-17t",
+            "source": "Gemini补充",
+            "summary": "Gemini 找到的补充来源",
+        },
+        {"name": "Gemini补充"},
+        DEFAULT_CONFIG,
+        now,
+    )
+    if not manual_event or manual_event.start != dt.datetime(2026, 6, 8, 19, 0, tzinfo=CN_TZ):
+        print("FAIL: manual Gemini CSV row should parse", file=sys.stderr)
+        return 1
+
     print("self-test ok")
     return 0
 
