@@ -345,6 +345,20 @@ NEGATIVE_KEYWORDS = [
     "do早报",
     "一文汇总",
     "主讲人",
+    "电影",
+    "放映",
+    "世界杯",
+    "开幕式",
+    "预热",
+    "壁纸",
+    "歌单",
+    "新标语",
+    "暗指",
+    "改版",
+    "独占",
+    "登陆 pc",
+    "登陆PC",
+    "可能性",
     "交付量",
     "销量",
     "财报",
@@ -869,7 +883,6 @@ def is_strong_supplemental_launch_text(text: str) -> bool:
         r"全球发布",
         r"主题演讲",
         r"定档.{0,24}发布",
-        r"将于.{0,24}发布",
     ]
     return any(re.search(pattern, normalized, flags=re.IGNORECASE) for pattern in patterns)
 
