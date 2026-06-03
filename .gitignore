@@ -1,13 +1,11 @@
-.pycache/
-__pycache__/
-.DS_Store
-.git-local/
-.github-feed-worktree/
-.git-test-write
-.codex_proxy_env
-.swift-module-cache/
-logs/
-config.json
-google_client_secret.json
-google_token.json
-publisher.json
+# This public GitHub Pages repo should stay small:
+# only README + the calendar subscription feed are tracked.
+*
+.*
+
+!.gitignore
+!README.md
+!subscription_feed.ics
+!out/
+out/*
+!out/subscription_feed.ics
