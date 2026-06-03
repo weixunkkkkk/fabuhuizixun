@@ -23,7 +23,7 @@ COMPAT_FEED = Path("subscription_feed.ics")
 PUBLISHED_FEEDS = [FEED, COMPAT_FEED]
 REMOTE = os.environ.get(
     "LAUNCH_FEED_GIT_REMOTE",
-    "git@github-fabuhuizixun:weixunkkkkk/fabuhuizixun.git",
+    "https://github.com/weixunkkkkk/fabuhuizixun.git",
 )
 BRANCH = os.environ.get("LAUNCH_FEED_GIT_BRANCH", "main")
 PUBLISH_ROOT = ROOT if (ROOT / ".git").exists() else ROOT / ".github-feed-worktree"
