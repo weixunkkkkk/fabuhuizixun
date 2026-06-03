@@ -1,9 +1,13 @@
 #!/bin/zsh
 cd "$(dirname "$0")"
 
-export LAUNCH_FEED_GIT_REMOTE="https://github.com/weixunkkkkk/fabuhuizixun.git"
+REMOTE="$(git remote get-url origin 2>/dev/null)"
+if [ -z "$REMOTE" ]; then
+  REMOTE="https://github.com/weixunkkkkk/fabuhuizixun.git"
+  git remote add origin "$REMOTE" 2>/dev/null || true
+fi
+export LAUNCH_FEED_GIT_REMOTE="$REMOTE"
 export LAUNCH_FEED_GIT_BRANCH="main"
-git remote set-url origin "$LAUNCH_FEED_GIT_REMOTE" 2>/dev/null || true
 
 ./修复GitHub连接.command
 if [ "$?" -ne 0 ]; then

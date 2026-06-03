@@ -3,13 +3,16 @@ set -u
 
 cd "$(dirname "$0")"
 
-REMOTE="https://github.com/weixunkkkkk/fabuhuizixun.git"
+REMOTE="${LAUNCH_FEED_GIT_REMOTE:-$(git remote get-url origin 2>/dev/null)}"
+if [ -z "$REMOTE" ]; then
+  REMOTE="https://github.com/weixunkkkkk/fabuhuizixun.git"
+fi
 export LAUNCH_FEED_GIT_REMOTE="$REMOTE"
 export LAUNCH_FEED_GIT_BRANCH="main"
 PROXY_ENV_FILE=".codex_proxy_env"
 
 echo "检查 GitHub 连接..."
-git remote set-url origin "$REMOTE" 2>/dev/null || true
+git remote get-url origin >/dev/null 2>&1 || git remote add origin "$REMOTE" 2>/dev/null || true
 
 test_github() {
   local label="$1"

@@ -103,8 +103,8 @@ def has_unpushed_commits() -> bool:
         return False
 
 
-def sync_with_remote_before_push() -> None:
-    run_git(["fetch", "origin", BRANCH], check=False)
+def sync_with_remote_before_edit() -> None:
+    run_git(["fetch", "origin", BRANCH])
     run_git(["rebase", "--autostash", f"origin/{BRANCH}"])
 
 
@@ -129,6 +129,8 @@ def main() -> int:
             print(f"dry-run: would copy {ROOT / FEED} to GitHub feed paths")
             return 0
 
+        if not args.dry_run:
+            sync_with_remote_before_edit()
         copy_feed()
         changed = feed_changed()
         ahead = has_unpushed_commits()
@@ -144,7 +146,6 @@ def main() -> int:
             run_git(["add", *[str(path) for path in PUBLISHED_FEEDS]])
             message = "Update subscription feed " + dt.datetime.now().strftime("%Y-%m-%d %H:%M")
             run_git(["commit", "-m", message, "--", *[str(path) for path in PUBLISHED_FEEDS]])
-        sync_with_remote_before_push()
         run_git(["push", "-u", "origin", f"HEAD:{BRANCH}"])
         print("GitHub upload complete.")
         return 0

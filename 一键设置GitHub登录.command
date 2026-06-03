@@ -1,8 +1,8 @@
 #!/bin/zsh
 cd "$(dirname "$0")"
 
-echo "当前推荐使用 GitHub Token 登录。"
-echo "即将打开 Token 登录并上传脚本。"
+echo "你不想输入 Token，所以改用 SSH 公钥登录。"
+echo "这个方式会打开 GitHub 网页，你可以在网页里输入密码确认。"
 echo ""
 
-./一键设置Token并上传GitHub.command
+./一键设置SSH并上传GitHub.command

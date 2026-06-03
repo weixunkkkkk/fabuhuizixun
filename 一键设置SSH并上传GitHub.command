@@ -5,6 +5,8 @@ KEY="$HOME/.ssh/fabuhuizixun_ed25519"
 PUB="$KEY.pub"
 CONFIG="$HOME/.ssh/config"
 REMOTE="git@github-fabuhuizixun:weixunkkkkk/fabuhuizixun.git"
+export LAUNCH_FEED_GIT_REMOTE="$REMOTE"
+export LAUNCH_FEED_GIT_BRANCH="main"
 
 echo "准备配置 SSH 上传到 GitHub：weixunkkkkk/fabuhuizixun"
 echo "这个方式不需要 GitHub CLI，也不需要在终端输入 GitHub 密码。"
@@ -30,7 +32,8 @@ if ! grep -q "Host github-fabuhuizixun" "$CONFIG" 2>/dev/null; then
   cat >> "$CONFIG" <<EOF
 
 Host github-fabuhuizixun
-  HostName github.com
+  HostName ssh.github.com
+  Port 443
   User git
   IdentityFile $KEY
   IdentitiesOnly yes
@@ -52,7 +55,7 @@ echo ""
 open "https://github.com/settings/ssh/new"
 read "?保存好 SSH key 后，回到这里按回车继续..."
 
-GIT_DIR=".git-local" GIT_WORK_TREE="." git remote set-url origin "$REMOTE"
+git remote set-url origin "$REMOTE" 2>/dev/null || git remote add origin "$REMOTE"
 
 echo ""
 echo "正在测试 SSH 连接..."
@@ -70,6 +73,10 @@ fi
 
 echo ""
 echo "SSH 已连通，开始首次上传订阅源文件..."
+./修复GitHub连接.command
+if [ -f ".codex_proxy_env" ]; then
+  source ".codex_proxy_env"
+fi
 python3 upload_subscription_feed_to_github.py
 code=$?
 
