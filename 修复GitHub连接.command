@@ -22,6 +22,10 @@ test_github() {
 }
 
 clear_git_proxy() {
+  git config --unset-all http.https://github.com.proxy >/dev/null 2>&1 || true
+  git config --unset-all https.https://github.com.proxy >/dev/null 2>&1 || true
+  git config --unset-all http.proxy >/dev/null 2>&1 || true
+  git config --unset-all https.proxy >/dev/null 2>&1 || true
   git config --global --unset-all http.https://github.com.proxy >/dev/null 2>&1 || true
   git config --global --unset-all https.https://github.com.proxy >/dev/null 2>&1 || true
   git config --global --unset-all http.proxy >/dev/null 2>&1 || true
@@ -31,6 +35,8 @@ clear_git_proxy() {
 set_git_proxy() {
   local proxy="$1"
   clear_git_proxy
+  git config http.https://github.com.proxy "$proxy"
+  git config https.https://github.com.proxy "$proxy"
   git config --global http.https://github.com.proxy "$proxy"
   git config --global https.https://github.com.proxy "$proxy"
   echo "已设置 GitHub Git 代理：$proxy"
@@ -44,7 +50,7 @@ fi
 
 echo "直连不可用，开始尝试常见本地代理端口..."
 
-for port in 7890 7897 7899 6152 6153 8080 1087 10809 20170; do
+for port in 12451 7890 7897 7899 6152 6153 8080 1087 10809 20170; do
   proxy="http://127.0.0.1:$port"
   if test_github "$proxy" --proxy "$proxy"; then
     set_git_proxy "$proxy"
@@ -52,7 +58,7 @@ for port in 7890 7897 7899 6152 6153 8080 1087 10809 20170; do
   fi
 done
 
-for port in 1080 1087 10808 10809 7890 7891; do
+for port in 12451 1080 1087 10808 10809 7890 7891; do
   proxy="socks5h://127.0.0.1:$port"
   if test_github "$proxy" --proxy "$proxy"; then
     set_git_proxy "$proxy"
@@ -64,7 +70,7 @@ echo ""
 echo "没有找到可用的 GitHub 连接。"
 echo "请先打开你的代理/VPN，并确认代理软件允许 Terminal 使用。"
 echo "如果你知道代理地址，可以手动运行："
-echo "git config --global http.https://github.com.proxy http://127.0.0.1:7890"
-echo "git config --global https.https://github.com.proxy http://127.0.0.1:7890"
+echo "git config --global http.https://github.com.proxy http://127.0.0.1:12451"
+echo "git config --global https.https://github.com.proxy http://127.0.0.1:12451"
 echo ""
 exit 1
