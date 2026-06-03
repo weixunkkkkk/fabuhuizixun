@@ -28,8 +28,16 @@ fi
 chmod 600 "$KEY"
 chmod 644 "$PUB"
 
-if ! grep -q "Host github-fabuhuizixun" "$CONFIG" 2>/dev/null; then
-  cat >> "$CONFIG" <<EOF
+TMP_CONFIG="$CONFIG.tmp.$$"
+if [ -f "$CONFIG" ]; then
+  awk '
+    /^Host github-fabuhuizixun$/ { skip = 1; next }
+    /^Host / && skip { skip = 0 }
+    !skip { print }
+  ' "$CONFIG" > "$TMP_CONFIG" && mv "$TMP_CONFIG" "$CONFIG"
+fi
+
+cat >> "$CONFIG" <<EOF
 
 Host github-fabuhuizixun
   HostName ssh.github.com
@@ -40,8 +48,7 @@ Host github-fabuhuizixun
   AddKeysToAgent yes
   UseKeychain yes
 EOF
-  chmod 600 "$CONFIG"
-fi
+chmod 600 "$CONFIG"
 
 pbcopy < "$PUB"
 echo "SSH 公钥已经复制到剪贴板。"
