@@ -13,6 +13,9 @@ if [ "$?" -ne 0 ]; then
   read "?按回车关闭这个窗口..."
   exit 1
 fi
+if [ -f ".codex_proxy_env" ]; then
+  source ".codex_proxy_env"
+fi
 
 echo "正在上传订阅源到 GitHub: https://github.com/weixunkkkkk/fabuhuizixun"
 echo "流程：先刷新 IT之家科技日历，再生成 out/subscription_feed.ics，最后上传。"

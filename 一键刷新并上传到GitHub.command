@@ -13,6 +13,9 @@ if [ "$?" -ne 0 ]; then
   read "?按回车关闭这个窗口..."
   exit 1
 fi
+if [ -f ".codex_proxy_env" ]; then
+  source ".codex_proxy_env"
+fi
 
 echo "开始刷新并上传发布会订阅源。"
 echo "输出文件：out/subscription_feed.ics"

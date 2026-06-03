@@ -35,6 +35,9 @@ if [ "$?" -ne 0 ]; then
   read "?按回车关闭这个窗口..."
   exit 1
 fi
+if [ -f ".codex_proxy_env" ]; then
+  source ".codex_proxy_env"
+fi
 
 echo ""
 read "GITHUB_USER?请输入 GitHub 用户名（通常是 weixunkkkkk）："

@@ -6,6 +6,7 @@ cd "$(dirname "$0")"
 REMOTE="https://github.com/weixunkkkkk/fabuhuizixun.git"
 export LAUNCH_FEED_GIT_REMOTE="$REMOTE"
 export LAUNCH_FEED_GIT_BRANCH="main"
+PROXY_ENV_FILE=".codex_proxy_env"
 
 echo "检查 GitHub 连接..."
 git remote set-url origin "$REMOTE" 2>/dev/null || true
@@ -32,6 +33,30 @@ clear_git_proxy() {
   git config --global --unset-all https.proxy >/dev/null 2>&1 || true
 }
 
+clear_fetch_proxy_env() {
+  cat > "$PROXY_ENV_FILE" <<'EOF'
+unset HTTP_PROXY
+unset HTTPS_PROXY
+unset ALL_PROXY
+unset http_proxy
+unset https_proxy
+unset all_proxy
+EOF
+}
+
+set_fetch_proxy_env() {
+  local proxy="$1"
+  cat > "$PROXY_ENV_FILE" <<EOF
+export HTTP_PROXY="$proxy"
+export HTTPS_PROXY="$proxy"
+export ALL_PROXY="$proxy"
+export http_proxy="$proxy"
+export https_proxy="$proxy"
+export all_proxy="$proxy"
+EOF
+  echo "已设置抓取代理环境：$proxy"
+}
+
 set_git_proxy() {
   local proxy="$1"
   clear_git_proxy
@@ -40,10 +65,12 @@ set_git_proxy() {
   git config --global http.https://github.com.proxy "$proxy"
   git config --global https.https://github.com.proxy "$proxy"
   echo "已设置 GitHub Git 代理：$proxy"
+  set_fetch_proxy_env "$proxy"
 }
 
 if test_github "直连"; then
   clear_git_proxy
+  clear_fetch_proxy_env
   echo "GitHub 可直连，已清理 Git 代理配置。"
   exit 0
 fi
