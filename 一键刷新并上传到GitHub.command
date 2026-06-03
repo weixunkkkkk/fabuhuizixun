@@ -1,6 +1,19 @@
 #!/bin/zsh
 cd "$(dirname "$0")"
 
+export LAUNCH_FEED_GIT_REMOTE="https://github.com/weixunkkkkk/fabuhuizixun.git"
+export LAUNCH_FEED_GIT_BRANCH="main"
+git remote set-url origin "$LAUNCH_FEED_GIT_REMOTE" 2>/dev/null || true
+
+./修复GitHub连接.command
+if [ "$?" -ne 0 ]; then
+  echo ""
+  echo "GitHub 连接不可用，已停止。请打开代理/VPN 后重新双击。"
+  echo ""
+  read "?按回车关闭这个窗口..."
+  exit 1
+fi
+
 echo "开始刷新并上传发布会订阅源。"
 echo "输出文件：out/subscription_feed.ics"
 echo "GitHub 仓库：https://github.com/weixunkkkkk/fabuhuizixun"

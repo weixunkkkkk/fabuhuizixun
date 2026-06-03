@@ -103,6 +103,11 @@ def has_unpushed_commits() -> bool:
         return False
 
 
+def sync_with_remote_before_push() -> None:
+    run_git(["fetch", "origin", BRANCH], check=False)
+    run_git(["rebase", "--autostash", f"origin/{BRANCH}"])
+
+
 def copy_feed() -> None:
     source = ROOT / FEED
     for target_path in PUBLISHED_FEEDS:
@@ -139,6 +144,7 @@ def main() -> int:
             run_git(["add", *[str(path) for path in PUBLISHED_FEEDS]])
             message = "Update subscription feed " + dt.datetime.now().strftime("%Y-%m-%d %H:%M")
             run_git(["commit", "-m", message, "--", *[str(path) for path in PUBLISHED_FEEDS]])
+        sync_with_remote_before_push()
         run_git(["push", "-u", "origin", f"HEAD:{BRANCH}"])
         print("GitHub upload complete.")
         return 0
