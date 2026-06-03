@@ -62,6 +62,20 @@ if ! git ls-remote --heads origin main >/dev/null 2>&1; then
 fi
 
 echo "登录测试通过，开始上传当前提交..."
+git fetch origin main
+if [ "$?" -ne 0 ]; then
+  echo "拉取远端最新提交失败，已停止。"
+  read "?按回车关闭这个窗口..."
+  exit 1
+fi
+
+git rebase --autostash origin/main
+if [ "$?" -ne 0 ]; then
+  echo "自动接上远端最新提交失败。请把终端输出发给我。"
+  read "?按回车关闭这个窗口..."
+  exit 1
+fi
+
 git push -u origin HEAD:main
 code=$?
 
