@@ -16,6 +16,14 @@ https://weixunkkkkk.github.io/fabuhuizixun/out/subscription_feed.ics
 https://weixunkkkkk.github.io/fabuhuizixun/subscription_feed.ics
 ```
 
+网页清单：
+
+```text
+https://weixunkkkkk.github.io/fabuhuizixun/out/events.html
+```
+
+网页支持点击顶部统计卡进入「未结束」「24小时内」「科技数码」「新能源汽车」等二级筛选视图，也可以用 URL hash 直接分享筛选结果。
+
 ## 数据策略
 
 - 主源：IT之家科技日历，来源标记为 `@微醺kkkkk`
