@@ -16,8 +16,9 @@ start,end,all_day,category,title,location,source,source_priority,url,score,match
 2026-06-12T00:00:00+08:00,2026-06-15T00:00:00+08:00,True,科技数码,华为开发者大会 HDC 2026（具体时间待定）,松山湖,@微醺kkkkk,100,https://img.ithome.com/app/calendar/event_detail.html?id=4118&noapp=1,9,06月12日 00:00
 2026-06-15T14:30:00+08:00,2026-06-15T15:30:00+08:00,False,新能源汽车,小鹏 SEPA 3.0 架构及端到端智驾技术沟通会,线上,@微醺kkkkk,100,,8,06月15日 14:30
 2026-06-16T00:00:00+08:00,2026-06-17T00:00:00+08:00,True,新能源汽车,零跑全新 C10/C11/C16 车型上市（具体时间待定）,线上,@微醺kkkkk,100,https://img.ithome.com/app/calendar/event_detail.html?id=4307&noapp=1,9,06月16日 00:00
-2026-06-16T00:00:00+08:00,2026-06-18T00:00:00+08:00,True,科技数码,2026 张江 EAI-张江具身智能开发者大会（具体时间待定）,上海张江,@微醺kkkkk,90,https://img.ithome.com/app/calendar/event_detail.html?id=4277&noapp=1,9,06月16日 00:00
+2026-06-16T00:00:00+08:00,2026-06-18T00:00:00+08:00,True,科技数码,2026 张江 EAI-张江具身智能开发者大会（具体时间待定）,上海张江,@微醺kkkkk,100,https://img.ithome.com/app/calendar/event_detail.html?id=4277&noapp=1,9,06月16日 00:00
 2026-06-16T00:00:00+08:00,2026-06-17T00:00:00+08:00,True,科技数码,2026 极核新品发布会（具体时间待定）,线上,@微醺kkkkk,100,https://img.ithome.com/app/calendar/event_detail.html?id=4306&noapp=1,9,06月16日 00:00
+2026-06-16T00:00:00+08:00,2026-06-17T00:00:00+08:00,True,科技数码,中国信通院高质量 Token 服务研讨会（具体时间待定）,北京,@微醺kkkkk,90,https://img.ithome.com/app/calendar/event_detail.html?id=4310&noapp=1,9,06月16日 00:00
 2026-06-17T00:00:00+08:00,2026-06-18T00:00:00+08:00,True,新能源汽车,2026 款瑞虎 7 PLUS 和瑞虎 7 高能版上市（具体时间待定）,线上,@微醺kkkkk,100,https://img.ithome.com/app/calendar/event_detail.html?id=2888&noapp=1,9,06月17日 00:00
 2026-06-30T00:00:00+08:00,2026-07-01T00:00:00+08:00,True,科技数码,优世界全尺寸超仿生人形机器人发布（具体时间待定）,线上,@微醺kkkkk,100,https://img.ithome.com/app/calendar/event_detail.html?id=4302&noapp=1,9,06月30日 00:00
 2026-07-22T00:00:00+08:00,2026-07-23T00:00:00+08:00,True,科技数码,AMD Advancing AI 2026（具体时间待定）,美国 加利福尼亚州 旧金山,@微醺kkkkk,100,https://img.ithome.com/app/calendar/event_detail.html?id=3936&noapp=1,9,07月22日 00:00

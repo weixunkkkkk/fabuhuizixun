@@ -8,27 +8,34 @@
   <style>
     :root {
       color-scheme: light;
-      --bg: #f6f7f8;
-      --surface: #ffffff;
-      --surface-2: #eef3f7;
-      --surface-muted: #eceff2;
-      --text: #1f2933;
-      --muted: #77818c;
-      --line: #dfe5ea;
-      --red: #e5534b;
-      --green: #28a17a;
-      --blue: #2f74c0;
-      --amber: #b7791f;
-      --violet: #7664c9;
+      --cloud: #f1efe8;
+      --cloud-soft: #faf9f5;
+      --surface: #fffdf8;
+      --surface-2: #f6f1e7;
+      --surface-muted: #ece8df;
+      --ink: #23231f;
+      --text: #30302b;
+      --muted: #777163;
+      --line: #ded8cd;
+      --mobile: #8abfa9;
+      --ev: #3e7f78;
+      --tech: #6c8ea4;
+      --computer: #8b83a6;
+      --soon: #ad7546;
+      --ended: #9a9488;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    [hidden] {
+      display: none !important;
+    }
+
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--cloud);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
         Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -36,7 +43,7 @@
     }
 
     .screen {
-      width: min(100%, 1040px);
+      width: min(100%, 1120px);
       min-height: 100vh;
       margin: 0 auto;
     }
@@ -45,24 +52,25 @@
       position: sticky;
       top: 0;
       z-index: 3;
-      padding: 16px 18px 14px;
-      background: rgba(246, 247, 248, 0.94);
+      padding: 18px 18px 14px;
+      background: rgba(241, 239, 232, 0.94);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(12px);
     }
 
     .topbar {
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 18px;
     }
 
     h1 {
       margin: 0;
-      font-size: 22px;
+      color: var(--ink);
+      font-size: 24px;
       line-height: 1.2;
-      font-weight: 700;
+      font-weight: 760;
     }
 
     .updated {
@@ -72,7 +80,7 @@
       line-height: 1.35;
     }
 
-    .links {
+    .links, .view-actions {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -80,8 +88,8 @@
       justify-content: flex-end;
     }
 
-    .links a {
-      color: var(--blue);
+    .links a, .view-actions a {
+      color: var(--ev);
       text-decoration: none;
       font-size: 13px;
       font-weight: 600;
@@ -90,38 +98,96 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
       gap: 10px;
       margin-top: 14px;
     }
 
-    .stat {
-      min-height: 74px;
-      padding: 12px;
+    .stat-card {
+      display: block;
+      min-height: 88px;
+      padding: 13px 14px;
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 8px;
+      color: inherit;
+      text-decoration: none;
+      outline: none;
+      transition: border-color 0.16s ease, transform 0.16s ease, background 0.16s ease;
     }
 
-    .stat strong {
-      display: block;
-      font-size: 24px;
-      line-height: 1;
+    .stat-card:hover, .stat-card:focus-visible, .stat-card.is-active {
+      border-color: color-mix(in srgb, var(--accent, var(--ev)) 52%, var(--line));
+      background: color-mix(in srgb, var(--accent, var(--ev)) 8%, var(--surface));
     }
 
-    .stat span {
-      display: block;
-      margin-top: 8px;
+    .stat-card:hover {
+      transform: translateY(-1px);
+    }
+
+    .stat-card[data-tone="mobile"] { --accent: var(--mobile); }
+    .stat-card[data-tone="ev"] { --accent: var(--ev); }
+    .stat-card[data-tone="tech"] { --accent: var(--tech); }
+    .stat-card[data-tone="computer"] { --accent: var(--computer); }
+    .stat-card[data-tone="soon24"] { --accent: var(--soon); }
+    .stat-card[data-tone="ended"] { --accent: var(--ended); }
+
+    .stat-label {
       color: var(--muted);
       font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .stat-value {
+      display: block;
+      margin-top: 10px;
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 760;
+    }
+
+    .stat-desc {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.3;
     }
 
     .controls {
       display: grid;
+      gap: 12px;
+      padding: 16px 18px 10px;
+    }
+
+    .viewbar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .view-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 740;
+    }
+
+    .view-subtitle {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .control-row {
+      display: grid;
       grid-template-columns: minmax(180px, 1fr) auto;
       gap: 10px;
       align-items: start;
-      padding: 14px 18px 8px;
     }
 
     .search {
@@ -137,8 +203,8 @@
     }
 
     .search:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(47, 116, 192, 0.14);
+      border-color: var(--tech);
+      box-shadow: 0 0 0 3px rgba(108, 142, 164, 0.16);
     }
 
     .filters {
@@ -150,49 +216,70 @@
     }
 
     .filter {
-      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
       padding: 0 11px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--surface);
       color: var(--text);
       font-size: 13px;
-      cursor: pointer;
-    }
-
-    .filter span {
-      color: var(--muted);
-      margin-left: 3px;
+      text-decoration: none;
     }
 
     .filter.is-active {
-      color: #ffffff;
-      background: var(--text);
-      border-color: var(--text);
+      color: var(--ink);
+      background: var(--surface-2);
+      border-color: color-mix(in srgb, var(--tech) 48%, var(--line));
     }
 
     .list {
+      position: relative;
       padding: 6px 18px 28px;
       display: grid;
       gap: 10px;
     }
 
+    .list::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      bottom: 34px;
+      left: 42px;
+      width: 1px;
+      background: var(--line);
+    }
+
     .event {
+      position: relative;
       display: grid;
-      grid-template-columns: 96px minmax(0, 1fr) auto;
+      grid-template-columns: 128px minmax(0, 1fr) auto;
       gap: 14px;
       align-items: start;
       padding: 14px;
       background: var(--surface);
       border: 1px solid var(--line);
-      border-left: 5px solid var(--red);
       border-radius: 8px;
     }
 
-    .event[data-category="手机新品"] { border-left-color: var(--green); }
-    .event[data-category="新能源汽车"] { border-left-color: var(--blue); }
-    .event[data-category="电脑新品"] { border-left-color: var(--violet); }
-    .event[data-category="科技数码"] { border-left-color: var(--amber); }
+    .event::before {
+      content: "";
+      position: absolute;
+      left: 37px;
+      top: 21px;
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--surface);
+      border-radius: 50%;
+      background: var(--event-color, var(--tech));
+      box-shadow: 0 0 0 1px var(--event-color, var(--tech));
+    }
+
+    .event[data-category="手机新品"] { --event-color: var(--mobile); }
+    .event[data-category="新能源汽车"] { --event-color: var(--ev); }
+    .event[data-category="电脑新品"] { --event-color: var(--computer); }
+    .event[data-category="科技数码"] { --event-color: var(--tech); }
 
     .event.ended {
       opacity: 0.66;
@@ -203,6 +290,7 @@
       display: grid;
       gap: 5px;
       min-width: 0;
+      padding-left: 42px;
     }
 
     .date {
@@ -234,11 +322,23 @@
       align-items: center;
       min-height: 22px;
       padding: 2px 7px;
-      border-radius: 1px;
+      border: 1px solid transparent;
+      border-radius: 7px;
       background: var(--surface-2);
       color: var(--muted);
       font-size: 12px;
       line-height: 1.3;
+    }
+
+    .badge.category {
+      border-color: color-mix(in srgb, var(--event-color, var(--tech)) 36%, var(--line));
+      color: color-mix(in srgb, var(--event-color, var(--tech)) 68%, var(--ink));
+      background: color-mix(in srgb, var(--event-color, var(--tech)) 10%, var(--surface));
+    }
+
+    .badge.time-kind {
+      color: var(--soon);
+      background: #f6ecdf;
     }
 
     h2 {
@@ -259,13 +359,13 @@
     }
 
     .meta a {
-      color: var(--blue);
+      color: var(--ev);
       text-decoration: none;
       font-weight: 600;
     }
 
     .status {
-      color: var(--green);
+      color: var(--ev);
       font-size: 13px;
       line-height: 1.4;
       font-weight: 600;
@@ -275,6 +375,11 @@
     .status.ended {
       color: #a0a0a0;
       font-weight: 500;
+    }
+
+    .result-count {
+      color: var(--muted);
+      font-size: 13px;
     }
 
     .empty-count {
@@ -316,7 +421,12 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .controls {
+      .viewbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .control-row {
         grid-template-columns: 1fr;
       }
 
@@ -330,10 +440,15 @@
         gap: 10px;
       }
 
+      .event::before, .list::before {
+        display: none;
+      }
+
       .datebox {
         display: flex;
         justify-content: space-between;
         gap: 10px;
+        padding-left: 0;
       }
 
       .status {
@@ -348,7 +463,7 @@
       <div class="topbar">
         <div class="headline">
           <h1>新品/科技发布会追踪</h1>
-          <div class="updated">更新于 2026-06-04 10:41 · 最近两个月 · 每 5 分钟自动刷新</div>
+          <div class="updated">更新于 2026-06-04 12:08 · Cloud Dancer 风格 · 每 5 分钟自动刷新</div>
         </div>
         <nav class="links" aria-label="输出文件">
           <a href="./subscription_feed.ics">订阅源</a>
@@ -357,107 +472,80 @@
         </nav>
       </div>
       <section class="stats" aria-label="统计">
-        <div class="stat"><strong>23</strong><span>总日程</span></div>
-        <div class="stat"><strong>20</strong><span>未结束</span></div>
-        <div class="stat"><strong>2</strong><span>24 小时内</span></div>
-        <div class="stat"><strong>0</strong><span>Gemini 补充</span></div>
+        <a class="stat-card" href="#view=all" data-tone="all"><span class="stat-label">全部</span><strong class="stat-value">24</strong><span class="stat-desc">所有明确时间的发布会</span></a>
+<a class="stat-card" href="#view=active" data-tone="active"><span class="stat-label">未结束</span><strong class="stat-value">21</strong><span class="stat-desc">还没结束的发布会</span></a>
+<a class="stat-card" href="#view=soon24" data-tone="soon24"><span class="stat-label">24小时内</span><strong class="stat-value">2</strong><span class="stat-desc">接下来一天内</span></a>
+<a class="stat-card" href="#view=ended" data-tone="ended"><span class="stat-label">已结束</span><strong class="stat-value">3</strong><span class="stat-desc">已结束，仅供回看</span></a>
+<a class="stat-card" href="#category=%E6%89%8B%E6%9C%BA%E6%96%B0%E5%93%81" data-tone="mobile"><span class="stat-label">手机新品</span><strong class="stat-value">1</strong><span class="stat-desc">按分类查看</span></a>
+<a class="stat-card" href="#category=%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6" data-tone="ev"><span class="stat-label">新能源汽车</span><strong class="stat-value">7</strong><span class="stat-desc">按分类查看</span></a>
+<a class="stat-card" href="#category=%E7%A7%91%E6%8A%80%E6%95%B0%E7%A0%81" data-tone="tech"><span class="stat-label">科技数码</span><strong class="stat-value">16</strong><span class="stat-desc">按分类查看</span></a>
       </section>
     </header>
     <section class="controls" aria-label="筛选">
-      <input id="search" class="search" type="search" placeholder="搜索品牌、车型、会议、地点">
-      <div class="filters" role="toolbar" aria-label="分类筛选">
-        <button class="filter is-active" type="button" data-filter="all">全部</button>
-<button class="filter" type="button" data-filter="active">未结束</button>
-<button class="filter" type="button" data-filter="soon24">24小时内</button>
-<button class="filter" type="button" data-filter="手机新品">手机新品 <span>1</span></button>
-<button class="filter" type="button" data-filter="新能源汽车">新能源汽车 <span>7</span></button>
-<button class="filter" type="button" data-filter="科技数码">科技数码 <span>15</span></button>
+      <div class="viewbar">
+        <div>
+          <h2 id="viewTitle" class="view-title">全部发布会</h2>
+          <div id="viewSubtitle" class="view-subtitle">点击上方统计卡进入二级筛选视图。</div>
+        </div>
+        <div class="view-actions">
+          <a href="#view=all" data-reset-view>返回全部</a>
+          <span id="resultCount" class="result-count">24 条</span>
+        </div>
+      </div>
+      <div class="control-row">
+        <input id="search" class="search" type="search" placeholder="搜索品牌、车型、会议、地点">
+        <div class="filters" role="toolbar" aria-label="分类筛选">
+          <a class="filter is-active" href="#view=all" data-filter-link data-filter-key="all">全部</a>
+<a class="filter" href="#view=active" data-filter-link data-filter-key="active">未结束</a>
+<a class="filter" href="#view=soon24" data-filter-link data-filter-key="soon24">24小时内</a>
+<a class="filter" href="#category=%E6%89%8B%E6%9C%BA%E6%96%B0%E5%93%81" data-filter-link data-filter-key="手机新品">手机新品</a>
+<a class="filter" href="#category=%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6" data-filter-link data-filter-key="新能源汽车">新能源汽车</a>
+<a class="filter" href="#category=%E7%A7%91%E6%8A%80%E6%95%B0%E7%A0%81" data-filter-link data-filter-key="科技数码">科技数码</a>
+        </div>
       </div>
     </section>
     <section id="list" class="list" aria-label="发布会清单">
-      <article class="event ended" data-category="科技数码" data-state="ended" data-soon24="false" data-search="2026 华为智能光伏战略 &amp; 新品发布会（具体时间待定） 科技数码 国家会展中心（上海） @微醺kkkkk">
-        <div class="datebox">
-          <span class="date">06月03日</span>
-          <span class="time">全天/待定</span>
-        </div>
-        <div class="body">
-          <div class="badges">
-            <span class="badge">科技数码</span>
-            <span class="badge">@微醺kkkkk</span>
-          </div>
-          <h2>2026 华为智能光伏战略 &amp; 新品发布会（具体时间待定）</h2>
-          <div class="meta">国家会展中心（上海） · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4211&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
-        </div>
-        <div class="status ended">已结束</div>
-      </article>
-<article class="event ended" data-category="科技数码" data-state="ended" data-soon24="false" data-search="微软 build 2026 开发者大会 科技数码 旧金山梅森堡（fort mason） @微醺kkkkk">
-        <div class="datebox">
-          <span class="date">06月03日</span>
-          <span class="time">00:30</span>
-        </div>
-        <div class="body">
-          <div class="badges">
-            <span class="badge">科技数码</span>
-            <span class="badge">@微醺kkkkk</span>
-          </div>
-          <h2>微软 Build 2026 开发者大会</h2>
-          <div class="meta">旧金山梅森堡（Fort Mason） · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=3800&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
-        </div>
-        <div class="status ended">已结束</div>
-      </article>
-<article class="event ended" data-category="科技数码" data-state="ended" data-soon24="false" data-search="新一轮 state of play 发布会举办直播 科技数码 线上 @微醺kkkkk">
-        <div class="datebox">
-          <span class="date">06月03日</span>
-          <span class="time">05:00</span>
-        </div>
-        <div class="body">
-          <div class="badges">
-            <span class="badge">科技数码</span>
-            <span class="badge">@微醺kkkkk</span>
-          </div>
-          <h2>新一轮 State of Play 发布会举办直播</h2>
-          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4222&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
-        </div>
-        <div class="status ended">已结束</div>
-      </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-search="全新纯电 glc suv 开启预售（具体时间待定） 科技数码 线上 @微醺kkkkk">
+      <article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-start="2026-06-05T00:00:00+08:00" data-search="全新纯电 glc suv 开启预售（具体时间待定） 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月05日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>全新纯电 GLC SUV 开启预售（具体时间待定）</h2>
           <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4305&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
         </div>
-        <div class="status soon">14小时后</div>
+        <div class="status soon">12小时后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-search="酷态科 cp25 电能块（双 c 线）开启预售 科技数码 线上 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-start="2026-06-05T10:00:00+08:00" data-search="酷态科 cp25 电能块（双 c 线）开启预售 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月05日</span>
           <span class="time">10:00</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>酷态科 CP25 电能块（双 C 线）开启预售</h2>
           <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4304&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
         </div>
-        <div class="status soon">24小时后</div>
+        <div class="status soon">22小时后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="2026 年度夏日游戏节发布会 科技数码 洛杉矶杜比剧院 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-06T05:00:00+08:00" data-search="2026 年度夏日游戏节发布会 科技数码 洛杉矶杜比剧院 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月06日</span>
           <span class="time">05:00</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>2026 年度夏日游戏节发布会</h2>
@@ -465,14 +553,15 @@
         </div>
         <div class="status soon">2天后</div>
       </article>
-<article class="event" data-category="手机新品" data-state="upcoming" data-soon24="false" data-search="小米 17t 系列国行手机发布（具体时间待定） 手机新品 线上 @微醺kkkkk">
+<article class="event" data-category="手机新品" data-state="upcoming" data-soon24="false" data-start="2026-06-08T00:00:00+08:00" data-search="小米 17t 系列国行手机发布（具体时间待定） 手机新品 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月08日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">手机新品</span>
+            <span class="badge category">手机新品</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>小米 17T 系列国行手机发布（具体时间待定）</h2>
@@ -480,14 +569,15 @@
         </div>
         <div class="status soon">4天后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="唯卓仕 af 75mm f1.8 evo 与 af 90mm f2.2 evo 镜头发布（具体时间待定） 科技数码 线上 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-08T00:00:00+08:00" data-search="唯卓仕 af 75mm f1.8 evo 与 af 90mm f2.2 evo 镜头发布（具体时间待定） 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月08日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>唯卓仕 AF 75mm F1.8 EVO 与 AF 90mm F2.2 EVO 镜头发布（具体时间待定）</h2>
@@ -495,14 +585,15 @@
         </div>
         <div class="status soon">4天后</div>
       </article>
-<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-search="赛豆科技全新汽车品牌发布会（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-09T00:00:00+08:00" data-search="赛豆科技全新汽车品牌发布会（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月09日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">新能源汽车</span>
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>赛豆科技全新汽车品牌发布会（具体时间待定）</h2>
@@ -510,14 +601,15 @@
         </div>
         <div class="status soon">5天后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="苹果 wwdc26 全球开发者大会主题演讲 科技数码 线上 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-09T01:00:00+08:00" data-search="苹果 wwdc26 全球开发者大会主题演讲 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月09日</span>
           <span class="time">01:00</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>苹果 WWDC26 全球开发者大会主题演讲</h2>
@@ -525,14 +617,15 @@
         </div>
         <div class="status soon">5天后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="大疆 dji 2026 夏季全场景新品发布会 科技数码 线上 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-10T14:00:00+08:00" data-search="大疆 dji 2026 夏季全场景新品发布会 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月10日</span>
           <span class="time">14:00</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>大疆 DJI 2026 夏季全场景新品发布会</h2>
@@ -540,14 +633,15 @@
         </div>
         <div class="status soon">1周后</div>
       </article>
-<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-search="smart 精灵 6 号正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-11T00:00:00+08:00" data-search="smart 精灵 6 号正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月11日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">新能源汽车</span>
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>smart 精灵 6 号正式上市（具体时间待定）</h2>
@@ -555,14 +649,15 @@
         </div>
         <div class="status soon">1周后</div>
       </article>
-<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-search="新乐道 l60 正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-11T00:00:00+08:00" data-search="新乐道 l60 正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月11日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">新能源汽车</span>
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>新乐道 L60 正式上市（具体时间待定）</h2>
@@ -570,14 +665,15 @@
         </div>
         <div class="status soon">1周后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="广汽传祺向往 m8 phev l 与 e8 phev 上市发布会（具体时间待定） 科技数码 线上 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-11T00:00:00+08:00" data-search="广汽传祺向往 m8 phev l 与 e8 phev 上市发布会（具体时间待定） 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月11日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>广汽传祺向往 M8 PHEV L 与 E8 PHEV 上市发布会（具体时间待定）</h2>
@@ -585,14 +681,15 @@
         </div>
         <div class="status soon">1周后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="华为开发者大会 hdc 2026（具体时间待定） 科技数码 松山湖 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-12T00:00:00+08:00" data-search="华为开发者大会 hdc 2026（具体时间待定） 科技数码 松山湖 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月12日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>华为开发者大会 HDC 2026（具体时间待定）</h2>
@@ -600,14 +697,15 @@
         </div>
         <div class="status soon">2周后</div>
       </article>
-<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-search="小鹏 sepa 3.0 架构及端到端智驾技术沟通会 新能源汽车 线上 @微醺kkkkk">
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-15T14:30:00+08:00" data-search="小鹏 sepa 3.0 架构及端到端智驾技术沟通会 新能源汽车 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月15日</span>
           <span class="time">14:30</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">新能源汽车</span>
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">明确时间</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>小鹏 SEPA 3.0 架构及端到端智驾技术沟通会</h2>
@@ -615,14 +713,15 @@
         </div>
         <div class="status soon">2周后</div>
       </article>
-<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-search="零跑全新 c10/c11/c16 车型上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-16T00:00:00+08:00" data-search="零跑全新 c10/c11/c16 车型上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月16日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">新能源汽车</span>
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>零跑全新 C10/C11/C16 车型上市（具体时间待定）</h2>
@@ -630,14 +729,15 @@
         </div>
         <div class="status soon">2周后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="2026 张江 eai-张江具身智能开发者大会（具体时间待定） 科技数码 上海张江 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-16T00:00:00+08:00" data-search="2026 张江 eai-张江具身智能开发者大会（具体时间待定） 科技数码 上海张江 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月16日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>2026 张江 EAI-张江具身智能开发者大会（具体时间待定）</h2>
@@ -645,14 +745,15 @@
         </div>
         <div class="status soon">2周后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="2026 极核新品发布会（具体时间待定） 科技数码 线上 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-16T00:00:00+08:00" data-search="2026 极核新品发布会（具体时间待定） 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月16日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>2026 极核新品发布会（具体时间待定）</h2>
@@ -660,14 +761,31 @@
         </div>
         <div class="status soon">2周后</div>
       </article>
-<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-search="2026 款瑞虎 7 plus 和瑞虎 7 高能版上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-16T00:00:00+08:00" data-search="中国信通院高质量 token 服务研讨会（具体时间待定） 科技数码 北京 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月16日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>中国信通院高质量 Token 服务研讨会（具体时间待定）</h2>
+          <div class="meta">北京 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4310&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">2周后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-17T00:00:00+08:00" data-search="2026 款瑞虎 7 plus 和瑞虎 7 高能版上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月17日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">新能源汽车</span>
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>2026 款瑞虎 7 PLUS 和瑞虎 7 高能版上市（具体时间待定）</h2>
@@ -675,14 +793,15 @@
         </div>
         <div class="status soon">2周后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="优世界全尺寸超仿生人形机器人发布（具体时间待定） 科技数码 线上 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-30T00:00:00+08:00" data-search="优世界全尺寸超仿生人形机器人发布（具体时间待定） 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">06月30日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>优世界全尺寸超仿生人形机器人发布（具体时间待定）</h2>
@@ -690,14 +809,15 @@
         </div>
         <div class="status soon">4周后</div>
       </article>
-<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-search="amd advancing ai 2026（具体时间待定） 科技数码 美国 加利福尼亚州 旧金山 @微醺kkkkk">
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-07-22T00:00:00+08:00" data-search="amd advancing ai 2026（具体时间待定） 科技数码 美国 加利福尼亚州 旧金山 @微醺kkkkk">
         <div class="datebox">
           <span class="date">07月22日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">科技数码</span>
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>AMD Advancing AI 2026（具体时间待定）</h2>
@@ -705,14 +825,15 @@
         </div>
         <div class="status soon">7周后</div>
       </article>
-<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-search="北京越野 bj81 正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-08-01T00:00:00+08:00" data-search="北京越野 bj81 正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
         <div class="datebox">
           <span class="date">08月01日</span>
           <span class="time">全天/待定</span>
         </div>
         <div class="body">
           <div class="badges">
-            <span class="badge">新能源汽车</span>
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
             <span class="badge">@微醺kkkkk</span>
           </div>
           <h2>北京越野 BJ81 正式上市（具体时间待定）</h2>
@@ -720,17 +841,93 @@
         </div>
         <div class="status soon">9周后</div>
       </article>
+<article class="event ended" data-category="科技数码" data-state="ended" data-soon24="false" data-start="2026-06-03T00:00:00+08:00" data-search="2026 华为智能光伏战略 &amp; 新品发布会（具体时间待定） 科技数码 国家会展中心（上海） @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月03日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>2026 华为智能光伏战略 &amp; 新品发布会（具体时间待定）</h2>
+          <div class="meta">国家会展中心（上海） · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4211&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status ended">已结束</div>
+      </article>
+<article class="event ended" data-category="科技数码" data-state="ended" data-soon24="false" data-start="2026-06-03T00:30:00+08:00" data-search="微软 build 2026 开发者大会 科技数码 旧金山梅森堡（fort mason） @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月03日</span>
+          <span class="time">00:30</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>微软 Build 2026 开发者大会</h2>
+          <div class="meta">旧金山梅森堡（Fort Mason） · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=3800&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status ended">已结束</div>
+      </article>
+<article class="event ended" data-category="科技数码" data-state="ended" data-soon24="false" data-start="2026-06-03T05:00:00+08:00" data-search="新一轮 state of play 发布会举办直播 科技数码 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月03日</span>
+          <span class="time">05:00</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>新一轮 State of Play 发布会举办直播</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4222&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status ended">已结束</div>
+      </article>
     </section>
     <section id="emptyCount" class="empty-count">没有匹配的发布会。</section>
   </main>
   <script>
     const search = document.querySelector('#search');
-    const filters = Array.from(document.querySelectorAll('.filter'));
+    const filterLinks = Array.from(document.querySelectorAll('[data-filter-link]'));
+    const statCards = Array.from(document.querySelectorAll('.stat-card'));
     const events = Array.from(document.querySelectorAll('.event'));
     const empty = document.querySelector('#emptyCount');
-    let activeFilter = 'all';
+    const viewTitle = document.querySelector('#viewTitle');
+    const viewSubtitle = document.querySelector('#viewSubtitle');
+    const resultCount = document.querySelector('#resultCount');
+
+    function parseHash() {
+      const raw = window.location.hash.replace(/^#/, '');
+      const params = new URLSearchParams(raw);
+      const category = params.get('category');
+      const view = params.get('view') || (category ? 'category' : 'all');
+      return { view, category };
+    }
+
+    function viewLabel(state) {
+      if (state.category) return state.category + '发布会';
+      if (state.view === 'active') return '未结束发布会';
+      if (state.view === 'soon24') return '24小时内发布会';
+      if (state.view === 'ended') return '已结束发布会';
+      return '全部发布会';
+    }
+
+    function viewSubtitleText(state) {
+      if (state.category) return '只显示“' + state.category + '”分类，可继续用搜索缩小范围。';
+      if (state.view === 'active') return '已结束项目会被隐藏，适合日常查看。';
+      if (state.view === 'soon24') return '只显示接下来 24 小时内或正在进行的项目。';
+      if (state.view === 'ended') return '只显示已结束项目，方便回看来源。';
+      return '点击上方统计卡进入二级筛选视图。';
+    }
 
     function applyFilters() {
+      const state = parseHash();
       const keyword = search.value.trim().toLowerCase();
       let visible = 0;
       for (const event of events) {
@@ -739,26 +936,33 @@
         const state = event.dataset.state || '';
         const soon24 = event.dataset.soon24 === 'true';
         const matchesSearch = !keyword || text.includes(keyword);
+        const current = parseHash();
         const matchesFilter =
-          activeFilter === 'all' ||
-          (activeFilter === 'active' && state !== 'ended') ||
-          (activeFilter === 'soon24' && soon24) ||
-          activeFilter === category;
+          current.view === 'all' ||
+          (current.view === 'active' && state !== 'ended') ||
+          (current.view === 'soon24' && soon24) ||
+          (current.view === 'ended' && state === 'ended') ||
+          (current.category && current.category === category);
         const show = matchesSearch && matchesFilter;
         event.hidden = !show;
         if (show) visible += 1;
       }
+      viewTitle.textContent = viewLabel(state);
+      viewSubtitle.textContent = viewSubtitleText(state);
+      resultCount.textContent = visible + ' 条';
+      const activeKey = state.category || state.view;
+      filterLinks.forEach(item => item.classList.toggle('is-active', item.dataset.filterKey === activeKey));
+      statCards.forEach(item => {
+        const href = item.getAttribute('href') || '';
+        item.classList.toggle('is-active', href === window.location.hash || (!window.location.hash && href === '#view=all'));
+      });
       empty.style.display = visible === 0 ? 'block' : 'none';
     }
 
     search.addEventListener('input', applyFilters);
-    for (const button of filters) {
-      button.addEventListener('click', () => {
-        activeFilter = button.dataset.filter;
-        filters.forEach(item => item.classList.toggle('is-active', item === button));
-        applyFilters();
-      });
-    }
+    window.addEventListener('hashchange', applyFilters);
+    if (!window.location.hash) window.location.hash = '#view=all';
+    applyFilters();
   </script>
 </body>
 </html>

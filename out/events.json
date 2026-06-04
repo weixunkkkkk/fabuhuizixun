@@ -159,7 +159,7 @@
     "source": "@微醺kkkkk",
     "source_priority": 100,
     "url": "",
-    "summary": "来源：Gemini表格\n识别到的时间：06月10日 14:00\n可信度分数：8",
+    "summary": "来源：@微醺kkkkk\n识别到的时间：06月10日 14:00\n可信度分数：8",
     "published_at": null,
     "score": 8,
     "matched_date": "06月10日 14:00"
@@ -234,7 +234,7 @@
     "source": "@微醺kkkkk",
     "source_priority": 100,
     "url": "",
-    "summary": "来源：Gemini表格\n识别到的时间：06月15日 14:30\n可信度分数：8",
+    "summary": "来源：@微醺kkkkk\n识别到的时间：06月15日 14:30\n可信度分数：8",
     "published_at": null,
     "score": 8,
     "matched_date": "06月15日 14:30"
@@ -262,10 +262,10 @@
     "all_day": true,
     "location": "上海张江",
     "source": "@微醺kkkkk",
-    "source_priority": 90,
+    "source_priority": 100,
     "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4277&noapp=1",
-    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4277&noapp=1\n标签：具身智能",
-    "published_at": "2026-05-30T15:18:22.177000+08:00",
+    "summary": "来源：@微醺kkkkk\n链接：https://img.ithome.com/app/calendar/event_detail.html?id=4277&noapp=1\n识别到的时间：06月16日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/event_detail.html?id=4277&noapp=1",
+    "published_at": null,
     "score": 9,
     "matched_date": "06月16日 00:00"
   },
@@ -281,6 +281,21 @@
     "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4306&noapp=1",
     "summary": "来源：@微醺kkkkk\n链接：https://img.ithome.com/app/calendar/event_detail.html?id=4306&noapp=1\n识别到的时间：06月16日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/event_detail.html?id=4306&noapp=1",
     "published_at": null,
+    "score": 9,
+    "matched_date": "06月16日 00:00"
+  },
+  {
+    "title": "中国信通院高质量 Token 服务研讨会（具体时间待定）",
+    "category": "科技数码",
+    "start": "2026-06-16T00:00:00+08:00",
+    "end": "2026-06-17T00:00:00+08:00",
+    "all_day": true,
+    "location": "北京",
+    "source": "@微醺kkkkk",
+    "source_priority": 90,
+    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4310&noapp=1",
+    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4310&noapp=1\n标签：中国信通院,Token,AIIA",
+    "published_at": "2026-06-04T11:34:48.370000+08:00",
     "score": 9,
     "matched_date": "06月16日 00:00"
   },
