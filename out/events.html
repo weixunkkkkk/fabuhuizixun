@@ -56,6 +56,7 @@
       background: rgba(241, 239, 232, 0.94);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(12px);
+      transition: padding 0.22s ease, box-shadow 0.22s ease;
     }
 
     .topbar {
@@ -78,6 +79,7 @@
       color: var(--muted);
       font-size: 13px;
       line-height: 1.35;
+      transition: max-height 0.22s ease, margin 0.22s ease, opacity 0.18s ease;
     }
 
     .links, .view-actions {
@@ -86,6 +88,7 @@
       gap: 8px;
       flex-wrap: wrap;
       justify-content: flex-end;
+      transition: max-height 0.22s ease, opacity 0.18s ease;
     }
 
     .links a, .view-actions a {
@@ -101,6 +104,9 @@
       grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
       gap: 10px;
       margin-top: 14px;
+      max-height: 420px;
+      overflow: hidden;
+      transition: max-height 0.24s ease, margin 0.22s ease, opacity 0.18s ease, transform 0.22s ease;
     }
 
     .stat-card {
@@ -406,6 +412,7 @@
     @media (max-width: 760px) {
       h1 {
         font-size: 19px;
+        transition: font-size 0.22s ease;
       }
 
       .topbar {
@@ -419,6 +426,45 @@
 
       .stats {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stat-card {
+        min-height: 82px;
+        padding: 11px 12px;
+      }
+
+      .stat-value {
+        font-size: 26px;
+      }
+
+      header.is-collapsed {
+        padding: 9px 18px 8px;
+        box-shadow: 0 8px 22px rgba(35, 35, 31, 0.08);
+      }
+
+      header.is-collapsed .topbar {
+        gap: 0;
+      }
+
+      header.is-collapsed h1 {
+        font-size: 16px;
+      }
+
+      header.is-collapsed .updated,
+      header.is-collapsed .links {
+        max-height: 0;
+        margin-top: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      header.is-collapsed .stats {
+        max-height: 0;
+        margin-top: 0;
+        opacity: 0;
+        transform: translateY(-6px);
+        pointer-events: none;
       }
 
       .viewbar {
@@ -463,7 +509,7 @@
       <div class="topbar">
         <div class="headline">
           <h1>新品/科技发布会追踪</h1>
-          <div class="updated">更新于 2026-06-04 12:08 · Cloud Dancer 风格 · 每 5 分钟自动刷新</div>
+          <div class="updated">更新于 2026-06-04 14:10 · Cloud Dancer 风格 · 每 5 分钟自动刷新</div>
         </div>
         <nav class="links" aria-label="输出文件">
           <a href="./subscription_feed.ics">订阅源</a>
@@ -519,7 +565,7 @@
           <h2>全新纯电 GLC SUV 开启预售（具体时间待定）</h2>
           <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4305&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
         </div>
-        <div class="status soon">12小时后</div>
+        <div class="status soon">10小时后</div>
       </article>
 <article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-start="2026-06-05T10:00:00+08:00" data-search="酷态科 cp25 电能块（双 c 线）开启预售 科技数码 线上 @微醺kkkkk">
         <div class="datebox">
@@ -535,7 +581,7 @@
           <h2>酷态科 CP25 电能块（双 C 线）开启预售</h2>
           <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4304&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
         </div>
-        <div class="status soon">22小时后</div>
+        <div class="status soon">20小时后</div>
       </article>
 <article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-06T05:00:00+08:00" data-search="2026 年度夏日游戏节发布会 科技数码 洛杉矶杜比剧院 @微醺kkkkk">
         <div class="datebox">
@@ -631,7 +677,7 @@
           <h2>大疆 DJI 2026 夏季全场景新品发布会</h2>
           <div class="meta">线上</div>
         </div>
-        <div class="status soon">1周后</div>
+        <div class="status soon">6天后</div>
       </article>
 <article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-11T00:00:00+08:00" data-search="smart 精灵 6 号正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
         <div class="datebox">
@@ -901,6 +947,9 @@
     const viewTitle = document.querySelector('#viewTitle');
     const viewSubtitle = document.querySelector('#viewSubtitle');
     const resultCount = document.querySelector('#resultCount');
+    const pageHeader = document.querySelector('header');
+    const mobileQuery = window.matchMedia('(max-width: 760px)');
+    let scrollTicking = false;
 
     function parseHash() {
       const raw = window.location.hash.replace(/^#/, '');
@@ -963,6 +1012,31 @@
     window.addEventListener('hashchange', applyFilters);
     if (!window.location.hash) window.location.hash = '#view=all';
     applyFilters();
+
+    function updateHeaderCollapse() {
+      if (!pageHeader) return;
+      if (!mobileQuery.matches) {
+        pageHeader.classList.remove('is-collapsed');
+        return;
+      }
+      const currentY = window.scrollY;
+      if (currentY <= 48) {
+        pageHeader.classList.remove('is-collapsed');
+      } else if (currentY > 96) {
+        pageHeader.classList.add('is-collapsed');
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      window.requestAnimationFrame(() => {
+        updateHeaderCollapse();
+        scrollTicking = false;
+      });
+    }, { passive: true });
+    window.addEventListener('resize', updateHeaderCollapse);
+    updateHeaderCollapse();
   </script>
 </body>
 </html>
