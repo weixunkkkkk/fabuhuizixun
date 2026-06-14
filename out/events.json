@@ -196,18 +196,18 @@
     "matched_date": "06月13日 09:00"
   },
   {
-    "title": "小鹏 SEPA 3.0 架构及端到端智驾技术沟通会",
+    "title": "鸿蒙智行全新一代问界 M9 全国首交仪式",
     "category": "新能源汽车",
-    "start": "2026-06-15T14:30:00+08:00",
-    "end": "2026-06-15T15:30:00+08:00",
+    "start": "2026-06-13T10:00:00+08:00",
+    "end": "2026-06-13T11:00:00+08:00",
     "all_day": false,
-    "location": "线上",
-    "source": "Gemini表格",
-    "url": "",
-    "summary": "",
-    "published_at": null,
-    "score": 8,
-    "matched_date": "06月15日 14:30"
+    "location": "赛力斯超级工厂（龙兴）",
+    "source": "@微醺kkkkk",
+    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4331&noapp=1",
+    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4331&noapp=1\n标签：问界 M9,鸿蒙智行,赛力斯",
+    "published_at": "2026-06-12T12:00:55.590000+08:00",
+    "score": 10,
+    "matched_date": "06月13日 10:00"
   },
   {
     "title": "Livis Day 理想汽车软件与人工智能发布会",
@@ -280,20 +280,6 @@
     "matched_date": "06月16日 00:00"
   },
   {
-    "title": "中国信通院高质量 Token 服务研讨会（具体时间待定）",
-    "category": "科技数码",
-    "start": "2026-06-16T00:00:00+08:00",
-    "end": "2026-06-17T00:00:00+08:00",
-    "all_day": true,
-    "location": "北京",
-    "source": "@微醺kkkkk",
-    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4310&noapp=1",
-    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4310&noapp=1\n标签：中国信通院,Token,AIIA",
-    "published_at": "2026-06-04T11:34:48.370000+08:00",
-    "score": 9,
-    "matched_date": "06月16日 00:00"
-  },
-  {
     "title": "大疆行业应用新品发布直播",
     "category": "科技数码",
     "start": "2026-06-16T20:00:00.100000+08:00",
@@ -318,20 +304,6 @@
     "url": "https://img.ithome.com/app/calendar/event_detail.html?id=2888&noapp=1",
     "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=2888&noapp=1\n标签：瑞虎 7 PLUS,瑞虎 7 高能版,奇瑞",
     "published_at": "2025-06-13T15:27:35.633000+08:00",
-    "score": 9,
-    "matched_date": "06月17日 00:00"
-  },
-  {
-    "title": "京东方 B16 生产基地 8.6 代 OLED 量产仪式（具体时间待定）",
-    "category": "科技数码",
-    "start": "2026-06-17T00:00:00+08:00",
-    "end": "2026-06-18T00:00:00+08:00",
-    "all_day": true,
-    "location": "四川成都",
-    "source": "@微醺kkkkk",
-    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4308&noapp=1",
-    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4308&noapp=1\n标签：京东方",
-    "published_at": "2026-06-03T19:02:40.303000+08:00",
     "score": 9,
     "matched_date": "06月17日 00:00"
   },
@@ -364,48 +336,6 @@
     "matched_date": "06月23日 00:00"
   },
   {
-    "title": "MWC26 上海（具体时间待定）",
-    "category": "科技数码",
-    "start": "2026-06-24T00:00:00+08:00",
-    "end": "2026-06-25T00:00:00+08:00",
-    "all_day": true,
-    "location": "上海",
-    "source": "@微醺kkkkk",
-    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=3544&noapp=1",
-    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=3544&noapp=1\n标签：2026 MWC 上海",
-    "published_at": "2025-11-18T10:21:08.797000+08:00",
-    "score": 9,
-    "matched_date": "06月24日 00:00"
-  },
-  {
-    "title": "高通 投资者日 2026（具体时间待定）",
-    "category": "科技数码",
-    "start": "2026-06-24T00:00:00+08:00",
-    "end": "2026-06-25T00:00:00+08:00",
-    "all_day": true,
-    "location": "美国 纽约 纽约",
-    "source": "@微醺kkkkk",
-    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4300&noapp=1",
-    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4300&noapp=1\n标签：高通",
-    "published_at": "2026-06-01T16:50:37.350000+08:00",
-    "score": 9,
-    "matched_date": "06月24日 00:00"
-  },
-  {
-    "title": "CIAS 2026 第九届中国新能源汽车产业数智峰会（具体时间待定）",
-    "category": "新能源汽车",
-    "start": "2026-06-25T00:00:00+08:00",
-    "end": "2026-06-26T00:00:00+08:00",
-    "all_day": true,
-    "location": "广东",
-    "source": "@微醺kkkkk",
-    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4287&noapp=1",
-    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4287&noapp=1\n标签：新能源汽车",
-    "published_at": "2026-05-30T15:28:28.390000+08:00",
-    "score": 9,
-    "matched_date": "06月25日 00:00"
-  },
-  {
     "title": "零跑 D99 正式开启预售（具体时间待定）",
     "category": "新能源汽车",
     "start": "2026-06-25T00:00:00+08:00",
@@ -418,34 +348,6 @@
     "published_at": "2026-06-09T15:55:18.443000+08:00",
     "score": 9,
     "matched_date": "06月25日 00:00"
-  },
-  {
-    "title": "2026 中国（深圳）集成电路峰会（具体时间待定）",
-    "category": "科技数码",
-    "start": "2026-06-26T00:00:00+08:00",
-    "end": "2026-06-27T00:00:00+08:00",
-    "all_day": true,
-    "location": "深圳南山蛇口希尔顿酒店",
-    "source": "@微醺kkkkk",
-    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4290&noapp=1",
-    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4290&noapp=1\n标签：集成电路",
-    "published_at": "2026-05-30T15:31:21.447000+08:00",
-    "score": 9,
-    "matched_date": "06月26日 00:00"
-  },
-  {
-    "title": "第三届出海全球峰会（具体时间待定）",
-    "category": "科技数码",
-    "start": "2026-06-28T00:00:00+08:00",
-    "end": "2026-06-30T00:00:00+08:00",
-    "all_day": true,
-    "location": "新加坡",
-    "source": "@微醺kkkkk",
-    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4292&noapp=1",
-    "summary": "IT之家日历：https://img.ithome.com/app/calendar/event_detail.html?id=4292&noapp=1\n标签：出海全球峰会",
-    "published_at": "2026-05-30T15:33:06.417000+08:00",
-    "score": 9,
-    "matched_date": "06月28日 00:00"
   },
   {
     "title": "优世界全尺寸超仿生人形机器人发布（具体时间待定）",
