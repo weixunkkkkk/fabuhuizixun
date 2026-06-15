@@ -8,23 +8,34 @@
   <style>
     :root {
       color-scheme: light;
-      --bg: #f5f5f3;
-      --surface: #ffffff;
-      --surface-muted: #eeeeec;
-      --text: #232323;
-      --muted: #969696;
-      --accent: #f05b57;
-      --fresh: #52c79a;
-      --hairline: #efefef;
+      --cloud: #f1efe8;
+      --cloud-soft: #faf9f5;
+      --surface: #fffdf8;
+      --surface-2: #f6f1e7;
+      --surface-muted: #ece8df;
+      --ink: #23231f;
+      --text: #30302b;
+      --muted: #777163;
+      --line: #ded8cd;
+      --mobile: #8abfa9;
+      --ev: #3e7f78;
+      --tech: #6c8ea4;
+      --computer: #8b83a6;
+      --soon: #ad7546;
+      --ended: #9a9488;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    [hidden] {
+      display: none !important;
+    }
+
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--cloud);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
         Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -32,106 +43,336 @@
     }
 
     .screen {
-      width: min(100%, 560px);
+      width: min(100%, 1120px);
       min-height: 100vh;
       margin: 0 auto;
-      background: var(--surface);
     }
 
     header {
       position: sticky;
       top: 0;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 18px 12px;
-      background: rgba(255, 255, 255, 0.95);
-      border-bottom: 1px solid var(--hairline);
+      z-index: 3;
+      padding: 18px 18px 14px;
+      background: rgba(241, 239, 232, 0.94);
+      border-bottom: 1px solid var(--line);
       backdrop-filter: blur(12px);
+      transition: padding 0.22s ease, box-shadow 0.22s ease;
     }
 
-    .headline {
-      min-width: 0;
+    .topbar {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
     }
 
     h1 {
       margin: 0;
-      font-size: 17px;
-      line-height: 1.3;
-      font-weight: 700;
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 760;
     }
 
     .updated {
-      margin-top: 3px;
+      margin-top: 6px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.35;
+      transition: max-height 0.22s ease, margin 0.22s ease, opacity 0.18s ease;
     }
 
-    .count {
-      flex: none;
-      color: var(--fresh);
+    .links, .view-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      transition: max-height 0.22s ease, opacity 0.18s ease;
+    }
+
+    .links a, .view-actions a {
+      color: var(--ev);
+      text-decoration: none;
       font-size: 13px;
       font-weight: 600;
       white-space: nowrap;
     }
 
-    .list {
-      padding: 0 0 20px;
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+      max-height: 420px;
+      overflow: hidden;
+      transition: max-height 0.24s ease, margin 0.22s ease, opacity 0.18s ease, transform 0.22s ease;
     }
 
-    .event-link {
+    .stat-card {
       display: block;
+      min-height: 88px;
+      padding: 13px 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
       color: inherit;
+      text-decoration: none;
+      outline: none;
+      transition: border-color 0.16s ease, transform 0.16s ease, background 0.16s ease;
+    }
+
+    .stat-card:hover, .stat-card:focus-visible, .stat-card.is-active {
+      border-color: color-mix(in srgb, var(--accent, var(--ev)) 52%, var(--line));
+      background: color-mix(in srgb, var(--accent, var(--ev)) 8%, var(--surface));
+    }
+
+    .stat-card:hover {
+      transform: translateY(-1px);
+    }
+
+    .stat-card[data-tone="mobile"] { --accent: var(--mobile); }
+    .stat-card[data-tone="ev"] { --accent: var(--ev); }
+    .stat-card[data-tone="tech"] { --accent: var(--tech); }
+    .stat-card[data-tone="computer"] { --accent: var(--computer); }
+    .stat-card[data-tone="soon24"] { --accent: var(--soon); }
+    .stat-card[data-tone="ended"] { --accent: var(--ended); }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .stat-value {
+      display: block;
+      margin-top: 10px;
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 760;
+    }
+
+    .stat-desc {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .controls {
+      display: grid;
+      gap: 12px;
+      padding: 16px 18px 10px;
+    }
+
+    .viewbar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .view-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 740;
+    }
+
+    .view-subtitle {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .control-row {
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) auto;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .search {
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: var(--tech);
+      box-shadow: 0 0 0 3px rgba(108, 142, 164, 0.16);
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      max-width: 640px;
+    }
+
+    .filter {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 13px;
       text-decoration: none;
     }
 
-    .event {
-      display: grid;
-      grid-template-columns: 4px minmax(0, 1fr) auto;
-      column-gap: 12px;
-      align-items: start;
-      min-height: 58px;
-      padding: 13px 18px 12px;
-      border-bottom: 1px solid #f4f4f4;
+    .filter.is-active {
+      color: var(--ink);
+      background: var(--surface-2);
+      border-color: color-mix(in srgb, var(--tech) 48%, var(--line));
     }
+
+    .list {
+      position: relative;
+      padding: 6px 18px 28px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .list::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      bottom: 34px;
+      left: 42px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .event {
+      position: relative;
+      display: grid;
+      grid-template-columns: 128px minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: start;
+      padding: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: 37px;
+      top: 21px;
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--surface);
+      border-radius: 50%;
+      background: var(--event-color, var(--tech));
+      box-shadow: 0 0 0 1px var(--event-color, var(--tech));
+    }
+
+    .event[data-category="手机新品"] { --event-color: var(--mobile); }
+    .event[data-category="新能源汽车"] { --event-color: var(--ev); }
+    .event[data-category="电脑新品"] { --event-color: var(--computer); }
+    .event[data-category="科技数码"] { --event-color: var(--tech); }
 
     .event.ended {
+      opacity: 0.66;
       background: var(--surface-muted);
-      border-bottom-color: #e4e4e2;
     }
 
-    .rail {
-      width: 4px;
-      height: 34px;
-      margin-top: 2px;
-      border-radius: 1px;
-      background: var(--accent);
+    .datebox {
+      display: grid;
+      gap: 5px;
+      min-width: 0;
+      padding-left: 42px;
+    }
+
+    .date {
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .time {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .body {
+      min-width: 0;
+    }
+
+    .badges {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 2px 7px;
+      border: 1px solid transparent;
+      border-radius: 7px;
+      background: var(--surface-2);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .badge.category {
+      border-color: color-mix(in srgb, var(--event-color, var(--tech)) 36%, var(--line));
+      color: color-mix(in srgb, var(--event-color, var(--tech)) 68%, var(--ink));
+      background: color-mix(in srgb, var(--event-color, var(--tech)) 10%, var(--surface));
+    }
+
+    .badge.time-kind {
+      color: var(--soon);
+      background: #f6ecdf;
     }
 
     h2 {
       margin: 0;
-      color: #242424;
-      font-size: 14px;
+      color: var(--text);
+      font-size: 16px;
       line-height: 1.35;
       font-weight: 700;
       word-break: break-word;
     }
 
     .meta {
-      margin-top: 3px;
+      margin-top: 7px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.35;
       word-break: break-word;
     }
 
+    .meta a {
+      color: var(--ev);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
     .status {
-      margin-top: 2px;
-      color: var(--fresh);
-      font-size: 12px;
+      color: var(--ev);
+      font-size: 13px;
       line-height: 1.4;
       font-weight: 600;
       white-space: nowrap;
@@ -140,6 +381,18 @@
     .status.ended {
       color: #a0a0a0;
       font-weight: 500;
+    }
+
+    .result-count {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .empty-count {
+      display: none;
+      padding: 24px 18px 40px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .empty {
@@ -156,15 +409,96 @@
       font-size: 14px;
     }
 
-    @media (max-width: 430px) {
-      header {
-        padding-inline: 14px;
+    @media (max-width: 760px) {
+      h1 {
+        font-size: 19px;
+        transition: font-size 0.22s ease;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .links {
+        justify-content: flex-start;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stat-card {
+        min-height: 82px;
+        padding: 11px 12px;
+      }
+
+      .stat-value {
+        font-size: 26px;
+      }
+
+      header.is-collapsed {
+        padding: 9px 18px 8px;
+        box-shadow: 0 8px 22px rgba(35, 35, 31, 0.08);
+      }
+
+      header.is-collapsed .topbar {
+        gap: 0;
+      }
+
+      header.is-collapsed h1 {
+        font-size: 16px;
+      }
+
+      header.is-collapsed .updated,
+      header.is-collapsed .links {
+        max-height: 0;
+        margin-top: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      header.is-collapsed .stats {
+        max-height: 0;
+        margin-top: 0;
+        opacity: 0;
+        transform: translateY(-6px);
+        pointer-events: none;
+      }
+
+      .viewbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .control-row {
+        grid-template-columns: 1fr;
+      }
+
+      .filters {
+        justify-content: flex-start;
+        max-width: none;
       }
 
       .event {
-        grid-template-columns: 4px minmax(0, 1fr) 54px;
-        padding-inline: 14px;
-        column-gap: 10px;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .event::before, .list::before {
+        display: none;
+      }
+
+      .datebox {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding-left: 0;
+      }
+
+      .status {
+        justify-self: start;
       }
     }
   </style>
@@ -172,174 +506,535 @@
 <body>
   <main class="screen">
     <header>
-      <div class="headline">
-        <h1>新品/科技发布会追踪</h1>
-        <div class="updated">更新于 2026-06-15 08:28 · 最近两个月</div>
+      <div class="topbar">
+        <div class="headline">
+          <h1>新品/科技发布会追踪</h1>
+          <div class="updated">更新于 2026-06-15 09:36 · Cloud Dancer 风格 · 每 5 分钟自动刷新</div>
+        </div>
+        <nav class="links" aria-label="输出文件">
+          <a href="./subscription_feed.ics">订阅源</a>
+          <a href="./events.csv">CSV</a>
+          <a href="./events.json">JSON</a>
+        </nav>
       </div>
-      <div class="count">16 场</div>
+      <section class="stats" aria-label="统计">
+        <a class="stat-card" href="#view=all" data-tone="all"><span class="stat-label">全部</span><strong class="stat-value">24</strong><span class="stat-desc">所有明确时间的发布会</span></a>
+<a class="stat-card" href="#view=active" data-tone="active"><span class="stat-label">未结束</span><strong class="stat-value">23</strong><span class="stat-desc">还没结束的发布会</span></a>
+<a class="stat-card" href="#view=soon24" data-tone="soon24"><span class="stat-label">24小时内</span><strong class="stat-value">9</strong><span class="stat-desc">接下来一天内</span></a>
+<a class="stat-card" href="#view=ended" data-tone="ended"><span class="stat-label">已结束</span><strong class="stat-value">1</strong><span class="stat-desc">已结束，仅供回看</span></a>
+<a class="stat-card" href="#category=%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6" data-tone="ev"><span class="stat-label">新能源汽车</span><strong class="stat-value">15</strong><span class="stat-desc">按分类查看</span></a>
+<a class="stat-card" href="#category=%E7%A7%91%E6%8A%80%E6%95%B0%E7%A0%81" data-tone="tech"><span class="stat-label">科技数码</span><strong class="stat-value">9</strong><span class="stat-desc">按分类查看</span></a>
+      </section>
     </header>
-    <section class="list" aria-label="发布会清单">
-      <div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>长城哈弗 H6 经典版 2026 款上市（具体时间待定）</h2>
-            <div class="meta">06月15日 00:00　线上</div>
-          </div>
-          <div class="status live">进行中</div>
-        </article>
+    <section class="controls" aria-label="筛选">
+      <div class="viewbar">
+        <div>
+          <h2 id="viewTitle" class="view-title">全部发布会</h2>
+          <div id="viewSubtitle" class="view-subtitle">点击上方统计卡进入二级筛选视图。</div>
+        </div>
+        <div class="view-actions">
+          <a href="#view=all" data-reset-view>返回全部</a>
+          <span id="resultCount" class="result-count">24 条</span>
+        </div>
       </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>中科曙光 新一代高性能通用计算平台 发布</h2>
-            <div class="meta">06月15日 14:00　线上</div>
-          </div>
-          <div class="status soon">6小时后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>Livis Day 理想汽车软件与人工智能发布会</h2>
-            <div class="meta">06月15日 16:30　线上</div>
-          </div>
-          <div class="status soon">9小时后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>第 5 代帝豪 i-HEV 智擎混动正式上市（具体时间待定）</h2>
-            <div class="meta">06月16日 00:00　线上</div>
-          </div>
-          <div class="status soon">16小时后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>零跑全新 C10/C11/C16 车型上市（具体时间待定）</h2>
-            <div class="meta">06月16日 00:00　线上</div>
-          </div>
-          <div class="status soon">16小时后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>魏牌高山 7 SUV 版发布会（具体时间待定）</h2>
-            <div class="meta">06月16日 00:00　线上</div>
-          </div>
-          <div class="status soon">16小时后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>2026 款奇瑞艾瑞泽 8 征服版上市（具体时间待定）</h2>
-            <div class="meta">06月17日 00:00　线上</div>
-          </div>
-          <div class="status soon">2天后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>2026 款瑞虎 7 PLUS 和瑞虎 7 高能版上市（具体时间待定）</h2>
-            <div class="meta">06月17日 00:00　线上</div>
-          </div>
-          <div class="status soon">2天后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>比亚迪大唐 EV 上市</h2>
-            <div class="meta">06月17日 19:30　西安</div>
-          </div>
-          <div class="status soon">3天后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>全新理想 L8 上市发布会（具体时间待定）</h2>
-            <div class="meta">06月23日 00:00　线上</div>
-          </div>
-          <div class="status soon">2周后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>腾势 N8L 闪充版上市（具体时间待定）</h2>
-            <div class="meta">06月23日 00:00　线上</div>
-          </div>
-          <div class="status soon">2周后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>零跑 D99 正式开启预售（具体时间待定）</h2>
-            <div class="meta">06月25日 00:00　线上</div>
-          </div>
-          <div class="status soon">2周后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>优世界全尺寸超仿生人形机器人发布（具体时间待定）</h2>
-            <div class="meta">06月30日 00:00　线上</div>
-          </div>
-          <div class="status soon">3周后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>AMD Advancing AI 2026（具体时间待定）</h2>
-            <div class="meta">07月22日 00:00　美国 加利福尼亚州 旧金山</div>
-          </div>
-          <div class="status soon">6周后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>北京越野 BJ81 正式上市（具体时间待定）</h2>
-            <div class="meta">08月01日 00:00　线上</div>
-          </div>
-          <div class="status soon">7周后</div>
-        </article>
-      </div>
-<div class="event-link">
-        <article class="event">
-          <span class="rail" aria-hidden="true"></span>
-          <div>
-            <h2>2026 款 smart 精灵#1 BRABUS 性能版亮相（具体时间待定）</h2>
-            <div class="meta">08月12日 00:00　线上</div>
-          </div>
-          <div class="status soon">9周后</div>
-        </article>
+      <div class="control-row">
+        <input id="search" class="search" type="search" placeholder="搜索品牌、车型、会议、地点">
+        <div class="filters" role="toolbar" aria-label="分类筛选">
+          <a class="filter is-active" href="#view=all" data-filter-link data-filter-key="all">全部</a>
+<a class="filter" href="#view=active" data-filter-link data-filter-key="active">未结束</a>
+<a class="filter" href="#view=soon24" data-filter-link data-filter-key="soon24">24小时内</a>
+<a class="filter" href="#category=%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6" data-filter-link data-filter-key="新能源汽车">新能源汽车</a>
+<a class="filter" href="#category=%E7%A7%91%E6%8A%80%E6%95%B0%E7%A0%81" data-filter-link data-filter-key="科技数码">科技数码</a>
+        </div>
       </div>
     </section>
+    <section id="list" class="list" aria-label="发布会清单">
+      <article class="event" data-category="新能源汽车" data-state="live" data-soon24="false" data-start="2026-06-15T00:00:00+08:00" data-search="长城哈弗 h6 经典版 2026 款上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月15日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>长城哈弗 H6 经典版 2026 款上市（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4335&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status live">进行中</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-start="2026-06-15T14:00:00+08:00" data-search="中科曙光 新一代高性能通用计算平台 发布 科技数码 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月15日</span>
+          <span class="time">14:00</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>中科曙光 新一代高性能通用计算平台 发布</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4332&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">5小时后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="true" data-start="2026-06-15T14:30:00+08:00" data-search="小鹏 sepa 3.0 架构及端到端智驾技术沟通会 新能源汽车 线上 gemini补充">
+        <div class="datebox">
+          <span class="date">06月15日</span>
+          <span class="time">14:30</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">Gemini补充</span>
+          </div>
+          <h2>小鹏 SEPA 3.0 架构及端到端智驾技术沟通会</h2>
+          <div class="meta">线上</div>
+        </div>
+        <div class="status soon">5小时后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="true" data-start="2026-06-15T16:30:00+08:00" data-search="livis day 理想汽车软件与人工智能发布会 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月15日</span>
+          <span class="time">16:30</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>Livis Day 理想汽车软件与人工智能发布会</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4317&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">7小时后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="true" data-start="2026-06-16T00:00:00+08:00" data-search="第 5 代帝豪 i-hev 智擎混动正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月16日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>第 5 代帝豪 i-HEV 智擎混动正式上市（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4325&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">15小时后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="true" data-start="2026-06-16T00:00:00+08:00" data-search="零跑全新 c10/c11/c16 车型上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月16日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>零跑全新 C10/C11/C16 车型上市（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4307&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">15小时后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="true" data-start="2026-06-16T00:00:00+08:00" data-search="魏牌高山 7 suv 版发布会（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月16日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>魏牌高山 7 SUV 版发布会（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4330&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">15小时后</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-start="2026-06-16T00:00:00+08:00" data-search="2026 张江 eai-张江具身智能开发者大会（具体时间待定） 科技数码 上海张江 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月16日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>2026 张江 EAI-张江具身智能开发者大会（具体时间待定）</h2>
+          <div class="meta">上海张江 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4277&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">15小时后</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-start="2026-06-16T00:00:00+08:00" data-search="2026 极核新品发布会（具体时间待定） 科技数码 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月16日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>2026 极核新品发布会（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4306&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">15小时后</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="true" data-start="2026-06-16T00:00:00+08:00" data-search="中国信通院高质量 token 服务研讨会（具体时间待定） 科技数码 北京 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月16日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>中国信通院高质量 Token 服务研讨会（具体时间待定）</h2>
+          <div class="meta">北京 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4310&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">15小时后</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-16T20:00:00.100000+08:00" data-search="大疆行业应用新品发布直播 科技数码 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月16日</span>
+          <span class="time">20:00</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>大疆行业应用新品发布直播</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4327&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">2天后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-17T00:00:00+08:00" data-search="2026 款奇瑞艾瑞泽 8 征服版上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月17日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>2026 款奇瑞艾瑞泽 8 征服版上市（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4338&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">2天后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-17T00:00:00+08:00" data-search="2026 款瑞虎 7 plus 和瑞虎 7 高能版上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月17日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>2026 款瑞虎 7 PLUS 和瑞虎 7 高能版上市（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=2888&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">2天后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-17T19:30:00+08:00" data-search="比亚迪大唐 ev 上市 新能源汽车 西安 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月17日</span>
+          <span class="time">19:30</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>比亚迪大唐 EV 上市</h2>
+          <div class="meta">西安 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4320&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">3天后</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-22T19:00:00+08:00" data-search="荣耀 x80 pro max 新品发布会 科技数码 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月22日</span>
+          <span class="time">19:00</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>荣耀 X80 Pro Max 新品发布会</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4340&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">2周后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-23T00:00:00+08:00" data-search="全新理想 l8 上市发布会（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月23日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>全新理想 L8 上市发布会（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4329&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">2周后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-23T00:00:00+08:00" data-search="腾势 n8l 闪充版上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月23日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>腾势 N8L 闪充版上市（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4337&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">2周后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-06-25T00:00:00+08:00" data-search="零跑 d99 正式开启预售（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月25日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>零跑 D99 正式开启预售（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4322&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">2周后</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-06-30T00:00:00+08:00" data-search="优世界全尺寸超仿生人形机器人发布（具体时间待定） 科技数码 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月30日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>优世界全尺寸超仿生人形机器人发布（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4302&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">3周后</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-07-22T00:00:00+08:00" data-search="amd advancing ai 2026（具体时间待定） 科技数码 美国 加利福尼亚州 旧金山 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">07月22日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>AMD Advancing AI 2026（具体时间待定）</h2>
+          <div class="meta">美国 加利福尼亚州 旧金山 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=3936&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">6周后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-08-01T00:00:00+08:00" data-search="北京越野 bj81 正式上市（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">08月01日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>北京越野 BJ81 正式上市（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4060&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">7周后</div>
+      </article>
+<article class="event" data-category="新能源汽车" data-state="upcoming" data-soon24="false" data-start="2026-08-12T00:00:00+08:00" data-search="2026 款 smart 精灵#1 brabus 性能版亮相（具体时间待定） 新能源汽车 线上 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">08月12日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>2026 款 smart 精灵#1 BRABUS 性能版亮相（具体时间待定）</h2>
+          <div class="meta">线上 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=3010&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">9周后</div>
+      </article>
+<article class="event" data-category="科技数码" data-state="upcoming" data-soon24="false" data-start="2026-08-13T00:00:00+08:00" data-search="《dota2》ti15 小组赛（具体时间待定） 科技数码 上海 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">08月13日</span>
+          <span class="time">全天/待定</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">科技数码</span>
+            <span class="badge time-kind">全天/待定</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>《DOTA2》TI15 小组赛（具体时间待定）</h2>
+          <div class="meta">上海 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=3207&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status soon">9周后</div>
+      </article>
+<article class="event ended" data-category="新能源汽车" data-state="ended" data-soon24="false" data-start="2026-06-14T17:30:00+08:00" data-search="tcr 世巡赛西班牙站第二回合、第三回合正赛 新能源汽车 西班牙瓦伦西亚里卡多 · 托尔莫赛道 @微醺kkkkk">
+        <div class="datebox">
+          <span class="date">06月14日</span>
+          <span class="time">17:30</span>
+        </div>
+        <div class="body">
+          <div class="badges">
+            <span class="badge category">新能源汽车</span>
+            <span class="badge time-kind">明确时间</span>
+            <span class="badge">@微醺kkkkk</span>
+          </div>
+          <h2>TCR 世巡赛西班牙站第二回合、第三回合正赛</h2>
+          <div class="meta">西班牙瓦伦西亚里卡多 · 托尔莫赛道 · <a href="https://img.ithome.com/app/calendar/event_detail.html?id=4336&amp;noapp=1" target="_blank" rel="noopener">原始链接</a></div>
+        </div>
+        <div class="status ended">已结束</div>
+      </article>
+    </section>
+    <section id="emptyCount" class="empty-count">没有匹配的发布会。</section>
   </main>
+  <script>
+    const search = document.querySelector('#search');
+    const filterLinks = Array.from(document.querySelectorAll('[data-filter-link]'));
+    const statCards = Array.from(document.querySelectorAll('.stat-card'));
+    const events = Array.from(document.querySelectorAll('.event'));
+    const empty = document.querySelector('#emptyCount');
+    const viewTitle = document.querySelector('#viewTitle');
+    const viewSubtitle = document.querySelector('#viewSubtitle');
+    const resultCount = document.querySelector('#resultCount');
+    const pageHeader = document.querySelector('header');
+    const mobileQuery = window.matchMedia('(max-width: 760px)');
+    let scrollTicking = false;
+
+    function parseHash() {
+      const raw = window.location.hash.replace(/^#/, '');
+      const params = new URLSearchParams(raw);
+      const category = params.get('category');
+      const view = params.get('view') || (category ? 'category' : 'all');
+      return { view, category };
+    }
+
+    function viewLabel(state) {
+      if (state.category) return state.category + '发布会';
+      if (state.view === 'active') return '未结束发布会';
+      if (state.view === 'soon24') return '24小时内发布会';
+      if (state.view === 'ended') return '已结束发布会';
+      return '全部发布会';
+    }
+
+    function viewSubtitleText(state) {
+      if (state.category) return '只显示“' + state.category + '”分类，可继续用搜索缩小范围。';
+      if (state.view === 'active') return '已结束项目会被隐藏，适合日常查看。';
+      if (state.view === 'soon24') return '只显示接下来 24 小时内或正在进行的项目。';
+      if (state.view === 'ended') return '只显示已结束项目，方便回看来源。';
+      return '点击上方统计卡进入二级筛选视图。';
+    }
+
+    function applyFilters() {
+      const state = parseHash();
+      const keyword = search.value.trim().toLowerCase();
+      let visible = 0;
+      for (const event of events) {
+        const text = event.dataset.search || '';
+        const category = event.dataset.category || '';
+        const state = event.dataset.state || '';
+        const soon24 = event.dataset.soon24 === 'true';
+        const matchesSearch = !keyword || text.includes(keyword);
+        const current = parseHash();
+        const matchesFilter =
+          current.view === 'all' ||
+          (current.view === 'active' && state !== 'ended') ||
+          (current.view === 'soon24' && soon24) ||
+          (current.view === 'ended' && state === 'ended') ||
+          (current.category && current.category === category);
+        const show = matchesSearch && matchesFilter;
+        event.hidden = !show;
+        if (show) visible += 1;
+      }
+      viewTitle.textContent = viewLabel(state);
+      viewSubtitle.textContent = viewSubtitleText(state);
+      resultCount.textContent = visible + ' 条';
+      const activeKey = state.category || state.view;
+      filterLinks.forEach(item => item.classList.toggle('is-active', item.dataset.filterKey === activeKey));
+      statCards.forEach(item => {
+        const href = item.getAttribute('href') || '';
+        item.classList.toggle('is-active', href === window.location.hash || (!window.location.hash && href === '#view=all'));
+      });
+      empty.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    search.addEventListener('input', applyFilters);
+    window.addEventListener('hashchange', applyFilters);
+    if (!window.location.hash) window.location.hash = '#view=all';
+    applyFilters();
+
+    function updateHeaderCollapse() {
+      if (!pageHeader) return;
+      if (!mobileQuery.matches) {
+        pageHeader.classList.remove('is-collapsed');
+        return;
+      }
+      const currentY = window.scrollY;
+      if (currentY <= 48) {
+        pageHeader.classList.remove('is-collapsed');
+      } else if (currentY > 96) {
+        pageHeader.classList.add('is-collapsed');
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      window.requestAnimationFrame(() => {
+        updateHeaderCollapse();
+        scrollTicking = false;
+      });
+    }, { passive: true });
+    window.addEventListener('resize', updateHeaderCollapse);
+    updateHeaderCollapse();
+  </script>
 </body>
 </html>
