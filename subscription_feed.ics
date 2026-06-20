@@ -6,6 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:新品/科技发布会追踪
 X-WR-TIMEZONE:Asia/Shanghai
 BEGIN:VEVENT
+<<<<<<< Updated upstream
 UID:0454023074c47ed85a0fecc022347eaff8ea1839@launch-calendar-bot
 DTSTAMP:20260617T064446Z
 SUMMARY:[新能源汽车] Livis Day 理想汽车软件与人工智能发
@@ -206,6 +207,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:8e993f07ac9673e42884b57704108982336e7fb9@launch-calendar-bot
 DTSTAMP:20260617T064446Z
+=======
+UID:8e993f07ac9673e42884b57704108982336e7fb9@launch-calendar-bot
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 荣耀 X80 Pro Max 新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4340&noapp=1\n识别到的时间：06月22
@@ -218,7 +223,11 @@ DTEND:20260622T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:558a877e1f9830ee0b4bda8a7c8fe76c645cf80e@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 腾势 N8L 闪充版上市（具体时间待定
  ）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -231,6 +240,7 @@ DTSTART;VALUE=DATE:20260623
 DTEND;VALUE=DATE:20260624
 END:VEVENT
 BEGIN:VEVENT
+<<<<<<< Updated upstream
 UID:b226bd2d5c638923eba1a0cc6bc838e64ab32534@launch-calendar-bot
 DTSTAMP:20260617T064446Z
 SUMMARY:[新能源汽车] 全新理想 L8 上市发布会（具体时间
@@ -239,6 +249,15 @@ DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4329&noapp=1\n识别到的时间：06月23
  日 20:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
  t_detail.html?id=4329&noapp=1
+=======
+UID:7fdb13a80dc9d9bd8dadf141d0eb654ae69a20a8@launch-calendar-bot
+DTSTAMP:20260620T103421Z
+SUMMARY:[新能源汽车] 全新理想 L8 上市发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4329&noapp=1\n识别到的时间：06月23
+ 日 20:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4329&noapp=1
+>>>>>>> Stashed changes
 CATEGORIES:新能源汽车
 LOCATION:线上
 DTSTART:20260623T120000Z
@@ -246,7 +265,11 @@ DTEND:20260623T130000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:9f21769d338467e92b989b624f6e8adfd9df2380@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 一汽大众迈腾 PHEV / 探岳 L PHEV 上市
  发布会（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -260,7 +283,11 @@ DTEND;VALUE=DATE:20260626
 END:VEVENT
 BEGIN:VEVENT
 UID:29ab3ff8cd7208ed8fbe27c6baca668933611249@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 零跑 D99 正式开启预售（具体时间待
  定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -273,22 +300,51 @@ DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 END:VEVENT
 BEGIN:VEVENT
+<<<<<<< Updated upstream
 UID:57dad17da1956e3c7d0fc7fd2a00156d43da8ce4@launch-calendar-bot
 DTSTAMP:20260617T064446Z
 SUMMARY:[新能源汽车] 捷途汽车第二届方盒子大会暨新品
  发布（具体时间待定）
+=======
+UID:7c702d7031c54f3c80b0fc06064543566f5802fd@launch-calendar-bot
+DTSTAMP:20260620T103421Z
+SUMMARY:[科技数码] 长城 H10 造型美学直播暨实车正式亮相
+ （具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4347&noapp=1\n识别到的时间：06月26
+ lendar/event_detail.html?id=4351&noapp=1\n识别到的时间：06月25
  日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4347&noapp=1
+ t_detail.html?id=4351&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260626
+END:VEVENT
+BEGIN:VEVENT
+UID:10a847751858ae7921c48289fab1bc33e5e26737@launch-calendar-bot
+DTSTAMP:20260620T103421Z
+SUMMARY:[新能源汽车] 第二届方盒子大会暨新品发布会，
+ 两款新车上市
+>>>>>>> Stashed changes
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4348&noapp=1\n识别到的时间：06月26
+ 日 00:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4348&noapp=1
 CATEGORIES:新能源汽车
+<<<<<<< Updated upstream
 LOCATION:甘肃敦煌
+=======
+LOCATION:线上
+>>>>>>> Stashed changes
 DTSTART:20260625T160000Z
 DTEND:20260625T170000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:c1f672b3d8d33e9719b71c3e13f87912dda5b5d2@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[手机新品] vivo X Fold6 新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4346&noapp=1\n识别到的时间：06月26
@@ -301,7 +357,11 @@ DTEND:20260626T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:c4e5ddbd0615f6adc23bf9b45c6d3647801eeb69@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 优世界全尺寸超仿生人形机器人发布
  （具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -328,7 +388,11 @@ DTEND;VALUE=DATE:20260701
 END:VEVENT
 BEGIN:VEVENT
 UID:da9444e70131a8c6788189aff31d70b3838d6881@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[手机新品] 红魔游戏平板 5 Pro 新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4345&noapp=1\n识别到的时间：06月30
@@ -341,7 +405,11 @@ DTEND:20260630T080000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:080600936e3ee230abcd7323536aecf58244dfe1@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 2027 款一汽丰田格瑞维亚 MPV 上市（具
  体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -355,7 +423,11 @@ DTEND;VALUE=DATE:20260703
 END:VEVENT
 BEGIN:VEVENT
 UID:fbac6a1d1e6f820e2d97b2f92a1cf2575e5d5830@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] AMD Advancing AI 2026（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=3936&noapp=1\n识别到的时间：07月22
@@ -368,7 +440,11 @@ DTEND;VALUE=DATE:20260723
 END:VEVENT
 BEGIN:VEVENT
 UID:c98f57d7c53b87e85ef4095bdbfe50e34f8f2e49@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 北京越野 BJ81 正式上市（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -382,7 +458,11 @@ DTEND;VALUE=DATE:20260802
 END:VEVENT
 BEGIN:VEVENT
 UID:56268dea4ae3f250a2476314dbe4ad19b387c552@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260617T064446Z
+=======
+DTSTAMP:20260620T103421Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 2026 款 smart 精灵#1 BRABUS 性能版亮相
  （具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -394,6 +474,7 @@ LOCATION:线上
 DTSTART;VALUE=DATE:20260812
 DTEND;VALUE=DATE:20260813
 END:VEVENT
+<<<<<<< Updated upstream
 BEGIN:VEVENT
 UID:0a4b9c66426095802d9218819d722ca29ff844cb@launch-calendar-bot
 DTSTAMP:20260617T064446Z
@@ -407,4 +488,6 @@ LOCATION:上海
 DTSTART;VALUE=DATE:20260813
 DTEND;VALUE=DATE:20260814
 END:VEVENT
+=======
+>>>>>>> Stashed changes
 END:VCALENDAR
