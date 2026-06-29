@@ -234,21 +234,21 @@
     "score": 0
   },
   {
-    "title": "MWC26 上海（具体时间待定）",
-    "source": "@微醺kkkkk",
-    "reason": "泛行业展会/峰会/论坛，缺少明确新品或厂商发布会信号",
-    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=3544&noapp=1",
-    "category": "科技数码",
-    "published_at": "2025-11-18T10:21:08.797000+08:00",
-    "score": 0
-  },
-  {
     "title": "2026 数字政府智能应用与创新发展大会（具体时间待定）",
     "source": "@微醺kkkkk",
     "reason": "泛行业展会/峰会/论坛，缺少明确新品或厂商发布会信号",
     "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4284&noapp=1",
     "category": "科技数码",
     "published_at": "2026-05-30T15:25:33.240000+08:00",
+    "score": 0
+  },
+  {
+    "title": "MWC26 上海",
+    "source": "@微醺kkkkk",
+    "reason": "泛行业展会/峰会/论坛，缺少明确新品或厂商发布会信号",
+    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=3544&noapp=1",
+    "category": "科技数码",
+    "published_at": "2025-11-18T10:21:08.797000+08:00",
     "score": 0
   },
   {
@@ -360,6 +360,24 @@
     "score": 0
   },
   {
+    "title": "2026 世界人工智能大会暨人工智能全球治理高级别会议（具体时间待定）",
+    "source": "@微醺kkkkk",
+    "reason": "泛行业展会/峰会/论坛，缺少明确新品或厂商发布会信号",
+    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4350&noapp=1",
+    "category": "科技数码",
+    "published_at": "2026-06-18T10:20:57.593000+08:00",
+    "score": 0
+  },
+  {
+    "title": "2026 世界人工智能大会（具体时间待定）",
+    "source": "@微醺kkkkk",
+    "reason": "泛行业展会/峰会/论坛，缺少明确新品或厂商发布会信号",
+    "url": "https://img.ithome.com/app/calendar/event_detail.html?id=4363&noapp=1",
+    "category": "科技数码",
+    "published_at": "2026-06-24T13:19:25.777000+08:00",
+    "score": 0
+  },
+  {
     "title": "第二届世界人形机器人运动会（具体时间待定）",
     "source": "@微醺kkkkk",
     "reason": "命中排除词：世界杯",
@@ -369,247 +387,166 @@
     "score": 0
   },
   {
-    "title": "韩国兴起“多巴胺网站”：假装点餐、购物缓解焦虑",
+    "title": "马斯克 55 岁生日愿望：愿全人类拥有光明未来",
     "source": "IT之家RSS",
     "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/386.htm",
+    "url": "https://www.ithome.com/0/970/093.htm",
     "category": "auto_detect",
-    "published_at": "2026-06-17T14:30:03+08:00",
+    "published_at": "2026-06-29T17:21:45+08:00",
     "score": 3
   },
   {
-    "title": "谷歌推送 Wear OS 7：续航提升 10%、升级 AI 交互",
-    "source": "IT之家RSS",
-    "reason": "可信度分数不足：2",
-    "url": "https://www.ithome.com/0/965/351.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T13:56:19+08:00",
-    "score": 2
-  },
-  {
-    "title": "微信鸿蒙版 8.0.18 更新内容公布，这次不是一句话了",
+    "title": "规范动力和储能电池企业供应商账款支付，工信部装备工业一司作出回应",
     "source": "IT之家RSS",
     "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/338.htm",
+    "url": "https://www.ithome.com/0/970/074.htm",
     "category": "auto_detect",
-    "published_at": "2026-06-17T13:24:02+08:00",
-    "score": 5
-  },
-  {
-    "title": "顺风车司机 100 多车速开智驾歪头睡觉，哈啰道歉称车主已被平台永久封禁",
-    "source": "IT之家RSS",
-    "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/333.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T12:48:58+08:00",
+    "published_at": "2026-06-29T16:53:06+08:00",
     "score": 3
   },
   {
-    "title": "快手：今年以来，配合有关部门抓获 34 名剧情演绎诈骗犯罪嫌疑人",
+    "title": "法拉利首款纯电车型 Luce 在中国市场首发售罄，88 台配额被抢光",
     "source": "IT之家RSS",
     "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/331.htm",
+    "url": "https://www.ithome.com/0/970/065.htm",
     "category": "auto_detect",
-    "published_at": "2026-06-17T12:41:39+08:00",
-    "score": 3
+    "published_at": "2026-06-29T16:41:42+08:00",
+    "score": 4
   },
   {
-    "title": "依视路陆逊梯卡、应用材料将携手开发下一代智能眼镜 AR 光学系统",
+    "title": "REDMI 头戴降噪耳机官宣支持小米澎湃智联，可精准定位快速寻回设备",
     "source": "IT之家RSS",
-    "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/321.htm",
+    "reason": "命中排除词：预热",
+    "url": "https://www.ithome.com/0/970/054.htm",
     "category": "auto_detect",
-    "published_at": "2026-06-17T12:08:30+08:00",
-    "score": 3
-  },
-  {
-    "title": "华为小艺 Claw 接入开源盘古 2.0 Pro 模型，可重点提升鸿蒙系统级任务执行能力",
-    "source": "IT之家RSS",
-    "reason": "可信度分数不足：2",
-    "url": "https://www.ithome.com/0/965/303.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T11:57:41+08:00",
-    "score": 2
-  },
-  {
-    "title": "Playground 回应《神鬼寓言》游戏演示守卫迟钝：为“故事”难度",
-    "source": "IT之家RSS",
-    "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/294.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T11:45:56+08:00",
-    "score": 3
-  },
-  {
-    "title": "成本平均便宜 30~40%，微软上线 Copilot Cowork 智能体 AI",
-    "source": "IT之家RSS",
-    "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/289.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T11:29:05+08:00",
-    "score": 3
-  },
-  {
-    "title": "勒索组织窃取制药巨头诺和诺德超 1TB 数据，索要 2500 万美元赎金失败准备售卖",
-    "source": "IT之家RSS",
-    "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/287.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T11:25:09+08:00",
-    "score": 3
-  },
-  {
-    "title": "米哈游《崩坏：星穹铁道》昔涟定制机械键盘开启预售：108 键三模 + 双轴可选，808 元",
-    "source": "IT之家RSS",
-    "reason": "命中排除词：京东 618",
-    "url": "https://www.ithome.com/0/965/280.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T11:06:11+08:00",
+    "published_at": "2026-06-29T16:34:32+08:00",
     "score": 0
   },
   {
-    "title": "微星为英特尔 600 / 700 / 800 系主板全面推送 HUDIMM 支持 BIOS",
-    "source": "IT之家RSS",
-    "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/255.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T10:54:05+08:00",
-    "score": 5
-  },
-  {
-    "title": "支付宝提醒：AI 版支付宝“阿宝”内测邀请码无需付费购买",
-    "source": "IT之家RSS",
-    "reason": "缺少强发布会信号",
-    "url": "https://www.ithome.com/0/965/251.htm",
-    "category": "auto_detect",
-    "published_at": "2026-06-17T10:50:56+08:00",
-    "score": 5
-  },
-  {
-    "title": "Viture 发布工业安全眼镜 Helix：搭载英伟达 XR 人工智能技术，起售价 600 美元",
+    "title": "广汽集团冯兴亚：和华为的合作正在从产品层面，向管理、研发等全领域延伸",
     "source": "IT之家RSS",
     "reason": "可信度分数不足：2",
-    "url": "https://www.ithome.com/0/965/221.htm",
+    "url": "https://www.ithome.com/0/970/026.htm",
     "category": "auto_detect",
-    "published_at": "2026-06-17T10:32:20+08:00",
+    "published_at": "2026-06-29T16:18:48+08:00",
     "score": 2
   },
   {
-    "title": "8点1氪丨连涨3天，SpaceX超越亚马逊跻身全球前五；支付宝启动史上最大改版；微信支付“AI专属卡”最快本周内上线",
-    "source": "36氪",
-    "reason": "命中排除词：改版",
-    "url": "https://36kr.com/p/3856525981275138?f=rss",
+    "title": "世嘉 ATLUS 开启 Steam 2026 夏季特卖专题活动，《女神异闻录 3：Reload》史低 93.8 元等",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/970/012.htm",
     "category": "auto_detect",
-    "published_at": null,
+    "published_at": "2026-06-29T15:54:22+08:00",
+    "score": 3
+  },
+  {
+    "title": "智元：精灵 G2 机器人平板量产产线直播作业 64828 件，成功率 99.99%",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/970/008.htm",
+    "category": "auto_detect",
+    "published_at": "2026-06-29T15:48:36+08:00",
+    "score": 5
+  },
+  {
+    "title": "AYANEO Pocket MICRO 2 掌机游玩《绝区零》实机视频发布，搭载骁龙 865 同档位定制处理器",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/970/007.htm",
+    "category": "auto_detect",
+    "published_at": "2026-06-29T15:47:44+08:00",
+    "score": 4
+  },
+  {
+    "title": "Diver-X 推出 VR 控制手套与机器人数据手套，采用电磁场追踪方案",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/969/999.htm",
+    "category": "auto_detect",
+    "published_at": "2026-06-29T15:31:23+08:00",
+    "score": 3
+  },
+  {
+    "title": "宁德时代、中创新航、弗迪电池等响应倡议：推动供应商账款支付不超 60 天",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/969/998.htm",
+    "category": "auto_detect",
+    "published_at": "2026-06-29T15:31:08+08:00",
+    "score": 3
+  },
+  {
+    "title": "酷态科开启外骨骼机器人体验招募，众测后设备可免费自留",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/969/995.htm",
+    "category": "auto_detect",
+    "published_at": "2026-06-29T15:25:46+08:00",
+    "score": 3
+  },
+  {
+    "title": "小米 REDMI 首款头戴降噪耳机明晚发布：蓝白黑三色，旗舰音质",
+    "source": "IT之家RSS",
+    "reason": "命中排除词：预热",
+    "url": "https://www.ithome.com/0/969/986.htm",
+    "category": "auto_detect",
+    "published_at": "2026-06-29T15:11:43+08:00",
     "score": 0
   },
   {
-    "title": "鸿蒙智行全面引入电池二供，国轩高科将上车问界｜36氪独家",
-    "source": "36氪",
-    "reason": "命中排除词：交付量",
-    "url": "https://36kr.com/p/3855879311823873?f=rss",
+    "title": "HKC 推出“27U240B”27 英寸显示器：4K 240Hz 三星四代 QD-OLED、配 DP 2.1 + 90W USB-C，4799 元",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/969/982.htm",
     "category": "auto_detect",
-    "published_at": null,
-    "score": 0
+    "published_at": "2026-06-29T15:08:17+08:00",
+    "score": 4
   },
   {
-    "title": "用科技重新定义旗舰：小鹏GX正式上市，限时权益价26.98万元起 2026-05-21",
+    "title": "日本 tarlin 预告 PC 微缩模型扭蛋，支持“装机”",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/969/922.htm",
+    "category": "auto_detect",
+    "published_at": "2026-06-29T14:25:19+08:00",
+    "score": 3
+  },
+  {
+    "title": "享界 G9 新车内饰首曝：全新三联屏 + 鸿蒙智行专属 HarmonyOS 车机，装配中控实体按键",
+    "source": "IT之家RSS",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.ithome.com/0/969/921.htm",
+    "category": "auto_detect",
+    "published_at": "2026-06-29T14:24:58+08:00",
+    "score": 4
+  },
+  {
+    "title": "物理AI，链接全球！小鹏集团携物理AI全品类亮相第四届链博会 2026-06-24",
     "source": "小鹏汽车新闻",
-    "reason": "可信度分数不足：2",
-    "url": "https://www.xiaopeng.com/news/company_news/5563.html",
+    "reason": "缺少强发布会信号",
+    "url": "https://www.xiaopeng.com/news/company_news/5575.html",
     "category": "新能源汽车",
     "published_at": null,
-    "score": 2
+    "score": 4
   },
   {
-    "title": "华为 Pura 90 系列新品发布会一文汇总：麒麟 9030S 登场，还有行业首款横向阔折叠、鸿蒙全家桶 - Sina finance",
-    "source": "Sina finance",
-    "reason": "命中排除词：汇总",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9fOExmZjBGZkl4MEVjVjhQaDk5UzJMWUFadHp1NVllRThCWjhxYi1uSFByLUhXU1Uzb3gyZG84a001dmRUaUNvYU9YajFoQ285ckJUMWEwTGlBM0RBLVlwVlY4amtSZ19UY29qSWYyMU5XZk9MTFdWQWZtZmVpMzQ?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-04-20T15:00:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "华为nova 16系列及全场景新品发布会今日举行 多款新品惊艳亮相 - 电玩巴士",
-    "source": "电玩巴士",
+    "title": "华为nova 16系列及全场景新品发布会今日举行 多款新品惊艳亮相 - C114通信网",
+    "source": "C114通信网",
     "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE53UEgwZkZrMFE1MUJiUG5KaThiTXlWLWlUNi12RW4xS19HbGRycjhaYW1MM1VWdnFKRkJ0d2xudWRFeE5tZFlOd3pR?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBNcDR1bHlzV2FMa2hoOFlUekpHamx2SFBGNHM0UUNidngzZ3RlM2VmbmJxbHJDRzRqNkVmUEtMMTRheGd4cFhET0FNejV3eDNz?oc=5",
     "category": "手机新品",
     "published_at": "2026-06-01T15:00:00+08:00",
     "score": 6
   },
   {
-    "title": "小米人车家全生态新品发布会定档5月21日！YU7 GT、17 Max来了 - 驱动之家",
-    "source": "驱动之家",
+    "title": "华为nova 16系列及全场景新品发布会今日举行 多款新品惊艳亮相 - DoNews",
+    "source": "DoNews",
     "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9TeXpoV1ZQQzR3VTdONGxwSFFBaFpkRWRsU1p0X2ZZMW1INUhIS0RvWGpuVDBWdUpNNnl6bWFuWmxLWmh2RG9qdHlVRDZQOGZ4ejhyNDh4dHM?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDS0ZqRXREMVp1dG0tTEt5MFRsaEpqV3owbXdKMi1KaktoYk9zenZNVVlCeVJFOW16YUJSOUlQd0V4ZmRFVzdQY0k0aXB5RWJJWjltUmRja1JuRzJMUEE?oc=5",
     "category": "手机新品",
-    "published_at": "2026-05-21T15:00:00+08:00",
-    "score": 7
-  },
-  {
-    "title": "余承东缺席3月华为春季全场景新品发布会原因曝光：曾在长沙摔了一跤、骨头现在还不太能弯 - Sina finance",
-    "source": "Sina finance",
-    "reason": "命中排除词：曝光",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9TLUZzMC02RFhVdlF5cFpEdGduWEtvU2w2bjI2QlZ1R3kxczR3THlXRnpHREdDOU5lOVMxRmxCb3AxNjdva1BBTnEtUEpSNFBhQjBkLWhhaTlpbkJTOW91SWRBWTUzZVhvQjRDYlpVbXBnSnBKbnc?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-04-27T15:00:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "华为海外新品发布会定档 5 月 7 日，畅享 90 Pro Max“化身”nova 15 Max 登场 - Sina finance",
-    "source": "Sina finance",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5uckRuQW13bWhKM1daYXVYTUxNSXU3UWRWVExlMFJZVW5ONURkTVFUWThwZDhkdFMyNjhLVnotdXJzaGNkTzNwdkhYS2I1Ry1RMkQ2eEZmUjZYRVBRZVpPbFRNMFJXcmpDN0VlV1ZyT1pWemhmVjlVUFZCRVVleWM?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-06T15:00:00+08:00",
-    "score": 7
-  },
-  {
-    "title": "小米人车家全生态新品发布会定档5月21日！YU7 GT、17 Max来了 - Sina finance",
-    "source": "Sina finance",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5DcDRPMlMxdXgwYTdBbVNZTTVLMnltNFY2dmprOXNUSFBvMjMwU1hQMkFzRzFWVndsc0hQMEJSNnVFOFI0VW1IemhfaThmZ1pYajlLSFdqZjM4bl9OQncxdkhaOU9PNFJKV2N6aGNGZUxwQzZaakpqc3NZakN2YlU?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-18T15:00:00+08:00",
-    "score": 7
-  },
-  {
-    "title": "小米新品发布会一文汇总：YU7 GT 正式上市，手机 / 耳机 / 手环联袂登场 - Sina finance",
-    "source": "Sina finance",
-    "reason": "命中排除词：汇总",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBBVGhtUlBlanFseTFFU0FmYnRDM3lCZXFzaDUzX0E4dEZacGU2R0RZeXhSRm15ei1NLS1JVG10c3RkZnB3Z1J6ZFRjamZ5M21BLWFIcS1idjlwUHFiWjNrbHNtclE3TTJUb2p2UEdWdHhjWHE4WmItS3ZrSHhleUk?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-21T15:00:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "华为余承东：新手机定价压力大，后期可能涨价在4月20日下午举行的华为终端新品发布会上，华为常务董事、终端BG董事长、产品投资评审委员会主任余承东直言：“现在新手机定价压力好大，成本上涨很多，后面扛不住 - 财富号",
-    "source": "财富号",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAtWmNFa3hRREpVa0o5MDQ4aTA3YkpXZS1HNFpyREdxaTdKS3JnTDdSNFVPLXRmbTRSYzNSMGtCenVXdnIwLUlZZGZLUEdPLXBXcktIZXVQTm5QaWJkZnVudHlJWmc4dzFnVDh3?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-04-20T15:00:00+08:00",
+    "published_at": "2026-06-01T15:00:00+08:00",
     "score": 6
-  },
-  {
-    "title": "华为 6 月 1 日新品发布会定档nova 16 系列领衔多款产品亮相- 数码科技 - news.zdwang.com",
-    "source": "news.zdwang.com",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9VelVsZWlBMzU2ZmlkNXpPb1VTZjgyTWdsLXhjMjlra3RCU2U4ajV1anhkYUtmWng3MUNGc2hsMmxlQXFtZ0s5NTVqaVIwWXA4RTZZdDlKMA?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-26T15:00:00+08:00",
-    "score": 7
-  },
-  {
-    "title": "华为 nova 16 系列及全场景新品发布会官宣 6 月 1 日举行，Mate90 系列搭载τ定律麒麟芯片 - 腾讯新闻",
-    "source": "腾讯新闻",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9mOUlrSVZuR0xIcWxIREhleHRHRVJhbnc5UGJPc0oySlplOWlTQVY5RGJfVTM4X0d5elZtajBkYlVvQmVvTVh6OFJwRnJIdG1nRHZKbFFrWQ?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-27T21:37:00+08:00",
-    "score": 7
   },
   {
     "title": "小米重磅发布会定档5月21日！新车、新手机来了 阵容庞大 - 电子工程专辑",
@@ -621,80 +558,62 @@
     "score": 7
   },
   {
-    "title": "2999元起打开实况想象力 OPPO Reno16 系列发布会汇总 - 中关村在线",
-    "source": "中关村在线",
-    "reason": "命中排除词：汇总",
-    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5jLUVodzNCVmdvay1JejVZeklZNHRaX2lPMnNhV0pma0pfYkMwOE5ZakJUVUxIZW02QUl2VVpWRGYtbWR0RUVkWnVlbjVfeGs5Nko0MG44Yw?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-29T09:24:18+08:00",
-    "score": 0
-  },
-  {
-    "title": "vivo Y600 Pro发布会汇总 10200mAh蓝海电池、耐用防水架构加持 - 中关村在线",
-    "source": "中关村在线",
-    "reason": "命中排除词：汇总",
-    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBCZFRnMFJYWWplNWthSklFdm9acVBmbkY4ZzlCdngyNzV3cXNRZWx2cWw0NnlkdmpBbXhrZEdsMGJVUDJ4Ni11ZTB4ZXJ6WTE4RzYzTG9Eaw?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-04-27T20:04:04+08:00",
-    "score": 0
-  },
-  {
-    "title": "红魔 11S Pro 新品发布会官宣定档 5 月 18 日，主打“风生水起 超频领先” - Sina finance",
-    "source": "Sina finance",
-    "reason": "命中排除词：超频",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBWUUk1UHVsRUtFTDV2Z3RQWlRvclAxc1NTSE9LbVpDb1NhUERyMDR5THN0anVrVXBBR3U2M0lqbnJWVlFzZHlKUVlkcm5lNXpUMzdLV25rV0FyX0ZVRHlMeURwa2h3MlFFSzM5X0ZxWTdYSm82bUR4cnY1ZmkwSTg?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-08T15:00:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "九号公司官宣将于4月29日举办2026新品发布会 - 新浪财经",
-    "source": "新浪财经",
-    "reason": "命中排除词：九号",
-    "url": "https://news.google.com/rss/articles/CBMi4wRBVV95cUxNZm5mQUVFUDNEbkFEMkl0Mnd3MV9HcVFRWHNQRk4wUFptSTctbFh4WnM4UXc3MkZCOENiUmtvakFYbFFxdGNJOWc4ZzF3VzIxR0o3UzctWEdhd21WZmdRc09seDl2Nkc4MGxueFdzTlltWFYzRG9md1BON0ZLdzNtQW1CQ1dzUlo0TW1QbkhxNnZyWVA1Y3QycFNLaGctSmZid3p4dW9sNW85aVBPYi13S3ZVS3AtdXFQMi02YkJMaGpYbW9hWEFfazgzd0V1ZGJEQ2VnNFRoV0o5YmpKSEZrSmpmYXRoWkpYR19uQmJTLWJLNk9tak1YSGhUajlLZnh5b3ZEeWE4X0ZQajNWVUxncTlYNUJmWUc0Zzk5UEJLaERxajVQTE5KUmJTVU1leEdNRFdHQkxmeHJ5RjU2ekVqUk5vdGdnVTItTEJQdWRZaDNNMTlldzNNbEN5ZXFaZTMwazJyNlBwUDh3NUZvSzJsc0Yxdlpmb3Vzd3c5dnJSbnBhaTg4aGREUkpVcnJBbDV6TkJmZ3NGQkhCOTdualBBUmswN1dZYXRCVE1zNmRJSHIxWHZhOUhYR080MGs5OGptY2QzTUZuMExtZXd2aFVkVGdBZzJxamRhLUZpb1hwYmZEdUtXYlpick1fQ2c4dzBIaGp0cjhxQWFtb3RiV2R6WUZEbUlqSVNsalREU05NbENvb2ZrLUJ3cEd0RXMyT0JCUXIxQXd5LXdqVkU5Q3EzcTAtZmhRMVp5OThrZ1VTemZfS3NBZ1lwcEw4bGlfU2lFMExCdldPUTUwQkJYWkxycm1mSQ?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-04-20T15:00:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "小米17T系列发布会汇总：全能影像旗舰，T系列回归国内 - 中关村在线",
-    "source": "中关村在线",
-    "reason": "命中排除词：汇总",
-    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1IaG1ZcHZkQXpCUjVwcUJKTlhobWlxLU9fTFBlcGZuZERKcmNQcEJjbTduMXJvNF92SDQ3bjlrSW5EVVNIbE5Od3Rsc3N3MURIWFNISzBLUQ?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-06-08T14:00:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "小米17 Max领衔，小米官宣5月21日召开新品发布会 - Sohu",
-    "source": "Sohu",
+    "title": "联想新品发布会定档5月19日！首款大折叠moto razr fold、拯救者Y70新一代等齐发 - 驱动之家",
+    "source": "驱动之家",
     "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5LN2Q3YjMwVXhuRUZnWER1R1N5M1pYNWFGWmUyZW1TSG1yVTIyS3Ffc2xWZk04aF9fVUg0V00wbmhyZHA4akcxeEY1VDFwY243dWc?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA2MkFwSGNiV2FaQnBQQ19YMG5lcGxDanNYeFFnMk92Z0VRbzBCemtleFFkSUYwTXgtcURXMWtwUW1PRVRMNXBMYWJTMXRuSTFkdHlFR25kcHI?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-05-19T15:00:00+08:00",
+    "score": 5
+  },
+  {
+    "title": "华为海外新品发布会定档 5 月 7 日，畅享 90 Pro Max“化身”nova 15 Max 登场 - 新浪财经",
+    "source": "新浪财经",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5uckRuQW13bWhKM1daYXVYTUxNSXU3UWRWVExlMFJZVW5ONURkTVFUWThwZDhkdFMyNjhLVnotdXJzaGNkTzNwdkhYS2I1Ry1RMkQ2eEZmUjZYRVBRZVpPbFRNMFJXcmpDN0VlV1ZyT1pWemhmVjlVUFZCRVVleWM?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-05-06T15:00:00+08:00",
+    "score": 7
+  },
+  {
+    "title": "小米人车家全生态新品发布会定档5月21日！YU7 GT、17 Max来了 - 新浪财经",
+    "source": "新浪财经",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5DcDRPMlMxdXgwYTdBbVNZTTVLMnltNFY2dmprOXNUSFBvMjMwU1hQMkFzRzFWVndsc0hQMEJSNnVFOFI0VW1IemhfaThmZ1pYajlLSFdqZjM4bl9OQncxdkhaOU9PNFJKV2N6aGNGZUxwQzZaakpqc3NZakN2YlU?oc=5",
     "category": "手机新品",
     "published_at": "2026-05-18T15:00:00+08:00",
     "score": 7
   },
   {
-    "title": "重磅新机齐亮相 荣耀 WIN Turbo 与 vivo S60 系列即将发布 - news.zdwang.com",
+    "title": "OPPO 新品发布会定档 5 月 25 日举行，Reno 16 系列手机领衔发布 - 腾讯新闻",
+    "source": "腾讯新闻",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tU01IMTVPWFN0R1VQdlJaM3ZTOE02NFBhcndVX0pnUERlSmFLdzdPdFN3RmEyUFlXdmY5NjNlU3cxdFpTTjYtYjJmaHhSa1NDTWVTUUd3?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-05-18T15:00:00+08:00",
+    "score": 7
+  },
+  {
+    "title": "vivo X Fold6折叠屏手机新品发布会定档6月26日|蓝图|功耗|蔡司|三星|超能_手机新浪网 - 新浪财经",
+    "source": "新浪财经",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPelpLVnNIYjg3NHc4U2tNclhVaFh0VXhuWFI3NEtpRXlUZXdtZHZEMm52Q0pUX2ZVelB5QVhhRVZ2QUxKUm5mUlZCU1FkaTJ4TmVpQUFhN3dPY3BnVnZPYndDOG1udG1OdkRVQUdQR0RYbzFoMWxQTzhMVm5sT0diMVJzRHlSSzA?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-06-16T15:55:11+08:00",
+    "score": 7
+  },
+  {
+    "title": "华为 6 月 1 日新品发布会定档nova 16 系列领衔多款产品亮相- 数码科技 - news.zdwang.com",
     "source": "news.zdwang.com",
-    "reason": "缺少强发布会信号",
-    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0zS0tya2pVMHFQTnMyRDY4SXg3eDFmVTRFeDNEVmM4NnBUZTVubm1TT0VWRnJzRlh1UzNjenBZa2VxbVJGY041VXhHSGVUWFdZc0ZLVWh4TQ?oc=5",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9VelVsZWlBMzU2ZmlkNXpPb1VTZjgyTWdsLXhjMjlra3RCU2U4ajV1anhkYUtmWng3MUNGc2hsMmxlQXFtZ0s5NTVqaVIwWXA4RTZZdDlKMA?oc=5",
     "category": "手机新品",
-    "published_at": "2026-05-28T15:00:00+08:00",
-    "score": 4
+    "published_at": "2026-05-26T15:00:00+08:00",
+    "score": 7
   },
   {
-    "title": "🛑直播回放：华为2026春季全场景新品发布会| Huawei 2026 Spring All-Scenario New Product Launch Event Caufield (ezDEhqkbxS) - Mshale",
-    "source": "Mshale",
-    "reason": "命中排除词：直播回放",
-    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1BYVBCemUxZlpsTk41R2I3QlBSR0Zibm9IUVpnUThQY1pwZkNHZ19FdlNraUVjVmRjRWRocUlGN25VQi05S2k3YVNPLUNlaWJHazVvQUoxU2IzbUk?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-06-16T03:11:51+08:00",
-    "score": 0
-  },
-  {
-    "title": "OPPO Reno16手机搭载潜望长焦系统，发布会定档5月25日 - Pchome电脑之家",
-    "source": "Pchome电脑之家",
+    "title": "OPPO Reno16手机搭载潜望长焦系统，发布会定档5月25日 - 电脑之家",
+    "source": "电脑之家",
     "reason": "活动时间已过",
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5DZnBKblB6SDNIeEFJVVhHak1ocDllbHhuYjRaZllxU3d5TFMtNXlzQU10S1lfNVI3S2V4WTdaNTZRODl0MzlMNE83djlleWtZNW5taQ?oc=5",
     "category": "手机新品",
@@ -702,8 +621,71 @@
     "score": 7
   },
   {
-    "title": "小米人车家全生态新品发布会定档5月21日！YU7 GT、17 Max来了 - Sohu",
-    "source": "Sohu",
+    "title": "小米新品发布会一文汇总：YU7 GT 正式上市，手机 / 耳机 / 手环联袂登场 - 新浪财经",
+    "source": "新浪财经",
+    "reason": "命中排除词：汇总",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBBVGhtUlBlanFseTFFU0FmYnRDM3lCZXFzaDUzX0E4dEZacGU2R0RZeXhSRm15ei1NLS1JVG10c3RkZnB3Z1J6ZFRjamZ5M21BLWFIcS1idjlwUHFiWjNrbHNtclE3TTJUb2p2UEdWdHhjWHE4WmItS3ZrSHhleUk?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-05-21T15:00:00+08:00",
+    "score": 0
+  },
+  {
+    "title": "红魔 11S Pro 新品发布会官宣定档 5 月 18 日，主打“风生水起 超频领先” - 新浪财经",
+    "source": "新浪财经",
+    "reason": "命中排除词：超频",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBWUUk1UHVsRUtFTDV2Z3RQWlRvclAxc1NTSE9LbVpDb1NhUERyMDR5THN0anVrVXBBR3U2M0lqbnJWVlFzZHlKUVlkcm5lNXpUMzdLV25rV0FyX0ZVRHlMeURwa2h3MlFFSzM5X0ZxWTdYSm82bUR4cnY1ZmkwSTg?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-05-08T15:00:00+08:00",
+    "score": 0
+  },
+  {
+    "title": "华为nova 16系列定档6月1日发布！十周年巅峰之作来袭 - 太平洋科技",
+    "source": "太平洋科技",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE50R0dXZFBfbHJvem5UNDFaSngxb3NjRGdidmQyd2pFQmpwckgyMkJwdHBLMVRZX2dIYzdoR2FTbmVRWGhmeGh3ckFoNVNMVERNLUs4eF91a2h5S3NNQkE?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-05-25T15:00:00+08:00",
+    "score": 5
+  },
+  {
+    "title": "小米17T系列发布会汇总：全能影像旗舰，T系列回归国内 - 中关村在线",
+    "source": "中关村在线",
+    "reason": "命中排除词：汇总",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1IaG1ZcHZkQXpCUjVwcUJKTlhobWlxLU9fTFBlcGZuZERKcmNQcEJjbTduMXJvNF92SDQ3bjlrSW5EVVNIbE5Od3Rsc3N3MURIWFNISzBLUQ?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-06-13T14:16:09+08:00",
+    "score": 0
+  },
+  {
+    "title": "2999元起！小米17T系列手机发布，人形机器人同台亮相 - 搜狐网",
+    "source": "搜狐网",
+    "reason": "缺少强发布会信号",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbGNQZkI1d2dSTWZLdGFhQ1BhcjN4dmlKLWJDOGVsZXJYSXVBbXlmS2oyRVlwVlpPZldtYVhSQ1k4dDRDbjhPSXdJVzh0TjdBZF9xSTZlcGpPeEk2ajRvRU5PN2JzWDhQa2htdUZoblNQUG0yYllUY2F5S1d6MzRZb3lIR0VhQjRo?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-06-09T10:32:24+08:00",
+    "score": 4
+  },
+  {
+    "title": "行业首个免费换屏手机，荣耀X80 Pro Max发布会定档6月22日|硬核|高通|新机|户外运动|骁龙_手机新浪网 - 新浪财经",
+    "source": "新浪财经",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQd3ROalFDZjZLUGYtYzhMOGpVS0VreDVtTk1yRVRmUUx1WllpLWlvTlpvd0ZrNUYwVngtQVpZM0x0WHFZRlhlcmNWTFdXMVlaNU1aX0o1U2dnam9xcTBTb29TOHdpakxEUU5SS09FVkFXVzFEX0ZJSGh0WXoyVDl4WjRUaWpJLWM?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-06-16T15:00:00+08:00",
+    "score": 7
+  },
+  {
+    "title": "小米17 Max领衔，小米官宣5月21日召开新品发布会 - 搜狐网",
+    "source": "搜狐网",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5LN2Q3YjMwVXhuRUZnWER1R1N5M1pYNWFGWmUyZW1TSG1yVTIyS3Ffc2xWZk04aF9fVUg0V00wbmhyZHA4akcxeEY1VDFwY243dWc?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-05-18T15:00:00+08:00",
+    "score": 7
+  },
+  {
+    "title": "小米人车家全生态新品发布会定档5月21日！YU7 GT、17 Max来了 - 搜狐网",
+    "source": "搜狐网",
     "reason": "活动时间已过",
     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KdlRYRUhGSGN5LUl6YndjR2hRME51akRqaERSNEZCbzlGelBYNXdvd2hfZmRPYm9HU3JUUG50dDNTUHV1TExzdFpiaDJRYXRYdmc?oc=5",
     "category": "手机新品",
@@ -711,12 +693,21 @@
     "score": 7
   },
   {
-    "title": "开局王炸！华为新机官宣：6月1日，正式发布上市！ - 手机网易网",
-    "source": "手机网易网",
+    "title": "索尼新旗舰官宣！Xperia 1 VIII 定档 5 月 13 日，售价近 1.6 万 - 电玩巴士",
+    "source": "电玩巴士",
     "reason": "缺少强发布会信号",
-    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBRRG9fbklrX1NaNHA1Vko3Q3luVG1ySDU4UjM3VXU2d2RzTl84SWFEN0VFLUg2Z2VxRUx6NHlZcFJPYm50cGhYSV9EMlJjekFZX1E5ZDJTZ2tJYnQ4eXBkSUlB?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB4RVc4eDhLVHdBcXRodjRrc1RCSjJVWlRDaF80TUJ4dGFtUWx5LUk0WG1WNFAxSEZ5SzNRSUQtNnl0SW93TXB0UjZtNExUZw?oc=5",
     "category": "手机新品",
-    "published_at": "2026-05-26T15:00:00+08:00",
+    "published_at": "2026-05-11T15:00:00+08:00",
+    "score": 5
+  },
+  {
+    "title": "荣耀 X80 Pro Max 官宣 6 月 22 日发布，经典商务风外观 + 11000mAh 大电池 - 腾讯新闻",
+    "source": "腾讯新闻",
+    "reason": "缺少强发布会信号",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5oNkk3bDZsdnFTVlFuek51WUlZTm5pcnBVSDYwaXZveUVTYlF0Q2hwRGR6aDh5YmQ5UWhfR2RMSVUzT2lXbEdSbkQ3S1JDcmRzdFdoTVRjdw?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-06-15T15:00:00+08:00",
     "score": 5
   },
   {
@@ -729,6 +720,15 @@
     "score": 6
   },
   {
+    "title": "🛑直播回放：华为2026春季全场景新品发布会| Huawei 2026 Spring All-Scenario New Product Launch Event Caufield (ezDEhqkbxS) - Mshale",
+    "source": "Mshale",
+    "reason": "命中排除词：直播回放",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1BYVBCemUxZlpsTk41R2I3QlBSR0Zibm9IUVpnUThQY1pwZkNHZ19FdlNraUVjVmRjRWRocUlGN25VQi05S2k3YVNPLUNlaWJHazVvQUoxU2IzbUk?oc=5",
+    "category": "手机新品",
+    "published_at": "2026-06-26T07:55:14+08:00",
+    "score": 0
+  },
+  {
     "title": "年度最强发布会？5月21日小米YU7 GT与17 Max齐登场 - 17173",
     "source": "17173",
     "reason": "活动时间已过",
@@ -738,62 +738,35 @@
     "score": 6
   },
   {
-    "title": "九号2026新品发布会：4款硬核产品重磅亮相 重新定义“好车标准” - 手机网易网",
-    "source": "手机网易网",
-    "reason": "命中排除词：九号",
-    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5OZHNPXzBsTEFIOTdqM0Zmd2wtSmxFb2Vpc3Zfd0NHaFNzM01XSV9ERzNnTE0xSURITktyQ09mWklIUXZhSDd2UHloYVVGTzJvNklVanlCcTRPYjVJQVpmVHVB?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-29T15:00:00+08:00",
+    "title": "为“驾驶本质”正名，沃尔沃EX90/ES90正式上市 - 汽车之家",
+    "source": "汽车之家",
+    "reason": "可信度分数不足：2",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9MVW5FWldIcXJ5cERvMENSbDM1WHY4WGtrLTZSZjlRTTgwSVpBZG9tVXdxc3JnTzdyc2hJNG1RZzJWVUxQNnZHTjdkdVVHYVhaeHZVM005c1lnems?oc=5",
+    "category": "新能源汽车",
+    "published_at": "2026-06-12T11:48:17+08:00",
+    "score": 2
+  },
+  {
+    "title": "华为开发者大会2026明天开幕！余承东出席 鸿蒙7蓄势待发 - 新浪财经",
+    "source": "新浪财经",
+    "reason": "可信度分数不足：0",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13QmpELTNhcEo5b3FvVGdNRm0wRmhjamV0a1ZBM09oWGlVUGFKZi13cW03b3cwMExlRmN3YXlLNWFLM1VZNjFjenVhRXhXNmtlZ0M1NUZqbUR1cHdTckpaVTFBSWZvN2t1R2hteUZRLUhWX0x0enJjOFdsTjhZQ2c?oc=5",
+    "category": "科技数码",
+    "published_at": "2026-06-11T15:00:00+08:00",
     "score": 0
   },
   {
-    "title": "小米本周四新品发布会新车YU7 GT及大屏手机17 Max登场｜即时新闻｜产经｜on.cc东网 - on.cc東網",
-    "source": "on.cc東網",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQWTVmMGdhUmhrS3JvSGFSR3I5eG9rbTlvSnp6d0FGellKVklOektBNXNLUVZZbHUzdDVzYWhRY1dDTGRrRXZZeXgxSVBpcVBoSjJuMjE0MFNWNUJZUkhrYmNMZHNSWXBxZGFjb3BRcmdicG5PV2tMM1JUS2NWRl9RaUZJYzB6YVVWWklHaDFKQWlzQXlLNm5SS1hzejk?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-05-18T15:00:00+08:00",
-    "score": 6
+    "title": "MediaTek天玑开发者大会即将开启，天玑8600曝光 - 搜狐网",
+    "source": "搜狐网",
+    "reason": "命中排除词：曝光",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5zek5qOG9QSGtFcS1wLXdjQV85V3lLYmVHYlJWeEw0NGo0cXVCQWQyRE9xWExtbjdTZ3ZxMVAxTlk3eWJ2ZlRzMU8wNm1LWkc2eVE?oc=5",
+    "category": "科技数码",
+    "published_at": "2026-05-11T15:00:00+08:00",
+    "score": 0
   },
   {
-    "title": "荣耀600系列“幸运星”外观正式亮相 发布会定档5月25日 - 电玩巴士",
-    "source": "电玩巴士",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBMU2stQ0V6TlBuMThRUDJLT042V2tvMTVjSl94alRJeG1qeXpIQXRYYTZmS2U2bkVRSDVIZFVDclM0TGpGWEF5bU5B?oc=5",
-    "category": "手机新品",
-    "published_at": "2026-06-08T05:01:50+08:00",
-    "score": 7
-  },
-  {
-    "title": "比亚迪官宣：5月28日举行智驾发布会 - Sina finance",
-    "source": "Sina finance",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1neHdzN0dEZzQwZVlUbU9YS2x0NjNIZzh3aE9LbGRzbl8xN2w2RUQyTXJKRmRQUFNhWW45UlBWeTRNZnByUDhQSDB1NjIwTHMyalR3U3lyZzBabGYwazNLUngyeVRRMFp4WHduVktYc2gyZHNLTGc?oc=5",
-    "category": "新能源汽车",
-    "published_at": "2026-05-22T15:00:00+08:00",
-    "score": 7
-  },
-  {
-    "title": "极氪8X预售38分钟订单过万之后：如虎添翼 - 汽车之家",
-    "source": "汽车之家",
-    "reason": "缺少强发布会信号",
-    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5BWnhtQk8xVTFjQy1DWUZ0RTNHMWEwZkxDZVhNa0NILU1tcWZJclVpQnRFNEloRHRUd3lXNEZ3YndBR3RsVGFMb0QzR3pUUVFKQW1BZDloNHhVSGxwNnc?oc=5",
-    "category": "新能源汽车",
-    "published_at": "2026-06-15T02:05:50+08:00",
-    "score": 4
-  },
-  {
-    "title": "启境GT7 预售21.99万起华为乾崑赋能智能猎装新标杆 - BitAuto",
-    "source": "BitAuto",
-    "reason": "缺少强发布会信号",
-    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9vTGJ2NHV1MWN1WmZSQ2RDdW0xdmRNZEM0NmJJR0hQdHpVMkN5dG5vY2h5SVVhT25mRXZ3TlJac3NmUTlRLUhsbW5LUV9BNmFEVE9Tb1ZlNVV0UQ?oc=5",
-    "category": "新能源汽车",
-    "published_at": "2026-05-29T15:00:00+08:00",
-    "score": 4
-  },
-  {
-    "title": "华为举办鸿蒙办公新品技术沟通会：发布MatePad Pro Max及生态产品 - Sina finance",
-    "source": "Sina finance",
+    "title": "华为举办鸿蒙办公新品技术沟通会：发布MatePad Pro Max及生态产品 - 新浪财经",
+    "source": "新浪财经",
     "reason": "可信度分数不足：0",
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZ3NiWkhuTWVDdWhxYllGblRKOHQ1Um92OUtlclpobGhncHhCbXJSSmhSNVRRZGZuZW5zOXRCY01ja3dsOEhWajBsYTdsUzFzNkxEX0RyTXc3cU5SZnM3UFJXOXQ2X1NKem1uMzhLaVRxRTJkS1VVdzFXQ0N0Zjd4R3Fua0Y0Tms?oc=5",
     "category": "科技数码",
@@ -801,39 +774,30 @@
     "score": 0
   },
   {
-    "title": "华为开发者大会2026明天开幕！余承东出席 鸿蒙7蓄势待发 - Sina finance",
-    "source": "Sina finance",
-    "reason": "可信度分数不足：0",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13QmpELTNhcEo5b3FvVGdNRm0wRmhjamV0a1ZBM09oWGlVUGFKZi13cW03b3cwMExlRmN3YXlLNWFLM1VZNjFjenVhRXhXNmtlZ0M1NUZqbUR1cHdTckpaVTFBSWZvN2t1R2hteUZRLUhWX0x0enJjOFdsTjhZQ2c?oc=5",
+    "title": "现场小姐姐直播带货_新浪新闻 - 新浪网",
+    "source": "新浪网",
+    "reason": "缺少强发布会信号",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5aLUFFVU9aNEZwZHdRZHhZWEZWSnFZQktCQnVEYWxTMi14aVRjbUxqbER3ZHFMaFJVRDBwaXJVUFgwMUxBUnBSajRBVE9yX1RJcFp0b1lDOVNSWGc5dnl4NUxwZw?oc=5",
     "category": "科技数码",
-    "published_at": "2026-06-11T00:43:00+08:00",
-    "score": 0
+    "published_at": "2026-06-01T15:00:00+08:00",
+    "score": 3
   },
   {
-    "title": "联发科天玑开发者大会 2026：押注全场景智能体化 升级AI与游戏技术栈 - Sina finance",
-    "source": "Sina finance",
+    "title": "2026苹果全球开发者大会只有三个关键词：Siri AI、开放、告别 - 新浪财经",
+    "source": "新浪财经",
     "reason": "可信度分数不足：2",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNWUxGUW1saXk1ZDRKV2ZENFhOWktubW5XUWthOUQ3cHFrWXc1blI0TnZCZV9mbllNUVFYRnh5QTItdUtoY1dYX1czX3ItU29mNDF5cUd2bWlBWmdCOG9aTTlNeC16YkoydHpGczJDMncxNXJpUzloMnowNHc4S09NZVpLT2EyNmYwOUVyVFNwZjNJQjFGTElhUXozUzM5UWh0anlhZXFnSGtHS3VjcXFtVDNNeVg0dFM1MGVlbkhueDIzS3NTbkJZa09YcUZzbmgxZEliRDJMenpsYVdY?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOU1RONGFSZ29sb1dRWmFuVHVPRXJ6NmpQSDVybmpxc3FzUHphNldNaVdwN05JSVV1NHljSWozMF9QOUplQWNGRzdHN1A4MW8tTU1YbUd6b1A5WkVlUHZ0dG9QOGZFenExNTRUSHl4QU1QRjlBUVFnUXU5N0RFdWNmWFBya2Y?oc=5",
     "category": "科技数码",
-    "published_at": "2026-05-13T15:00:00+08:00",
+    "published_at": "2026-06-09T15:00:00+08:00",
     "score": 2
   },
   {
-    "title": "今年华为开发者大会的物料，这件可爱的T恤是最高分。#华为开发者大会2026# ​ - 新浪网",
+    "title": "华为开发者大会2026_新浪新闻 - 新浪网",
     "source": "新浪网",
     "reason": "可信度分数不足：0",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9rT1V1MXFKSDB3ekhtdVBBTWFzc3ZCODZuQndJSm5sNWRvajVBVHVXNkxLbXFWWEFUWDA3ZDhzZXdvZG56ckRiSUlPRzZJWUg2cW1EeDcxY3NRamFGZUo2dG1Zaw?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5CR09wYW1qcnJXd0czU2dwRTVQUXVjWENuMHRONVBKTWl4dC0xM2RpNldpcVpLZS1qYnRmYXl3LUd6X21tTGtCUlN6TmV4UU9qMFZlSWg5VXNWOExGZ1hQR2phSQ?oc=5",
     "category": "科技数码",
-    "published_at": "2026-06-11T17:33:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "天玑开发者大会召开_新浪新闻 - 新浪网",
-    "source": "新浪网",
-    "reason": "可信度分数不足：0",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1KQTRpRVF4bVVZR3FoTWxhUVFBY0g1QjFmU1RsVURRWldGSlRSUHBlanMzTVE0UzMzQmo1enctR2gySWN5cWlyLTdtZFZ3X2xkM1hzSHZ4MV9NVHpMcGFiT09KWQ?oc=5",
-    "category": "科技数码",
-    "published_at": "2026-05-15T15:00:00+08:00",
+    "published_at": "2026-06-12T15:00:00+08:00",
     "score": 0
   },
   {
@@ -842,111 +806,48 @@
     "reason": "可信度分数不足：0",
     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBPSWRqNXRNNGxTSGVuWWlUSUlyMjhrMlB5Rm9VMkVBWkVPdzVXVC1FYzlGdXlsTlNBaWtHdnVHZXdDTHQ0V2I4VHhCRGtjWThmdURwTmdnSmczWTRvamwtZEVIVQ?oc=5",
     "category": "科技数码",
-    "published_at": "2026-06-12T14:54:00+08:00",
+    "published_at": "2026-06-12T15:00:00+08:00",
     "score": 0
   },
   {
-    "title": "联发科天玑开发者大会举行_新浪新闻 - 新浪网",
+    "title": "华为开发者大会2026_新浪新闻 - 新浪网",
     "source": "新浪网",
     "reason": "可信度分数不足：0",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5EN3dKY0NLeXVGaVBUem5wNUNvQnI5UUZnMFRsNFV5X2sxVzZwSld2b0RFWTZxdW1TaG92a2U4VUNFVFVIWXBXa0xWWFhwczQ0amZSOEtwSE40cUFkcktvSW9MMA?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1oZmdIZHJzSHZVSTRlWDJxTGRLSXQ0RzJ4amhBU1JxaC0ybXBwcVN4X3ZyaHVDaTFZdEtacHZ4dFRZczdCR08zdktyVVFEUEJjT3RkTmVmYUN5V1o2VUcwVFNRZw?oc=5",
     "category": "科技数码",
-    "published_at": "2026-05-13T15:00:00+08:00",
+    "published_at": "2026-06-04T15:00:00+08:00",
     "score": 0
   },
   {
-    "title": "极米2026新品发布会定档4月29日：将推出四款旗舰投影设备 - Pchome电脑之家",
-    "source": "Pchome电脑之家",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5rZnhXa0h2bnFuZFVLc1h3WDd0aEFDLVBEZjJIYWR3T3NFVDRhX2pidEd5aE5TcWFjZy0wUGlfU2JpTzJvMkpPd21tWTYxS2loSWFTMw?oc=5",
-    "category": "科技数码",
-    "published_at": "2026-04-27T15:00:00+08:00",
-    "score": 5
-  },
-  {
-    "title": "MediaTek天玑开发者大会即将开启，天玑8600曝光 - QQ News",
-    "source": "QQ News",
-    "reason": "命中排除词：曝光",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9RdWZ3Q092eFlUU3Nrdmx3dUtFc1RMM1BRLV9BZHlJX0JLaUU1V2N2bzR1RUM0dFlxQlU5M2NONmliM2hvUko0SndnLXE0NHJ2ZUJzMVBn?oc=5",
-    "category": "科技数码",
-    "published_at": "2026-05-11T15:00:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "#华为开发者大会2026# 看了一下现场的摄像设备，新时代的组合搭配[good] ​ - 新浪网",
+    "title": "苹果开发者大会AI升级_新浪新闻 - 新浪网",
     "source": "新浪网",
-    "reason": "可信度分数不足：0",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5ya2cwRzVRRExPQzRQcWVNLS03d3pCcWN0RElTTW1rbDVBcndaMTdQanJPemxhb09sUUx2NDREUlFhMG1lbUV6cXBiUGFfTlNpWTNtdk5FVVNfUk9oQUQyQ0NYZw?oc=5",
+    "reason": "可信度分数不足：2",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1oTjBRY3hVMlhLazdWZFl3ajhTaHFOdmR3dUtPRDZ5dzRWeGJnQjUyUGVCdkRNYXZSRU9mLUYtRHlpSjltYVNDY3ZlenVrckExV3ZDOW8yLThjVDhiR3VCUEFZOA?oc=5",
     "category": "科技数码",
-    "published_at": "2026-06-12T14:00:00+08:00",
-    "score": 0
+    "published_at": "2026-06-09T15:00:00+08:00",
+    "score": 2
   },
   {
-    "title": "天玑开发者大会召开_新浪新闻 - 新浪网",
-    "source": "新浪网",
-    "reason": "可信度分数不足：0",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9VSXd4YVRiNm5VMlZMNVdjRVlBNFZiYnpENG9GaTZMV1ltMmNVUFh3aFAyWElYbG1PdXUwMUtuU1h1LWhqM0tvM0hkSzFYMGNqQkJUaFozM2ViMFVETVdJSWdNWQ?oc=5",
-    "category": "科技数码",
-    "published_at": "2026-05-13T15:00:00+08:00",
-    "score": 0
-  },
-  {
-    "title": "三张图看懂今天 红魔新品发布会#红魔11SPro# ​ - 新浪网",
-    "source": "新浪网",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBjVjI4RDd5dXRqdlZEU1JZeUItV0dyVTB3a0ZJZHRYZnlrNG1vbGxHNTZEUjVCbm5IcnFfM3ljdzMyQ1lEXzNUaEMyczZyZ1VhQmt3aExuZGU4SjZFLVcyY3o1aw?oc=5",
-    "category": "科技数码",
-    "published_at": "2026-05-18T15:00:00+08:00",
-    "score": 4
-  },
-  {
-    "title": "鸿蒙智行问界 M9 系列新品发布会提至 5 月 27 日 14:30，会后即刻开启大定 - Sina finance",
-    "source": "Sina finance",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9MOGRZN1ZubHVuZVh0b3hOVUxWU3lzeVZmRDcyWnRvbi1rTTJhNXhtSEMyY1IzME85ZHE1dUFDd0hqVjJPRXdiR3NDNkUtSmYzRm0zNy1IOHBDOFNMaWsxamN5YUxLT2RFd2FKWUdPbVIwS081a2pRdEl5TEFNSlk?oc=5",
+    "title": "全新一代问界M9正式上市，官方零售价47.98万元起 - 新华网",
+    "source": "新华网",
+    "reason": "可信度分数不足：2",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeldYcGU2TUkycE1tMHUzaUdyTW4zbVVKdDVpZUJqQ3k4dWtkeENBZ1VlZnJNMzVhMTI5UDVaV20tZTM5dXQtcGJQbF9JakFrZlY5VHBkR1VjcXFKMnVmT19HZ2tGWkQ2bl9wZ2VTVEZ0MDJBZHNrdXZUVkxlc1FGMkJNNWgydw?oc=5",
     "category": "新能源汽车",
-    "published_at": "2026-05-23T15:00:00+08:00",
-    "score": 6
+    "published_at": "2026-05-28T15:00:00+08:00",
+    "score": 2
   },
   {
-    "title": "华为海外新品发布会定档5月7日，nova 15 Max确认即将登场 - 凤凰网科技",
-    "source": "凤凰网科技",
+    "title": "华为nova 16系列及全场景新品发布会今日举行 多款新品惊艳亮相 - C114通信网",
+    "source": "C114通信网",
     "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE13d1QtaWhMQmlKTGpHQk0wcWVPOE5TYUx5Yl9iUnU1QlZQc1JxZXBMOHJscXZLUEpXWVdqalJOblZIUXRfV0lJV3NUTlA?oc=5",
-    "category": "新能源汽车",
-    "published_at": "2026-05-07T15:00:00+08:00",
-    "score": 5
-  },
-  {
-    "title": "华为海外新品发布会定档 5 月 7 日，畅享 90 Pro Max“化身”nova 15 Max 登场 - Sina finance",
-    "source": "Sina finance",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5uckRuQW13bWhKM1daYXVYTUxNSXU3UWRWVExlMFJZVW5ONURkTVFUWThwZDhkdFMyNjhLVnotdXJzaGNkTzNwdkhYS2I1Ry1RMkQ2eEZmUjZYRVBRZVpPbFRNMFJXcmpDN0VlV1ZyT1pWemhmVjlVUFZCRVVleWM?oc=5",
-    "category": "新能源汽车",
-    "published_at": "2026-05-06T15:00:00+08:00",
-    "score": 5
-  },
-  {
-    "title": "华为nova 16系列及全场景新品发布会今日举行 多款新品惊艳亮相 - 电玩巴士",
-    "source": "电玩巴士",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE53UEgwZkZrMFE1MUJiUG5KaThiTXlWLWlUNi12RW4xS19HbGRycjhaYW1MM1VWdnFKRkJ0d2xudWRFeE5tZFlOd3pR?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBNcDR1bHlzV2FMa2hoOFlUekpHamx2SFBGNHM0UUNidngzZ3RlM2VmbmJxbHJDRzRqNkVmUEtMMTRheGd4cFhET0FNejV3eDNz?oc=5",
     "category": "新能源汽车",
     "published_at": "2026-06-01T15:00:00+08:00",
     "score": 4
   },
   {
-    "title": "鸿蒙智行全新一代问界 M9 发布在即，多款配色实车亮相 - Sina finance",
-    "source": "Sina finance",
-    "reason": "缺少强发布会信号",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UZm9XUlZGVk4wWDY5aGhDN0dFY0tvS1BDSms5UHJiVmlPUGJRNHpvbDJ0Mlpwak1vTUpQMEo3VzZxUmpLVGVRR2hhOEx4Q294Z29DTTFhNWhNN1dHY3lzdXNvNk52T0d0UGxmeHR6OE5GcDl2M1FPeEVRcHNwSVE?oc=5",
-    "category": "新能源汽车",
-    "published_at": "2026-05-27T15:00:00+08:00",
-    "score": 4
-  },
-  {
-    "title": "鸿蒙智行全新一代问界M9发布在即，多款配色实车亮相 - Sohu",
-    "source": "Sohu",
+    "title": "鸿蒙智行全新一代问界M9发布在即，多款配色实车亮相 - 搜狐网",
+    "source": "搜狐网",
     "reason": "缺少强发布会信号",
     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0ySW1rZmZ1ZTRCQ0NNWjZGT1p1M2luOWExUWJnbmdwanBDMlFVMUdVT0xLRllIX1N4VXJ1RTlIdWNwUkpOMThaNGJGLXRHZEM2R1E?oc=5",
     "category": "新能源汽车",
@@ -954,31 +855,40 @@
     "score": 4
   },
   {
-    "title": "华为乾崑联合设计：猛士汽车春季焕新发布会定档4月20日 - 新浪财经",
-    "source": "新浪财经",
+    "title": "华为nova 16系列及全场景新品发布会今日举行 多款新品惊艳亮相 - DoNews",
+    "source": "DoNews",
     "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMitgRBVV95cUxNZzNjS2ZpYXJlRk5YS1R3S0NOdEpLZWdmNVVhZ3NSR001TUpqTWpyRHRqdUhoLXJOdkIwUUt0LTQ4LXJ2WXJ5dWdlNmJ1TkUxLThYRkhMNDVaUHpOQ2NMR1FBQ0o0eHFQZWZwOHdBLUE2ZVAzYlp3WVMxdmdka1RzNFZTTURfelRyWVlIc2xiY0FqblF1cU4wZWFrRmhNb1dzY0tseGxlMUlmS202Vlg2NklJTmgxMTVLVXlyaE1CMHE3bnVpVjJ1blg5eHVLWHhzcE92eWotWXJkeG5wTVJwdnRzVjdwNzBuOGpBUU5sV1NuZzFOb1oxZ0IxbFdFZS1EZHJGUUtkYThyU3RBUGtFcFM2V1ByTUZ3NGlPbmdaNHNmQjdCaFdYNFNjRkFBQ2R3Y3NORkpIcUNVT213eGhiRlQyUlFTOHVSSUd4OGJGYmRodldfWTNyRHhUbGFxUHRWUUVTTDlOUV9kYjIxaW4tak92MnMtR0NwMUhUVlNOQWRtY1Y5YWlGVkg4WE14amNzMTFROEhRZkNqeTM0UG9JZGk2Z3ZPWVJYWlpvNmVlalJheVVaREQzczdwSGduMi1SWllVZUFJWC01SW1NM3owdVo0dEI0UjdUN2N5QmxaNVVQNktvaHpFYmlvZnExZEwtTlJOSWxuVXlNUE9MTDRDLTA2bHFzNkpYaW9lSEttb094QUpiLXA2ZW9qVnJ6bG5JbUFybmRYUngxY1lLeTVHU2MxZzVUZw?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDS0ZqRXREMVp1dG0tTEt5MFRsaEpqV3owbXdKMi1KaktoYk9zenZNVVlCeVJFOW16YUJSOUlQd0V4ZmRFVzdQY0k0aXB5RWJJWjltUmRja1JuRzJMUEE?oc=5",
     "category": "新能源汽车",
-    "published_at": "2026-04-19T15:00:00+08:00",
+    "published_at": "2026-06-01T15:00:00+08:00",
+    "score": 4
+  },
+  {
+    "title": "问界M9系列新品发布会定档5月27日，预售价49.98万元起 - 汽车之家",
+    "source": "汽车之家",
+    "reason": "活动时间已过",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5IaWFUaFZFZGF6RHFUZnBLZmtiOHhRRHgwQXBhVWdTQWRSZzJZVVN0WmNMMjlQY3d1UmdfeTdyS0xrbHgxV2dWa2FlaDdNOEZDRDJSM09maU5jY2NfWUE?oc=5",
+    "category": "新能源汽车",
+    "published_at": "2026-06-10T10:22:21+08:00",
     "score": 7
   },
   {
-    "title": "华境S上市发布会明晚举行！全系标配华为乾崑智驾 - 汽车之家",
+    "title": "今晚，鸿蒙智行春季新品发布会火力全开！ - 汽车之家",
     "source": "汽车之家",
     "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0Q3otYlF5LU9lZUlIbXFxZk9OZGtxbFBzS0Vnc1B4R3c5clp6Y2ZXa3NWVHVlSkxiZVdEX0ZaTmNwQUdhTVlIUjJPQjdnYlI5d3Z1SG0xSnFvTmc?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5qNVBOMnVHWW5TSDNOYTNhdzhkQnM4eEg2Xy1GbEQ5TENyYy1uREQxeVJmTkdNVnZwSk03RTZrNFlxbnBqM1hUU3pIQmkwTnNiVVlJM1hqNENtaVUwR0E?oc=5",
     "category": "新能源汽车",
-    "published_at": "2026-05-07T15:00:00+08:00",
+    "published_at": "2026-06-24T15:12:45+08:00",
     "score": 6
   },
   {
-    "title": "今天，问界M9系列新品发布会 - 汽车之家",
-    "source": "汽车之家",
+    "title": "华为nova16系列及全场景新品发布会今日开启，时代少年团作为nova代言人空降现场！ - icswb.com",
+    "source": "icswb.com",
     "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8wMDJ0czNYVE8ybWItSHB0ZVVPZTRLN0N3Zm9TUHc0WDhTVm9PV2VLZHRxVXowRjMtU3I2SGRsUXlyaDE1a2ZLLUpKZTZfcHZzTUdESlBYNWFDSlk?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ib19vZVpGaU5KRTM4RkFQX3RFdm9RNjJjNmxJQU8ydjRUa1hmOEhBWnhySGVfWi1waGZzVDJQQ1p6SXY0dDdYZWR4YTJoRGQ3XzFsVUg4SV9SVDFUU2RxRA?oc=5",
     "category": "新能源汽车",
-    "published_at": "2026-05-27T09:36:11+08:00",
-    "score": 6
+    "published_at": "2026-06-01T15:00:00+08:00",
+    "score": 4
   },
   {
     "title": "全新一代问界M9累计预订破7万台！系列发布会定档5月27日 - 汽车之家",
@@ -990,12 +900,30 @@
     "score": 7
   },
   {
-    "title": "定档6月1日！华为nova16系列新品发布会来了，全新新机引全网猜测，网友 - 东方财富",
-    "source": "东方财富",
-    "reason": "活动时间已过",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObGpRZDl5Sjk2MVdwM0ZVUlBkR1h4NjdXWGVBdlpBcUxYOHh1Sm11alhvS0pkdjhheHpJcUJNOW5kb1hPeWFPZXlmSmI5Ul84UDQ5LUY2Q0huMlpueUozZUdFU253ZlkyalFMOVdIMkowUnlDajY1ZVVpTkxZbkZQOVNKNThlTk1YQmxDeHB6NEk2eHJfdkxISVpOTlFRQlJWMHdHSFBTQ0loWDlFQUZNTHJMYw?oc=5",
+    "title": "余承东发布尊界S800典藏大观，鸿蒙ALPS座舱首发MOFs材料2.0 - 新浪网",
+    "source": "新浪网",
+    "reason": "缺少强发布会信号",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5XWFRlXzhyamFQMFJ1NHhLZFpQUXR5aTdQT0d4ZU1STXZiYzFlMzZNQjhrTW1yekN4OG5CNHNEZ3RWcGxqaFNxV04xSTZVTFkxNzF4TGRkNFJSeHVaa1VPbjVPTkk5aW51a1lnTkQ2emVmeTA?oc=5",
     "category": "新能源汽车",
-    "published_at": "2026-05-26T02:39:29+08:00",
-    "score": 5
+    "published_at": "2026-06-27T12:20:18+08:00",
+    "score": 4
+  },
+  {
+    "title": "138.8万起！尊界双旗舰震撼首发！ - 搜狐网",
+    "source": "搜狐网",
+    "reason": "缺少强发布会信号",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUk4yQU9hUXlCY1lFLXNhdHFIR0M3WXNXUDNyQ2xuUUE5VU5KUndPLTFyUHNnU1JjeDUxbjVJa0xya1hzQlBOaF9KUDJEZV9aZTRsX3V5OGpLRXdoeXlGbFJnQ1kxZ05yVE5NREdiNE5nS0RWdHBfWC1fcTh5U21Yb3M0ekUwQ0JZ?oc=5",
+    "category": "新能源汽车",
+    "published_at": "2026-06-25T20:54:12+08:00",
+    "score": 4
+  },
+  {
+    "title": "140项创新 全新一代问界M9系列正式上市 - 人民网",
+    "source": "人民网",
+    "reason": "可信度分数不足：2",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBienpKRkxGaVdFUmFhYjVIM0JVaDdkZVJreGE3TWhIR2hXWUNwdWNEaW9peFprUnRMcUpRcUs4MmNYT1kzZ2w1YkNGSmp5RXd4eEFHTHFzbzZQQUZvbmRqXy1yZDRCT2FnZGc?oc=5",
+    "category": "新能源汽车",
+    "published_at": "2026-05-28T15:00:00+08:00",
+    "score": 2
   }
 ]
