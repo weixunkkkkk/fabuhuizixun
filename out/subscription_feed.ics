@@ -6,61 +6,22 @@ METHOD:PUBLISH
 X-WR-CALNAME:新品/科技发布会追踪
 X-WR-TIMEZONE:Asia/Shanghai
 BEGIN:VEVENT
-UID:f80024cec9bef48097ceb2d2f164662b27da4e69@launch-calendar-bot
-DTSTAMP:20260709T011421Z
-SUMMARY:[新能源汽车] 极氪 9X 五座版开启预售（具体时间
- 待定）
+UID:f634c18023e96763631c2e99200ebec98cc32c18@launch-calendar-bot
+DTSTAMP:20260710T010327Z
+SUMMARY:[新能源汽车] 腾势 Z 全球上市首秀登陆古德伍德
+ 速度节
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4405&noapp=1\n识别到的时间：07月08
- 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4405&noapp=1
+ lendar/event_detail.html?id=4406&noapp=1\n识别到的时间：07月09
+ 日 17:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4406&noapp=1
 CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260708
-DTEND;VALUE=DATE:20260709
-END:VEVENT
-BEGIN:VEVENT
-UID:0e8a51734d1cc065beafabd64620e63dfcfc5f06@launch-calendar-bot
-DTSTAMP:20260709T011421Z
-SUMMARY:[科技数码] Momenta 香港联合交易所挂牌上市
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4376&noapp=1\n识别到的时间：07月08
- 日 09:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4376&noapp=1
-CATEGORIES:科技数码
-LOCATION:香港联合交易所
-DTSTART:20260708T010000Z
-DTEND:20260708T020000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5df0427cdcab88dc81adf1afb9680324d33874de@launch-calendar-bot
-DTSTAMP:20260709T011421Z
-SUMMARY:[新能源汽车] 苹果 iOS 27 现踪迹：iPhone 17 等用户
- 未来可用 Apple 车钥匙解锁小米 SU7/YU7 汽车
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/0/974/2
- 79.htm\n识别到的时间：7月8日\n可信度分数：5\nhttps://www.
- ithome.com/0/974/279.htm
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260708
-DTEND;VALUE=DATE:20260709
-END:VEVENT
-BEGIN:VEVENT
-UID:6bb969896a5e562460a6399e8eb7f16bd15bc87f@launch-calendar-bot
-DTSTAMP:20260709T011421Z
-SUMMARY:[科技数码] 全新奔驰纯电 GLC 上市盛典
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4365&noapp=1\n识别到的时间：07月08
- 日 19:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4365&noapp=1
-CATEGORIES:科技数码
-LOCATION:北京首钢园三高炉
-DTSTART:20260708T113000Z
-DTEND:20260708T123000Z
+LOCATION:英国古德伍德速度节
+DTSTART:20260709T090000Z
+DTEND:20260709T100000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:673fa2ebf84b169c199d3e107026face66cf0dad@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 奇瑞风云 A9 科技美学秀（预售发布
  会）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -74,7 +35,7 @@ DTEND:20260709T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:18ac6929f545452a76c861ac1d3d0f87cafc1331@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 蔚来 ES8 大五座版正式发布上市
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4374&noapp=1\n识别到的时间：07月09
@@ -87,7 +48,7 @@ DTEND:20260709T123000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:543b17828554d7ce3924ff66870ad043b04e99b5@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] 索尼 RX10 V 黑卡相机发布
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4408&noapp=1\n识别到的时间：07月09
@@ -100,7 +61,7 @@ DTEND:20260709T150000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:c4a89c928f870c7b9b8bc2e85f29eddac4f082e1@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 吉利宽体旗舰家轿全球首秀（具体
  时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -113,22 +74,8 @@ DTSTART;VALUE=DATE:20260710
 DTEND;VALUE=DATE:20260711
 END:VEVENT
 BEGIN:VEVENT
-UID:53b0ddb71a11e3c8efe2c72109fc7d2e4294eecc@launch-calendar-bot
-DTSTAMP:20260709T011421Z
-SUMMARY:[新能源汽车] 腾势 Z 全球上市首秀登陆古德伍德
- 速度节
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4406&noapp=1\n识别到的时间：07月10
- 日 00:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4406&noapp=1
-CATEGORIES:新能源汽车
-LOCATION:英国古德伍德速度节
-DTSTART:20260709T160000Z
-DTEND:20260709T170000Z
-END:VEVENT
-BEGIN:VEVENT
 UID:e8f7d3e8927def73172d38b57960f2453e319bd7@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] BilibiliWorld 2026（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4418&noapp=1\n识别到的时间：07月10
@@ -141,7 +88,7 @@ DTEND;VALUE=DATE:20260714
 END:VEVENT
 BEGIN:VEVENT
 UID:d25333a0ae36d8bc76fa37a90ea3bfc49fb75eeb@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] 长征十号乙首飞（预测）（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -155,7 +102,7 @@ DTEND;VALUE=DATE:20260711
 END:VEVENT
 BEGIN:VEVENT
 UID:c04377d2382338b549f358292b568a1ed16066a6@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 2027 款奇瑞星途 ES 正式上市（具体
  时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -168,8 +115,22 @@ DTSTART;VALUE=DATE:20260712
 DTEND;VALUE=DATE:20260713
 END:VEVENT
 BEGIN:VEVENT
+UID:499add9ae355c4cd5d0b9c38961d3ed3a675b23e@launch-calendar-bot
+DTSTAMP:20260710T010327Z
+SUMMARY:[新能源汽车] 一汽悦意 08 车型上市（具体时间待
+ 定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4422&noapp=1\n识别到的时间：07月12
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4422&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260712
+DTEND;VALUE=DATE:20260713
+END:VEVENT
+BEGIN:VEVENT
 UID:0c4a34f3bee52b44901ac0eaa4e6b27909562e95@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] 奔驰“小 G”全球首秀（具体时间待定
  ）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -183,7 +144,7 @@ DTEND;VALUE=DATE:20260714
 END:VEVENT
 BEGIN:VEVENT
 UID:799a1d7e0bea9a3133f43cfcaa5b6c5be6f3f673@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[手机新品] 小米 REDMI Note 17 系列手机新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4415&noapp=1\n识别到的时间：07月14
@@ -196,7 +157,7 @@ DTEND:20260714T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:ae10b0aa74d0ef7c6a6a4a055a3ab60cf2847e3b@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 五菱星光 L 正式上市（具体时间待
  定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -210,7 +171,7 @@ DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
 UID:b89921b5161119843edbb422b5369a397ce62600@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 智己 LS9 Hyper 汽车上市发布会（具体
  时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -224,7 +185,7 @@ DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
 UID:401d3ef006ca31ecd48ffef2e9a70bab05de1285@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] 广汽集团 3000 万用户感恩活动（具体
  时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -237,8 +198,35 @@ DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
+UID:2ac3659266bd4cff7b3216fb1328b358e6b35f30@launch-calendar-bot
+DTSTAMP:20260710T010327Z
+SUMMARY:[新能源汽车] 新一代理想 L6 产品发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4421&noapp=1\n识别到的时间：07月16
+ 日 19:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4421&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART:20260716T113000Z
+DTEND:20260716T123000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:02b93a98a9896d34cb80e00f984a71b541a9aadf@launch-calendar-bot
+DTSTAMP:20260710T010327Z
+SUMMARY:[新能源汽车] 全新坦克 300 正式上市（具体时间待
+ 定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4423&noapp=1\n识别到的时间：07月19
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4423&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260719
+DTEND;VALUE=DATE:20260720
+END:VEVENT
+BEGIN:VEVENT
 UID:fbac6a1d1e6f820e2d97b2f92a1cf2575e5d5830@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] AMD Advancing AI 2026（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=3936&noapp=1\n识别到的时间：07月22
@@ -251,7 +239,7 @@ DTEND;VALUE=DATE:20260723
 END:VEVENT
 BEGIN:VEVENT
 UID:b835bff84363afaad1431568ab801e04519798a6@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] 三星 Galaxy Unpacked 2026 夏季新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4417&noapp=1\n识别到的时间：07月22
@@ -264,7 +252,7 @@ DTEND:20260722T140000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:086dd5d510964d9487594bd2b7cd671316ae8999@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] MG 07 开启预售（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4410&noapp=1\n识别到的时间：07月29
@@ -277,7 +265,7 @@ DTEND;VALUE=DATE:20260730
 END:VEVENT
 BEGIN:VEVENT
 UID:c98f57d7c53b87e85ef4095bdbfe50e34f8f2e49@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 北京越野 BJ81 正式上市（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -291,7 +279,7 @@ DTEND;VALUE=DATE:20260802
 END:VEVENT
 BEGIN:VEVENT
 UID:56268dea4ae3f250a2476314dbe4ad19b387c552@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 2026 款 smart 精灵#1 BRABUS 性能版亮相
  （具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -305,7 +293,7 @@ DTEND;VALUE=DATE:20260813
 END:VEVENT
 BEGIN:VEVENT
 UID:c75b24cc284bc2474bc21e6d21386eb4a4c263a5@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[手机新品] 谷歌 Made By Google 发布会发布 Pixel 11 系
  列手机
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -319,7 +307,7 @@ DTEND:20260812T230000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:2a7e3702f751ca7be91dc7e444dadf10369ffb60@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[科技数码] gamescom 2026 科隆游戏展（具体时间待定
  ）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -333,7 +321,7 @@ DTEND;VALUE=DATE:20260827
 END:VEVENT
 BEGIN:VEVENT
 UID:7bf70422ebaf0339fdb6b1e4f66b219bea28e718@launch-calendar-bot
-DTSTAMP:20260709T011421Z
+DTSTAMP:20260710T010327Z
 SUMMARY:[新能源汽车] 2026 款岚图知音 SUV 上市（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
