@@ -6,6 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:新品/科技发布会追踪
 X-WR-TIMEZONE:Asia/Shanghai
 BEGIN:VEVENT
+<<<<<<< Updated upstream
 UID:cd742803e6d9a0af179ae2cadef57f018dd1a9af@launch-calendar-bot
 DTSTAMP:20260714T071725Z
 SUMMARY:[新能源汽车] 比亚迪腾势 Z 电动超跑国内预售（
@@ -84,6 +85,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:f6158ee8b661f1abb59a4a7e648eff69b8dcc52f@launch-calendar-bot
 DTSTAMP:20260714T071725Z
+=======
+UID:f6158ee8b661f1abb59a4a7e648eff69b8dcc52f@launch-calendar-bot
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 问界M9纯电续航直播实测 | 成渝双城
  往返挑战
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -150,12 +155,15 @@ DTEND;VALUE=DATE:20260715
 END:VEVENT
 BEGIN:VEVENT
 UID:799a1d7e0bea9a3133f43cfcaa5b6c5be6f3f673@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[手机新品] 小米 REDMI Note 17 系列手机新品发布会
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4415&noapp=1\n识别到的时间：07月14
- 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4415&noapp=1
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/976/
+ 463.htm\n识别到的时间：07月14日 19:00\n可信度分数：10\nht
+ tps://www.ithome.com/0/976/463.htm
 CATEGORIES:手机新品
 LOCATION:线上
 DTSTART:20260714T110000Z
@@ -163,7 +171,11 @@ DTEND:20260714T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:2b7429a9fdcc7c1503834c1bd542aede79c17e0c@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 长安启源 Q06 新车发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4429&noapp=1\n识别到的时间：07月15
@@ -176,7 +188,11 @@ DTEND:20260715T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:cec44604ddf25bccb2ad502e06501f04265306b2@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 全新零跑 B01/B10 车型上市发布会（
  具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -190,7 +206,11 @@ DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
 UID:8319977ef085bd9b0ecca0dc6f73f93a5c0d174e@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 吉利银河全球首款“雷霆 16 合 1 智
  能电驱”发布（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -204,7 +224,11 @@ DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
 UID:b89921b5161119843edbb422b5369a397ce62600@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 智己 LS9 Hyper 汽车上市发布会（具体
  时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -218,7 +242,11 @@ DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
 UID:1d9da580954ad69b957833618d17cff0666ceeea@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 魏牌 V9X 家庭版 1.5T 超级混动版本发
  布（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -232,7 +260,11 @@ DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
 UID:acf5613466ec1df28e4e1437a067d5fd49a64dfd@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[手机新品] 2026 金标联盟开发者沙龙（具体时间待
  定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -246,7 +278,11 @@ DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
 UID:0681fce3ed8b389b289326e932811df40dd1abee@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 酷态科车载充电器亮相（具体时间待
  定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -260,7 +296,11 @@ DTEND;VALUE=DATE:20260717
 END:VEVENT
 BEGIN:VEVENT
 UID:d6f81e5c417ad6a67feaf1dc021135e2446e5bf8@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 广汽集团 3000 万用户感恩活动
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4375&noapp=1\n识别到的时间：07月16
@@ -273,7 +313,11 @@ DTEND:20260716T080000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:012596b09854711f6843680fd807e8975d240269@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 小鹏 MONA L03 全球上市发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4433&noapp=1\n识别到的时间：07月16
@@ -286,7 +330,11 @@ DTEND:20260716T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:2ac3659266bd4cff7b3216fb1328b358e6b35f30@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 新一代理想 L6 产品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4421&noapp=1\n识别到的时间：07月16
@@ -298,6 +346,7 @@ DTSTART:20260716T113000Z
 DTEND:20260716T123000Z
 END:VEVENT
 BEGIN:VEVENT
+<<<<<<< Updated upstream
 UID:4e6e869c02ec9141d632365f1cc267e9d5ce6a7e@launch-calendar-bot
 DTSTAMP:20260714T071725Z
 SUMMARY:[新能源汽车] 五菱星光 L 正式上市（具体时间待
@@ -306,6 +355,15 @@ DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4419&noapp=1\n识别到的时间：07月16
  日 20:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
  t_detail.html?id=4419&noapp=1
+=======
+UID:e1f876ac1ca974665e0ca20ac9a5eef0bbf33b41@launch-calendar-bot
+DTSTAMP:20260715T012612Z
+SUMMARY:[新能源汽车] 五菱星光 L 正式上市
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4419&noapp=1\n识别到的时间：07月16
+ 日 20:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4419&noapp=1
+>>>>>>> Stashed changes
 CATEGORIES:新能源汽车
 LOCATION:线上
 DTSTART:20260716T120000Z
@@ -313,7 +371,11 @@ DTEND:20260716T130000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:dabfeb832412a463509897b63da7f6db3ced334c@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 阿维塔 07L 开启预售（具体时间待定
  ）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -327,7 +389,11 @@ DTEND;VALUE=DATE:20260718
 END:VEVENT
 BEGIN:VEVENT
 UID:6f7bd09c2afd7a9bc8d92e5b6620a0a1f0814fa5@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] SpaceX 星舰第 13 次试飞
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4428&noapp=1\n识别到的时间：07月17
@@ -340,7 +406,11 @@ DTEND:20260716T234500Z
 END:VEVENT
 BEGIN:VEVENT
 UID:000ad8460a04ad0405f2317f5d619e763fb1f521@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 中兴努比亚 AI 宠物机器人 iMoochi 正式
  上线销售
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -354,7 +424,11 @@ DTEND:20260717T030000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:02b93a98a9896d34cb80e00f984a71b541a9aadf@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 全新坦克 300 正式上市（具体时间待
  定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -368,7 +442,11 @@ DTEND;VALUE=DATE:20260720
 END:VEVENT
 BEGIN:VEVENT
 UID:fbac6a1d1e6f820e2d97b2f92a1cf2575e5d5830@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] AMD Advancing AI 2026（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=3936&noapp=1\n识别到的时间：07月22
@@ -475,7 +553,11 @@ DTEND:20260722T140000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:b835bff84363afaad1431568ab801e04519798a6@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 三星 Galaxy Unpacked 2026 夏季新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4417&noapp=1\n识别到的时间：07月22
@@ -487,8 +569,40 @@ DTSTART:20260722T130000Z
 DTEND:20260722T140000Z
 END:VEVENT
 BEGIN:VEVENT
+<<<<<<< Updated upstream
 UID:086dd5d510964d9487594bd2b7cd671316ae8999@launch-calendar-bot
 DTSTAMP:20260714T071725Z
+=======
+UID:bac76c1a1d782da8b83b379c48e43f65dafba529@launch-calendar-bot
+DTSTAMP:20260715T012612Z
+SUMMARY:[科技数码] APEC 数字和人工智能部长会议（具体时
+ 间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4425&noapp=1\n识别到的时间：07月23
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4425&noapp=1
+CATEGORIES:科技数码
+LOCATION:四川成都
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+END:VEVENT
+BEGIN:VEVENT
+UID:c0a487a67aa5d287372fdcf4c73846f18f4d7642@launch-calendar-bot
+DTSTAMP:20260715T012612Z
+SUMMARY:[新能源汽车] 领克 07GT 汽车上市发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4442&noapp=1\n识别到的时间：07月23
+ 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4442&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART:20260723T110000Z
+DTEND:20260723T120000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:086dd5d510964d9487594bd2b7cd671316ae8999@launch-calendar-bot
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] MG 07 开启预售（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4410&noapp=1\n识别到的时间：07月29
@@ -501,7 +615,11 @@ DTEND;VALUE=DATE:20260730
 END:VEVENT
 BEGIN:VEVENT
 UID:a88adeaaaedc6cedfdb612118605656c3861a83c@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 南希·格雷斯·罗曼太空望远镜发射
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4427&noapp=1\n识别到的时间：07月30
@@ -528,7 +646,11 @@ DTEND;VALUE=DATE:20260803
 END:VEVENT
 BEGIN:VEVENT
 UID:c98f57d7c53b87e85ef4095bdbfe50e34f8f2e49@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 北京越野 BJ81 正式上市（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -542,7 +664,11 @@ DTEND;VALUE=DATE:20260802
 END:VEVENT
 BEGIN:VEVENT
 UID:b017bbb2a4f3f93189c6d35e13517fbf8e1b06b8@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] 2027 款广汽埃安 AION RT 上市（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -556,7 +682,11 @@ DTEND;VALUE=DATE:20260811
 END:VEVENT
 BEGIN:VEVENT
 UID:56268dea4ae3f250a2476314dbe4ad19b387c552@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 2026 款 smart 精灵#1 BRABUS 性能版亮相
  （具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -583,7 +713,11 @@ DTEND;VALUE=DATE:20260814
 END:VEVENT
 BEGIN:VEVENT
 UID:c75b24cc284bc2474bc21e6d21386eb4a4c263a5@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[手机新品] 谷歌 Made By Google 发布会发布 Pixel 11 系
  列手机
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -610,7 +744,11 @@ DTEND;VALUE=DATE:20260821
 END:VEVENT
 BEGIN:VEVENT
 UID:2a7e3702f751ca7be91dc7e444dadf10369ffb60@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[科技数码] gamescom 2026 科隆游戏展（具体时间待定
  ）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -624,7 +762,11 @@ DTEND;VALUE=DATE:20260827
 END:VEVENT
 BEGIN:VEVENT
 UID:7bf70422ebaf0339fdb6b1e4f66b219bea28e718@launch-calendar-bot
+<<<<<<< Updated upstream
 DTSTAMP:20260714T071725Z
+=======
+DTSTAMP:20260715T012612Z
+>>>>>>> Stashed changes
 SUMMARY:[新能源汽车] 2026 款岚图知音 SUV 上市（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -635,5 +777,18 @@ CATEGORIES:新能源汽车
 LOCATION:线上
 DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260829
+END:VEVENT
+BEGIN:VEVENT
+UID:074b525cf4ca5ed78a22e24dfa0d6b4e0a2c2aa2@launch-calendar-bot
+DTSTAMP:20260715T012612Z
+SUMMARY:[科技数码] 2026 暴雪嘉年华（具体时间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=3483&noapp=1\n识别到的时间：09月12
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=3483&noapp=1
+CATEGORIES:科技数码
+LOCATION:美国加州安纳海姆会议中心
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
 END:VEVENT
 END:VCALENDAR
