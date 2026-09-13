@@ -6,34 +6,35 @@ METHOD:PUBLISH
 X-WR-CALNAME:新品/科技发布会追踪
 X-WR-TIMEZONE:Asia/Shanghai
 BEGIN:VEVENT
-UID:b17a558b3b4a0780093a22e318358457255ac783@launch-calendar-bot
-DTSTAMP:20260912T010242Z
-SUMMARY:[手机新品] OPPO A7 Pro 手机发售
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4686&noapp=1\n识别到的时间：09月11
- 日 10:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4686&noapp=1
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART:20260911T020000Z
-DTEND:20260911T030000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:55f521ae01d709201f63fa1dfb2553f627b1dd55@launch-calendar-bot
-DTSTAMP:20260912T010242Z
-SUMMARY:[科技数码] 迄今最高效奥迪车型：奥迪 A2 e-tron 开
- 发时间成功缩短 21 个月
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/4
- 68.htm\n识别到的时间：今天\n可信度分数：3\nhttps://www.it
- home.com/1/001/468.htm
-CATEGORIES:科技数码
+UID:b48ab992d2cac4dff1c3347120996fb2384ea1f6@launch-calendar-bot
+DTSTAMP:20260913T010222Z
+SUMMARY:[新能源汽车] 国家发改委：积极支持大型汽车企
+ 业集团开展改革，以市场化、法制化方式推进企业间兼
+ 并重组
+DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
+ 54.htm\n识别到的时间：9月11日\n可信度分数：6\nhttps://www
+ .ithome.com/1/001/654.htm
+CATEGORIES:新能源汽车
 LOCATION:线上
 DTSTART;VALUE=DATE:20260911
 DTEND;VALUE=DATE:20260912
 END:VEVENT
 BEGIN:VEVENT
+UID:2049c85fc119d78825154ce9e88dc46e7cb0b3ba@launch-calendar-bot
+DTSTAMP:20260913T010222Z
+SUMMARY:[科技数码] 中国聚变：正全力推进全球首个高温
+ 超导强场稳态燃烧实验平台研发
+DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
+ 52.htm\n识别到的时间：9月11日\n可信度分数：7\nhttps://www
+ .ithome.com/1/001/652.htm
+CATEGORIES:科技数码
+LOCATION:上海
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+END:VEVENT
+BEGIN:VEVENT
 UID:f50078613e6a6bc5a6ec6afa477641cb7ea764c5@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 长安 UNI-V 蓝鲸超擎混动新车发布会
  （具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -47,7 +48,7 @@ DTEND;VALUE=DATE:20260913
 END:VEVENT
 BEGIN:VEVENT
 UID:494ff086a7c22f37e35c79dcae41cc0b2ba61df5@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 大众安徽与众 08 猎影版上市
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4674&noapp=1\n识别到的时间：09月12
@@ -60,7 +61,7 @@ DTEND:20260912T080000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:01662b403471ebb37ba42925d2ba66edae7cc7da@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 2026 绿联全球品牌发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4681&noapp=1\n识别到的时间：09月12
@@ -72,8 +73,21 @@ DTSTART:20260912T093000Z
 DTEND:20260912T103000Z
 END:VEVENT
 BEGIN:VEVENT
+UID:0947369d0ab3fa45f541a4bbfdce0497910c8a25@launch-calendar-bot
+DTSTAMP:20260913T010222Z
+SUMMARY:[合资/日系车] 长安 UNI-V 蓝鲸超擎混动上市，限时
+  10.99 万-11.39 万元
+DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
+ 46.htm\n识别到的时间：今天\n可信度分数：3\nhttps://www.it
+ home.com/1/001/646.htm
+CATEGORIES:合资/日系车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
+END:VEVENT
+BEGIN:VEVENT
 UID:56d1d1bf97216664a5bd3dcfcf3cae88824b1784@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] iPhone 18 Pro 系列预购开启
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4709&noapp=1\n识别到的时间：09月12
@@ -86,7 +100,7 @@ DTEND:20260912T130000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:e64bcdf32eb281aef463e9404db12957e86b9bd8@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 2026 暴雪嘉年华
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=3483&noapp=1\n识别到的时间：09月13
@@ -99,7 +113,7 @@ DTEND:20260912T183000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:6ffd617c94ec20e98e24cad02632f3b197330726@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[手机新品] 三星显示 x iQOO 屏幕技术沟通会（具体
  时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -113,7 +127,7 @@ DTEND;VALUE=DATE:20260915
 END:VEVENT
 BEGIN:VEVENT
 UID:76b1e2635a8b71753ac0db5711ff7b77fe49e8db@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 魏牌高山 8/9 PHEV 新版型开启下订
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4722&noapp=1\n识别到的时间：09月14
@@ -126,7 +140,7 @@ DTEND:20260914T100000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:75d44f91ccb1ddf6e6210e15a68af19f2e28dddd@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 比亚迪腾势 N8L 纯电版上市发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4688&noapp=1\n识别到的时间：09月14
@@ -139,7 +153,7 @@ DTEND:20260914T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:cd9f55f39dff483c25c74d1342fb656e75250d5d@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 吉利银河战舰 700 全球预售开启（具
  体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -153,7 +167,7 @@ DTEND;VALUE=DATE:20260916
 END:VEVENT
 BEGIN:VEVENT
 UID:4dfdba6769789c7514234beb5e02091e2ca5fea5@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 2027 款广汽埃安 i60 上市（具体时间待
  定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -167,7 +181,7 @@ DTEND;VALUE=DATE:20260916
 END:VEVENT
 BEGIN:VEVENT
 UID:1a8012e865a141822bcca312f113915c4690745e@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 苹果 iOS / iPadOS 27、macOS 27、watchOS 27 和
   visionOS 27 正式版发布（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -181,7 +195,7 @@ DTEND;VALUE=DATE:20260916
 END:VEVENT
 BEGIN:VEVENT
 UID:7e7315946fcdc5e4af719d5efd44d79b57ea0231@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 2026 联发科天玑旗舰新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4701&noapp=1\n识别到的时间：09月15
@@ -193,8 +207,21 @@ DTSTART:20260915T063000Z
 DTEND:20260915T073000Z
 END:VEVENT
 BEGIN:VEVENT
+UID:45f86b704a0f9c981321a7bd9528b046c9f8e54d@launch-calendar-bot
+DTSTAMP:20260913T010222Z
+SUMMARY:[手机新品] 消息称华为 Mate 90 系列手机将延续星
+ 环设计，还是本月下旬发布
+DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
+ 77.htm\n识别到的时间：9月15日\n可信度分数：7\nhttps://www
+ .ithome.com/1/001/677.htm
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260916
+END:VEVENT
+BEGIN:VEVENT
 UID:8b314544a4b2a0d325491033150cbf13226c872e@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 荣耀 MagicOS 11 发布
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4696&noapp=1\n识别到的时间：09月15
@@ -207,7 +234,7 @@ DTEND:20260915T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:b959d963fb25a35a522e9377480acc6e51f07644@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] SpaceXAI Grok Bot 团队直播
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4717&noapp=1\n识别到的时间：09月15
@@ -220,7 +247,7 @@ DTEND:20260915T163000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:12ec26f19e83f207af822e09e3822a32432615b8@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 吉利星瑞 L PLUS 开启预售（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -234,7 +261,7 @@ DTEND;VALUE=DATE:20260917
 END:VEVENT
 BEGIN:VEVENT
 UID:c79a718e0dfc2e8f856dc017a5f7333d9d6626fb@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 比亚迪方程豹方程 S 及方程 S GT 上
  市发布会（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -248,7 +275,7 @@ DTEND;VALUE=DATE:20260917
 END:VEVENT
 BEGIN:VEVENT
 UID:19f6bcb2ae3e345bcb91b679b56a137d47cfec79@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 零跑 2026 年度技术发布会（具体时
  间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -262,7 +289,7 @@ DTEND;VALUE=DATE:20260917
 END:VEVENT
 BEGIN:VEVENT
 UID:32773e290d913b8ad0d366562f655a54a0380cd2@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 全新奔驰长轴距 GLE SUV 上市发布会（
  具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -276,7 +303,7 @@ DTEND;VALUE=DATE:20260917
 END:VEVENT
 BEGIN:VEVENT
 UID:5faba34988e3f7b3752ab6253e8492224ca4a497@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[手机新品] 努比亚 NaviX Ultra 新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4694&noapp=1\n识别到的时间：09月16
@@ -289,7 +316,7 @@ DTEND:20260916T070000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:9c4449371473fe03a428a1b26ad56a7bd52591eb@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 理想 i9 新形态家庭旗舰 SUV 发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4706&noapp=1\n识别到的时间：09月16
@@ -302,7 +329,7 @@ DTEND:20260916T123000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:66c28c3d603017b92731cd161fb5116ee8c5c136@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[电脑新品] Capcom Spotlight 发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4672&noapp=1\n识别到的时间：09月16
@@ -315,7 +342,7 @@ DTEND:20260916T150000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:d4b3c2aa07fb1dc70a657d8aec061390cae114c5@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 东京电玩展 2026
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=3292&noapp=1\n识别到的时间：09月17
@@ -328,7 +355,7 @@ DTEND:20260917T020000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:dc5b4368fbdbffc4d81374d2b5870d7085f1df78@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] TGS 2026 Broadcast XBOX 直播节目
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4530&noapp=1\n识别到的时间：09月17
@@ -341,7 +368,7 @@ DTEND:20260917T110000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:a83c1243f23a4bec8a898306fb41e64844c34195@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 苹果 iPhone 18 Pro / Max、AirPods 5、Apple Wat
  ch Series 12/Ultra 5 发售（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -354,8 +381,35 @@ DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
 END:VEVENT
 BEGIN:VEVENT
+UID:492b0ed59e1aa694d8671c6399771cb74799f952@launch-calendar-bot
+DTSTAMP:20260913T010222Z
+SUMMARY:[手机新品] 苹果披露 iPhone 18 Pro / Duo 系列新品环
+ 境可持续报告：包装使用纤维基材料、Apple Watch Ultra 4 
+ 再生材料占比达 45%
+DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
+ 70.htm\n识别到的时间：9月18日\n可信度分数：4\nhttps://www
+ .ithome.com/1/001/670.htm
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+END:VEVENT
+BEGIN:VEVENT
+UID:19209a51b0ee0c96ff9fbdf6d8dd0fbbf1458de9@launch-calendar-bot
+DTSTAMP:20260913T010222Z
+SUMMARY:[科技数码] SpaceX 星舰第 14 次飞行发射任务
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4723&noapp=1\n识别到的时间：09月18
+ 日 20:15\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4723&noapp=1
+CATEGORIES:科技数码
+LOCATION:得州星际基地（Starbase）
+DTSTART:20260918T121500Z
+DTEND:20260918T131500Z
+END:VEVENT
+BEGIN:VEVENT
 UID:cea63d463a777f7d58e434f3d32dc05d60e224a7@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 一汽-大众 ID. AURA T6 上市发布会（具
  体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -368,21 +422,8 @@ DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 END:VEVENT
 BEGIN:VEVENT
-UID:458d9f8ad393910a4caeec0a7dcbdb1a589a649e@launch-calendar-bot
-DTSTAMP:20260912T010242Z
-SUMMARY:[手机新品] vivo X500 Pro Max 手机四款配色公布，9 月
-  21 日发布
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/4
- 56.htm\n识别到的时间：9月21日\n可信度分数：6\nhttps://www
- .ithome.com/1/001/456.htm
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260921
-DTEND;VALUE=DATE:20260922
-END:VEVENT
-BEGIN:VEVENT
 UID:4a7c4ce27d9fe59fc5cabda974065a701669230b@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[手机新品] vivo X500 系列及智慧终端新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4700&noapp=1\n识别到的时间：09月21
@@ -395,7 +436,7 @@ DTEND:20260921T120000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:8f20cc7839710ec632ddbc70b3cc671550d41f44@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 奇瑞全新 QQ3 摩登版纯电小车上市（
  具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -409,7 +450,7 @@ DTEND;VALUE=DATE:20260923
 END:VEVENT
 BEGIN:VEVENT
 UID:3e75861b0c05cc6bc1b1d55d6447457c573b4996@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 广汽传祺越 7 上市发布会（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -423,7 +464,7 @@ DTEND;VALUE=DATE:20260923
 END:VEVENT
 BEGIN:VEVENT
 UID:c551a2685cb14b43f4d77ff51d956405094592f4@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 第 48 届世界技能大赛（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4619&noapp=1\n识别到的时间：09月22
@@ -436,7 +477,7 @@ DTEND;VALUE=DATE:20260923
 END:VEVENT
 BEGIN:VEVENT
 UID:f3cff315d6423acb0eabda608dc95ce79d2c3b2d@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 全新一代智己 LS6 上市发布（具体时
  间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -450,7 +491,7 @@ DTEND;VALUE=DATE:20260924
 END:VEVENT
 BEGIN:VEVENT
 UID:20f6d6e1014b3c5a9c7fc542bff375522cf56ebe@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 华为终端 Haco 发布会（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4563&noapp=1\n识别到的时间：09月23
@@ -463,7 +504,7 @@ DTEND;VALUE=DATE:20260924
 END:VEVENT
 BEGIN:VEVENT
 UID:9ba5fe46a5dc828a58510cbaac0987944dbb4e3b@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 罗技 G PLAY 2026 趣玩日（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4684&noapp=1\n识别到的时间：09月23
@@ -476,7 +517,7 @@ DTEND;VALUE=DATE:20260926
 END:VEVENT
 BEGIN:VEVENT
 UID:dc33c984a2535ebd18d0d6a5f34aad78c2e15d5d@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[新能源汽车] 与众 09 亮相发布会（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4675&noapp=1\n识别到的时间：09月24
@@ -489,7 +530,7 @@ DTEND;VALUE=DATE:20260925
 END:VEVENT
 BEGIN:VEVENT
 UID:70c7f7c11f8f87d25a3a7c48b13830b342401f00@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 长安马自达 EZ-60 激光版上市发布会（
  具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -503,7 +544,7 @@ DTEND;VALUE=DATE:20260927
 END:VEVENT
 BEGIN:VEVENT
 UID:89e89c5696976f39cbaa0c1bfec08374a62798dc@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 荣耀 Magic 盛典暨荣耀 Magic9 系列新品
  发布会（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -516,22 +557,8 @@ DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 END:VEVENT
 BEGIN:VEVENT
-UID:9b11e59f154159696dc20a651103c538a7c114e1@launch-calendar-bot
-DTSTAMP:20260912T010242Z
-SUMMARY:[新能源汽车] 上汽大众推出 ID. ERA 5S 安心交付承
- 诺：超期 1 天可获 100 元等值 V 豆补偿，累计补偿最多 
- 30 天
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/4
- 49.htm\n识别到的时间：2026年9月30日\n可信度分数：3\nhttp
- s://www.ithome.com/1/001/449.htm
-CATEGORIES:新能源汽车
-LOCATION:成都
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-END:VEVENT
-BEGIN:VEVENT
 UID:ab654474b5f0cd6c8ef2a1fad6afa45bcba267c1@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] iPhone Duo 国行预购开启
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4708&noapp=1\n识别到的时间：10月16
@@ -544,7 +571,7 @@ DTEND:20261016T130000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:6b62f3f5a2d2a791910926b1d8d20a710760b68d@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 苹果 iPhone Duo 正式发售（具体时间待
  定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -558,7 +585,7 @@ DTEND;VALUE=DATE:20261024
 END:VEVENT
 BEGIN:VEVENT
 UID:769b5fb8fb8cd03dc5fbf6b64e3efa497e865964@launch-calendar-bot
-DTSTAMP:20260912T010242Z
+DTSTAMP:20260913T010222Z
 SUMMARY:[科技数码] 首届 CMG 世界机器人登泰山大赛（具体
  时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
