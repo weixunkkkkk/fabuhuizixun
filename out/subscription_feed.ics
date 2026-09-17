@@ -6,248 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:新品/科技发布会追踪
 X-WR-TIMEZONE:Asia/Shanghai
 BEGIN:VEVENT
-UID:b48ab992d2cac4dff1c3347120996fb2384ea1f6@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[新能源汽车] 国家发改委：积极支持大型汽车企
- 业集团开展改革，以市场化、法制化方式推进企业间兼
- 并重组
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
- 54.htm\n识别到的时间：9月11日\n可信度分数：6\nhttps://www
- .ithome.com/1/001/654.htm
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260911
-DTEND;VALUE=DATE:20260912
-END:VEVENT
-BEGIN:VEVENT
-UID:2049c85fc119d78825154ce9e88dc46e7cb0b3ba@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 中国聚变：正全力推进全球首个高温
- 超导强场稳态燃烧实验平台研发
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
- 52.htm\n识别到的时间：9月11日\n可信度分数：7\nhttps://www
- .ithome.com/1/001/652.htm
-CATEGORIES:科技数码
-LOCATION:上海
-DTSTART;VALUE=DATE:20260911
-DTEND;VALUE=DATE:20260912
-END:VEVENT
-BEGIN:VEVENT
-UID:f50078613e6a6bc5a6ec6afa477641cb7ea764c5@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[新能源汽车] 长安 UNI-V 蓝鲸超擎混动新车发布会
- （具体时间待定）
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4704&noapp=1\n识别到的时间：09月12
- 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4704&noapp=1
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260912
-DTEND;VALUE=DATE:20260913
-END:VEVENT
-BEGIN:VEVENT
-UID:494ff086a7c22f37e35c79dcae41cc0b2ba61df5@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[新能源汽车] 大众安徽与众 08 猎影版上市
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4674&noapp=1\n识别到的时间：09月12
- 日 15:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4674&noapp=1
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART:20260912T070000Z
-DTEND:20260912T080000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:01662b403471ebb37ba42925d2ba66edae7cc7da@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 2026 绿联全球品牌发布会
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4681&noapp=1\n识别到的时间：09月12
- 日 17:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4681&noapp=1
-CATEGORIES:科技数码
-LOCATION:中国 福建 厦门
-DTSTART:20260912T093000Z
-DTEND:20260912T103000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:0947369d0ab3fa45f541a4bbfdce0497910c8a25@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[合资/日系车] 长安 UNI-V 蓝鲸超擎混动上市，限时
-  10.99 万-11.39 万元
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
- 46.htm\n识别到的时间：今天\n可信度分数：3\nhttps://www.it
- home.com/1/001/646.htm
-CATEGORIES:合资/日系车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260912
-DTEND;VALUE=DATE:20260913
-END:VEVENT
-BEGIN:VEVENT
-UID:56d1d1bf97216664a5bd3dcfcf3cae88824b1784@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] iPhone 18 Pro 系列预购开启
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4709&noapp=1\n识别到的时间：09月12
- 日 20:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4709&noapp=1
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART:20260912T120000Z
-DTEND:20260912T130000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:e64bcdf32eb281aef463e9404db12957e86b9bd8@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 2026 暴雪嘉年华
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=3483&noapp=1\n识别到的时间：09月13
- 日 01:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=3483&noapp=1
-CATEGORIES:科技数码
-LOCATION:美国加州安纳海姆会议中心
-DTSTART:20260912T173000Z
-DTEND:20260912T183000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:6ffd617c94ec20e98e24cad02632f3b197330726@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[手机新品] 三星显示 x iQOO 屏幕技术沟通会（具体
- 时间待定）
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4705&noapp=1\n识别到的时间：09月14
- 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4705&noapp=1
-CATEGORIES:手机新品
-LOCATION:韩国三星显示总部
-DTSTART;VALUE=DATE:20260914
-DTEND;VALUE=DATE:20260915
-END:VEVENT
-BEGIN:VEVENT
-UID:76b1e2635a8b71753ac0db5711ff7b77fe49e8db@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 魏牌高山 8/9 PHEV 新版型开启下订
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4722&noapp=1\n识别到的时间：09月14
- 日 17:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4722&noapp=1
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART:20260914T090000Z
-DTEND:20260914T100000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:75d44f91ccb1ddf6e6210e15a68af19f2e28dddd@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[新能源汽车] 比亚迪腾势 N8L 纯电版上市发布会
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4688&noapp=1\n识别到的时间：09月14
- 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4688&noapp=1
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART:20260914T110000Z
-DTEND:20260914T120000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:cd9f55f39dff483c25c74d1342fb656e75250d5d@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[新能源汽车] 吉利银河战舰 700 全球预售开启（具
- 体时间待定）
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4703&noapp=1\n识别到的时间：09月15
- 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4703&noapp=1
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260915
-DTEND;VALUE=DATE:20260916
-END:VEVENT
-BEGIN:VEVENT
-UID:4dfdba6769789c7514234beb5e02091e2ca5fea5@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 2027 款广汽埃安 i60 上市（具体时间待
- 定）
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4714&noapp=1\n识别到的时间：09月15
- 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4714&noapp=1
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART;VALUE=DATE:20260915
-DTEND;VALUE=DATE:20260916
-END:VEVENT
-BEGIN:VEVENT
-UID:1a8012e865a141822bcca312f113915c4690745e@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 苹果 iOS / iPadOS 27、macOS 27、watchOS 27 和
-  visionOS 27 正式版发布（具体时间待定）
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4710&noapp=1\n识别到的时间：09月15
- 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4710&noapp=1
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART;VALUE=DATE:20260915
-DTEND;VALUE=DATE:20260916
-END:VEVENT
-BEGIN:VEVENT
-UID:7e7315946fcdc5e4af719d5efd44d79b57ea0231@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 2026 联发科天玑旗舰新品发布会
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4701&noapp=1\n识别到的时间：09月15
- 日 14:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4701&noapp=1
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART:20260915T063000Z
-DTEND:20260915T073000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:45f86b704a0f9c981321a7bd9528b046c9f8e54d@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[手机新品] 消息称华为 Mate 90 系列手机将延续星
- 环设计，还是本月下旬发布
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
- 77.htm\n识别到的时间：9月15日\n可信度分数：7\nhttps://www
- .ithome.com/1/001/677.htm
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260915
-DTEND;VALUE=DATE:20260916
-END:VEVENT
-BEGIN:VEVENT
-UID:8b314544a4b2a0d325491033150cbf13226c872e@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 荣耀 MagicOS 11 发布
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4696&noapp=1\n识别到的时间：09月15
- 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4696&noapp=1
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART:20260915T110000Z
-DTEND:20260915T120000Z
-END:VEVENT
-BEGIN:VEVENT
-UID:b959d963fb25a35a522e9377480acc6e51f07644@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] SpaceXAI Grok Bot 团队直播
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4717&noapp=1\n识别到的时间：09月15
- 日 23:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
- nt_detail.html?id=4717&noapp=1
-CATEGORIES:科技数码
-LOCATION:线上
-DTSTART:20260915T153000Z
-DTEND:20260915T163000Z
-END:VEVENT
-BEGIN:VEVENT
 UID:12ec26f19e83f207af822e09e3822a32432615b8@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[新能源汽车] 吉利星瑞 L PLUS 开启预售（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -260,50 +20,48 @@ DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 END:VEVENT
 BEGIN:VEVENT
-UID:c79a718e0dfc2e8f856dc017a5f7333d9d6626fb@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[新能源汽车] 比亚迪方程豹方程 S 及方程 S GT 上
- 市发布会（具体时间待定）
+UID:cb0048138b54e449a528a7bc2b83ab21f9994217@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 引力一号遥三运载火箭海上发射（具
+ 体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4715&noapp=1\n识别到的时间：09月16
+ lendar/event_detail.html?id=4726&noapp=1\n识别到的时间：09月16
  日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4715&noapp=1
-CATEGORIES:新能源汽车
-LOCATION:上海
+ t_detail.html?id=4726&noapp=1
+CATEGORIES:科技数码
+LOCATION:我国东海海域
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 END:VEVENT
 BEGIN:VEVENT
-UID:19f6bcb2ae3e345bcb91b679b56a137d47cfec79@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[新能源汽车] 零跑 2026 年度技术发布会（具体时
- 间待定）
+UID:a89c64aa9e195bcc6480d3c98d8ec45ffe1f4b70@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 佳能EOS R8 Mark II发布
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4669&noapp=1\n识别到的时间：09月16
- 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4669&noapp=1
-CATEGORIES:新能源汽车
-LOCATION:线上
-DTSTART;VALUE=DATE:20260916
-DTEND;VALUE=DATE:20260917
-END:VEVENT
-BEGIN:VEVENT
-UID:32773e290d913b8ad0d366562f655a54a0380cd2@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[科技数码] 全新奔驰长轴距 GLE SUV 上市发布会（
- 具体时间待定）
-DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
- lendar/event_detail.html?id=4690&noapp=1\n识别到的时间：09月16
- 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
- t_detail.html?id=4690&noapp=1
+ lendar/event_detail.html?id=4725&noapp=1\n识别到的时间：09月16
+ 日 08:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4725&noapp=1
 CATEGORIES:科技数码
 LOCATION:线上
-DTSTART;VALUE=DATE:20260916
-DTEND;VALUE=DATE:20260917
+DTSTART:20260916T003000Z
+DTEND:20260916T013000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:f148d9431b90503952bc1d976017e6c7f6aec5d7@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 努比亚 LiveClip2 耳夹耳机发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4736&noapp=1\n识别到的时间：09月16
+ 日 10:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4736&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART:20260916T020000Z
+DTEND:20260916T030000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:5faba34988e3f7b3752ab6253e8492224ca4a497@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[手机新品] 努比亚 NaviX Ultra 新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4694&noapp=1\n识别到的时间：09月16
@@ -315,8 +73,73 @@ DTSTART:20260916T060000Z
 DTEND:20260916T070000Z
 END:VEVENT
 BEGIN:VEVENT
+UID:3c7e7afbb5196a21b12f6e079ba45f73f2df13d2@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 比亚迪方程豹方程 S 及方程 S GT 上
+ 市发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://www.ithome.com/0/1002
+ /863.htm\n识别到的时间：09月16日 19:00\n可信度分数：10\nh
+ ttps://www.ithome.com/0/1002/863.htm
+CATEGORIES:新能源汽车
+LOCATION:上海
+DTSTART:20260916T110000Z
+DTEND:20260916T120000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:03d309efd22d96305a5aee6b7a9e6515cea2bae4@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 零跑 2026 年度技术发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4669&noapp=1\n识别到的时间：09月16
+ 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4669&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART:20260916T110000Z
+DTEND:20260916T120000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:48598a99e447df2c975a90408b9977d69a7a2b06@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 全新一汽红旗 H7 上市：限时 16.88 万-20
+ .88 万元，2916.171 公里续航刷新吉尼斯纪录
+DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/003/3
+ 17.htm\n识别到的时间：今天\n可信度分数：4\nhttps://www.it
+ home.com/1/003/317.htm
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+END:VEVENT
+BEGIN:VEVENT
+UID:a2889179173c7690954fceaf754576c95f2674cc@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 华为发布《智能世界 2035》最新报告，
+ 预测到 2035 年全球年度 Token 消耗量将增长 10 万倍
+DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/003/3
+ 12.htm\n识别到的时间：今日\n可信度分数：7\nhttps://www.it
+ home.com/1/003/312.htm
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+END:VEVENT
+BEGIN:VEVENT
+UID:fc80c63120e6fb26d93a53e7f08be2e56b07685b@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 极狐阿尔法 T7 汽车上市发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4745&noapp=1\n识别到的时间：09月16
+ 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4745&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART:20260916T110000Z
+DTEND:20260916T120000Z
+END:VEVENT
+BEGIN:VEVENT
 UID:9c4449371473fe03a428a1b26ad56a7bd52591eb@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[新能源汽车] 理想 i9 新形态家庭旗舰 SUV 发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4706&noapp=1\n识别到的时间：09月16
@@ -328,8 +151,21 @@ DTSTART:20260916T113000Z
 DTEND:20260916T123000Z
 END:VEVENT
 BEGIN:VEVENT
+UID:1a6a624b01d125a22ed60ea14496ca9fd0b38313@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 全新奔驰长轴距 GLE SUV 上市发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4690&noapp=1\n识别到的时间：09月16
+ 日 19:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4690&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART:20260916T113000Z
+DTEND:20260916T123000Z
+END:VEVENT
+BEGIN:VEVENT
 UID:66c28c3d603017b92731cd161fb5116ee8c5c136@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[电脑新品] Capcom Spotlight 发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4672&noapp=1\n识别到的时间：09月16
@@ -341,8 +177,21 @@ DTSTART:20260916T140000Z
 DTEND:20260916T150000Z
 END:VEVENT
 BEGIN:VEVENT
+UID:a9ed8f43bde57a75e707a6779120c4036837a6af@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 酷态科新品发布（具体时间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4732&noapp=1\n识别到的时间：09月17
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4732&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+END:VEVENT
+BEGIN:VEVENT
 UID:d4b3c2aa07fb1dc70a657d8aec061390cae114c5@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 东京电玩展 2026
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=3292&noapp=1\n识别到的时间：09月17
@@ -355,7 +204,7 @@ DTEND:20260917T020000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:dc5b4368fbdbffc4d81374d2b5870d7085f1df78@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] TGS 2026 Broadcast XBOX 直播节目
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4530&noapp=1\n识别到的时间：09月17
@@ -367,8 +216,21 @@ DTSTART:20260917T100000Z
 DTEND:20260917T110000Z
 END:VEVENT
 BEGIN:VEVENT
+UID:db29181c24e8f81bd72f09ecec77a9570e01fcb5@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 小鹏 G9L 中国上市发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4731&noapp=1\n识别到的时间：09月17
+ 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4731&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:北京
+DTSTART:20260917T110000Z
+DTEND:20260917T120000Z
+END:VEVENT
+BEGIN:VEVENT
 UID:a83c1243f23a4bec8a898306fb41e64844c34195@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 苹果 iPhone 18 Pro / Max、AirPods 5、Apple Wat
  ch Series 12/Ultra 5 发售（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -381,22 +243,8 @@ DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
 END:VEVENT
 BEGIN:VEVENT
-UID:492b0ed59e1aa694d8671c6399771cb74799f952@launch-calendar-bot
-DTSTAMP:20260913T010222Z
-SUMMARY:[手机新品] 苹果披露 iPhone 18 Pro / Duo 系列新品环
- 境可持续报告：包装使用纤维基材料、Apple Watch Ultra 4 
- 再生材料占比达 45%
-DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/001/6
- 70.htm\n识别到的时间：9月18日\n可信度分数：4\nhttps://www
- .ithome.com/1/001/670.htm
-CATEGORIES:手机新品
-LOCATION:线上
-DTSTART;VALUE=DATE:20260918
-DTEND;VALUE=DATE:20260919
-END:VEVENT
-BEGIN:VEVENT
 UID:19209a51b0ee0c96ff9fbdf6d8dd0fbbf1458de9@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] SpaceX 星舰第 14 次飞行发射任务
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4723&noapp=1\n识别到的时间：09月18
@@ -408,8 +256,22 @@ DTSTART:20260918T121500Z
 DTEND:20260918T131500Z
 END:VEVENT
 BEGIN:VEVENT
+UID:7ac660d3b853d3b43087b6059e3f9d6d49f5ec0d@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 东风柳汽 2026 秋季新品发布会（东
+ 风风行星海 V6 上市）（具体时间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4733&noapp=1\n识别到的时间：09月19
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4733&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+END:VEVENT
+BEGIN:VEVENT
 UID:cea63d463a777f7d58e434f3d32dc05d60e224a7@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[新能源汽车] 一汽-大众 ID. AURA T6 上市发布会（具
  体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -422,8 +284,49 @@ DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 END:VEVENT
 BEGIN:VEVENT
+UID:33476d68388a3e9ca38ae9467ca1694d220f7fbd@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 长城坦克 300“虎克之路”上市发布
+ 会（具体时间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4742&noapp=1\n识别到的时间：09月20
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4742&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+END:VEVENT
+BEGIN:VEVENT
+UID:6dbd95cf7df26fd71f583c66d60dcd00a60527af@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] EAI 机器人“四核全智”新品发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4730&noapp=1\n识别到的时间：09月20
+ 日 23:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4730&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART:20260920T150000Z
+DTEND:20260920T160000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:557bf4a8e078c852c9fa305691130fc5289b07d5@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 一汽红旗天工 07 预售发布会（具体
+ 时间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4735&noapp=1\n识别到的时间：09月21
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4735&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+END:VEVENT
+BEGIN:VEVENT
 UID:4a7c4ce27d9fe59fc5cabda974065a701669230b@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[手机新品] vivo X500 系列及智慧终端新品发布会
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4700&noapp=1\n识别到的时间：09月21
@@ -435,8 +338,35 @@ DTSTART:20260921T110000Z
 DTEND:20260921T120000Z
 END:VEVENT
 BEGIN:VEVENT
+UID:a7b251d647fd6152259679d16907729251b20274@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 影石 Luna Ultra“小巨炮”长焦模组发布
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4747&noapp=1\n识别到的时间：09月21
+ 日 20:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4747&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART:20260921T120000Z
+DTEND:20260921T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:c8c1d8cab073e8062c050ed8992cdc76c06c71f3@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 一汽红旗 G919 预售发布会（具体时
+ 间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4737&noapp=1\n识别到的时间：09月22
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4737&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+END:VEVENT
+BEGIN:VEVENT
 UID:8f20cc7839710ec632ddbc70b3cc671550d41f44@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[新能源汽车] 奇瑞全新 QQ3 摩登版纯电小车上市（
  具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -449,8 +379,36 @@ DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
 END:VEVENT
 BEGIN:VEVENT
+UID:c5508a599ce362c93d8436f36e274b9375c74dd5@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 岚图梦想家 9 上市发布会（具体时
+ 间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4748&noapp=1\n识别到的时间：09月22
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4748&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+END:VEVENT
+BEGIN:VEVENT
+UID:8bfe10c7b93b17ff4fe69348a11116d8d5eaba0e@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 莲花 Scura 系列第三款新车亮相（具
+ 体时间待定）
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4746&noapp=1\n识别到的时间：09月22
+ 日 00:00\n可信度分数：9\nhttps://img.ithome.com/app/calendar/even
+ t_detail.html?id=4746&noapp=1
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+END:VEVENT
+BEGIN:VEVENT
 UID:3e75861b0c05cc6bc1b1d55d6447457c573b4996@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 广汽传祺越 7 上市发布会（具体时间
  待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -464,7 +422,7 @@ DTEND;VALUE=DATE:20260923
 END:VEVENT
 BEGIN:VEVENT
 UID:c551a2685cb14b43f4d77ff51d956405094592f4@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 第 48 届世界技能大赛（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4619&noapp=1\n识别到的时间：09月22
@@ -476,8 +434,47 @@ DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
 END:VEVENT
 BEGIN:VEVENT
+UID:5df1d910f44a59e9a09b4c589df8d4c32c9d5aea@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[新能源汽车] 岚图梦想家 9 试驾车到店：9 月 22 
+ 日上市，预售价 42.99 万元起
+DESCRIPTION:来源：IT之家RSS\n链接：https://www.ithome.com/1/003/3
+ 78.htm\n识别到的时间：9月22日\n可信度分数：4\nhttps://www
+ .ithome.com/1/003/378.htm
+CATEGORIES:新能源汽车
+LOCATION:线上
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+END:VEVENT
+BEGIN:VEVENT
+UID:483255b6816b58b1eea1d2760b398037095aca28@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[手机新品] OPPO Find X10 系列发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4729&noapp=1\n识别到的时间：09月22
+ 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4729&noapp=1
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART:20260922T110000Z
+DTEND:20260922T120000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:c9968f34bcc2aa3c6af5d2421e3e7416052964df@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 拓竹 R1 激光切割机发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4738&noapp=1\n识别到的时间：09月22
+ 日 22:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4738&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART:20260922T140000Z
+DTEND:20260922T150000Z
+END:VEVENT
+BEGIN:VEVENT
 UID:f3cff315d6423acb0eabda608dc95ce79d2c3b2d@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[新能源汽车] 全新一代智己 LS6 上市发布（具体时
  间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -491,7 +488,7 @@ DTEND;VALUE=DATE:20260924
 END:VEVENT
 BEGIN:VEVENT
 UID:20f6d6e1014b3c5a9c7fc542bff375522cf56ebe@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 华为终端 Haco 发布会（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4563&noapp=1\n识别到的时间：09月23
@@ -504,7 +501,7 @@ DTEND;VALUE=DATE:20260924
 END:VEVENT
 BEGIN:VEVENT
 UID:9ba5fe46a5dc828a58510cbaac0987944dbb4e3b@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 罗技 G PLAY 2026 趣玩日（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4684&noapp=1\n识别到的时间：09月23
@@ -516,8 +513,34 @@ DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260926
 END:VEVENT
 BEGIN:VEVENT
+UID:a577f1fb60544c65ddb312755ba409b3eef0fadd@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 华为智慧屏 Mate TV 2 预售
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4741&noapp=1\n识别到的时间：09月23
+ 日 10:08\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4741&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART:20260923T020800Z
+DTEND:20260923T030800Z
+END:VEVENT
+BEGIN:VEVENT
+UID:0cc53c83ff1b282d119e6de186f1eb6fb644f556@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 2026 海信电视秋季新品发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4744&noapp=1\n识别到的时间：09月23
+ 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4744&noapp=1
+CATEGORIES:科技数码
+LOCATION:线上
+DTSTART:20260923T110000Z
+DTEND:20260923T120000Z
+END:VEVENT
+BEGIN:VEVENT
 UID:dc33c984a2535ebd18d0d6a5f34aad78c2e15d5d@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[新能源汽车] 与众 09 亮相发布会（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4675&noapp=1\n识别到的时间：09月24
@@ -530,7 +553,7 @@ DTEND;VALUE=DATE:20260925
 END:VEVENT
 BEGIN:VEVENT
 UID:70c7f7c11f8f87d25a3a7c48b13830b342401f00@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 长安马自达 EZ-60 激光版上市发布会（
  具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -544,7 +567,7 @@ DTEND;VALUE=DATE:20260927
 END:VEVENT
 BEGIN:VEVENT
 UID:89e89c5696976f39cbaa0c1bfec08374a62798dc@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 荣耀 Magic 盛典暨荣耀 Magic9 系列新品
  发布会（具体时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -557,8 +580,47 @@ DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 END:VEVENT
 BEGIN:VEVENT
+UID:f520587144d567c9e992efe9c00569904f791149@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[手机新品] iQOO 16 新品发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4739&noapp=1\n识别到的时间：09月29
+ 日 19:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4739&noapp=1
+CATEGORIES:手机新品
+LOCATION:线上
+DTSTART:20260929T110000Z
+DTEND:20260929T120000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:692f4680ac462787b0422462381d0fcf9c738136@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[科技数码] 特斯拉全新Roadster超跑亮相
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4724&noapp=1\n识别到的时间：10月02
+ 日 08:30\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4724&noapp=1
+CATEGORIES:科技数码
+LOCATION:得克萨斯州韦科
+DTSTART:20261002T003000Z
+DTEND:20261002T013000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6c5de0361a3498dd8035b7cf27134870d584c1b9@launch-calendar-bot
+DTSTAMP:20260917T013720Z
+SUMMARY:[电脑新品] 微软人工智能 PC 发布会
+DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
+ lendar/event_detail.html?id=4740&noapp=1\n识别到的时间：10月08
+ 日 01:00\n可信度分数：10\nhttps://img.ithome.com/app/calendar/eve
+ nt_detail.html?id=4740&noapp=1
+CATEGORIES:电脑新品
+LOCATION:美国旧金山
+DTSTART:20261007T170000Z
+DTEND:20261007T180000Z
+END:VEVENT
+BEGIN:VEVENT
 UID:ab654474b5f0cd6c8ef2a1fad6afa45bcba267c1@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] iPhone Duo 国行预购开启
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
  lendar/event_detail.html?id=4708&noapp=1\n识别到的时间：10月16
@@ -571,7 +633,7 @@ DTEND:20261016T130000Z
 END:VEVENT
 BEGIN:VEVENT
 UID:6b62f3f5a2d2a791910926b1d8d20a710760b68d@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 苹果 iPhone Duo 正式发售（具体时间待
  定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
@@ -585,7 +647,7 @@ DTEND;VALUE=DATE:20261024
 END:VEVENT
 BEGIN:VEVENT
 UID:769b5fb8fb8cd03dc5fbf6b64e3efa497e865964@launch-calendar-bot
-DTSTAMP:20260913T010222Z
+DTSTAMP:20260917T013720Z
 SUMMARY:[科技数码] 首届 CMG 世界机器人登泰山大赛（具体
  时间待定）
 DESCRIPTION:来源：@微醺kkkkk\n链接：https://img.ithome.com/app/ca
